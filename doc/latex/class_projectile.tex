@@ -1,0 +1,403 @@
+\hypertarget{class_projectile}{}\doxysection{Projectile Class Reference}
+\label{class_projectile}\index{Projectile@{Projectile}}
+
+
+{\ttfamily \#include $<$Projectile.\+hpp$>$}
+
+Inheritance diagram for Projectile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_projectile}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Type}} \{ \mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eba04b85e53fc3f5777e314fb34eab7b03d}{Player\+Projectile}}
+, \mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eba0c4d2850b28d325fc282a830a4171a58}{Enemy\+Projectile}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_projectile_a0e446f66561f9b41e3a051d150a7cf58}{Projectile}} (sf\+::\+Sprite \&sprite, sf\+::\+Vector2f start\+Pos, bool penetrates\+Objects=false)
+\item 
+bool \mbox{\hyperlink{class_projectile_ac540791c62fe462b5ec91cbf3297e04f}{Has\+Hit}} (\mbox{\hyperlink{class_character}{Character}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Function to check if this projectile has already hit a specific character. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projectile_a6df5f030a740be045f4d49e2e78af12f}{Hit}} (\mbox{\hyperlink{class_character}{Character}} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Function to add character c to the characters this projectile has hit so it cannot hit it again. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_projectile_addfa18c38c3439c0d452c1e617b6f63f}{Get\+Damage}} ()
+\begin{DoxyCompactList}\small\item\em Get the Damage that this projectile will make when colliding. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Projectile\+::\+Type}} \mbox{\hyperlink{class_projectile_a03730b907a639e902175ffe77b0ed7a8}{Get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the Type of this projectile. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_projectile_addc30ed90f98c3aa4b35ee0937e0be17}{Get\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em Get the Direction that this \mbox{\hyperlink{class_projectile}{Projectile}} is travelling in. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_projectile_a2f9c4ee708b1340c1af49d91c080278d}{Get\+Start\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Get the position that this \mbox{\hyperlink{class_projectile}{Projectile}} was spawned at. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_projectile_ab058000bd28bef0a14583c8630395253}{Get\+Time\+Existed}} ()
+\begin{DoxyCompactList}\small\item\em Get the time in seconds that this \mbox{\hyperlink{class_projectile}{Projectile}} has existed. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_projectile_ad33defbb231add63056e7123e2168be0}{Get\+Time\+Life\+Span}} ()
+\begin{DoxyCompactList}\small\item\em Get the time in seconds that this \mbox{\hyperlink{class_projectile}{Projectile}} will exist before being deleted. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_projectile_a8d1e4b329ca9e4417b790ef76aadc15d}{Get\+Projectile\+Speed}} ()
+\begin{DoxyCompactList}\small\item\em Get the speed that this \mbox{\hyperlink{class_projectile}{Projectile}} is travelling at. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_projectile_a1187b6790a6bd9c839ce22b24474ad34}{Get\+Distance\+Life\+Span}} ()
+\begin{DoxyCompactList}\small\item\em Get the distance that this \mbox{\hyperlink{class_projectile}{Projectile}} will travell before being deleted. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_projectile_a7b938f5093586631f2fb1afcd2f86f78}{Penetrates}} ()
+\begin{DoxyCompactList}\small\item\em Check if this \mbox{\hyperlink{class_projectile}{Projectile}} can penetrate characters or not. Meaning if it can go through characters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_projectile_a253f25f4511e8fb3cd72ab8fe2f9bf35}{Is\+Alive}} ()
+\begin{DoxyCompactList}\small\item\em Checks if this \mbox{\hyperlink{class_projectile}{Projectile}} should be deleted or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projectile_a24fbeebb823c94781b46fe688b6f113d}{Set\+Type}} (\mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Projectile\+::\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Set the Type of this projectile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projectile_a47b5ad29be51136d23df91ba3661d04e}{Set\+Direction}} (sf\+::\+Vector2f direction)
+\begin{DoxyCompactList}\small\item\em Set the Direction of this projectile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projectile_aa89f6165d96af811d8f834fd8307ff41}{Set\+Damage}} (int damage)
+\begin{DoxyCompactList}\small\item\em Set the Damage of this projectile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projectile_aca4d5bd7b26cd7350b0d9513bc1ad0fb}{Set\+Projectile\+Speed}} (float projectile\+Speed)
+\begin{DoxyCompactList}\small\item\em Set the Speed of this projectile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projectile_a879b2c80cd0ee984546b456983b4a63e}{Set\+Time\+Life\+Span}} (float time\+Life\+Span)
+\begin{DoxyCompactList}\small\item\em Set the time\+Life\+Span of this projectile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projectile_a6c7955d069707f5de0ce2da569499bbd}{Set\+Distance\+Life\+Span}} (float distance\+Life\+Span)
+\begin{DoxyCompactList}\small\item\em Set the distance\+Life\+Span of this projectile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projectile_aa77550e62fec47dd353a8705a37d36d2}{Set\+Sprite}} (sf\+::\+Sprite sprite)
+\begin{DoxyCompactList}\small\item\em Set the Sprite of this \mbox{\hyperlink{class_projectile}{Projectile}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projectile_a4ca054a48e8db56a03e314a9c77baed1}{Kill}} ()
+\begin{DoxyCompactList}\small\item\em Function to make the game delete this \mbox{\hyperlink{class_projectile}{Projectile}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projectile_a4330e3fcf8a15f112b5bcad48f8926f3}{Update}} (float dt)
+\begin{DoxyCompactList}\small\item\em Function to update this projectile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}\label{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}} 
+\index{Projectile@{Projectile}!Type@{Type}}
+\index{Type@{Type}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Projectile\+::\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PlayerProjectile@{PlayerProjectile}!Projectile@{Projectile}}\index{Projectile@{Projectile}!PlayerProjectile@{PlayerProjectile}}}\mbox{\Hypertarget{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eba04b85e53fc3f5777e314fb34eab7b03d}\label{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eba04b85e53fc3f5777e314fb34eab7b03d}} 
+Player\+Projectile&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EnemyProjectile@{EnemyProjectile}!Projectile@{Projectile}}\index{Projectile@{Projectile}!EnemyProjectile@{EnemyProjectile}}}\mbox{\Hypertarget{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eba0c4d2850b28d325fc282a830a4171a58}\label{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eba0c4d2850b28d325fc282a830a4171a58}} 
+Enemy\+Projectile&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_projectile_a0e446f66561f9b41e3a051d150a7cf58}\label{class_projectile_a0e446f66561f9b41e3a051d150a7cf58}} 
+\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Projectile()}{Projectile()}}
+{\footnotesize\ttfamily Projectile\+::\+Projectile (\begin{DoxyParamCaption}\item[{sf\+::\+Sprite \&}]{sprite,  }\item[{sf\+::\+Vector2f}]{start\+Pos,  }\item[{bool}]{penetrates\+Objects = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_projectile_addfa18c38c3439c0d452c1e617b6f63f}\label{class_projectile_addfa18c38c3439c0d452c1e617b6f63f}} 
+\index{Projectile@{Projectile}!GetDamage@{GetDamage}}
+\index{GetDamage@{GetDamage}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{GetDamage()}{GetDamage()}}
+{\footnotesize\ttfamily int Projectile\+::\+Get\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Damage that this projectile will make when colliding. 
+
+\begin{DoxyReturn}{Returns}
+int damage of this projectile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projectile_addc30ed90f98c3aa4b35ee0937e0be17}\label{class_projectile_addc30ed90f98c3aa4b35ee0937e0be17}} 
+\index{Projectile@{Projectile}!GetDirection@{GetDirection}}
+\index{GetDirection@{GetDirection}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{GetDirection()}{GetDirection()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Projectile\+::\+Get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Direction that this \mbox{\hyperlink{class_projectile}{Projectile}} is travelling in. 
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Vector2f direction of this projectile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projectile_a1187b6790a6bd9c839ce22b24474ad34}\label{class_projectile_a1187b6790a6bd9c839ce22b24474ad34}} 
+\index{Projectile@{Projectile}!GetDistanceLifeSpan@{GetDistanceLifeSpan}}
+\index{GetDistanceLifeSpan@{GetDistanceLifeSpan}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{GetDistanceLifeSpan()}{GetDistanceLifeSpan()}}
+{\footnotesize\ttfamily float Projectile\+::\+Get\+Distance\+Life\+Span (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the distance that this \mbox{\hyperlink{class_projectile}{Projectile}} will travell before being deleted. 
+
+\begin{DoxyReturn}{Returns}
+float distance\+Life\+Span of this \mbox{\hyperlink{class_projectile}{Projectile}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projectile_a8d1e4b329ca9e4417b790ef76aadc15d}\label{class_projectile_a8d1e4b329ca9e4417b790ef76aadc15d}} 
+\index{Projectile@{Projectile}!GetProjectileSpeed@{GetProjectileSpeed}}
+\index{GetProjectileSpeed@{GetProjectileSpeed}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{GetProjectileSpeed()}{GetProjectileSpeed()}}
+{\footnotesize\ttfamily float Projectile\+::\+Get\+Projectile\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the speed that this \mbox{\hyperlink{class_projectile}{Projectile}} is travelling at. 
+
+\begin{DoxyReturn}{Returns}
+float speed of this \mbox{\hyperlink{class_projectile}{Projectile}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projectile_a2f9c4ee708b1340c1af49d91c080278d}\label{class_projectile_a2f9c4ee708b1340c1af49d91c080278d}} 
+\index{Projectile@{Projectile}!GetStartPosition@{GetStartPosition}}
+\index{GetStartPosition@{GetStartPosition}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{GetStartPosition()}{GetStartPosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Projectile\+::\+Get\+Start\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the position that this \mbox{\hyperlink{class_projectile}{Projectile}} was spawned at. 
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Vector2f start postion of this \mbox{\hyperlink{class_projectile}{Projectile}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projectile_ab058000bd28bef0a14583c8630395253}\label{class_projectile_ab058000bd28bef0a14583c8630395253}} 
+\index{Projectile@{Projectile}!GetTimeExisted@{GetTimeExisted}}
+\index{GetTimeExisted@{GetTimeExisted}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{GetTimeExisted()}{GetTimeExisted()}}
+{\footnotesize\ttfamily float Projectile\+::\+Get\+Time\+Existed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the time in seconds that this \mbox{\hyperlink{class_projectile}{Projectile}} has existed. 
+
+\begin{DoxyReturn}{Returns}
+float time\+Existed of this \mbox{\hyperlink{class_projectile}{Projectile}} in seconds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projectile_ad33defbb231add63056e7123e2168be0}\label{class_projectile_ad33defbb231add63056e7123e2168be0}} 
+\index{Projectile@{Projectile}!GetTimeLifeSpan@{GetTimeLifeSpan}}
+\index{GetTimeLifeSpan@{GetTimeLifeSpan}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{GetTimeLifeSpan()}{GetTimeLifeSpan()}}
+{\footnotesize\ttfamily float Projectile\+::\+Get\+Time\+Life\+Span (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the time in seconds that this \mbox{\hyperlink{class_projectile}{Projectile}} will exist before being deleted. 
+
+\begin{DoxyReturn}{Returns}
+float time\+Life\+Span of this \mbox{\hyperlink{class_projectile}{Projectile}} in seconds 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projectile_a03730b907a639e902175ffe77b0ed7a8}\label{class_projectile_a03730b907a639e902175ffe77b0ed7a8}} 
+\index{Projectile@{Projectile}!GetType@{GetType}}
+\index{GetType@{GetType}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Projectile\+::\+Type}} Projectile\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the Type of this projectile. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Projectile\+::\+Type}} the type of this projectile 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projectile_ac540791c62fe462b5ec91cbf3297e04f}\label{class_projectile_ac540791c62fe462b5ec91cbf3297e04f}} 
+\index{Projectile@{Projectile}!HasHit@{HasHit}}
+\index{HasHit@{HasHit}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{HasHit()}{HasHit()}}
+{\footnotesize\ttfamily bool Projectile\+::\+Has\+Hit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_character}{Character}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Function to check if this projectile has already hit a specific character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & character to check if this projectile has hit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if projectile has hit charachter c 
+
+false if projectile has not hit character c 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projectile_a6df5f030a740be045f4d49e2e78af12f}\label{class_projectile_a6df5f030a740be045f4d49e2e78af12f}} 
+\index{Projectile@{Projectile}!Hit@{Hit}}
+\index{Hit@{Hit}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Hit()}{Hit()}}
+{\footnotesize\ttfamily void Projectile\+::\+Hit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_character}{Character}} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Function to add character c to the characters this projectile has hit so it cannot hit it again. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & character to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projectile_a253f25f4511e8fb3cd72ab8fe2f9bf35}\label{class_projectile_a253f25f4511e8fb3cd72ab8fe2f9bf35}} 
+\index{Projectile@{Projectile}!IsAlive@{IsAlive}}
+\index{IsAlive@{IsAlive}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{IsAlive()}{IsAlive()}}
+{\footnotesize\ttfamily bool Projectile\+::\+Is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if this \mbox{\hyperlink{class_projectile}{Projectile}} should be deleted or not. 
+
+\begin{DoxyReturn}{Returns}
+true Meaning that this \mbox{\hyperlink{class_projectile}{Projectile}} should not be deleted 
+
+false Meaning that this \mbox{\hyperlink{class_projectile}{Projectile}} should be deleted 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projectile_a4ca054a48e8db56a03e314a9c77baed1}\label{class_projectile_a4ca054a48e8db56a03e314a9c77baed1}} 
+\index{Projectile@{Projectile}!Kill@{Kill}}
+\index{Kill@{Kill}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Kill()}{Kill()}}
+{\footnotesize\ttfamily void Projectile\+::\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to make the game delete this \mbox{\hyperlink{class_projectile}{Projectile}}. 
+
+\mbox{\Hypertarget{class_projectile_a7b938f5093586631f2fb1afcd2f86f78}\label{class_projectile_a7b938f5093586631f2fb1afcd2f86f78}} 
+\index{Projectile@{Projectile}!Penetrates@{Penetrates}}
+\index{Penetrates@{Penetrates}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Penetrates()}{Penetrates()}}
+{\footnotesize\ttfamily bool Projectile\+::\+Penetrates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if this \mbox{\hyperlink{class_projectile}{Projectile}} can penetrate characters or not. Meaning if it can go through characters. 
+
+\begin{DoxyReturn}{Returns}
+true Meaning that this \mbox{\hyperlink{class_projectile}{Projectile}} can penetrate characters 
+
+false Meaning that this \mbox{\hyperlink{class_projectile}{Projectile}} can not penetrate characters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_projectile_aa89f6165d96af811d8f834fd8307ff41}\label{class_projectile_aa89f6165d96af811d8f834fd8307ff41}} 
+\index{Projectile@{Projectile}!SetDamage@{SetDamage}}
+\index{SetDamage@{SetDamage}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{SetDamage()}{SetDamage()}}
+{\footnotesize\ttfamily void Projectile\+::\+Set\+Damage (\begin{DoxyParamCaption}\item[{int}]{damage }\end{DoxyParamCaption})}
+
+
+
+Set the Damage of this projectile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & the new Damage of this projectile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projectile_a47b5ad29be51136d23df91ba3661d04e}\label{class_projectile_a47b5ad29be51136d23df91ba3661d04e}} 
+\index{Projectile@{Projectile}!SetDirection@{SetDirection}}
+\index{SetDirection@{SetDirection}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{SetDirection()}{SetDirection()}}
+{\footnotesize\ttfamily void Projectile\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{direction }\end{DoxyParamCaption})}
+
+
+
+Set the Direction of this projectile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & the new Direction of this projectile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projectile_a6c7955d069707f5de0ce2da569499bbd}\label{class_projectile_a6c7955d069707f5de0ce2da569499bbd}} 
+\index{Projectile@{Projectile}!SetDistanceLifeSpan@{SetDistanceLifeSpan}}
+\index{SetDistanceLifeSpan@{SetDistanceLifeSpan}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{SetDistanceLifeSpan()}{SetDistanceLifeSpan()}}
+{\footnotesize\ttfamily void Projectile\+::\+Set\+Distance\+Life\+Span (\begin{DoxyParamCaption}\item[{float}]{distance\+Life\+Span }\end{DoxyParamCaption})}
+
+
+
+Set the distance\+Life\+Span of this projectile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance\+Life\+Span} & the new distance\+Life\+Span of this projectile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projectile_aca4d5bd7b26cd7350b0d9513bc1ad0fb}\label{class_projectile_aca4d5bd7b26cd7350b0d9513bc1ad0fb}} 
+\index{Projectile@{Projectile}!SetProjectileSpeed@{SetProjectileSpeed}}
+\index{SetProjectileSpeed@{SetProjectileSpeed}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{SetProjectileSpeed()}{SetProjectileSpeed()}}
+{\footnotesize\ttfamily void Projectile\+::\+Set\+Projectile\+Speed (\begin{DoxyParamCaption}\item[{float}]{projectile\+Speed }\end{DoxyParamCaption})}
+
+
+
+Set the Speed of this projectile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em projectile\+Speed} & the new Speed of this projectile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projectile_aa77550e62fec47dd353a8705a37d36d2}\label{class_projectile_aa77550e62fec47dd353a8705a37d36d2}} 
+\index{Projectile@{Projectile}!SetSprite@{SetSprite}}
+\index{SetSprite@{SetSprite}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{SetSprite()}{SetSprite()}}
+{\footnotesize\ttfamily void Projectile\+::\+Set\+Sprite (\begin{DoxyParamCaption}\item[{sf\+::\+Sprite}]{sprite }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the Sprite of this \mbox{\hyperlink{class_projectile}{Projectile}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & the new Sprite of this projectile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projectile_a879b2c80cd0ee984546b456983b4a63e}\label{class_projectile_a879b2c80cd0ee984546b456983b4a63e}} 
+\index{Projectile@{Projectile}!SetTimeLifeSpan@{SetTimeLifeSpan}}
+\index{SetTimeLifeSpan@{SetTimeLifeSpan}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{SetTimeLifeSpan()}{SetTimeLifeSpan()}}
+{\footnotesize\ttfamily void Projectile\+::\+Set\+Time\+Life\+Span (\begin{DoxyParamCaption}\item[{float}]{time\+Life\+Span }\end{DoxyParamCaption})}
+
+
+
+Set the time\+Life\+Span of this projectile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Life\+Span} & the new time\+Life\+Span of this projectile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projectile_a24fbeebb823c94781b46fe688b6f113d}\label{class_projectile_a24fbeebb823c94781b46fe688b6f113d}} 
+\index{Projectile@{Projectile}!SetType@{SetType}}
+\index{SetType@{SetType}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{SetType()}{SetType()}}
+{\footnotesize\ttfamily void Projectile\+::\+Set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Projectile\+::\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Set the Type of this projectile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & the new type of this projectile \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_projectile_a4330e3fcf8a15f112b5bcad48f8926f3}\label{class_projectile_a4330e3fcf8a15f112b5bcad48f8926f3}} 
+\index{Projectile@{Projectile}!Update@{Update}}
+\index{Update@{Update}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Projectile\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})}
+
+
+
+Function to update this projectile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & deltatime to compensate framerate \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Combat/\mbox{\hyperlink{_projectile_8hpp}{Projectile.\+hpp}}\item 
+src/\+Combat/\mbox{\hyperlink{projectile_8cpp}{projectile.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,24 @@
+\hypertarget{_collision_system_8hpp_source}{}\doxysection{Collision\+System.\+hpp}
+\label{_collision_system_8hpp_source}\index{src/Interfaces/CollisionSystem.hpp@{src/Interfaces/CollisionSystem.hpp}}
+\mbox{\hyperlink{_collision_system_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef \_COLLISIONSYSTEM\_CLASS\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define \_COLLISIONSYSTEM\_CLASS\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_i_collidable_8hpp}{Interfaces/ICollidable.hpp}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_collision_system}{CollisionSystem}} \{}
+\DoxyCodeLine{11 \textcolor{keyword}{private}:}
+\DoxyCodeLine{12     \textcolor{comment}{// hold all objects that participate in collision}}
+\DoxyCodeLine{13     std::vector<ICollidable*> objectList;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_collision_system_ac8b1ff32bb9c9ff3e765c2b334713454}{CollisionSystem}}() \{\};}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_collision_system_af9faff5c49093f4e9c7dc84e79b4d603}{AddToCollisionList}}(\mbox{\hyperlink{class_i_collidable}{ICollidable}}* obj);}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_collision_system_a9d6e9cde8591ecb95624e500be5e638d}{RemoveFromCollisionList}}(\mbox{\hyperlink{class_i_collidable}{ICollidable}}* obj);}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_collision_system_ad5e250426e816d5657eab2ce8184140f}{ProcessCollisionList}}();}
+\DoxyCodeLine{20 \};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,63 @@
+\hypertarget{room_instance_8hpp}{}\doxysection{src/\+Dungeon/room\+Instance.hpp File Reference}
+\label{room_instance_8hpp}\index{src/Dungeon/roomInstance.hpp@{src/Dungeon/roomInstance.hpp}}
+{\ttfamily \#include \char`\"{}Actors/\+Monsters/\+Monster\+Spawner/\+Monster\+Spawner.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Combat/\+Health/\+Potion.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Tiles/room\+Tile.\+hpp\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_room_instance}{Room\+Instance}}
+\begin{DoxyCompactList}\small\item\em Class representing a room of a dungeon, usually includes a monsterspawner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacedirection}{direction}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \{ \newline
+\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa258f49887ef8d14ac268c92b02503aaa}{Up}}
+, \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa08a38277b0309070706f6652eeae9a53}{Down}}
+, \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa945d5e233cf7d6240f6b783b36a374ff}{Left}}
+, \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa92b09c7c48c520c3c55e497875da437c}{Right}}
+, \newline
+\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaae93f994f01c537c4e2f7d8528c3eb5e9}{Count}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{namespacedirection_a580fb38bfd0065c2213d1cc56b39be11}{direction\+::\+Get\+Opposite\+Dir}} (\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}\label{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}} 
+\index{roomInstance.hpp@{roomInstance.hpp}!Direction@{Direction}}
+\index{Direction@{Direction}!roomInstance.hpp@{roomInstance.hpp}}
+\doxysubsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Up@{Up}!roomInstance.hpp@{roomInstance.hpp}}\index{roomInstance.hpp@{roomInstance.hpp}!Up@{Up}}}\mbox{\Hypertarget{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa258f49887ef8d14ac268c92b02503aaa}\label{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa258f49887ef8d14ac268c92b02503aaa}} 
+Up&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Down@{Down}!roomInstance.hpp@{roomInstance.hpp}}\index{roomInstance.hpp@{roomInstance.hpp}!Down@{Down}}}\mbox{\Hypertarget{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa08a38277b0309070706f6652eeae9a53}\label{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa08a38277b0309070706f6652eeae9a53}} 
+Down&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Left@{Left}!roomInstance.hpp@{roomInstance.hpp}}\index{roomInstance.hpp@{roomInstance.hpp}!Left@{Left}}}\mbox{\Hypertarget{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa945d5e233cf7d6240f6b783b36a374ff}\label{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa945d5e233cf7d6240f6b783b36a374ff}} 
+Left&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Right@{Right}!roomInstance.hpp@{roomInstance.hpp}}\index{roomInstance.hpp@{roomInstance.hpp}!Right@{Right}}}\mbox{\Hypertarget{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa92b09c7c48c520c3c55e497875da437c}\label{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa92b09c7c48c520c3c55e497875da437c}} 
+Right&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Count@{Count}!roomInstance.hpp@{roomInstance.hpp}}\index{roomInstance.hpp@{roomInstance.hpp}!Count@{Count}}}\mbox{\Hypertarget{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaae93f994f01c537c4e2f7d8528c3eb5e9}\label{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaae93f994f01c537c4e2f7d8528c3eb5e9}} 
+Count&\\
+\hline
+
+\end{DoxyEnumFields}

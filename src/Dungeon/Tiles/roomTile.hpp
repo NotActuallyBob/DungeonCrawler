@@ -15,6 +15,7 @@ public:
      * @param    penetratable         can projectiles penetrate the tile
      */
     RoomTile(std::string texture, float x, float y, bool walkable, bool penetratable);
+
     const sf::Vector2f getSize() const;
     const sf::Vector2f& getPosition() const;
     const sf::FloatRect getBoundingBox() const;
@@ -40,6 +41,10 @@ public:
     }
 };
 
+/**
+ * @brief A wall that is not walkable but penetrable
+ *
+ */
 class FrontWallTile : public RoomTile {
 public:
     FrontWallTile(std::string texture, float x, float y)

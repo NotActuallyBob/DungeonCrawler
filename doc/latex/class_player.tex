@@ -1,0 +1,207 @@
+\hypertarget{class_player}{}\doxysection{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+\mbox{\hyperlink{class_player}{Player}} class, our controlled character.  
+
+
+
+
+{\ttfamily \#include $<$player.\+hpp$>$}
+
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_player}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
+\item 
+\mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{$\sim$\+Player}} ()
+\item 
+virtual void \mbox{\hyperlink{class_player_a2e6518b602a35ec83a71318db084e67b}{Update}} (float dt)
+\item 
+void \mbox{\hyperlink{class_player_a90684e3a8d5ae38cc0579b5592e8db35}{Dash}} ()
+\begin{DoxyCompactList}\small\item\em Handles the dashing functions. \end{DoxyCompactList}\item 
+std\+::list$<$ \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{Projectile\+UP}} $>$ \mbox{\hyperlink{class_player_a008826863f2a69464e5f51ea4504828c}{Attack}} (sf\+::\+Vector2f aim\+Pos)
+\begin{DoxyCompactList}\small\item\em handles the attacking of player character \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a41ed6d3482b0815b564ac401093a297a}{init\+Variables}} ()
+\item 
+void \mbox{\hyperlink{class_player_a6cc79a135f85503b04f0f872e8bae318}{Reset\+Dash\+Cooldown}} ()
+\item 
+float \mbox{\hyperlink{class_player_a154c995d8a6cc846ac3ddf72e930b532}{Get\+Dash\+Cooldown\+Left}} () const
+\item 
+float \mbox{\hyperlink{class_player_a471b07609433018177c9e1c33cfae2fc}{Get\+Dash\+Cooldown\+Length}} () const
+\item 
+void \mbox{\hyperlink{class_player_acb65287ccc0e6154e66fcdf47f11df96}{Add\+Potion}} (\mbox{\hyperlink{class_potion}{Potion}} $\ast$potion)
+\begin{DoxyCompactList}\small\item\em Adds a potion to be used later. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a34559f5f74fd83837d3feeea068100b6}{Use\+Potion}} (const std\+::string \&colour)
+\begin{DoxyCompactList}\small\item\em Get the colour of the potion player is going to use and runs the funcions to use it. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_potion}{Potion}} $\ast$ $>$ \mbox{\hyperlink{class_player_a190571de6a8a1a19ec9111838d62df70}{Get\+Inventory}} () const
+\begin{DoxyCompactList}\small\item\em gets inventory of \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_af87692c2ccbda91a484d03e2ae8fe741}{Clear\+Inventory}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_player_ae1a22d7b4a1d85295c1693ed046c86fb}{Can\+Dash}}
+\item 
+bool \mbox{\hyperlink{class_player_a8ef6848b8b83a6fcb8f92b0da2f4306d}{Is\+Dashing}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_player}{Player}} class, our controlled character. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}\label{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a749d2c00e1fe0f5c2746f7505a58c062}\label{class_player_a749d2c00e1fe0f5c2746f7505a58c062}} 
+\index{Player@{Player}!````~Player@{$\sim$Player}}
+\index{````~Player@{$\sim$Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{$\sim$Player()}{~Player()}}
+{\footnotesize\ttfamily Player\+::$\sim$\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_acb65287ccc0e6154e66fcdf47f11df96}\label{class_player_acb65287ccc0e6154e66fcdf47f11df96}} 
+\index{Player@{Player}!AddPotion@{AddPotion}}
+\index{AddPotion@{AddPotion}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{AddPotion()}{AddPotion()}}
+{\footnotesize\ttfamily void Player\+::\+Add\+Potion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_potion}{Potion}} $\ast$}]{potion }\end{DoxyParamCaption})}
+
+
+
+Adds a potion to be used later. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em potion} & potion to be added to inventory \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_a008826863f2a69464e5f51ea4504828c}\label{class_player_a008826863f2a69464e5f51ea4504828c}} 
+\index{Player@{Player}!Attack@{Attack}}
+\index{Attack@{Attack}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily std\+::list$<$ \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{Projectile\+UP}} $>$ Player\+::\+Attack (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{aim\+Pos }\end{DoxyParamCaption})}
+
+
+
+handles the attacking of player character 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aim\+Pos} & position of where mouse is aiming \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::list$<$\+Projectile\+UP$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_af87692c2ccbda91a484d03e2ae8fe741}\label{class_player_af87692c2ccbda91a484d03e2ae8fe741}} 
+\index{Player@{Player}!ClearInventory@{ClearInventory}}
+\index{ClearInventory@{ClearInventory}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{ClearInventory()}{ClearInventory()}}
+{\footnotesize\ttfamily void Player\+::\+Clear\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a90684e3a8d5ae38cc0579b5592e8db35}\label{class_player_a90684e3a8d5ae38cc0579b5592e8db35}} 
+\index{Player@{Player}!Dash@{Dash}}
+\index{Dash@{Dash}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Dash()}{Dash()}}
+{\footnotesize\ttfamily void Player\+::\+Dash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles the dashing functions. 
+
+\mbox{\Hypertarget{class_player_a154c995d8a6cc846ac3ddf72e930b532}\label{class_player_a154c995d8a6cc846ac3ddf72e930b532}} 
+\index{Player@{Player}!GetDashCooldownLeft@{GetDashCooldownLeft}}
+\index{GetDashCooldownLeft@{GetDashCooldownLeft}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetDashCooldownLeft()}{GetDashCooldownLeft()}}
+{\footnotesize\ttfamily float Player\+::\+Get\+Dash\+Cooldown\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_a471b07609433018177c9e1c33cfae2fc}\label{class_player_a471b07609433018177c9e1c33cfae2fc}} 
+\index{Player@{Player}!GetDashCooldownLength@{GetDashCooldownLength}}
+\index{GetDashCooldownLength@{GetDashCooldownLength}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetDashCooldownLength()}{GetDashCooldownLength()}}
+{\footnotesize\ttfamily float Player\+::\+Get\+Dash\+Cooldown\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_a190571de6a8a1a19ec9111838d62df70}\label{class_player_a190571de6a8a1a19ec9111838d62df70}} 
+\index{Player@{Player}!GetInventory@{GetInventory}}
+\index{GetInventory@{GetInventory}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetInventory()}{GetInventory()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_potion}{Potion}} $\ast$ $>$ Player\+::\+Get\+Inventory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+gets inventory of 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Potion$\ast$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_player_a41ed6d3482b0815b564ac401093a297a}\label{class_player_a41ed6d3482b0815b564ac401093a297a}} 
+\index{Player@{Player}!initVariables@{initVariables}}
+\index{initVariables@{initVariables}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{initVariables()}{initVariables()}}
+{\footnotesize\ttfamily void Player\+::init\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a6cc79a135f85503b04f0f872e8bae318}\label{class_player_a6cc79a135f85503b04f0f872e8bae318}} 
+\index{Player@{Player}!ResetDashCooldown@{ResetDashCooldown}}
+\index{ResetDashCooldown@{ResetDashCooldown}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{ResetDashCooldown()}{ResetDashCooldown()}}
+{\footnotesize\ttfamily void Player\+::\+Reset\+Dash\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_player_a2e6518b602a35ec83a71318db084e67b}\label{class_player_a2e6518b602a35ec83a71318db084e67b}} 
+\index{Player@{Player}!Update@{Update}}
+\index{Update@{Update}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Player\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_character_a72da2201326fe395bea15161cd37bd53}{Character}}.
+
+\mbox{\Hypertarget{class_player_a34559f5f74fd83837d3feeea068100b6}\label{class_player_a34559f5f74fd83837d3feeea068100b6}} 
+\index{Player@{Player}!UsePotion@{UsePotion}}
+\index{UsePotion@{UsePotion}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{UsePotion()}{UsePotion()}}
+{\footnotesize\ttfamily void Player\+::\+Use\+Potion (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{colour }\end{DoxyParamCaption})}
+
+
+
+Get the colour of the potion player is going to use and runs the funcions to use it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em colour} & colour of potion \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_ae1a22d7b4a1d85295c1693ed046c86fb}\label{class_player_ae1a22d7b4a1d85295c1693ed046c86fb}} 
+\index{Player@{Player}!CanDash@{CanDash}}
+\index{CanDash@{CanDash}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{CanDash}{CanDash}}
+{\footnotesize\ttfamily bool Player\+::\+Can\+Dash}
+
+\mbox{\Hypertarget{class_player_a8ef6848b8b83a6fcb8f92b0da2f4306d}\label{class_player_a8ef6848b8b83a6fcb8f92b0da2f4306d}} 
+\index{Player@{Player}!IsDashing@{IsDashing}}
+\index{IsDashing@{IsDashing}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{IsDashing}{IsDashing}}
+{\footnotesize\ttfamily bool Player\+::\+Is\+Dashing}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Actors/\mbox{\hyperlink{player_8hpp}{player.\+hpp}}\item 
+src/\+Actors/\mbox{\hyperlink{player_8cpp}{player.\+cpp}}\end{DoxyCompactItemize}

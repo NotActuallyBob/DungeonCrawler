@@ -1,0 +1,35 @@
+\hypertarget{_windows_platform_8hpp_source}{}\doxysection{Windows\+Platform.\+hpp}
+\label{_windows_platform_8hpp_source}\index{src/Platform/Win32/WindowsPlatform.hpp@{src/Platform/Win32/WindowsPlatform.hpp}}
+\mbox{\hyperlink{_windows_platform_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef UTIL\_WINDOWS\_PLATFORM\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define UTIL\_WINDOWS\_PLATFORM\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_i_platform_8hpp}{Platform/IPlatform.hpp}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{// TODO: WM\_DISPLAYCHANGE event handling (multi-\/monitor support)}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceutil}{util}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{struct }\mbox{\hyperlink{structutil_1_1_windows_platform}{WindowsPlatform}} : \mbox{\hyperlink{structutil_1_1_i_platform}{IPlatform}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \mbox{\hyperlink{structutil_1_1_windows_platform_a6f3766048e1807d75413ebcf026d8392}{WindowsPlatform}}();}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \textcolor{keywordtype}{void} \mbox{\hyperlink{structutil_1_1_windows_platform_a04ac02ad7151860559fb480e6190f895}{setIcon}}(\textcolor{keyword}{const} sf::WindowHandle\& inHandle) \textcolor{keyword}{final};}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{structutil_1_1_windows_platform_a12d82194c51ac484ac01f3cc6f3652fc}{toggleFullscreen}}(\textcolor{keyword}{const} sf::WindowHandle\& inHandle, \textcolor{keyword}{const} sf::Uint32 inStyle, \textcolor{keyword}{const} \textcolor{keywordtype}{bool} inWindowed, \textcolor{keyword}{const} sf::Vector2u\& inResolution) \textcolor{keyword}{final};}
+\DoxyCodeLine{16     \textcolor{keywordtype}{float} \mbox{\hyperlink{structutil_1_1_windows_platform_a9cdc52b10354c5f3949aa08fb9c1eea6}{getScreenScalingFactor}}(\textcolor{keyword}{const} sf::WindowHandle\& inHandle) \textcolor{keyword}{final};}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} \mbox{\hyperlink{structutil_1_1_windows_platform_a4b3656c1ca3cf7eab52bd8205729c5f4}{getRefreshRate}}(\textcolor{keyword}{const} sf::WindowHandle\& inHandle) \textcolor{keyword}{final};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20     PBYTE getIconDirectory(\textcolor{keyword}{const} \textcolor{keywordtype}{int} inResourceId);}
+\DoxyCodeLine{21     HICON getIconFromIconDirectory(PBYTE inIconDirectory, \textcolor{keyword}{const} \mbox{\hyperlink{_types_8hpp_a2e1c09bb972fc5997dcc8ea0cf5fa447}{uint}} inSize);}
+\DoxyCodeLine{22     DWORD sfmlWindowStyleToWin32WindowStyle(\textcolor{keyword}{const} sf::Uint32 inStyle);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keywordtype}{float} m\_screenScalingFactor = 0.0f;}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} m\_refreshRate = 0;}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 \}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// UTIL\_WINDOWS\_PLATFORM\_HPP}}
+
+\end{DoxyCode}

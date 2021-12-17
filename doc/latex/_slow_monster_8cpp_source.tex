@@ -1,0 +1,51 @@
+\doxysection{Slow\+Monster.\+cpp}
+\label{_slow_monster_8cpp_source}\index{src/Actors/Monsters/SlowMonster.cpp@{src/Actors/Monsters/SlowMonster.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}SlowMonster.hpp"{}}}
+\DoxyCodeLine{00002 \textcolor{keyword}{namespace }\{}
+\DoxyCodeLine{00003 \textcolor{keyword}{const} std::string monsterSpriteFileLocation = \textcolor{stringliteral}{"{}content/sprites/monsters/monster4.png"{}};}
+\DoxyCodeLine{00004 \}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 SlowMonster::SlowMonster(PlayerPS player, sf::Vector2f pos)}
+\DoxyCodeLine{00007     : SlowMonster(player, pos.x, pos.y)}
+\DoxyCodeLine{00008 \{}
+\DoxyCodeLine{00009 \}}
+\DoxyCodeLine{00010 SlowMonster::SlowMonster(PlayerPS player, \textcolor{keywordtype}{float} xPos, \textcolor{keywordtype}{float} yPos)}
+\DoxyCodeLine{00011     : Monster(player, sf::Vector2f(xPos, yPos), monsterSpriteFileLocation)}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013     initVariables();}
+\DoxyCodeLine{00014 \}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016 SlowMonster::\string~SlowMonster() \{ \}}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018 \textcolor{keywordtype}{bool} SlowMonster::Move(\textcolor{keywordtype}{float} dt)}
+\DoxyCodeLine{00019 \{}
+\DoxyCodeLine{00020     \textcolor{keywordflow}{return} moveTowardsPlayer(dt);}
+\DoxyCodeLine{00021 \}}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023 std::list<ProjectileUP> SlowMonster::Attack()}
+\DoxyCodeLine{00024 \{}
+\DoxyCodeLine{00025     \textcolor{keywordflow}{if} (!CanAttack || !HasWeapon() || !inRangeOfPlayer() || !IsAlive()) \{}
+\DoxyCodeLine{00026         \textcolor{keywordflow}{return} emptyList();}
+\DoxyCodeLine{00027     \}}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     ResetAttackCooldown();}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031     sf::Vector2f playerCenterPos = player\_-\/>GetSpriteCenter();}
+\DoxyCodeLine{00032     \textcolor{keywordtype}{float} xMiss = randomhelper::RandomFloatBetween(-\/120.0f, 120.0f);}
+\DoxyCodeLine{00033     \textcolor{keywordtype}{float} yMiss = randomhelper::RandomFloatBetween(-\/120.0f, 120.0f);}
+\DoxyCodeLine{00034     sf::Vector2f aimPos1 = sf::Vector2f(playerCenterPos.x + xMiss, playerCenterPos.y + yMiss);}
+\DoxyCodeLine{00035     shotProjectileList(aimPos1);}
+\DoxyCodeLine{00036     \textcolor{keywordflow}{return} shotProjectileList(aimPos1);}
+\DoxyCodeLine{00037     ;}
+\DoxyCodeLine{00038 \}}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040 \textcolor{keywordtype}{void} SlowMonster::initVariables()}
+\DoxyCodeLine{00041 \{}
+\DoxyCodeLine{00042     BowWeapon* slowBow = \textcolor{keyword}{new} BowWeapon(5, 400, 200, 200, sf::Vector2f(100, 100), \textcolor{stringliteral}{"{}content/sprites/projectiles/projectileoctopus.png"{}});}
+\DoxyCodeLine{00043     Equip(slowBow);}
+\DoxyCodeLine{00044     SetNormalSpeed(200.0f);}
+\DoxyCodeLine{00045 \}}
+
+\end{DoxyCode}

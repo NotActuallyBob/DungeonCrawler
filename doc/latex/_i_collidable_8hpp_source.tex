@@ -1,0 +1,31 @@
+\hypertarget{_i_collidable_8hpp_source}{}\doxysection{ICollidable.\+hpp}
+\label{_i_collidable_8hpp_source}\index{src/Interfaces/ICollidable.hpp@{src/Interfaces/ICollidable.hpp}}
+\mbox{\hyperlink{_i_collidable_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef \_COLLIDABLE\_INTERFACE\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define \_COLLIDABLE\_INTERFACE\_}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_i_collidable}{ICollidable}} \{}
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{11     \textcolor{keyword}{enum} \mbox{\hyperlink{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45}{EntityType}} \{}
+\DoxyCodeLine{12         \mbox{\hyperlink{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45aebffec0f8595c081fe83e3dd43d25b51}{character}},}
+\DoxyCodeLine{13         \mbox{\hyperlink{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45aa7243a3e7bc5ab45ef212d9cd4e2acac}{projectile}},}
+\DoxyCodeLine{14         \mbox{\hyperlink{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45a4a3b7850a5043cbfebaa49a28e214eab}{tile}},}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \};}
+\DoxyCodeLine{17     \textcolor{comment}{// we use these function to retrieve collision relevant information}}
+\DoxyCodeLine{18     \textcolor{comment}{// virtual sf::Vector2f GetPosition() = 0; // objects have position}}
+\DoxyCodeLine{19     \textcolor{keyword}{virtual} sf::FloatRect \mbox{\hyperlink{class_i_collidable_a91761de57b7eb05285f91a59f124bd59}{GetBoundingBox}}() = 0; \textcolor{comment}{// objects have a size}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{comment}{// using this function, we notify the object that it collided with something else}}
+\DoxyCodeLine{22     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_collidable_a024f9ea1ae909aa49a062d4aff18671b}{ProcessCollision}}(\mbox{\hyperlink{class_i_collidable}{ICollidable}}* other) = 0;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45}{EntityType}} \mbox{\hyperlink{class_i_collidable_a6ddf97f57e9513f5e3ed79892c0a5123}{GetEntityType}}() = 0;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_i_collidable_a7a3defb6bc89121474ccc7b2201ec07e}{\string~ICollidable}}() \{\};}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

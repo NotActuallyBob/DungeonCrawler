@@ -1,0 +1,92 @@
+\hypertarget{class_boss_monster}{}\doxysection{Boss\+Monster Class Reference}
+\label{class_boss_monster}\index{BossMonster@{BossMonster}}
+
+
+This is the boss monster. It is the most powerful monster and once the player kills it the game is won.  
+
+
+
+
+{\ttfamily \#include $<$Boss\+Monster.\+hpp$>$}
+
+Inheritance diagram for Boss\+Monster\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_boss_monster}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_boss_monster_a3c221bcfff648a80bd3aaf7a4f7554be}{Boss\+Monster}} (\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}} player, float x\+Pos, float y\+Pos)
+\item 
+\mbox{\hyperlink{class_boss_monster_a5de8ab6ba55d6aa04e16bdffa2432e13}{Boss\+Monster}} (\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}} player, sf\+::\+Vector2f pos)
+\item 
+\mbox{\hyperlink{class_boss_monster_ab4ebbd36356abf8353b412fc3ed7550e}{$\sim$\+Boss\+Monster}} ()
+\item 
+virtual std\+::list$<$ \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{Projectile\+UP}} $>$ \mbox{\hyperlink{class_boss_monster_a2ec1678d6f2add0f7273ab8d5a301b72}{Attack}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_boss_monster_a3e08beea7748fa58c2de8299063d0d65}{Move}} (float dt)
+\item 
+void \mbox{\hyperlink{class_boss_monster_a09f7c53372531c976d056b07328fa310}{init\+Variables}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+This is the boss monster. It is the most powerful monster and once the player kills it the game is won. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_boss_monster_a3c221bcfff648a80bd3aaf7a4f7554be}\label{class_boss_monster_a3c221bcfff648a80bd3aaf7a4f7554be}} 
+\index{BossMonster@{BossMonster}!BossMonster@{BossMonster}}
+\index{BossMonster@{BossMonster}!BossMonster@{BossMonster}}
+\doxysubsubsection{\texorpdfstring{BossMonster()}{BossMonster()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Boss\+Monster\+::\+Boss\+Monster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}}}]{player,  }\item[{float}]{x\+Pos,  }\item[{float}]{y\+Pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_boss_monster_a5de8ab6ba55d6aa04e16bdffa2432e13}\label{class_boss_monster_a5de8ab6ba55d6aa04e16bdffa2432e13}} 
+\index{BossMonster@{BossMonster}!BossMonster@{BossMonster}}
+\index{BossMonster@{BossMonster}!BossMonster@{BossMonster}}
+\doxysubsubsection{\texorpdfstring{BossMonster()}{BossMonster()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Boss\+Monster\+::\+Boss\+Monster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}}}]{player,  }\item[{sf\+::\+Vector2f}]{pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_boss_monster_ab4ebbd36356abf8353b412fc3ed7550e}\label{class_boss_monster_ab4ebbd36356abf8353b412fc3ed7550e}} 
+\index{BossMonster@{BossMonster}!````~BossMonster@{$\sim$BossMonster}}
+\index{````~BossMonster@{$\sim$BossMonster}!BossMonster@{BossMonster}}
+\doxysubsubsection{\texorpdfstring{$\sim$BossMonster()}{~BossMonster()}}
+{\footnotesize\ttfamily Boss\+Monster\+::$\sim$\+Boss\+Monster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_boss_monster_a2ec1678d6f2add0f7273ab8d5a301b72}\label{class_boss_monster_a2ec1678d6f2add0f7273ab8d5a301b72}} 
+\index{BossMonster@{BossMonster}!Attack@{Attack}}
+\index{Attack@{Attack}!BossMonster@{BossMonster}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily std\+::list$<$ \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{Projectile\+UP}} $>$ Boss\+Monster\+::\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_monster_a65d700523a81fdbf87fd30a838c6e610}{Monster}}.
+
+\mbox{\Hypertarget{class_boss_monster_a09f7c53372531c976d056b07328fa310}\label{class_boss_monster_a09f7c53372531c976d056b07328fa310}} 
+\index{BossMonster@{BossMonster}!initVariables@{initVariables}}
+\index{initVariables@{initVariables}!BossMonster@{BossMonster}}
+\doxysubsubsection{\texorpdfstring{initVariables()}{initVariables()}}
+{\footnotesize\ttfamily void Boss\+Monster\+::init\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_boss_monster_a3e08beea7748fa58c2de8299063d0d65}\label{class_boss_monster_a3e08beea7748fa58c2de8299063d0d65}} 
+\index{BossMonster@{BossMonster}!Move@{Move}}
+\index{Move@{Move}!BossMonster@{BossMonster}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily bool Boss\+Monster\+::\+Move (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_monster_af0b3f67e1cc9593b0b657323a25d746e}{Monster}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Actors/\+Monsters/\mbox{\hyperlink{_boss_monster_8hpp}{Boss\+Monster.\+hpp}}\item 
+src/\+Actors/\+Monsters/\mbox{\hyperlink{_boss_monster_8cpp}{Boss\+Monster.\+cpp}}\end{DoxyCompactItemize}

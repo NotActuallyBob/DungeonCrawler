@@ -1,0 +1,50 @@
+\hypertarget{_weapon_8hpp_source}{}\doxysection{Weapon.\+hpp}
+\label{_weapon_8hpp_source}\index{src/Combat/Weapons/Weapon.hpp@{src/Combat/Weapons/Weapon.hpp}}
+\mbox{\hyperlink{_weapon_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef \_WEAPON\_CLASS\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define \_WEAPON\_CLASS\_}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_power_up_8hpp}{Combat/PowerUps/PowerUp.hpp}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_projectile_8hpp}{Combat/Projectile.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_sprite_helper_8hpp}{Utility/SpriteHelper.hpp}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }sf;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_weapon}{Weapon}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_weapon_a760ffc526351bd14fa03d96a171b6e78}{Weapon}}(\textcolor{keywordtype}{int} damage, \textcolor{keywordtype}{int} range, \textcolor{keywordtype}{int} rateOfFire, \textcolor{keywordtype}{float} projectileSpeed, Vector2f projectileSize, \textcolor{keyword}{const} std::string\& spriteLocation);}
+\DoxyCodeLine{15     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_weapon_ac5f7305f5d08c48003c826e6e73f37da}{\string~Weapon}}() \{\};}
+\DoxyCodeLine{16     \textcolor{keyword}{virtual} \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{ProjectileUP}} \mbox{\hyperlink{class_weapon_acf05bc02ada0b8b7c064072fbd2c2706}{Use}}(Vector2f dir, Vector2f origin) = 0;}
+\DoxyCodeLine{17     \textcolor{comment}{// virtual void Animate() = 0;}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_weapon_aa4d20872dbf1a6dbbf4d2d3c01b51cad}{AddPowerUp}}(\mbox{\hyperlink{class_power_up}{PowerUp}}* up);}
+\DoxyCodeLine{19     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_weapon_a2a06385027149fed1e627993e15b5001}{GetAttackCooldown}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_weapon_ace5a7b10dfe5092f90b1df030010f754}{cooldown\_}}; \};}
+\DoxyCodeLine{20     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_weapon_a9823c8899e84b1dd8e4d313c2768ac7a}{GetRange}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_weapon_a7ff23a65649ad1a69f1c4a3ea6855fcd}{range\_}}; \};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_weapon_af574dccf8ae5515bab4cc94b81608310}{SetTextureRect}}(sf::IntRect rect);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_weapon_abecf92ce115fd76c14742711b2bd8de0}{BoostDamageValue}}();}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_weapon_a85ed54e052fb96a4887dd441eea1d681}{UnBoostDamageValue}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_weapon_afcffeadd4f72dfbb7286a9a6d5cf281a}{defaultDamage\_}};}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_weapon_a750d4319c3ff324264d71437de96c1ad}{currentDamage\_}};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_weapon_a2e6465310781305f066d74f406c3b960}{damageBoostModifier}} = 1.1f;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_weapon_a7ff23a65649ad1a69f1c4a3ea6855fcd}{range\_}};}
+\DoxyCodeLine{31     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_weapon_ae94946d9bd33b24d6ac1353fe2c8a39c}{projectileSpeed\_}};}
+\DoxyCodeLine{32     Vector2f \mbox{\hyperlink{class_weapon_aafb1cd040c2eb1483fa59a0cf07597e6}{projectileSize\_}};}
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_weapon_a86045d6a750bbe0a4156aabcbb5be868}{speed\_}};}
+\DoxyCodeLine{34     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_weapon_a838869f30e8efe60fef6f342cf735cbc}{penetrates\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{35     \textcolor{keyword}{const} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_weapon_a36cb600633f83c713133d82fd60d4b87}{maxPowerUps}} = 3;}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_weapon_abb091e56c15430cbc13707a8085d1139}{getPowerUpCount}}();}
+\DoxyCodeLine{37     Sprite \mbox{\hyperlink{class_weapon_a9a5c192a9cacc8aeee9ec3a1e99b4146}{sprite\_}};}
+\DoxyCodeLine{38     Texture \mbox{\hyperlink{class_weapon_af2f8e16c755ff73ff619ed0a43a730cf}{texture\_}};}
+\DoxyCodeLine{39     vector<PowerUp*> \mbox{\hyperlink{class_weapon_ae135a49f63abbed5ed11b7c5bd79e1a1}{powerUps\_}};}
+\DoxyCodeLine{40     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_weapon_ace5a7b10dfe5092f90b1df030010f754}{cooldown\_}};}
+\DoxyCodeLine{41     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_weapon_afa5640ded22e84de740fa53188937aa7}{attackCooldownLength\_}};}
+\DoxyCodeLine{42     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_weapon_afd86e35acc9b7a3df9c37dff9912d533}{attackCooldownLeft}};}
+\DoxyCodeLine{43 \};}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

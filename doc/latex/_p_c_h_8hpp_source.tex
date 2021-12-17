@@ -1,0 +1,78 @@
+\hypertarget{_p_c_h_8hpp_source}{}\doxysection{PCH.\+hpp}
+\label{_p_c_h_8hpp_source}\index{src/PCH.hpp@{src/PCH.hpp}}
+\mbox{\hyperlink{_p_c_h_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PRECOMPILED\_HEADER\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PRECOMPILED\_HEADER\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef \_DEBUG}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef NDEBUG}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define NDEBUG}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_DEBUG}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{// SFML}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <SFML/Network.hpp>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <SFML/System.hpp>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <SFML/Window.hpp>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{comment}{// Raspberry Pi}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifdef SFML\_SYSTEM\_LINUX}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifdef \_\_arm\_\_}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define SFML\_SYSTEM\_PI}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SFML SYSTEM\_LINUX}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{comment}{// Typical stdafx.h}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include <cstdio>}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include <deque>}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{comment}{// Additional C/C++ libs}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#include <atomic>}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#include <cstdlib>}}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#include <exception>}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#include <type\_traits>}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{comment}{// Windows}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#ifndef UNICODE}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define UNICODE}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#ifndef \_UNICODE}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define \_UNICODE}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define WIN32\_LEAN\_AND\_MEAN}}
+\DoxyCodeLine{62 \textcolor{comment}{//\#include <windows.h>}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_WIN32}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{comment}{// Utils}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_file_system_8hpp}{Utility/FileSystem.hpp}}"{}}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_types_8hpp}{Utility/Types.hpp}}"{}}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{comment}{// Macros}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define UNUSED(x) (void)(x)}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// PRECOMPILED\_HEADER\_HPP}}
+
+\end{DoxyCode}

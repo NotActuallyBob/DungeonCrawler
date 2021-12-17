@@ -1,0 +1,479 @@
+\hypertarget{class_room_instance}{}\doxysection{Room\+Instance Class Reference}
+\label{class_room_instance}\index{RoomInstance@{RoomInstance}}
+
+
+Class representing a room of a dungeon, usually includes a monsterspawner.  
+
+
+
+
+{\ttfamily \#include $<$room\+Instance.\+hpp$>$}
+
+Inheritance diagram for Room\+Instance\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_room_instance}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_room_instance_a4d85f9cd2da480025c2c1a036f6e9b5a}{Room\+Instance}} (sf\+::\+Vector2u window\+\_\+size, sf\+::\+Vector2i coords)
+\begin{DoxyCompactList}\small\item\em Construct a new Room Instance object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_room_instance_a80ab69702c56d513bf82bf891242e54b}{Room\+Instance}} (sf\+::\+Vector2u window\+\_\+size, sf\+::\+Vector2i coords, \mbox{\hyperlink{class_monster_spawner}{Monster\+Spawner}} $\ast$spawner)
+\item 
+\mbox{\hyperlink{class_room_instance_aebd06b402545a1e655f17328e0fd4ad6}{Room\+Instance}} ()=default
+\item 
+virtual \mbox{\hyperlink{class_room_instance_a27fa2efc948f49ee5bb60b893bae4fe7}{$\sim$\+Room\+Instance}} ()
+\item 
+void \mbox{\hyperlink{class_room_instance_a772e1aa461c0116a3c38562934ff83c7}{Render}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Renders the room. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_room_tile}{Room\+Tile}} $\ast$ $>$ \mbox{\hyperlink{class_room_instance_aaac705fa93cbb86eb453386535966526}{get\+Room\+Tiles\+At}} (sf\+::\+Float\+Rect bounds)
+\item 
+bool \mbox{\hyperlink{class_room_instance_a4181b60918ea3d70e3c5ec9c0cbd0f85}{position\+Is\+Walkable}} (sf\+::\+Float\+Rect bounds)
+\item 
+bool \mbox{\hyperlink{class_room_instance_a9733d67f2187a7d51523cfd25443729f}{position\+Is\+Penetratable}} (sf\+::\+Float\+Rect bounds)
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_room_tile}{Room\+Tile}} $\ast$ $>$ $>$ \mbox{\hyperlink{class_room_instance_aab3e4b8df79e9533e8edbd8a5b33bf0b}{get\+Tiles}} () const
+\item 
+void \mbox{\hyperlink{class_room_instance_aa4e45182505503e14605310bd58c81b1}{Create\+Exit}} (\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction)
+\begin{DoxyCompactList}\small\item\em Takes down a 2-\/wide in wall (replaces walls with floortiles) to be able to walk between two rooms. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_instance_abc3d42a5b505cc1ea175449e2bd5c302}{Connect}} (\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir, \mbox{\hyperlink{class_room_instance}{Room\+Instance}} $\ast$room)
+\begin{DoxyCompactList}\small\item\em Connects two rooms to each other. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_room_instance}{Room\+Instance}} $\ast$ \mbox{\hyperlink{class_room_instance_a26c16fde6317293f1f400440297f0460}{Get\+Room\+In\+Dir}} (\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\begin{DoxyCompactList}\small\item\em Returns the room found in the wanted direction, nullptr if it is not found. \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \mbox{\hyperlink{class_room_instance_aed72579f4a75fd47f01d65676d895f7c}{Get\+Coords}} ()
+\begin{DoxyCompactList}\small\item\em Get the coordinates of this room on the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_instance_ac1cbc196076bf9d9265cf81457094ca1}{render\+Sprite\+Background}} ()
+\begin{DoxyCompactList}\small\item\em Renders the rooms background to be a static backdrop, a very expensive operation. \end{DoxyCompactList}\item 
+sf\+::\+Vector2u \mbox{\hyperlink{class_room_instance_a9b292d28d0aaec583cdd6f841ab4c4ae}{Get\+Entrance\+In\+Direction}} (\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction)
+\item 
+virtual void \mbox{\hyperlink{class_room_instance_adb09cc1b5859ac2bf5da3a00f25ae87c}{Enter}} (\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}} player, \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction)
+\begin{DoxyCompactList}\small\item\em Function called when entering a room, needs player as parameter to perform some calculations about room difficulty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_instance_a8d8aaefe76e96a69903a80c41adfc747}{Exit}} ()
+\begin{DoxyCompactList}\small\item\em Function called when exiting a room modifies cleared\+\_\+ and visited\+\_\+ booleans. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{_monster_spawner_8hpp_afb70709ed8a2f17a51242fdcef316b0f}{Monster\+SP}} $>$ \& \mbox{\hyperlink{class_room_instance_a9b2c27ad6378b69710d0ff5a9dfcc3a4}{Get\+Monsters}} ()
+\item 
+void \mbox{\hyperlink{class_room_instance_a3e063b132b1367cfbcdbd4de7b652815}{delete\+Monster}} (\mbox{\hyperlink{_monster_spawner_8hpp_afb70709ed8a2f17a51242fdcef316b0f}{Monster\+SP}} m)
+\item 
+\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{class_room_instance_a357544af9517d978f4a1114b0787b43d}{Remove\+Random\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em Function used for Generating the dungeon map. Removes and returns a random Direction from the directions\+Left\+\_\+ vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_instance_a66882a0c73e3ef64801581a0d12725c1}{Remove\+Direction}} (\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\begin{DoxyCompactList}\small\item\em Function used for Generating the dungeon map. Removes the Direction dir from the directions\+Left\+\_\+ vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_instance_ac26587978163c0e48a65870807fef6b2}{Has\+Directions\+Left}} ()
+\begin{DoxyCompactList}\small\item\em Function used for Generating the dungeon map. Checks if this room\+Instance has any direction that does not already contain an other room\+Instance. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_instance_a27504779d11b39a6c6b1e174415cb46e}{Is\+Cleared}} ()
+\begin{DoxyCompactList}\small\item\em Function the check if the room\+Instance is cleared of Monsters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_instance_a7b8401a29ecd7b0bc7579dd3adbb12f8}{Is\+Visisted}} ()
+\item 
+bool \mbox{\hyperlink{class_room_instance_aee3ac343dd6faa6b6e6d436feaed425b}{monster\+Cleared}} ()
+\item 
+void \mbox{\hyperlink{class_room_instance_ad66835b89f11773d3bbd8815cae224f9}{Add\+Potion}} (\mbox{\hyperlink{class_potion}{Potion}} $\ast$potion)
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_potion}{Potion}} $\ast$ $>$ \& \mbox{\hyperlink{class_room_instance_a597ce5ea47ae4f944d220e6af0a07a9e}{Get\+Potions}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_room_instance_ab75ed11371c444727eaca04afd6a01e5}{set\+Tiles}} ()
+\begin{DoxyCompactList}\small\item\em Helper, Sets all the roomtiles of the roominstance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2u \mbox{\hyperlink{class_room_instance_a87799e96640fc7da124aa15bffb60b85}{room\+Size\+\_\+}}
+\item 
+sf\+::\+Vector2i \mbox{\hyperlink{class_room_instance_ab5a52cf25e73a6703a0e8c0bb13efbf5}{coords\+\_\+}}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_room_tile}{Room\+Tile}} $\ast$ $>$ $>$ \mbox{\hyperlink{class_room_instance_add806c0423d10b54467cc3e325c5e8f5}{tile\+Vector\+\_\+}}
+\item 
+sf\+::\+Render\+Texture \mbox{\hyperlink{class_room_instance_aa8d5dce5fd639e41418ec9ef6e366de2}{room\+Texture}}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{class_room_instance_aa15b6acb1eb63e8de65109c719920382}{room\+Background}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{_monster_spawner_8hpp_afb70709ed8a2f17a51242fdcef316b0f}{Monster\+SP}} $>$ \mbox{\hyperlink{class_room_instance_aa196d25b07e726f058b648671b3dbd48}{monsters\+\_\+}}
+\item 
+\mbox{\hyperlink{class_monster_spawner}{Monster\+Spawner}} $\ast$ \mbox{\hyperlink{class_room_instance_a037a6eb6b87af0009e3013bbfd3f86ba}{spawner\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_potion}{Potion}} $\ast$ $>$ \mbox{\hyperlink{class_room_instance_a260f20c6cdfb9231dc4ef7840a32023e}{potions\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_room_instance_af67ad40e957a8982b0e89f8352ffbe9e}{cleared\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_room_instance_a263387869e98e70522cbcc090db69172}{visited\+\_\+}}
+\item 
+vector$<$ \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} $>$ \mbox{\hyperlink{class_room_instance_aaffd08664585da19c373481f8df168e6}{directions\+Left\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a room of a dungeon, usually includes a monsterspawner. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_room_instance_a4d85f9cd2da480025c2c1a036f6e9b5a}\label{class_room_instance_a4d85f9cd2da480025c2c1a036f6e9b5a}} 
+\index{RoomInstance@{RoomInstance}!RoomInstance@{RoomInstance}}
+\index{RoomInstance@{RoomInstance}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{RoomInstance()}{RoomInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Room\+Instance\+::\+Room\+Instance (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2u}]{window\+\_\+size,  }\item[{sf\+::\+Vector2i}]{coords }\end{DoxyParamCaption})}
+
+
+
+Construct a new Room Instance object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+\_\+size} & TO BE CHANGED takes the windowsize to create a correctly sized room \\
+\hline
+{\em coords} & the map coordinate of the room, follows the cartesian coordinate system \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_room_instance_a80ab69702c56d513bf82bf891242e54b}\label{class_room_instance_a80ab69702c56d513bf82bf891242e54b}} 
+\index{RoomInstance@{RoomInstance}!RoomInstance@{RoomInstance}}
+\index{RoomInstance@{RoomInstance}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{RoomInstance()}{RoomInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Room\+Instance\+::\+Room\+Instance (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2u}]{window\+\_\+size,  }\item[{sf\+::\+Vector2i}]{coords,  }\item[{\mbox{\hyperlink{class_monster_spawner}{Monster\+Spawner}} $\ast$}]{spawner }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_instance_aebd06b402545a1e655f17328e0fd4ad6}\label{class_room_instance_aebd06b402545a1e655f17328e0fd4ad6}} 
+\index{RoomInstance@{RoomInstance}!RoomInstance@{RoomInstance}}
+\index{RoomInstance@{RoomInstance}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{RoomInstance()}{RoomInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Room\+Instance\+::\+Room\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_room_instance_a27fa2efc948f49ee5bb60b893bae4fe7}\label{class_room_instance_a27fa2efc948f49ee5bb60b893bae4fe7}} 
+\index{RoomInstance@{RoomInstance}!````~RoomInstance@{$\sim$RoomInstance}}
+\index{````~RoomInstance@{$\sim$RoomInstance}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{$\sim$RoomInstance()}{~RoomInstance()}}
+{\footnotesize\ttfamily Room\+Instance\+::$\sim$\+Room\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_room_instance_ad66835b89f11773d3bbd8815cae224f9}\label{class_room_instance_ad66835b89f11773d3bbd8815cae224f9}} 
+\index{RoomInstance@{RoomInstance}!AddPotion@{AddPotion}}
+\index{AddPotion@{AddPotion}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{AddPotion()}{AddPotion()}}
+{\footnotesize\ttfamily void Room\+Instance\+::\+Add\+Potion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_potion}{Potion}} $\ast$}]{potion }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_instance_abc3d42a5b505cc1ea175449e2bd5c302}\label{class_room_instance_abc3d42a5b505cc1ea175449e2bd5c302}} 
+\index{RoomInstance@{RoomInstance}!Connect@{Connect}}
+\index{Connect@{Connect}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily void Room\+Instance\+::\+Connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir,  }\item[{\mbox{\hyperlink{class_room_instance}{Room\+Instance}} $\ast$}]{room }\end{DoxyParamCaption})}
+
+
+
+Connects two rooms to each other. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Direction where the new room resides \\
+\hline
+{\em room} & The new room \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Also adds the rooms as a connection on the argument room\textquotesingle{}s side 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_room_instance_aa4e45182505503e14605310bd58c81b1}\label{class_room_instance_aa4e45182505503e14605310bd58c81b1}} 
+\index{RoomInstance@{RoomInstance}!CreateExit@{CreateExit}}
+\index{CreateExit@{CreateExit}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{CreateExit()}{CreateExit()}}
+{\footnotesize\ttfamily void Room\+Instance\+::\+Create\+Exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Takes down a 2-\/wide in wall (replaces walls with floortiles) to be able to walk between two rooms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction of the exit \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_room_instance_a3e063b132b1367cfbcdbd4de7b652815}\label{class_room_instance_a3e063b132b1367cfbcdbd4de7b652815}} 
+\index{RoomInstance@{RoomInstance}!deleteMonster@{deleteMonster}}
+\index{deleteMonster@{deleteMonster}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{deleteMonster()}{deleteMonster()}}
+{\footnotesize\ttfamily void Room\+Instance\+::delete\+Monster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_monster_spawner_8hpp_afb70709ed8a2f17a51242fdcef316b0f}{Monster\+SP}}}]{m }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_instance_adb09cc1b5859ac2bf5da3a00f25ae87c}\label{class_room_instance_adb09cc1b5859ac2bf5da3a00f25ae87c}} 
+\index{RoomInstance@{RoomInstance}!Enter@{Enter}}
+\index{Enter@{Enter}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{Enter()}{Enter()}}
+{\footnotesize\ttfamily void Room\+Instance\+::\+Enter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}}}]{player,  }\item[{\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Function called when entering a room, needs player as parameter to perform some calculations about room difficulty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \\
+\hline
+{\em direction} & the direction we enter from \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_boss_room_af75386659098248854bbe50abc2969e7}{Boss\+Room}}.
+
+\mbox{\Hypertarget{class_room_instance_a8d8aaefe76e96a69903a80c41adfc747}\label{class_room_instance_a8d8aaefe76e96a69903a80c41adfc747}} 
+\index{RoomInstance@{RoomInstance}!Exit@{Exit}}
+\index{Exit@{Exit}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{Exit()}{Exit()}}
+{\footnotesize\ttfamily void Room\+Instance\+::\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function called when exiting a room modifies cleared\+\_\+ and visited\+\_\+ booleans. 
+
+\mbox{\Hypertarget{class_room_instance_aed72579f4a75fd47f01d65676d895f7c}\label{class_room_instance_aed72579f4a75fd47f01d65676d895f7c}} 
+\index{RoomInstance@{RoomInstance}!GetCoords@{GetCoords}}
+\index{GetCoords@{GetCoords}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{GetCoords()}{GetCoords()}}
+{\footnotesize\ttfamily sf\+::\+Vector2i Room\+Instance\+::\+Get\+Coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the coordinates of this room on the map. 
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Vector2i 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_room_instance_a9b292d28d0aaec583cdd6f841ab4c4ae}\label{class_room_instance_a9b292d28d0aaec583cdd6f841ab4c4ae}} 
+\index{RoomInstance@{RoomInstance}!GetEntranceInDirection@{GetEntranceInDirection}}
+\index{GetEntranceInDirection@{GetEntranceInDirection}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{GetEntranceInDirection()}{GetEntranceInDirection()}}
+{\footnotesize\ttfamily sf\+::\+Vector2u Room\+Instance\+::\+Get\+Entrance\+In\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_instance_a9b2c27ad6378b69710d0ff5a9dfcc3a4}\label{class_room_instance_a9b2c27ad6378b69710d0ff5a9dfcc3a4}} 
+\index{RoomInstance@{RoomInstance}!GetMonsters@{GetMonsters}}
+\index{GetMonsters@{GetMonsters}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{GetMonsters()}{GetMonsters()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{_monster_spawner_8hpp_afb70709ed8a2f17a51242fdcef316b0f}{Monster\+SP}} $>$ \& Room\+Instance\+::\+Get\+Monsters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_instance_a597ce5ea47ae4f944d220e6af0a07a9e}\label{class_room_instance_a597ce5ea47ae4f944d220e6af0a07a9e}} 
+\index{RoomInstance@{RoomInstance}!GetPotions@{GetPotions}}
+\index{GetPotions@{GetPotions}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{GetPotions()}{GetPotions()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_potion}{Potion}} $\ast$ $>$ \& Room\+Instance\+::\+Get\+Potions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_instance_a26c16fde6317293f1f400440297f0460}\label{class_room_instance_a26c16fde6317293f1f400440297f0460}} 
+\index{RoomInstance@{RoomInstance}!GetRoomInDir@{GetRoomInDir}}
+\index{GetRoomInDir@{GetRoomInDir}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{GetRoomInDir()}{GetRoomInDir()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_instance}{Room\+Instance}} $\ast$ Room\+Instance\+::\+Get\+Room\+In\+Dir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir }\end{DoxyParamCaption})}
+
+
+
+Returns the room found in the wanted direction, nullptr if it is not found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & The direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Room\+Instance$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_room_instance_aaac705fa93cbb86eb453386535966526}\label{class_room_instance_aaac705fa93cbb86eb453386535966526}} 
+\index{RoomInstance@{RoomInstance}!getRoomTilesAt@{getRoomTilesAt}}
+\index{getRoomTilesAt@{getRoomTilesAt}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{getRoomTilesAt()}{getRoomTilesAt()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_room_tile}{Room\+Tile}} $\ast$ $>$ Room\+Instance\+::get\+Room\+Tiles\+At (\begin{DoxyParamCaption}\item[{sf\+::\+Float\+Rect}]{bounds }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_instance_aab3e4b8df79e9533e8edbd8a5b33bf0b}\label{class_room_instance_aab3e4b8df79e9533e8edbd8a5b33bf0b}} 
+\index{RoomInstance@{RoomInstance}!getTiles@{getTiles}}
+\index{getTiles@{getTiles}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{getTiles()}{getTiles()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_room_tile}{Room\+Tile}} $\ast$ $>$ $>$ Room\+Instance\+::get\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_instance_ac26587978163c0e48a65870807fef6b2}\label{class_room_instance_ac26587978163c0e48a65870807fef6b2}} 
+\index{RoomInstance@{RoomInstance}!HasDirectionsLeft@{HasDirectionsLeft}}
+\index{HasDirectionsLeft@{HasDirectionsLeft}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{HasDirectionsLeft()}{HasDirectionsLeft()}}
+{\footnotesize\ttfamily bool Room\+Instance\+::\+Has\+Directions\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function used for Generating the dungeon map. Checks if this room\+Instance has any direction that does not already contain an other room\+Instance. 
+
+\begin{DoxyReturn}{Returns}
+true Meaning that this room\+Instance can be used to generate a new room\+Instance 
+
+false Meaning that this room\+Instance cannot be used to generate a new room\+Instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_room_instance_a27504779d11b39a6c6b1e174415cb46e}\label{class_room_instance_a27504779d11b39a6c6b1e174415cb46e}} 
+\index{RoomInstance@{RoomInstance}!IsCleared@{IsCleared}}
+\index{IsCleared@{IsCleared}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{IsCleared()}{IsCleared()}}
+{\footnotesize\ttfamily bool Room\+Instance\+::\+Is\+Cleared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function the check if the room\+Instance is cleared of Monsters. 
+
+\begin{DoxyReturn}{Returns}
+true Meaning that this room\+Instance is cleared of Monsters 
+
+false Meaning that this room\+Instance is not cleared of Monsters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_room_instance_a7b8401a29ecd7b0bc7579dd3adbb12f8}\label{class_room_instance_a7b8401a29ecd7b0bc7579dd3adbb12f8}} 
+\index{RoomInstance@{RoomInstance}!IsVisisted@{IsVisisted}}
+\index{IsVisisted@{IsVisisted}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{IsVisisted()}{IsVisisted()}}
+{\footnotesize\ttfamily bool Room\+Instance\+::\+Is\+Visisted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_room_instance_aee3ac343dd6faa6b6e6d436feaed425b}\label{class_room_instance_aee3ac343dd6faa6b6e6d436feaed425b}} 
+\index{RoomInstance@{RoomInstance}!monsterCleared@{monsterCleared}}
+\index{monsterCleared@{monsterCleared}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{monsterCleared()}{monsterCleared()}}
+{\footnotesize\ttfamily bool Room\+Instance\+::monster\+Cleared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_instance_a9733d67f2187a7d51523cfd25443729f}\label{class_room_instance_a9733d67f2187a7d51523cfd25443729f}} 
+\index{RoomInstance@{RoomInstance}!positionIsPenetratable@{positionIsPenetratable}}
+\index{positionIsPenetratable@{positionIsPenetratable}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{positionIsPenetratable()}{positionIsPenetratable()}}
+{\footnotesize\ttfamily bool Room\+Instance\+::position\+Is\+Penetratable (\begin{DoxyParamCaption}\item[{sf\+::\+Float\+Rect}]{bounds }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_instance_a4181b60918ea3d70e3c5ec9c0cbd0f85}\label{class_room_instance_a4181b60918ea3d70e3c5ec9c0cbd0f85}} 
+\index{RoomInstance@{RoomInstance}!positionIsWalkable@{positionIsWalkable}}
+\index{positionIsWalkable@{positionIsWalkable}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{positionIsWalkable()}{positionIsWalkable()}}
+{\footnotesize\ttfamily bool Room\+Instance\+::position\+Is\+Walkable (\begin{DoxyParamCaption}\item[{sf\+::\+Float\+Rect}]{bounds }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_instance_a66882a0c73e3ef64801581a0d12725c1}\label{class_room_instance_a66882a0c73e3ef64801581a0d12725c1}} 
+\index{RoomInstance@{RoomInstance}!RemoveDirection@{RemoveDirection}}
+\index{RemoveDirection@{RemoveDirection}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{RemoveDirection()}{RemoveDirection()}}
+{\footnotesize\ttfamily void Room\+Instance\+::\+Remove\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir }\end{DoxyParamCaption})}
+
+
+
+Function used for Generating the dungeon map. Removes the Direction dir from the directions\+Left\+\_\+ vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & The Direction to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_room_instance_a357544af9517d978f4a1114b0787b43d}\label{class_room_instance_a357544af9517d978f4a1114b0787b43d}} 
+\index{RoomInstance@{RoomInstance}!RemoveRandomDirection@{RemoveRandomDirection}}
+\index{RemoveRandomDirection@{RemoveRandomDirection}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{RemoveRandomDirection()}{RemoveRandomDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} Room\+Instance\+::\+Remove\+Random\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function used for Generating the dungeon map. Removes and returns a random Direction from the directions\+Left\+\_\+ vector. 
+
+\begin{DoxyReturn}{Returns}
+Direction The Direction that was randomly chosen. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_room_instance_a772e1aa461c0116a3c38562934ff83c7}\label{class_room_instance_a772e1aa461c0116a3c38562934ff83c7}} 
+\index{RoomInstance@{RoomInstance}!Render@{Render}}
+\index{Render@{Render}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Room\+Instance\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Renders the room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Where to render the room. About always game window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_room_instance_ac1cbc196076bf9d9265cf81457094ca1}\label{class_room_instance_ac1cbc196076bf9d9265cf81457094ca1}} 
+\index{RoomInstance@{RoomInstance}!renderSpriteBackground@{renderSpriteBackground}}
+\index{renderSpriteBackground@{renderSpriteBackground}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{renderSpriteBackground()}{renderSpriteBackground()}}
+{\footnotesize\ttfamily void Room\+Instance\+::render\+Sprite\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renders the rooms background to be a static backdrop, a very expensive operation. 
+
+\mbox{\Hypertarget{class_room_instance_ab75ed11371c444727eaca04afd6a01e5}\label{class_room_instance_ab75ed11371c444727eaca04afd6a01e5}} 
+\index{RoomInstance@{RoomInstance}!setTiles@{setTiles}}
+\index{setTiles@{setTiles}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{setTiles()}{setTiles()}}
+{\footnotesize\ttfamily void Room\+Instance\+::set\+Tiles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Helper, Sets all the roomtiles of the roominstance. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_room_instance_af67ad40e957a8982b0e89f8352ffbe9e}\label{class_room_instance_af67ad40e957a8982b0e89f8352ffbe9e}} 
+\index{RoomInstance@{RoomInstance}!cleared\_@{cleared\_}}
+\index{cleared\_@{cleared\_}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{cleared\_}{cleared\_}}
+{\footnotesize\ttfamily bool Room\+Instance\+::cleared\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_room_instance_ab5a52cf25e73a6703a0e8c0bb13efbf5}\label{class_room_instance_ab5a52cf25e73a6703a0e8c0bb13efbf5}} 
+\index{RoomInstance@{RoomInstance}!coords\_@{coords\_}}
+\index{coords\_@{coords\_}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{coords\_}{coords\_}}
+{\footnotesize\ttfamily sf\+::\+Vector2i Room\+Instance\+::coords\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_room_instance_aaffd08664585da19c373481f8df168e6}\label{class_room_instance_aaffd08664585da19c373481f8df168e6}} 
+\index{RoomInstance@{RoomInstance}!directionsLeft\_@{directionsLeft\_}}
+\index{directionsLeft\_@{directionsLeft\_}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{directionsLeft\_}{directionsLeft\_}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}$>$ Room\+Instance\+::directions\+Left\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_room_instance_aa196d25b07e726f058b648671b3dbd48}\label{class_room_instance_aa196d25b07e726f058b648671b3dbd48}} 
+\index{RoomInstance@{RoomInstance}!monsters\_@{monsters\_}}
+\index{monsters\_@{monsters\_}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{monsters\_}{monsters\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{_monster_spawner_8hpp_afb70709ed8a2f17a51242fdcef316b0f}{Monster\+SP}}$>$ Room\+Instance\+::monsters\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_room_instance_a260f20c6cdfb9231dc4ef7840a32023e}\label{class_room_instance_a260f20c6cdfb9231dc4ef7840a32023e}} 
+\index{RoomInstance@{RoomInstance}!potions\_@{potions\_}}
+\index{potions\_@{potions\_}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{potions\_}{potions\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_potion}{Potion}}$\ast$$>$ Room\+Instance\+::potions\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_room_instance_aa15b6acb1eb63e8de65109c719920382}\label{class_room_instance_aa15b6acb1eb63e8de65109c719920382}} 
+\index{RoomInstance@{RoomInstance}!roomBackground@{roomBackground}}
+\index{roomBackground@{roomBackground}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{roomBackground}{roomBackground}}
+{\footnotesize\ttfamily sf\+::\+Sprite Room\+Instance\+::room\+Background\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_room_instance_a87799e96640fc7da124aa15bffb60b85}\label{class_room_instance_a87799e96640fc7da124aa15bffb60b85}} 
+\index{RoomInstance@{RoomInstance}!roomSize\_@{roomSize\_}}
+\index{roomSize\_@{roomSize\_}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{roomSize\_}{roomSize\_}}
+{\footnotesize\ttfamily sf\+::\+Vector2u Room\+Instance\+::room\+Size\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_room_instance_aa8d5dce5fd639e41418ec9ef6e366de2}\label{class_room_instance_aa8d5dce5fd639e41418ec9ef6e366de2}} 
+\index{RoomInstance@{RoomInstance}!roomTexture@{roomTexture}}
+\index{roomTexture@{roomTexture}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{roomTexture}{roomTexture}}
+{\footnotesize\ttfamily sf\+::\+Render\+Texture Room\+Instance\+::room\+Texture\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_room_instance_a037a6eb6b87af0009e3013bbfd3f86ba}\label{class_room_instance_a037a6eb6b87af0009e3013bbfd3f86ba}} 
+\index{RoomInstance@{RoomInstance}!spawner\_@{spawner\_}}
+\index{spawner\_@{spawner\_}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{spawner\_}{spawner\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_monster_spawner}{Monster\+Spawner}}$\ast$ Room\+Instance\+::spawner\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_room_instance_add806c0423d10b54467cc3e325c5e8f5}\label{class_room_instance_add806c0423d10b54467cc3e325c5e8f5}} 
+\index{RoomInstance@{RoomInstance}!tileVector\_@{tileVector\_}}
+\index{tileVector\_@{tileVector\_}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{tileVector\_}{tileVector\_}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{class_room_tile}{Room\+Tile}}$\ast$$>$ $>$ Room\+Instance\+::tile\+Vector\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_room_instance_a263387869e98e70522cbcc090db69172}\label{class_room_instance_a263387869e98e70522cbcc090db69172}} 
+\index{RoomInstance@{RoomInstance}!visited\_@{visited\_}}
+\index{visited\_@{visited\_}!RoomInstance@{RoomInstance}}
+\doxysubsubsection{\texorpdfstring{visited\_}{visited\_}}
+{\footnotesize\ttfamily bool Room\+Instance\+::visited\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dungeon/\mbox{\hyperlink{room_instance_8hpp}{room\+Instance.\+hpp}}\item 
+src/\+Dungeon/\mbox{\hyperlink{room_instance_8cpp}{room\+Instance.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,82 @@
+\hypertarget{structutil_1_1_i_platform}{}\doxysection{util\+::IPlatform Struct Reference}
+\label{structutil_1_1_i_platform}\index{util::IPlatform@{util::IPlatform}}
+
+
+{\ttfamily \#include $<$IPlatform.\+hpp$>$}
+
+Inheritance diagram for util\+::IPlatform\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structutil_1_1_i_platform}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structutil_1_1_i_platform_a0871cdb2e3ba111b58d910af8d78f740}{$\sim$\+IPlatform}} ()=default
+\item 
+virtual void \mbox{\hyperlink{structutil_1_1_i_platform_aabac4c4af05614dee6065f226519bd94}{set\+Icon}} (const sf\+::\+Window\+Handle \&in\+Handle)=0
+\item 
+virtual void \mbox{\hyperlink{structutil_1_1_i_platform_abc6f5e66cfbadd1b3111cde2c728d16c}{toggle\+Fullscreen}} (const sf\+::\+Window\+Handle \&in\+Handle, const sf\+::\+Uint32 in\+Style, const bool in\+Windowed, const sf\+::\+Vector2u \&in\+Resolution)=0
+\item 
+virtual int \mbox{\hyperlink{structutil_1_1_i_platform_aaca0f786f9a1aad4cd016dd98fcd85b7}{get\+Refresh\+Rate}} (const sf\+::\+Window\+Handle \&in\+Handle)=0
+\item 
+virtual float \mbox{\hyperlink{structutil_1_1_i_platform_aff4e642e55143a4d7925411ff56970ab}{get\+Screen\+Scaling\+Factor}} (const sf\+::\+Window\+Handle \&in\+Handle)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structutil_1_1_i_platform_a0871cdb2e3ba111b58d910af8d78f740}\label{structutil_1_1_i_platform_a0871cdb2e3ba111b58d910af8d78f740}} 
+\index{util::IPlatform@{util::IPlatform}!````~IPlatform@{$\sim$IPlatform}}
+\index{````~IPlatform@{$\sim$IPlatform}!util::IPlatform@{util::IPlatform}}
+\doxysubsubsection{\texorpdfstring{$\sim$IPlatform()}{~IPlatform()}}
+{\footnotesize\ttfamily virtual util\+::\+IPlatform\+::$\sim$\+IPlatform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structutil_1_1_i_platform_aaca0f786f9a1aad4cd016dd98fcd85b7}\label{structutil_1_1_i_platform_aaca0f786f9a1aad4cd016dd98fcd85b7}} 
+\index{util::IPlatform@{util::IPlatform}!getRefreshRate@{getRefreshRate}}
+\index{getRefreshRate@{getRefreshRate}!util::IPlatform@{util::IPlatform}}
+\doxysubsubsection{\texorpdfstring{getRefreshRate()}{getRefreshRate()}}
+{\footnotesize\ttfamily virtual int util\+::\+IPlatform\+::get\+Refresh\+Rate (\begin{DoxyParamCaption}\item[{const sf\+::\+Window\+Handle \&}]{in\+Handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structutil_1_1_linux_platform_a273f32b02d9158ffd57fa291ab7e2614}{util\+::\+Linux\+Platform}}, and \mbox{\hyperlink{structutil_1_1_windows_platform_a4b3656c1ca3cf7eab52bd8205729c5f4}{util\+::\+Windows\+Platform}}.
+
+\mbox{\Hypertarget{structutil_1_1_i_platform_aff4e642e55143a4d7925411ff56970ab}\label{structutil_1_1_i_platform_aff4e642e55143a4d7925411ff56970ab}} 
+\index{util::IPlatform@{util::IPlatform}!getScreenScalingFactor@{getScreenScalingFactor}}
+\index{getScreenScalingFactor@{getScreenScalingFactor}!util::IPlatform@{util::IPlatform}}
+\doxysubsubsection{\texorpdfstring{getScreenScalingFactor()}{getScreenScalingFactor()}}
+{\footnotesize\ttfamily virtual float util\+::\+IPlatform\+::get\+Screen\+Scaling\+Factor (\begin{DoxyParamCaption}\item[{const sf\+::\+Window\+Handle \&}]{in\+Handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structutil_1_1_linux_platform_a6d74b5883c30117619b5cdc5589297d6}{util\+::\+Linux\+Platform}}, and \mbox{\hyperlink{structutil_1_1_windows_platform_a9cdc52b10354c5f3949aa08fb9c1eea6}{util\+::\+Windows\+Platform}}.
+
+\mbox{\Hypertarget{structutil_1_1_i_platform_aabac4c4af05614dee6065f226519bd94}\label{structutil_1_1_i_platform_aabac4c4af05614dee6065f226519bd94}} 
+\index{util::IPlatform@{util::IPlatform}!setIcon@{setIcon}}
+\index{setIcon@{setIcon}!util::IPlatform@{util::IPlatform}}
+\doxysubsubsection{\texorpdfstring{setIcon()}{setIcon()}}
+{\footnotesize\ttfamily virtual void util\+::\+IPlatform\+::set\+Icon (\begin{DoxyParamCaption}\item[{const sf\+::\+Window\+Handle \&}]{in\+Handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structutil_1_1_linux_platform_a5f091a688ddeefd2849104d04ae15f19}{util\+::\+Linux\+Platform}}, and \mbox{\hyperlink{structutil_1_1_windows_platform_a04ac02ad7151860559fb480e6190f895}{util\+::\+Windows\+Platform}}.
+
+\mbox{\Hypertarget{structutil_1_1_i_platform_abc6f5e66cfbadd1b3111cde2c728d16c}\label{structutil_1_1_i_platform_abc6f5e66cfbadd1b3111cde2c728d16c}} 
+\index{util::IPlatform@{util::IPlatform}!toggleFullscreen@{toggleFullscreen}}
+\index{toggleFullscreen@{toggleFullscreen}!util::IPlatform@{util::IPlatform}}
+\doxysubsubsection{\texorpdfstring{toggleFullscreen()}{toggleFullscreen()}}
+{\footnotesize\ttfamily virtual void util\+::\+IPlatform\+::toggle\+Fullscreen (\begin{DoxyParamCaption}\item[{const sf\+::\+Window\+Handle \&}]{in\+Handle,  }\item[{const sf\+::\+Uint32}]{in\+Style,  }\item[{const bool}]{in\+Windowed,  }\item[{const sf\+::\+Vector2u \&}]{in\+Resolution }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{structutil_1_1_linux_platform_a5a546e4eb9f29381b1fb431fbacf8706}{util\+::\+Linux\+Platform}}, and \mbox{\hyperlink{structutil_1_1_windows_platform_a12d82194c51ac484ac01f3cc6f3652fc}{util\+::\+Windows\+Platform}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Platform/\mbox{\hyperlink{_i_platform_8hpp}{IPlatform.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,79 @@
+\hypertarget{game_8hpp_source}{}\doxysection{game.\+hpp}
+\label{game_8hpp_source}\index{src/game.hpp@{src/game.hpp}}
+\mbox{\hyperlink{game_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef \_GAME\_CLASS\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define \_GAME\_CLASS\_}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_boss_monster_8hpp}{Actors/Monsters/BossMonster.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{player_8hpp}{Actors/player.hpp}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_potion_8hpp}{Combat/Health/Potion.hpp}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_projectile_8hpp}{Combat/Projectile.hpp}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_bow_weapon_8hpp}{Combat/Weapons/BowWeapon.hpp}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_sword_weapon_8hpp}{Combat/Weapons/SwordWeapon.hpp}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{map_8hpp}{Dungeon/map.hpp}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_level_up_system_8hpp}{Utility/LevelUpSystem.hpp}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_screen_text_8hpp}{Utility/ScreenText.hpp}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_sound_effects_8hpp}{Utility/Sounds/SoundEffects.hpp}}"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{gamebar_8hpp}{gamebar.hpp}}"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_game}{Game}} \{}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}();}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_game_ae3d112ca6e0e55150d2fdbc704474530}{\string~Game}}();}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_af7c8b9e9b190f9fa165fe13a9b07131c}{UpdateGame}}();}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a9b80dfa4b5f77795e3d4b6147cc5564a}{RenderGame}}();}
+\DoxyCodeLine{38     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_game_a09ca0ee5656bd3398f551f7c036d3a3e}{Running}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a08638ab30c07c595cb268de4d25659a4}{Events}}();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keyword}{private}:}
+\DoxyCodeLine{46     sf::VideoMode videomode\_;}
+\DoxyCodeLine{47     sf::RenderWindow* window\_;}
+\DoxyCodeLine{48     sf::Event event\_;}
+\DoxyCodeLine{49     sf::Clock dtClock\_;}
+\DoxyCodeLine{50     \mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} player\_;}
+\DoxyCodeLine{51     \mbox{\hyperlink{class_map}{Map}} dungeonMap\_;}
+\DoxyCodeLine{52     \mbox{\hyperlink{class_gamebar}{Gamebar}} gamebar\_;}
+\DoxyCodeLine{53     \mbox{\hyperlink{class_screen_text}{ScreenText}} deathtext\_;}
+\DoxyCodeLine{54     \mbox{\hyperlink{class_screen_text}{ScreenText}} victoryScreen\_;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \mbox{\hyperlink{class_sound_effect}{SoundEffect}}* playerHitSound = \textcolor{keyword}{new} \mbox{\hyperlink{class_sound_effect}{SoundEffect}}(\textcolor{stringliteral}{"{}content/sounds/playerHit.wav"{}});}
+\DoxyCodeLine{57     \mbox{\hyperlink{class_sound_effect}{SoundEffect}}* monsterHitSound = \textcolor{keyword}{new} \mbox{\hyperlink{class_sound_effect}{SoundEffect}}(\textcolor{stringliteral}{"{}content/sounds/monsterHit.wav"{}});}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{float} dt\_;}
+\DoxyCodeLine{60     \textcolor{keywordtype}{bool} paused = \textcolor{keyword}{false};}
+\DoxyCodeLine{61     \textcolor{keywordtype}{bool} escapePressedLastTick = paused;}
+\DoxyCodeLine{62     \textcolor{keywordtype}{bool} gameEnder\_;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     std::list<ProjectileUP> projectiles\_;}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} initWindow();}
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} updateDt();}
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} manageInput();}
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} managePauseInput();}
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} checkCollisions(\mbox{\hyperlink{class_character}{Character}}* character, \mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Projectile::Type}} projectileType);}
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} checkMonsterCollisions();}
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} checkPlayerCollisions();}
+\DoxyCodeLine{107     \textcolor{keywordtype}{void} checkAndHandleProjectileWallCollisions();}
+\DoxyCodeLine{113     \textcolor{keywordtype}{void} deleteProjectile(\mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{ProjectileUP}} p);}
+\DoxyCodeLine{119     \textcolor{keywordtype}{void} addProjectiles(std::list<ProjectileUP> listToAdd);}
+\DoxyCodeLine{125     \textcolor{keywordtype}{void} deleteMonster(\mbox{\hyperlink{class_character}{Character}}* m);}
+\DoxyCodeLine{126     \textcolor{keywordtype}{void} deletePotion(\mbox{\hyperlink{class_potion}{Potion}}* p);}
+\DoxyCodeLine{131     \textcolor{keywordtype}{void} updateProjectiles();}
+\DoxyCodeLine{136     \textcolor{keywordtype}{void} updateMonsters();}
+\DoxyCodeLine{144     \textcolor{keywordtype}{void} updatePotions();}
+\DoxyCodeLine{145     \textcolor{keywordtype}{bool} collidesWithWall(\mbox{\hyperlink{class_character}{Character}}* character);}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{154     \textcolor{keywordtype}{bool} collidesWithWall(\mbox{\hyperlink{class_projectile}{Projectile}}* \textcolor{keywordtype}{object});}
+\DoxyCodeLine{161     \textcolor{keywordtype}{bool} ShouldChangeRoom();}
+\DoxyCodeLine{168     \textcolor{keywordtype}{bool} gameLost();}
+\DoxyCodeLine{173     \textcolor{keywordtype}{void} restartGame();}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{181     \textcolor{keywordtype}{bool} gameWon();}
+\DoxyCodeLine{182 \};}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

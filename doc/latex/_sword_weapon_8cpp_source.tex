@@ -1,0 +1,28 @@
+\doxysection{Sword\+Weapon.\+cpp}
+\label{_sword_weapon_8cpp_source}\index{src/Combat/Weapons/SwordWeapon.cpp@{src/Combat/Weapons/SwordWeapon.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}Combat/Weapons/SwordWeapon.hpp"{}}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 SwordWeapon::SwordWeapon(\textcolor{keywordtype}{int} damage, \textcolor{keywordtype}{int} range, \textcolor{keywordtype}{int} rateOfFire, \textcolor{keywordtype}{float} projectileSpeed, Vector2f projectileSize, \textcolor{keyword}{const} std::string\& spriteLocation)}
+\DoxyCodeLine{00005     : Weapon(damage, range, rateOfFire, projectileSpeed, projectileSize, spriteLocation)}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007     penetrates\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{00008     spritehelper::SetScale(projectileSize, sprite\_);}
+\DoxyCodeLine{00009 \}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 ProjectileUP SwordWeapon::Use(Vector2f dir, Vector2f origin)}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013     \textcolor{comment}{// have to rotate the projectile}}
+\DoxyCodeLine{00014     spritehelper::RotateSprite(dir, sprite\_);}
+\DoxyCodeLine{00015     spritehelper::SetOriginBottomCenter(sprite\_);}
+\DoxyCodeLine{00016     ProjectileUP p(\textcolor{keyword}{new} Projectile(sprite\_, origin, \textcolor{keyword}{true}));}
+\DoxyCodeLine{00017     p-\/>SetDirection(dir);}
+\DoxyCodeLine{00018     p-\/>SetDamage(currentDamage\_);}
+\DoxyCodeLine{00019     p-\/>SetDistanceLifeSpan(range\_);}
+\DoxyCodeLine{00020     p-\/>SetProjectileSpeed(projectileSpeed\_);}
+\DoxyCodeLine{00021     \textcolor{keywordflow}{return} p;}
+\DoxyCodeLine{00022 \}}
+
+\end{DoxyCode}

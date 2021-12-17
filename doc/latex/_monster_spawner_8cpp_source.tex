@@ -1,0 +1,55 @@
+\doxysection{Monster\+Spawner.\+cpp}
+\label{_monster_spawner_8cpp_source}\index{src/Actors/Monsters/MonsterSpawner/MonsterSpawner.cpp@{src/Actors/Monsters/MonsterSpawner/MonsterSpawner.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}MonsterSpawner.hpp"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 MonsterSP MonsterSpawner::getRandomMonster(PlayerPS target)\textcolor{keyword}{ const}}
+\DoxyCodeLine{00005 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00006     \textcolor{keywordtype}{int} monsterType = randomhelper::RandomIntBetween(0, monsterTypeCount\_ -\/ 1);}
+\DoxyCodeLine{00007     \textcolor{keywordflow}{switch} (monsterType) \{}
+\DoxyCodeLine{00008     \textcolor{keywordflow}{case} 0: \{ \textcolor{comment}{// RandomMonster}}
+\DoxyCodeLine{00009         \textcolor{keywordflow}{return} MonsterSP(\textcolor{keyword}{new} RandomMonster(target, 0, 0));}
+\DoxyCodeLine{00010     \}}
+\DoxyCodeLine{00011     \textcolor{keywordflow}{case} 1: \{ \textcolor{comment}{// SlowMonster}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013         \textcolor{keywordflow}{return} MonsterSP(\textcolor{keyword}{new} SlowMonster(target, 1000, 700));}
+\DoxyCodeLine{00014     \}}
+\DoxyCodeLine{00015     \textcolor{keywordflow}{case} 2: \{ \textcolor{comment}{// WallPatrolMonster}}
+\DoxyCodeLine{00016         \textcolor{keywordflow}{return} MonsterSP(\textcolor{keyword}{new} WallPatrolMonster(target, 1000, 700));}
+\DoxyCodeLine{00017     \}}
+\DoxyCodeLine{00018     \textcolor{keywordflow}{case} 3: \{ \textcolor{comment}{// SnipingMonster}}
+\DoxyCodeLine{00019         \textcolor{keywordflow}{return} MonsterSP(\textcolor{keyword}{new} SnipingMonster(target, 0, 0));}
+\DoxyCodeLine{00020     \}}
+\DoxyCodeLine{00021     \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{00022         \textcolor{keywordflow}{return} MonsterSP(\textcolor{keyword}{new} SearchingMonster(target, 0, 0));}
+\DoxyCodeLine{00023     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00024         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00025     \}}
+\DoxyCodeLine{00026 \}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 MonsterSP MonsterSpawner::SpawnMonster(sf::Vector2u roomSize, PlayerPS target)\textcolor{keyword}{ const}}
+\DoxyCodeLine{00029 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00030     \textcolor{keyword}{auto} m = getRandomMonster(target);}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{if} (m == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{00032         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00033     \}}
+\DoxyCodeLine{00034     \textcolor{keywordtype}{int} randomPosX, randomPosY;}
+\DoxyCodeLine{00035     randomPosX = (rand() \% (roomSize.x -\/ 200)) + 100;}
+\DoxyCodeLine{00036     randomPosY = (rand() \% (roomSize.y -\/ 200)) + 100;}
+\DoxyCodeLine{00037     m-\/>SetPosAndOldPos(sf::Vector2f(randomPosX, randomPosY));}
+\DoxyCodeLine{00038     \textcolor{keywordflow}{return} m;}
+\DoxyCodeLine{00039 \}}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041 \textcolor{keywordtype}{void} MonsterSpawner::SetMonsterAmount(uint amount)}
+\DoxyCodeLine{00042 \{}
+\DoxyCodeLine{00043     monsterCount\_ = amount;}
+\DoxyCodeLine{00044 \}}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046 uint MonsterSpawner::GetMonsterAmount()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00047 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00048     \textcolor{keywordflow}{return} monsterCount\_;}
+\DoxyCodeLine{00049 \}}
+
+\end{DoxyCode}

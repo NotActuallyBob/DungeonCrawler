@@ -1,0 +1,65 @@
+\doxysection{projectile.\+cpp}
+\label{projectile_8cpp_source}\index{src/Combat/projectile.cpp@{src/Combat/projectile.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}Combat/Projectile.hpp"{}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{namespace }\{}
+\DoxyCodeLine{00004 \textcolor{keyword}{const} std::string PROJECTILE\_SPRITE = \textcolor{stringliteral}{"{}content/sprites/projectile.png"{}};}
+\DoxyCodeLine{00005 \}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 Projectile::Projectile(sf::Sprite\& sprite, sf::Vector2f pos, \textcolor{keywordtype}{bool} penetrates)}
+\DoxyCodeLine{00008     : Entity(sprite, pos.x, pos.y)}
+\DoxyCodeLine{00009     , penetrates\_(penetrates)}
+\DoxyCodeLine{00010 \{}
+\DoxyCodeLine{00011     initVariables();}
+\DoxyCodeLine{00012 \}}
+\DoxyCodeLine{00013 \textcolor{keywordtype}{bool} Projectile::HasHit(Character* element)}
+\DoxyCodeLine{00014 \{}
+\DoxyCodeLine{00015     \textcolor{keyword}{auto} it = charactersHit\_.find(element);}
+\DoxyCodeLine{00016     \textcolor{keywordflow}{return} it != charactersHit\_.end();}
+\DoxyCodeLine{00017 \}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019 \textcolor{keywordtype}{void} Projectile::Hit(Character* c)}
+\DoxyCodeLine{00020 \{}
+\DoxyCodeLine{00021     charactersHit\_.insert(c);}
+\DoxyCodeLine{00022 \}}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024 \textcolor{keywordtype}{bool} Projectile::move(\textcolor{keywordtype}{float} dt, \textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y)}
+\DoxyCodeLine{00025 \{}
+\DoxyCodeLine{00026     \textcolor{keywordtype}{float} xMovement = (x / (std::abs(x) + std::abs(y))) * projectileSpeed\_;}
+\DoxyCodeLine{00027     \textcolor{keywordtype}{float} yMovement = (y / (std::abs(x) + std::abs(y))) * projectileSpeed\_;}
+\DoxyCodeLine{00028     xMovement *= dt;}
+\DoxyCodeLine{00029     yMovement *= dt;}
+\DoxyCodeLine{00030     pos\_.x += xMovement;}
+\DoxyCodeLine{00031     pos\_.y += yMovement;}
+\DoxyCodeLine{00032     sprite\_.setPosition(pos\_);}
+\DoxyCodeLine{00033     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00034 \}}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036 \textcolor{keywordtype}{void} Projectile::Update(\textcolor{keywordtype}{float} dt)}
+\DoxyCodeLine{00037 \{}
+\DoxyCodeLine{00038     timeExisted\_ += dt;}
+\DoxyCodeLine{00039     \textcolor{keywordtype}{float} distanceTravelledSquared = (std::abs(startPos\_.x -\/ pos\_.x) + std::abs(startPos\_.y -\/ pos\_.y));}
+\DoxyCodeLine{00040     \textcolor{keywordflow}{if} (distanceTravelledSquared > distanceLifeSpanSquared\_) \{}
+\DoxyCodeLine{00041         Kill();}
+\DoxyCodeLine{00042     \}}
+\DoxyCodeLine{00043     move(dt, direction\_.x, direction\_.y);}
+\DoxyCodeLine{00044 \}}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046 \textcolor{keywordtype}{void} Projectile::initVariables()}
+\DoxyCodeLine{00047 \{}
+\DoxyCodeLine{00048     alive\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{00049     timeExisted\_ = 0;}
+\DoxyCodeLine{00050     startPos\_ = GetPos();}
+\DoxyCodeLine{00051 \}}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053 \textcolor{comment}{// Setters}}
+\DoxyCodeLine{00054 \textcolor{keywordtype}{void} Projectile::SetDamage(\textcolor{keywordtype}{int} damage) \{ damage\_ = damage; \}}
+\DoxyCodeLine{00055 \textcolor{keywordtype}{void} Projectile::SetDirection(sf::Vector2f direction) \{ direction\_ = direction; \}}
+\DoxyCodeLine{00056 \textcolor{keywordtype}{void} Projectile::SetType(Projectile::Type type) \{ type\_ = type; \}}
+\DoxyCodeLine{00057 \textcolor{keywordtype}{void} Projectile::SetTimeLifeSpan(\textcolor{keywordtype}{float} timeLifeSpan) \{ timeLifeSpan\_ = timeLifeSpan; \}}
+\DoxyCodeLine{00058 \textcolor{keywordtype}{void} Projectile::SetDistanceLifeSpan(\textcolor{keywordtype}{float} distanceLifeSpan) \{ distanceLifeSpanSquared\_ = distanceLifeSpan; \}}
+\DoxyCodeLine{00059 \textcolor{keywordtype}{void} Projectile::SetProjectileSpeed(\textcolor{keywordtype}{float} projectileSpeed) \{ projectileSpeed\_ = projectileSpeed; \}}
+
+\end{DoxyCode}

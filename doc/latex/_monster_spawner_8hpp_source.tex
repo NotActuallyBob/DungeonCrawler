@@ -1,0 +1,44 @@
+\hypertarget{_monster_spawner_8hpp_source}{}\doxysection{Monster\+Spawner.\+hpp}
+\label{_monster_spawner_8hpp_source}\index{src/Actors/Monsters/MonsterSpawner/MonsterSpawner.hpp@{src/Actors/Monsters/MonsterSpawner/MonsterSpawner.hpp}}
+\mbox{\hyperlink{_monster_spawner_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef \_MONSTERSPAWNER\_CLASS\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define \_MONSTERSPAWNER\_CLASS\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../BossMonster.hpp"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}../RandomMonster.hpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}../SearchingMonster.hpp"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}../SlowMonster.hpp"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}../SnipingMonster.hpp"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}../WallPatrolMonster.hpp"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{typedef} std::shared\_ptr<Monster> \mbox{\hyperlink{_monster_spawner_8hpp_afb70709ed8a2f17a51242fdcef316b0f}{MonsterSP}};}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_monster_spawner}{MonsterSpawner}} \{}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_monster_spawner_a7e39ccabbdc2eb1eee616482a93a29a0}{MonsterSpawner}}(\mbox{\hyperlink{_types_8hpp_a2e1c09bb972fc5997dcc8ea0cf5fa447}{uint}} monsterAmount)}
+\DoxyCodeLine{17         : \mbox{\hyperlink{class_monster_spawner_a2150aa73d545855167c629741a942015}{monsterCount\_}}(monsterAmount)}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19     \}}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_monster_spawner_ae916240bcd697c89971f06db3a7578b3}{MonsterSpawner}}()}
+\DoxyCodeLine{21         : \mbox{\hyperlink{class_monster_spawner_a2150aa73d545855167c629741a942015}{monsterCount\_}}(0) \{\};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_monster_spawner_ad280f25efed058c84a2af3e4669bd46f}{\string~MonsterSpawner}}() \{ \}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{comment}{// std::list<Monster*> SpawnMonsters(sf::Vector2u roomSize) const;}}
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \mbox{\hyperlink{_monster_spawner_8hpp_afb70709ed8a2f17a51242fdcef316b0f}{MonsterSP}} \mbox{\hyperlink{class_monster_spawner_ab44d3a5868eeb5e46f8ed946fe9daa00}{SpawnMonster}}(sf::Vector2u roomSize, \mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} target) \textcolor{keyword}{const};}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_monster_spawner_abbf83649b9ea16880bd9f3732040e01b}{SetMonsterAmount}}(\mbox{\hyperlink{_types_8hpp_a2e1c09bb972fc5997dcc8ea0cf5fa447}{uint}} amount);}
+\DoxyCodeLine{28     \mbox{\hyperlink{_types_8hpp_a2e1c09bb972fc5997dcc8ea0cf5fa447}{uint}} \mbox{\hyperlink{class_monster_spawner_adb22273389629d66c6f0e8d777a74cc1}{GetMonsterAmount}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{31     \mbox{\hyperlink{_monster_spawner_8hpp_afb70709ed8a2f17a51242fdcef316b0f}{MonsterSP}} \mbox{\hyperlink{class_monster_spawner_a2ab53d3be7ff619d58c238b69cc44bb5}{getRandomMonster}}(\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} target) \textcolor{keyword}{const};}
+\DoxyCodeLine{32     \mbox{\hyperlink{_types_8hpp_a2e1c09bb972fc5997dcc8ea0cf5fa447}{uint}} \mbox{\hyperlink{class_monster_spawner_a2150aa73d545855167c629741a942015}{monsterCount\_}};}
+\DoxyCodeLine{33     \mbox{\hyperlink{_types_8hpp_a2e1c09bb972fc5997dcc8ea0cf5fa447}{uint}} \mbox{\hyperlink{class_monster_spawner_a8f7dfbfd74ddee3d614043015fc0159d}{monsterTypeCount\_}} = 5; \textcolor{comment}{// update this when adding monsters}}
+\DoxyCodeLine{34 \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{typedef} std::shared\_ptr<MonsterSpawner> \mbox{\hyperlink{_monster_spawner_8hpp_a1b9ca62d2cbbc10f2226a9a9a6d9a841}{MonsterSpawnerUP}};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,57 @@
+\hypertarget{player_8hpp_source}{}\doxysection{player.\+hpp}
+\label{player_8hpp_source}\index{src/Actors/player.hpp@{src/Actors/player.hpp}}
+\mbox{\hyperlink{player_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef \_PLAYER\_CLASS\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define \_PLAYER\_CLASS\_}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{character_8hpp}{Actors/character.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_potion_8hpp}{Combat/Health/Potion.hpp}}"{}}}
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_player}{Player}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_character}{Character}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}}();}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{\string~Player}}() \{\};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a2e6518b602a35ec83a71318db084e67b}{Update}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a90684e3a8d5ae38cc0579b5592e8db35}{Dash}}();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{30     std::list<ProjectileUP> \mbox{\hyperlink{class_player_a008826863f2a69464e5f51ea4504828c}{Attack}}(sf::Vector2f aimPos);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a41ed6d3482b0815b564ac401093a297a}{initVariables}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a6cc79a135f85503b04f0f872e8bae318}{ResetDashCooldown}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_player_a154c995d8a6cc846ac3ddf72e930b532}{GetDashCooldownLeft}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} dashCooldownLeft\_; \};}
+\DoxyCodeLine{37     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_player_a471b07609433018177c9e1c33cfae2fc}{GetDashCooldownLength}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} dashCooldownLength\_; \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_ae1a22d7b4a1d85295c1693ed046c86fb}{CanDash}};}
+\DoxyCodeLine{40     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_player_a8ef6848b8b83a6fcb8f92b0da2f4306d}{IsDashing}};}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_acb65287ccc0e6154e66fcdf47f11df96}{AddPotion}}(\mbox{\hyperlink{class_potion}{Potion}}* potion);}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_a34559f5f74fd83837d3feeea068100b6}{UsePotion}}(\textcolor{keyword}{const} std::string\& colour);}
+\DoxyCodeLine{58     std::vector<Potion*> \mbox{\hyperlink{class_player_a190571de6a8a1a19ec9111838d62df70}{GetInventory}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_player_af87692c2ccbda91a484d03e2ae8fe741}{ClearInventory}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{private}:}
+\DoxyCodeLine{62     \textcolor{keywordtype}{int} attacksBoosted\_;}
+\DoxyCodeLine{63     \textcolor{keywordtype}{int} dashesBoosted\_;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{float} dashSpeed\_;}
+\DoxyCodeLine{66     \textcolor{keywordtype}{float} dashLengthBoostModifier = 2.0f;}
+\DoxyCodeLine{67     \textcolor{keywordtype}{float} dashDefaultDurationLength\_;}
+\DoxyCodeLine{68     \textcolor{keywordtype}{float} dashCurrentDurationLength\_;}
+\DoxyCodeLine{69     \textcolor{keywordtype}{float} dashDurationLeft\_;}
+\DoxyCodeLine{70     \textcolor{keywordtype}{bool} deadAnimationPlayed = \textcolor{keyword}{false};}
+\DoxyCodeLine{71     \textcolor{keywordtype}{float} dt\_time = 0;}
+\DoxyCodeLine{72     \textcolor{keywordtype}{float} dashCooldownLength\_;}
+\DoxyCodeLine{73     \textcolor{keywordtype}{float} dashCooldownLeft\_;}
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} updateDashCooldown(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     std::vector<Potion*> inventory\_;}
+\DoxyCodeLine{77 \};}
+\DoxyCodeLine{78 \textcolor{keyword}{typedef} std::shared\_ptr<Player> \mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

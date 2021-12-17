@@ -5,15 +5,28 @@
 
 #include "Actors/character.hpp"
 #include "Combat/Health/Potion.hpp"
-
+/**
+ * @brief Player class, our controlled character
+ *
+ */
 class Player : public Character {
 public:
     Player();
     ~Player() {};
 
     virtual void Update(float dt);
-
+    /**
+     * @brief Handles the dashing functions
+     *
+     */
     void Dash();
+
+    /**
+     * @brief handles the attacking of player character
+     *
+     * @param    aimPos               position of where mouse is aiming
+     * @return std::list<ProjectileUP>
+     */
     std::list<ProjectileUP> Attack(sf::Vector2f aimPos);
 
     void initVariables();
@@ -25,10 +38,23 @@ public:
 
     bool CanDash;
     bool IsDashing;
-
+    /**
+     * @brief Adds a potion to be used later
+     *
+     * @param    potion               potion to be added to inventory
+     */
     void AddPotion(Potion* potion);
+    /**
+     * @brief Get the colour of the potion player is going to use and runs the funcions to use it
+     *
+     * @param    colour               colour of potion
+     */
     void UsePotion(const std::string& colour);
-
+    /**
+     * @brief gets inventory of
+     *
+     * @return std::vector<Potion*>
+     */
     std::vector<Potion*> GetInventory() const;
     void ClearInventory();
 

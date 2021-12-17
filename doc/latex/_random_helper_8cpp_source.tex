@@ -1,0 +1,22 @@
+\doxysection{Random\+Helper.\+cpp}
+\label{_random_helper_8cpp_source}\index{src/Utility/RandomHelper.cpp@{src/Utility/RandomHelper.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}Utility/RandomHelper.hpp"{}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{namespace }randomhelper \{}
+\DoxyCodeLine{00004 \textcolor{keywordtype}{float} RandomFloatBetween(\textcolor{keywordtype}{float} min, \textcolor{keywordtype}{float} max)}
+\DoxyCodeLine{00005 \{}
+\DoxyCodeLine{00006     \textcolor{keywordtype}{float} random = ((float)rand()) / (\textcolor{keywordtype}{float})RAND\_MAX;}
+\DoxyCodeLine{00007     \textcolor{keywordtype}{float} diffrence = max -\/ min;}
+\DoxyCodeLine{00008     \textcolor{keywordtype}{float} r = random * diffrence;}
+\DoxyCodeLine{00009     \textcolor{keywordflow}{return} min + r;}
+\DoxyCodeLine{00010 \}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 \textcolor{keywordtype}{int} RandomIntBetween(\textcolor{keywordtype}{int} min, \textcolor{keywordtype}{int} max)}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014     \textcolor{keywordflow}{return} (rand() \% (max -\/ min + 1) + min);}
+\DoxyCodeLine{00015 \}}
+\DoxyCodeLine{00016 \}}
+
+\end{DoxyCode}

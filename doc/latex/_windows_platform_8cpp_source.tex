@@ -1,0 +1,194 @@
+\doxysection{Windows\+Platform.\+cpp}
+\label{_windows_platform_8cpp_source}\index{src/Platform/Win32/WindowsPlatform.cpp@{src/Platform/Win32/WindowsPlatform.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{    \#include "{}Platform/Win32/WindowsPlatform.hpp"{}}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{preprocessor}{    \#include "{}Resource.h"{}}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{keyword}{namespace }util}
+\DoxyCodeLine{00007 \{}
+\DoxyCodeLine{00008 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00011 WindowsPlatform::WindowsPlatform()}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013     \textcolor{comment}{// Get the default device info}}
+\DoxyCodeLine{00014     m\_screenScalingFactor = getScreenScalingFactor(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00015     m\_refreshRate = getRefreshRate(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00016 \}}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00019 \textcolor{comment}{ * The window handle uses 32x32 (ICON\_BIG) \& 16x16 (ICON\_SMALL) sized icons.}}
+\DoxyCodeLine{00020 \textcolor{comment}{ * This should be called any time the SFML window is create/recreated}}
+\DoxyCodeLine{00021 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00022 \textcolor{keywordtype}{void} WindowsPlatform::setIcon(\textcolor{keyword}{const} sf::WindowHandle\& inHandle)}
+\DoxyCodeLine{00023 \{}
+\DoxyCodeLine{00024     \textcolor{comment}{// Get the icon directory}}
+\DoxyCodeLine{00025     PBYTE iconDirectory = getIconDirectory(WIN32\_ICON\_MAIN);}
+\DoxyCodeLine{00026     std::array<int, 5> icons = \{ 16, 32, 48, 64, 128 \};}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028     std::size\_t indexSmallIcon = \textcolor{keyword}{static\_cast<}std::size\_t\textcolor{keyword}{>}(std::min(std::max(std::ceil(m\_screenScalingFactor -\/ 1.0f), 0.0f), \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(icons.size()) -\/ 1.0f));}
+\DoxyCodeLine{00029     std::size\_t indexBigIcon = \textcolor{keyword}{static\_cast<}std::size\_t\textcolor{keyword}{>}(std::min(std::max(std::ceil(m\_screenScalingFactor -\/ 1.0f), 0.0f) + 1.0f, \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(icons.size()) -\/ 1.0f));}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031     HICON smallIcon = getIconFromIconDirectory(iconDirectory, icons[indexSmallIcon]);}
+\DoxyCodeLine{00032     HICON bigIcon = getIconFromIconDirectory(iconDirectory, icons[indexBigIcon]);}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     \textcolor{keywordflow}{if} (smallIcon)}
+\DoxyCodeLine{00035         SendMessage(inHandle, WM\_SETICON, ICON\_SMALL, (LPARAM)smallIcon);}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037     \textcolor{keywordflow}{if} (bigIcon)}
+\DoxyCodeLine{00038         SendMessage(inHandle, WM\_SETICON, ICON\_BIG, (LPARAM)bigIcon);}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     \textcolor{comment}{// https://docs.microsoft.com/en-\/us/windows/win32/api/winuser/nf-\/winuser-\/destroyicon}}
+\DoxyCodeLine{00041     \textcolor{comment}{// It is only necessary to call DestroyIcon for icons and cursors created with the following functions:}}
+\DoxyCodeLine{00042     \textcolor{comment}{//   CreateIconFromResourceEx (if called without the LR\_SHARED flag)}}
+\DoxyCodeLine{00043 \}}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00046 \textcolor{comment}{ *}}
+\DoxyCodeLine{00047 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00048 \textcolor{keywordtype}{void} WindowsPlatform::toggleFullscreen(\textcolor{keyword}{const} sf::WindowHandle\& inHandle, \textcolor{keyword}{const} sf::Uint32 inStyle, \textcolor{keyword}{const} \textcolor{keywordtype}{bool} inWindowed, \textcolor{keyword}{const} sf::Vector2u\& inResolution)}
+\DoxyCodeLine{00049 \{}
+\DoxyCodeLine{00050     DWORD win32Style = sfmlWindowStyleToWin32WindowStyle(inStyle);}
+\DoxyCodeLine{00051     UINT flags = SWP\_DRAWFRAME | SWP\_FRAMECHANGED;}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053     \textcolor{keywordflow}{if} (inWindowed)}
+\DoxyCodeLine{00054     \{}
+\DoxyCodeLine{00055         \textcolor{comment}{// Window (centered on the focused screen)}}
+\DoxyCodeLine{00056         HDC screenDC = GetDC(inHandle);}
+\DoxyCodeLine{00057         \textcolor{keywordtype}{int} screenWidth = GetDeviceCaps(screenDC, HORZRES);}
+\DoxyCodeLine{00058         \textcolor{keywordtype}{int} screenHeight = GetDeviceCaps(screenDC, VERTRES);}
+\DoxyCodeLine{00059         ReleaseDC(inHandle, screenDC);}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061         \textcolor{keywordtype}{int} width = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(inResolution.x);}
+\DoxyCodeLine{00062         \textcolor{keywordtype}{int} height = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(inResolution.y);}
+\DoxyCodeLine{00063         \textcolor{keywordtype}{int} left = (screenWidth -\/ width) / 2;}
+\DoxyCodeLine{00064         \textcolor{keywordtype}{int} top = (screenHeight -\/ height) / 2;}
+\DoxyCodeLine{00065         RECT rectangle = \{ 0, 0, width, height \};}
+\DoxyCodeLine{00066         AdjustWindowRect(\&rectangle, win32Style, \textcolor{keyword}{false});}
+\DoxyCodeLine{00067         width = rectangle.right -\/ rectangle.left;}
+\DoxyCodeLine{00068         height = rectangle.bottom -\/ rectangle.top;}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070         SetWindowLongPtr(inHandle, GWL\_STYLE, win32Style);}
+\DoxyCodeLine{00071         SetWindowLongPtr(inHandle, GWL\_EXSTYLE, 0);}
+\DoxyCodeLine{00072         SetWindowPos(inHandle, \textcolor{keyword}{nullptr}, left, top, width, height, flags);}
+\DoxyCodeLine{00073     \}}
+\DoxyCodeLine{00074     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00075     \{}
+\DoxyCodeLine{00076         \textcolor{comment}{// Fullscreen}}
+\DoxyCodeLine{00077         \textcolor{keywordtype}{int} width = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(inResolution.x);}
+\DoxyCodeLine{00078         \textcolor{keywordtype}{int} height = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(inResolution.y);}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080         \textcolor{comment}{// first time prevents the border from showing in the corner}}
+\DoxyCodeLine{00081         SetWindowPos(inHandle, HWND\_TOP, 0, 0, width, height, flags);}
+\DoxyCodeLine{00082         SetWindowLongPtr(inHandle, GWL\_EXSTYLE, WS\_EX\_APPWINDOW);}
+\DoxyCodeLine{00083         SetWindowLongPtr(inHandle, GWL\_STYLE, win32Style);}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085         \textcolor{comment}{// second time cleans up the rect after the border has been removed}}
+\DoxyCodeLine{00086         SetWindowPos(inHandle, HWND\_TOP, 0, 0, width, height, flags);}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088         \textcolor{comment}{// note: double SetWindowPos call isn't very effective on slower machines anyway :/}}
+\DoxyCodeLine{00089     \}}
+\DoxyCodeLine{00090     ShowWindow(inHandle, SW\_SHOW);}
+\DoxyCodeLine{00091 \}}
+\DoxyCodeLine{00092 }
+\DoxyCodeLine{00093 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00094 \textcolor{comment}{ * Gets the screen scaling factor of the device from the supplied handle}}
+\DoxyCodeLine{00095 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00096 \textcolor{keywordtype}{float} WindowsPlatform::getScreenScalingFactor(\textcolor{keyword}{const} sf::WindowHandle\& inHandle)}
+\DoxyCodeLine{00097 \{}
+\DoxyCodeLine{00098     UNUSED(inHandle);}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100     \textcolor{keywordflow}{if} (m\_screenScalingFactor != 0.0f)}
+\DoxyCodeLine{00101         \textcolor{keywordflow}{return} m\_screenScalingFactor;}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     HDC screenDC = GetDC(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00104     \textcolor{keywordtype}{int} logicalScreenHeight = GetDeviceCaps(screenDC, VERTRES);}
+\DoxyCodeLine{00105     \textcolor{keywordtype}{int} physicalScreenHeight = GetDeviceCaps(screenDC, DESKTOPVERTRES);}
+\DoxyCodeLine{00106     m\_screenScalingFactor = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(physicalScreenHeight) / \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(logicalScreenHeight);}
+\DoxyCodeLine{00107     ReleaseDC(\textcolor{keyword}{nullptr}, screenDC);}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109     \textcolor{keywordflow}{return} m\_screenScalingFactor;}
+\DoxyCodeLine{00110 \}}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00112 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00113 \textcolor{comment}{ * Gets the refresh rate of the device from the supplied handle}}
+\DoxyCodeLine{00114 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00115 \textcolor{keywordtype}{int} WindowsPlatform::getRefreshRate(\textcolor{keyword}{const} sf::WindowHandle\& inHandle)}
+\DoxyCodeLine{00116 \{}
+\DoxyCodeLine{00117     UNUSED(inHandle);}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     \textcolor{keywordflow}{if} (m\_refreshRate != 0)}
+\DoxyCodeLine{00120         \textcolor{keywordflow}{return} m\_refreshRate;}
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{00122     HDC screenDC = GetDC(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00123     m\_refreshRate = GetDeviceCaps(screenDC, VREFRESH);}
+\DoxyCodeLine{00124     ReleaseDC(\textcolor{keyword}{nullptr}, screenDC);}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126     \textcolor{keywordflow}{return} m\_refreshRate;}
+\DoxyCodeLine{00127 \}}
+\DoxyCodeLine{00128 }
+\DoxyCodeLine{00129 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00130 \textcolor{comment}{ * Loads a .ico file from The application's resources, and can contain multiple}}
+\DoxyCodeLine{00131 \textcolor{comment}{ * sizes (for instance 16x16, 32x32 \& 64x64). This is referred to as an}}
+\DoxyCodeLine{00132 \textcolor{comment}{ * "{}Icon Directory"{}. Additionally, it can have a single icon}}
+\DoxyCodeLine{00133 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00134 PBYTE WindowsPlatform::getIconDirectory(\textcolor{keyword}{const} \textcolor{keywordtype}{int} inResourceId)}
+\DoxyCodeLine{00135 \{}
+\DoxyCodeLine{00136     HMODULE hModule = GetModuleHandle(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00137     HRSRC hResource = FindResource(hModule, MAKEINTRESOURCE(inResourceId), RT\_GROUP\_ICON);}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139     HGLOBAL hData = LoadResource(hModule, hResource);}
+\DoxyCodeLine{00140     PBYTE data = (PBYTE)LockResource(hData);}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142     \textcolor{keywordflow}{return} data;}
+\DoxyCodeLine{00143 \}}
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{00145 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00146 \textcolor{comment}{ * This will attempt to load a single icon from an icon directory}}
+\DoxyCodeLine{00147 \textcolor{comment}{ * If the requested size isn't found, the first one is returned}}
+\DoxyCodeLine{00148 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00149 HICON WindowsPlatform::getIconFromIconDirectory(PBYTE inIconDirectory, \textcolor{keyword}{const} uint inSize)}
+\DoxyCodeLine{00150 \{}
+\DoxyCodeLine{00151     HMODULE hModule = GetModuleHandle(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00152     \textcolor{keywordtype}{int} resourceId = LookupIconIdFromDirectoryEx(inIconDirectory, TRUE, inSize, inSize, LR\_DEFAULTCOLOR | LR\_SHARED);}
+\DoxyCodeLine{00153     HRSRC hResource = FindResource(hModule, MAKEINTRESOURCE(resourceId), RT\_ICON);}
+\DoxyCodeLine{00154 }
+\DoxyCodeLine{00155     HGLOBAL hData = LoadResource(hModule, hResource);}
+\DoxyCodeLine{00156     PBYTE data = (PBYTE)LockResource(hData);}
+\DoxyCodeLine{00157     DWORD sizeofData = SizeofResource(hModule, hResource);}
+\DoxyCodeLine{00158 }
+\DoxyCodeLine{00159     HICON icon = CreateIconFromResourceEx(data, sizeofData, TRUE, 0x00030000, inSize, inSize, LR\_DEFAULTCOLOR | LR\_SHARED);}
+\DoxyCodeLine{00160     \textcolor{keywordflow}{return} icon;}
+\DoxyCodeLine{00161 \}}
+\DoxyCodeLine{00162 }
+\DoxyCodeLine{00163 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00164 \textcolor{comment}{ * Takes an SFML window style and matches it back to the Win32 equivalent}}
+\DoxyCodeLine{00165 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00166 DWORD WindowsPlatform::sfmlWindowStyleToWin32WindowStyle(\textcolor{keyword}{const} sf::Uint32 inStyle)}
+\DoxyCodeLine{00167 \{}
+\DoxyCodeLine{00168     DWORD style = 0;}
+\DoxyCodeLine{00169     \textcolor{keywordflow}{if} (inStyle == sf::Style::None || inStyle == sf::Style::Fullscreen)}
+\DoxyCodeLine{00170     \{}
+\DoxyCodeLine{00171         style = WS\_VISIBLE | WS\_POPUP | WS\_CLIPCHILDREN | WS\_CLIPSIBLINGS;}
+\DoxyCodeLine{00172     \}}
+\DoxyCodeLine{00173     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00174     \{}
+\DoxyCodeLine{00175         style = WS\_VISIBLE;}
+\DoxyCodeLine{00176         \textcolor{keywordflow}{if} (inStyle \& sf::Style::Titlebar)}
+\DoxyCodeLine{00177             style |= WS\_CAPTION | WS\_MINIMIZEBOX;}
+\DoxyCodeLine{00178         \textcolor{keywordflow}{if} (inStyle \& sf::Style::Resize)}
+\DoxyCodeLine{00179             style |= WS\_THICKFRAME | WS\_MAXIMIZEBOX;}
+\DoxyCodeLine{00180         \textcolor{keywordflow}{if} (inStyle \& sf::Style::Close)}
+\DoxyCodeLine{00181             style |= WS\_SYSMENU;}
+\DoxyCodeLine{00182     \}}
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{00184     \textcolor{keywordflow}{return} style;}
+\DoxyCodeLine{00185 \}}
+\DoxyCodeLine{00186 \}}
+\DoxyCodeLine{00187 }
+\DoxyCodeLine{00188 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_WIN32}}
+
+\end{DoxyCode}

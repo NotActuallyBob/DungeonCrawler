@@ -1,0 +1,91 @@
+\hypertarget{class_i_collidable}{}\doxysection{ICollidable Class Reference}
+\label{class_i_collidable}\index{ICollidable@{ICollidable}}
+
+
+Unused interface for collisionsystem.  
+
+
+
+
+{\ttfamily \#include $<$ICollidable.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45}{Entity\+Type}} \{ \mbox{\hyperlink{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45aebffec0f8595c081fe83e3dd43d25b51}{character}}
+, \mbox{\hyperlink{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45aa7243a3e7bc5ab45ef212d9cd4e2acac}{projectile}}
+, \mbox{\hyperlink{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45a4a3b7850a5043cbfebaa49a28e214eab}{tile}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual sf\+::\+Float\+Rect \mbox{\hyperlink{class_i_collidable_a91761de57b7eb05285f91a59f124bd59}{Get\+Bounding\+Box}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_i_collidable_a024f9ea1ae909aa49a062d4aff18671b}{Process\+Collision}} (\mbox{\hyperlink{class_i_collidable}{ICollidable}} $\ast$other)=0
+\item 
+virtual \mbox{\hyperlink{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45}{Entity\+Type}} \mbox{\hyperlink{class_i_collidable_a6ddf97f57e9513f5e3ed79892c0a5123}{Get\+Entity\+Type}} ()=0
+\item 
+virtual \mbox{\hyperlink{class_i_collidable_a7a3defb6bc89121474ccc7b2201ec07e}{$\sim$\+ICollidable}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Unused interface for collisionsystem. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45}\label{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45}} 
+\index{ICollidable@{ICollidable}!EntityType@{EntityType}}
+\index{EntityType@{EntityType}!ICollidable@{ICollidable}}
+\doxysubsubsection{\texorpdfstring{EntityType}{EntityType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45}{ICollidable\+::\+Entity\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{character@{character}!ICollidable@{ICollidable}}\index{ICollidable@{ICollidable}!character@{character}}}\mbox{\Hypertarget{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45aebffec0f8595c081fe83e3dd43d25b51}\label{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45aebffec0f8595c081fe83e3dd43d25b51}} 
+character&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{projectile@{projectile}!ICollidable@{ICollidable}}\index{ICollidable@{ICollidable}!projectile@{projectile}}}\mbox{\Hypertarget{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45aa7243a3e7bc5ab45ef212d9cd4e2acac}\label{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45aa7243a3e7bc5ab45ef212d9cd4e2acac}} 
+projectile&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{tile@{tile}!ICollidable@{ICollidable}}\index{ICollidable@{ICollidable}!tile@{tile}}}\mbox{\Hypertarget{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45a4a3b7850a5043cbfebaa49a28e214eab}\label{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45a4a3b7850a5043cbfebaa49a28e214eab}} 
+tile&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_collidable_a7a3defb6bc89121474ccc7b2201ec07e}\label{class_i_collidable_a7a3defb6bc89121474ccc7b2201ec07e}} 
+\index{ICollidable@{ICollidable}!````~ICollidable@{$\sim$ICollidable}}
+\index{````~ICollidable@{$\sim$ICollidable}!ICollidable@{ICollidable}}
+\doxysubsubsection{\texorpdfstring{$\sim$ICollidable()}{~ICollidable()}}
+{\footnotesize\ttfamily virtual ICollidable\+::$\sim$\+ICollidable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_collidable_a91761de57b7eb05285f91a59f124bd59}\label{class_i_collidable_a91761de57b7eb05285f91a59f124bd59}} 
+\index{ICollidable@{ICollidable}!GetBoundingBox@{GetBoundingBox}}
+\index{GetBoundingBox@{GetBoundingBox}!ICollidable@{ICollidable}}
+\doxysubsubsection{\texorpdfstring{GetBoundingBox()}{GetBoundingBox()}}
+{\footnotesize\ttfamily virtual sf\+::\+Float\+Rect ICollidable\+::\+Get\+Bounding\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_i_collidable_a6ddf97f57e9513f5e3ed79892c0a5123}\label{class_i_collidable_a6ddf97f57e9513f5e3ed79892c0a5123}} 
+\index{ICollidable@{ICollidable}!GetEntityType@{GetEntityType}}
+\index{GetEntityType@{GetEntityType}!ICollidable@{ICollidable}}
+\doxysubsubsection{\texorpdfstring{GetEntityType()}{GetEntityType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_i_collidable_a19ef6da0632e8174437eda0b86fe2b45}{Entity\+Type}} ICollidable\+::\+Get\+Entity\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_i_collidable_a024f9ea1ae909aa49a062d4aff18671b}\label{class_i_collidable_a024f9ea1ae909aa49a062d4aff18671b}} 
+\index{ICollidable@{ICollidable}!ProcessCollision@{ProcessCollision}}
+\index{ProcessCollision@{ProcessCollision}!ICollidable@{ICollidable}}
+\doxysubsubsection{\texorpdfstring{ProcessCollision()}{ProcessCollision()}}
+{\footnotesize\ttfamily virtual void ICollidable\+::\+Process\+Collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_i_collidable}{ICollidable}} $\ast$}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Interfaces/\mbox{\hyperlink{_i_collidable_8hpp}{ICollidable.\+hpp}}\end{DoxyCompactItemize}

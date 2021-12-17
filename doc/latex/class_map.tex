@@ -1,0 +1,189 @@
+\hypertarget{class_map}{}\doxysection{Map Class Reference}
+\label{class_map}\index{Map@{Map}}
+
+
+{\ttfamily \#include $<$map.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_map_ab7d0fd68a8dd0c924ffdd5ea802faccf}{Map}} (sf\+::\+Vector2u size\+Of\+Rooms, int no\+Rooms, \mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}} player)
+\begin{DoxyCompactList}\small\item\em Initializes variables for new room and calls \mbox{\hyperlink{class_map_aa1146b7b32f8895f9178e96e0506021b}{Create\+Dungeon()}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_map_aa403fbe09394ccf39747588f5168e3b2}{$\sim$\+Map}} ()
+\item 
+void \mbox{\hyperlink{class_map_a4e75304a826f38166d1cb52fdbce7c95}{Render\+Current\+Room}} (sf\+::\+Render\+Target $\ast$target)
+\begin{DoxyCompactList}\small\item\em Renders the current room to the given target. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_aa1146b7b32f8895f9178e96e0506021b}{Create\+Dungeon}} (int no\+Rooms)
+\begin{DoxyCompactList}\small\item\em Create the actual dungeon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a45b65115a6a2a14264acfa5ca50f2a94}{Move\+Player}} (\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\begin{DoxyCompactList}\small\item\em Moves the player to the room on the map in the given direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_room_instance}{Room\+Instance}} $\ast$ \mbox{\hyperlink{class_map_a91265020d35a6f195efdefe2d5abfdff}{Get\+Room\+In\+Dir}} (\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction)
+\begin{DoxyCompactList}\small\item\em Get the Room in the argument direction. \end{DoxyCompactList}\item 
+sf\+::\+Vector2i \mbox{\hyperlink{class_map_a5e66d7c4ec1a678afb616b036433c846}{Dir\+To\+Vec}} (\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction)
+\begin{DoxyCompactList}\small\item\em Converts a Direction to a unit vector and returns it. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_room_instance}{Room\+Instance}} $\ast$ \mbox{\hyperlink{class_map_a08f6e91181740add51eb3ebd28b16127}{Get\+Current\+Room}} ()
+\begin{DoxyCompactList}\small\item\em Get the room the player is in on the map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_room_instance}{Room\+Instance}} $\ast$ \mbox{\hyperlink{class_map_a64a536447d070ff7fcaf128205ebb908}{Get\+Spawn\+Room}} ()
+\begin{DoxyCompactList}\small\item\em Get the Spawn\+Room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_a2ff18c2b1d7e3e165260ee155f8dcead}{Reset\+Map}} ()
+\item 
+bool \mbox{\hyperlink{class_map_ad9f36344a313ab45eca56c91a3509f8e}{Is\+Boss\+Room\+Cleared}} ()
+\begin{DoxyCompactList}\small\item\em Checks Whether the bossroom has been cleared. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_map_ab7d0fd68a8dd0c924ffdd5ea802faccf}\label{class_map_ab7d0fd68a8dd0c924ffdd5ea802faccf}} 
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily Map\+::\+Map (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2u}]{size\+Of\+Rooms,  }\item[{int}]{no\+Rooms,  }\item[{\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Initializes variables for new room and calls \mbox{\hyperlink{class_map_aa1146b7b32f8895f9178e96e0506021b}{Create\+Dungeon()}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size\+Of\+Rooms} & the size we want our rooms to be \\
+\hline
+{\em no\+Rooms} & The number of rooms we want the dungeon to consist of \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_map_aa403fbe09394ccf39747588f5168e3b2}\label{class_map_aa403fbe09394ccf39747588f5168e3b2}} 
+\index{Map@{Map}!````~Map@{$\sim$Map}}
+\index{````~Map@{$\sim$Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{$\sim$Map()}{~Map()}}
+{\footnotesize\ttfamily Map\+::$\sim$\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_map_aa1146b7b32f8895f9178e96e0506021b}\label{class_map_aa1146b7b32f8895f9178e96e0506021b}} 
+\index{Map@{Map}!CreateDungeon@{CreateDungeon}}
+\index{CreateDungeon@{CreateDungeon}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{CreateDungeon()}{CreateDungeon()}}
+{\footnotesize\ttfamily void Map\+::\+Create\+Dungeon (\begin{DoxyParamCaption}\item[{int}]{no\+Rooms }\end{DoxyParamCaption})}
+
+
+
+Create the actual dungeon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no\+Rooms} & number of rooms on in the dungeon \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_map_a5e66d7c4ec1a678afb616b036433c846}\label{class_map_a5e66d7c4ec1a678afb616b036433c846}} 
+\index{Map@{Map}!DirToVec@{DirToVec}}
+\index{DirToVec@{DirToVec}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{DirToVec()}{DirToVec()}}
+{\footnotesize\ttfamily sf\+::\+Vector2i Map\+::\+Dir\+To\+Vec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Converts a Direction to a unit vector and returns it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & the direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sf\+::\+Vector2i the converted vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_map_a08f6e91181740add51eb3ebd28b16127}\label{class_map_a08f6e91181740add51eb3ebd28b16127}} 
+\index{Map@{Map}!GetCurrentRoom@{GetCurrentRoom}}
+\index{GetCurrentRoom@{GetCurrentRoom}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetCurrentRoom()}{GetCurrentRoom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_instance}{Room\+Instance}} $\ast$ Map\+::\+Get\+Current\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the room the player is in on the map. 
+
+\begin{DoxyReturn}{Returns}
+Room\+Instance$\ast$ The room 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_map_a91265020d35a6f195efdefe2d5abfdff}\label{class_map_a91265020d35a6f195efdefe2d5abfdff}} 
+\index{Map@{Map}!GetRoomInDir@{GetRoomInDir}}
+\index{GetRoomInDir@{GetRoomInDir}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetRoomInDir()}{GetRoomInDir()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_instance}{Room\+Instance}} $\ast$ Map\+::\+Get\+Room\+In\+Dir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Get the Room in the argument direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & The direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns room, or nullptr if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_map_a64a536447d070ff7fcaf128205ebb908}\label{class_map_a64a536447d070ff7fcaf128205ebb908}} 
+\index{Map@{Map}!GetSpawnRoom@{GetSpawnRoom}}
+\index{GetSpawnRoom@{GetSpawnRoom}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{GetSpawnRoom()}{GetSpawnRoom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room_instance}{Room\+Instance}} $\ast$ Map\+::\+Get\+Spawn\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Spawn\+Room. 
+
+\begin{DoxyReturn}{Returns}
+Room\+Instance$\ast$ The Spawn\+Room 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_map_ad9f36344a313ab45eca56c91a3509f8e}\label{class_map_ad9f36344a313ab45eca56c91a3509f8e}} 
+\index{Map@{Map}!IsBossRoomCleared@{IsBossRoomCleared}}
+\index{IsBossRoomCleared@{IsBossRoomCleared}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{IsBossRoomCleared()}{IsBossRoomCleared()}}
+{\footnotesize\ttfamily bool Map\+::\+Is\+Boss\+Room\+Cleared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks Whether the bossroom has been cleared. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_map_a45b65115a6a2a14264acfa5ca50f2a94}\label{class_map_a45b65115a6a2a14264acfa5ca50f2a94}} 
+\index{Map@{Map}!MovePlayer@{MovePlayer}}
+\index{MovePlayer@{MovePlayer}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{MovePlayer()}{MovePlayer()}}
+{\footnotesize\ttfamily void Map\+::\+Move\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir }\end{DoxyParamCaption})}
+
+
+
+Moves the player to the room on the map in the given direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Direction to go \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_map_a4e75304a826f38166d1cb52fdbce7c95}\label{class_map_a4e75304a826f38166d1cb52fdbce7c95}} 
+\index{Map@{Map}!RenderCurrentRoom@{RenderCurrentRoom}}
+\index{RenderCurrentRoom@{RenderCurrentRoom}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{RenderCurrentRoom()}{RenderCurrentRoom()}}
+{\footnotesize\ttfamily void Map\+::\+Render\+Current\+Room (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Renders the current room to the given target. 
+
+\mbox{\Hypertarget{class_map_a2ff18c2b1d7e3e165260ee155f8dcead}\label{class_map_a2ff18c2b1d7e3e165260ee155f8dcead}} 
+\index{Map@{Map}!ResetMap@{ResetMap}}
+\index{ResetMap@{ResetMap}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{ResetMap()}{ResetMap()}}
+{\footnotesize\ttfamily void Map\+::\+Reset\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dungeon/\mbox{\hyperlink{map_8hpp}{map.\+hpp}}\item 
+src/\+Dungeon/\mbox{\hyperlink{map_8cpp}{map.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,95 @@
+\hypertarget{room_instance_8hpp_source}{}\doxysection{room\+Instance.\+hpp}
+\label{room_instance_8hpp_source}\index{src/Dungeon/roomInstance.hpp@{src/Dungeon/roomInstance.hpp}}
+\mbox{\hyperlink{room_instance_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef \_ROOM\_INSTANCE\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define \_ROOM\_INSTANCE\_}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_monster_spawner_8hpp}{Actors/Monsters/MonsterSpawner/MonsterSpawner.hpp}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_potion_8hpp}{Combat/Health/Potion.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{room_tile_8hpp}{Tiles/roomTile.hpp}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{enum class} \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \{}
+\DoxyCodeLine{10     \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa258f49887ef8d14ac268c92b02503aaa}{Up}},}
+\DoxyCodeLine{11     \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa08a38277b0309070706f6652eeae9a53}{Down}},}
+\DoxyCodeLine{12     \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa945d5e233cf7d6240f6b783b36a374ff}{Left}},}
+\DoxyCodeLine{13     \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaa92b09c7c48c520c3c55e497875da437c}{Right}},}
+\DoxyCodeLine{14     \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aaae93f994f01c537c4e2f7d8528c3eb5e9}{Count}}}
+\DoxyCodeLine{15 \};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacedirection}{direction}} \{}
+\DoxyCodeLine{18 \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{namespacedirection_a580fb38bfd0065c2213d1cc56b39be11}{GetOppositeDir}}(\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{namespacedirection}{direction}});}
+\DoxyCodeLine{19 \}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{25 \textcolor{keyword}{class }\mbox{\hyperlink{class_room_instance}{RoomInstance}} \{}
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_room_instance_aebd06b402545a1e655f17328e0fd4ad6}{RoomInstance}}(sf::Vector2u window\_size, sf::Vector2i coords);}
+\DoxyCodeLine{34     \mbox{\hyperlink{class_room_instance_aebd06b402545a1e655f17328e0fd4ad6}{RoomInstance}}(sf::Vector2u window\_size, sf::Vector2i coords, \mbox{\hyperlink{class_monster_spawner}{MonsterSpawner}}* spawner);}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_room_instance_aebd06b402545a1e655f17328e0fd4ad6}{RoomInstance}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{36     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_room_instance_a27fa2efc948f49ee5bb60b893bae4fe7}{\string~RoomInstance}}();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room_instance_a772e1aa461c0116a3c38562934ff83c7}{Render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     std::vector<RoomTile*> \mbox{\hyperlink{class_room_instance_aaac705fa93cbb86eb453386535966526}{getRoomTilesAt}}(sf::FloatRect bounds);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_room_instance_a4181b60918ea3d70e3c5ec9c0cbd0f85}{positionIsWalkable}}(sf::FloatRect bounds);}
+\DoxyCodeLine{48     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_room_instance_a9733d67f2187a7d51523cfd25443729f}{positionIsPenetratable}}(sf::FloatRect bounds);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     std::vector<std::vector<RoomTile*>> \mbox{\hyperlink{class_room_instance_aab3e4b8df79e9533e8edbd8a5b33bf0b}{getTiles}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room_instance_aa4e45182505503e14605310bd58c81b1}{CreateExit}}(\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{namespacedirection}{direction}});}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room_instance_abc3d42a5b505cc1ea175449e2bd5c302}{Connect}}(\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir, \mbox{\hyperlink{class_room_instance}{RoomInstance}}* room);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{74     \mbox{\hyperlink{class_room_instance}{RoomInstance}}* \mbox{\hyperlink{class_room_instance_a26c16fde6317293f1f400440297f0460}{GetRoomInDir}}(\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{81     sf::Vector2i \mbox{\hyperlink{class_room_instance_aed72579f4a75fd47f01d65676d895f7c}{GetCoords}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_room_instance_ab5a52cf25e73a6703a0e8c0bb13efbf5}{coords\_}}; \}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room_instance_ac1cbc196076bf9d9265cf81457094ca1}{renderSpriteBackground}}();}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88     sf::Vector2u \mbox{\hyperlink{class_room_instance_a9b292d28d0aaec583cdd6f841ab4c4ae}{GetEntranceInDirection}}(\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{namespacedirection}{direction}});}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{96     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room_instance_adb09cc1b5859ac2bf5da3a00f25ae87c}{Enter}}(\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} player, \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{namespacedirection}{direction}});}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room_instance_a8d8aaefe76e96a69903a80c41adfc747}{Exit}}();}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     std::vector<MonsterSP>\& \mbox{\hyperlink{class_room_instance_a9b2c27ad6378b69710d0ff5a9dfcc3a4}{GetMonsters}}();}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room_instance_a3e063b132b1367cfbcdbd4de7b652815}{deleteMonster}}(\mbox{\hyperlink{_monster_spawner_8hpp_afb70709ed8a2f17a51242fdcef316b0f}{MonsterSP}} m);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{113     \mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{class_room_instance_a357544af9517d978f4a1114b0787b43d}{RemoveRandomDirection}}();}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{120     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room_instance_a66882a0c73e3ef64801581a0d12725c1}{RemoveDirection}}(\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir);}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{128     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_room_instance_ac26587978163c0e48a65870807fef6b2}{HasDirectionsLeft}}();}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{136     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_room_instance_a27504779d11b39a6c6b1e174415cb46e}{IsCleared}}();}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_room_instance_a7b8401a29ecd7b0bc7579dd3adbb12f8}{IsVisisted}}() \{\textcolor{keywordflow}{return} \mbox{\hyperlink{class_room_instance_a263387869e98e70522cbcc090db69172}{visited\_}};\}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_room_instance_aee3ac343dd6faa6b6e6d436feaed425b}{monsterCleared}}();}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room_instance_ad66835b89f11773d3bbd8815cae224f9}{AddPotion}}(\mbox{\hyperlink{class_potion}{Potion}}* potion);}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     std::vector<Potion*>\& \mbox{\hyperlink{class_room_instance_a597ce5ea47ae4f944d220e6af0a07a9e}{GetPotions}}();}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{151     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_room_instance_ab75ed11371c444727eaca04afd6a01e5}{setTiles}}();}
+\DoxyCodeLine{152     sf::Vector2u \mbox{\hyperlink{class_room_instance_a87799e96640fc7da124aa15bffb60b85}{roomSize\_}};}
+\DoxyCodeLine{153     sf::Vector2i \mbox{\hyperlink{class_room_instance_ab5a52cf25e73a6703a0e8c0bb13efbf5}{coords\_}};}
+\DoxyCodeLine{154     std::vector<std::vector<RoomTile*>> \mbox{\hyperlink{class_room_instance_add806c0423d10b54467cc3e325c5e8f5}{tileVector\_}};}
+\DoxyCodeLine{155     sf::RenderTexture \mbox{\hyperlink{class_room_instance_aa8d5dce5fd639e41418ec9ef6e366de2}{roomTexture}};}
+\DoxyCodeLine{156     sf::Sprite \mbox{\hyperlink{class_room_instance_aa15b6acb1eb63e8de65109c719920382}{roomBackground}};}
+\DoxyCodeLine{157     std::vector<MonsterSP> \mbox{\hyperlink{class_room_instance_aa196d25b07e726f058b648671b3dbd48}{monsters\_}};}
+\DoxyCodeLine{158     \mbox{\hyperlink{class_monster_spawner}{MonsterSpawner}}* \mbox{\hyperlink{class_room_instance_a037a6eb6b87af0009e3013bbfd3f86ba}{spawner\_}};}
+\DoxyCodeLine{159     std::vector<Potion*> \mbox{\hyperlink{class_room_instance_a260f20c6cdfb9231dc4ef7840a32023e}{potions\_}};}
+\DoxyCodeLine{160     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_room_instance_af67ad40e957a8982b0e89f8352ffbe9e}{cleared\_}}; \textcolor{comment}{// whether the room is cleared}}
+\DoxyCodeLine{161     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_room_instance_a263387869e98e70522cbcc090db69172}{visited\_}}; \textcolor{comment}{// whether the room has been visited already}}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163     vector<Direction> \mbox{\hyperlink{class_room_instance_aaffd08664585da19c373481f8df168e6}{directionsLeft\_}};}
+\DoxyCodeLine{164 \};}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

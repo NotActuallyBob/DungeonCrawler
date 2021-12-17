@@ -3,9 +3,8 @@
 #ifndef _GAME_CLASS_
 #define _GAME_CLASS_
 
-#include "Actors/player.hpp"
-/*#include "CollisionSystem.hpp"*/
 #include "Actors/Monsters/BossMonster.hpp"
+#include "Actors/player.hpp"
 #include "Combat/Health/Potion.hpp"
 #include "Combat/Projectile.hpp"
 #include "Combat/Weapons/BowWeapon.hpp"

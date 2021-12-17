@@ -1,0 +1,26 @@
+\hypertarget{_file_system_8hpp_source}{}\doxysection{File\+System.\+hpp}
+\label{_file_system_8hpp_source}\index{src/Utility/FileSystem.hpp@{src/Utility/FileSystem.hpp}}
+\mbox{\hyperlink{_file_system_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef UTIL\_FILE\_SYSTEM\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define UTIL\_FILE\_SYSTEM\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{// std::filesystem}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#if \_\_GNUC\_\_ >= 8 || \_\_clang\_major\_\_ >= 9}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{    \#include <filesystem>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{    \#include <experimental/filesystem>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceutil}{util}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#if \_\_GNUC\_\_ >= 8 || \_\_clang\_major\_\_ >= 9}}
+\DoxyCodeLine{14 \textcolor{keyword}{namespace }fs = std::filesystem;}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{16 \textcolor{keyword}{namespace }fs = std::experimental::filesystem::v1;}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{18 \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// UTIL\_FILE\_SYSTEM\_HPP}}
+
+\end{DoxyCode}

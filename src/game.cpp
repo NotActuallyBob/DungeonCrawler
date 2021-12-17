@@ -1,5 +1,5 @@
 #include "game.hpp"
-#include "Collision.hpp"
+#include "Utility/Collision.hpp"
 #define C_PIXELS 64
 
 namespace {

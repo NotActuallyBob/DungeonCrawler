@@ -1,0 +1,86 @@
+\hypertarget{_projectile_8hpp_source}{}\doxysection{Projectile.\+hpp}
+\label{_projectile_8hpp_source}\index{src/Combat/Projectile.hpp@{src/Combat/Projectile.hpp}}
+\mbox{\hyperlink{_projectile_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef \_Projectile\_CLASS\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define \_Projectile\_CLASS\_}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{entity_8hpp}{entity.hpp}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{class_character}{Character}};}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_projectile}{Projectile}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_entity}{Entity}} \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \textcolor{keyword}{enum} \mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Type}} \{ \mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eba04b85e53fc3f5777e314fb34eab7b03d}{PlayerProjectile}},}
+\DoxyCodeLine{13         \mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eba0c4d2850b28d325fc282a830a4171a58}{EnemyProjectile}} \};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_projectile_a0e446f66561f9b41e3a051d150a7cf58}{Projectile}}(sf::Sprite\& sprite, sf::Vector2f startPos, \textcolor{keywordtype}{bool} penetratesObjects = \textcolor{keyword}{false});}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_projectile_ac540791c62fe462b5ec91cbf3297e04f}{HasHit}}(\mbox{\hyperlink{class_character}{Character}}* c);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_projectile_a6df5f030a740be045f4d49e2e78af12f}{Hit}}(\mbox{\hyperlink{class_character}{Character}}* c);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_projectile_addfa18c38c3439c0d452c1e617b6f63f}{GetDamage}}() \{ \textcolor{keywordflow}{return} damage\_; \}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{46     \mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Projectile::Type}} \mbox{\hyperlink{class_projectile_a03730b907a639e902175ffe77b0ed7a8}{GetType}}() \{ \textcolor{keywordflow}{return} type\_; \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{53     sf::Vector2f \mbox{\hyperlink{class_projectile_addc30ed90f98c3aa4b35ee0937e0be17}{GetDirection}}() \{ \textcolor{keywordflow}{return} direction\_; \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{60     sf::Vector2f \mbox{\hyperlink{class_projectile_a2f9c4ee708b1340c1af49d91c080278d}{GetStartPosition}}() \{ \textcolor{keywordflow}{return} startPos\_; \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_projectile_ab058000bd28bef0a14583c8630395253}{GetTimeExisted}}() \{ \textcolor{keywordflow}{return} timeExisted\_; \}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_projectile_ad33defbb231add63056e7123e2168be0}{GetTimeLifeSpan}}() \{ \textcolor{keywordflow}{return} timeLifeSpan\_; \}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{81     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_projectile_a8d1e4b329ca9e4417b790ef76aadc15d}{GetProjectileSpeed}}() \{ \textcolor{keywordflow}{return} projectileSpeed\_; \}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{88     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_projectile_a1187b6790a6bd9c839ce22b24474ad34}{GetDistanceLifeSpan}}() \{ \textcolor{keywordflow}{return} distanceLifeSpanSquared\_; \}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{96     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_projectile_a7b938f5093586631f2fb1afcd2f86f78}{Penetrates}}() \{ \textcolor{keywordflow}{return} penetrates\_; \}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{104     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_projectile_a253f25f4511e8fb3cd72ab8fe2f9bf35}{IsAlive}}() \{ \textcolor{keywordflow}{return} alive\_; \}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{111     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_projectile_a24fbeebb823c94781b46fe688b6f113d}{SetType}}(\mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Projectile::Type}} type);}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{118     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_projectile_a47b5ad29be51136d23df91ba3661d04e}{SetDirection}}(sf::Vector2f \mbox{\hyperlink{namespacedirection}{direction}});}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{125     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_projectile_aa89f6165d96af811d8f834fd8307ff41}{SetDamage}}(\textcolor{keywordtype}{int} damage);}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{132     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_projectile_aca4d5bd7b26cd7350b0d9513bc1ad0fb}{SetProjectileSpeed}}(\textcolor{keywordtype}{float} projectileSpeed);}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{139     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_projectile_a879b2c80cd0ee984546b456983b4a63e}{SetTimeLifeSpan}}(\textcolor{keywordtype}{float} timeLifeSpan);}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{146     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_projectile_a6c7955d069707f5de0ce2da569499bbd}{SetDistanceLifeSpan}}(\textcolor{keywordtype}{float} distanceLifeSpan);}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{153     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_projectile_aa77550e62fec47dd353a8705a37d36d2}{SetSprite}}(sf::Sprite sprite) \{ \mbox{\hyperlink{class_entity_a4b53d16db25bf36bbacdbc07fa2b069e}{sprite\_}} = sprite; \}}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{159     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_projectile_a4ca054a48e8db56a03e314a9c77baed1}{Kill}}() \{ alive\_ = \textcolor{keyword}{false}; \};}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{166     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_projectile_a4330e3fcf8a15f112b5bcad48f8926f3}{Update}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{168 \textcolor{keyword}{private}:}
+\DoxyCodeLine{169     \mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Type}} type\_;}
+\DoxyCodeLine{170     sf::Vector2f direction\_;}
+\DoxyCodeLine{171     sf::Vector2f startPos\_;}
+\DoxyCodeLine{172     std::set<Character*> charactersHit\_;}
+\DoxyCodeLine{173     \textcolor{keywordtype}{int} damage\_;}
+\DoxyCodeLine{174     \textcolor{keywordtype}{float} projectileSpeed\_;}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176     \textcolor{keywordtype}{bool} alive\_;}
+\DoxyCodeLine{177     \textcolor{keywordtype}{bool} penetrates\_;}
+\DoxyCodeLine{178     \textcolor{keywordtype}{float} distanceLifeSpanSquared\_;}
+\DoxyCodeLine{179     \textcolor{keywordtype}{float} timeExisted\_;}
+\DoxyCodeLine{180     \textcolor{keywordtype}{float} timeLifeSpan\_;}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182     \textcolor{keywordtype}{void} initVariables();}
+\DoxyCodeLine{183     \textcolor{keywordtype}{bool} move(\textcolor{keywordtype}{float} dt, \textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y);}
+\DoxyCodeLine{184 \};}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 \textcolor{keyword}{typedef} std::unique\_ptr<Projectile> \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{ProjectileUP}};}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

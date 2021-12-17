@@ -34,6 +34,11 @@ public:
      */
     void CreateDungeon(int noRooms);
 
+    /**
+     * @brief Moves the player to the room on the map in the given direction
+     *
+     * @param    dir                  Direction to go
+     */
     void MovePlayer(Direction dir);
 
     /**
@@ -67,6 +72,13 @@ public:
     RoomInstance* GetSpawnRoom();
 
     void ResetMap();
+
+    /**
+     * @brief Checks Whether the bossroom has been cleared
+     *
+     * @return true
+     * @return false
+     */
     bool IsBossRoomCleared();
 
 private:
@@ -81,7 +93,18 @@ private:
      */
     RoomInstance* GetRoomAt(sf::Vector2i coord);
 
+    /**
+     * @brief Gets the key for the dungeon-map for the current position on the map
+     *
+     * @return std::pair<int, int>
+     */
     std::pair<int, int> getKey();
+
+    /**
+     * @brief Gets the key for the dungeon-map for the current position at a specific point
+     *
+     * @return std::pair<int, int>
+     */
     std::pair<int, int> getKey(sf::Vector2i coord);
     RoomInstance* getRandomRoom();
     RoomInstance* addRoomToDungeon(sf::Vector2u roomSize, sf::Vector2i coords);

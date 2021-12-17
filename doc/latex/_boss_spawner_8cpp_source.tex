@@ -1,0 +1,20 @@
+\doxysection{Boss\+Spawner.\+cpp}
+\label{_boss_spawner_8cpp_source}\index{src/Actors/Monsters/MonsterSpawner/BossSpawner.cpp@{src/Actors/Monsters/MonsterSpawner/BossSpawner.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}BossSpawner.hpp"{}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 MonsterSP BossSpawner::SpawnMonster(sf::Vector2u roomSize, PlayerPS target)}
+\DoxyCodeLine{00004 \{}
+\DoxyCodeLine{00005     MonsterSP m(\textcolor{keyword}{new} BossMonster(target, 0, 0));}
+\DoxyCodeLine{00006     \textcolor{keywordflow}{if} (m == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{00007         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00008     \}}
+\DoxyCodeLine{00009     \textcolor{keywordtype}{int} randomPosX, randomPosY;}
+\DoxyCodeLine{00010     randomPosX = (rand() \% (roomSize.x -\/ 200)) + 100;}
+\DoxyCodeLine{00011     randomPosY = (rand() \% (roomSize.y -\/ 200)) + 100;}
+\DoxyCodeLine{00012     m-\/>SetPosAndOldPos(sf::Vector2f(randomPosX, randomPosY));}
+\DoxyCodeLine{00013     \textcolor{keywordflow}{return} m;}
+\DoxyCodeLine{00014 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,379 @@
+\doxysection{game.\+cpp}
+\label{game_8cpp_source}\index{src/game.cpp@{src/game.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}game.hpp"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}Collision.hpp"{}}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#define C\_PIXELS 64}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keyword}{namespace }\{}
+\DoxyCodeLine{00006 \textcolor{keyword}{const} sf::Vector2u VIDEOMODE\_DIMS = sf::Vector2u(1280, 768);}
+\DoxyCodeLine{00007 \textcolor{keyword}{const} std::string DEATHTEXT = \textcolor{stringliteral}{"{}content/sprites/DEATHTEXT.png"{}};}
+\DoxyCodeLine{00008 \textcolor{keyword}{const} std::string VICTORY = \textcolor{stringliteral}{"{}content/endscreen.png"{}};}
+\DoxyCodeLine{00009 \}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011 Game::Game()}
+\DoxyCodeLine{00012     : player\_(PlayerPS(new Player()))}
+\DoxyCodeLine{00013     , dungeonMap\_(Map(VIDEOMODE\_DIMS, 10, player\_))}
+\DoxyCodeLine{00014     , gamebar\_(Gamebar(player\_))}
+\DoxyCodeLine{00015     , deathtext\_(ScreenText(DEATHTEXT, \{ 0, 0 \}, \{ 3, 3 \}))}
+\DoxyCodeLine{00016     , victoryScreen\_(ScreenText(VICTORY, \{ 0, 0 \}, \{ 7, 6 \}))}
+\DoxyCodeLine{00017     , gameEnder\_(\textcolor{keyword}{false})}
+\DoxyCodeLine{00018 \{}
+\DoxyCodeLine{00019     SwordWeapon* playerSword = \textcolor{keyword}{new} SwordWeapon(20, 100, 120, 1000, sf::Vector2f(200, 200), \textcolor{stringliteral}{"{}content/sprites/Weapons/swordtoobig.png"{}});}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021     player\_-\/>Equip(playerSword);}
+\DoxyCodeLine{00022     LevelUpSystem::AddCharacter(player\_.get());}
+\DoxyCodeLine{00023     initWindow();}
+\DoxyCodeLine{00024     dtClock\_.restart(); \textcolor{comment}{// to not have giant first dt}}
+\DoxyCodeLine{00025 \}}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027 Game::\string~Game()}
+\DoxyCodeLine{00028 \{}
+\DoxyCodeLine{00029     \textcolor{keyword}{delete} window\_;}
+\DoxyCodeLine{00030     \textcolor{keyword}{delete} playerHitSound;}
+\DoxyCodeLine{00031     \textcolor{keyword}{delete} monsterHitSound;}
+\DoxyCodeLine{00032 \}}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034 \textcolor{keywordtype}{void} Game::UpdateGame()}
+\DoxyCodeLine{00035 \{}
+\DoxyCodeLine{00036     Events();}
+\DoxyCodeLine{00037     managePauseInput();}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     \textcolor{keywordflow}{if} (!paused) \{}
+\DoxyCodeLine{00040         updateDt();}
+\DoxyCodeLine{00041         manageInput();}
+\DoxyCodeLine{00042         updateMonsters();}
+\DoxyCodeLine{00043         updatePotions();}
+\DoxyCodeLine{00044         updateProjectiles();}
+\DoxyCodeLine{00045         checkMonsterCollisions();}
+\DoxyCodeLine{00046         checkPlayerCollisions();}
+\DoxyCodeLine{00047         checkAndHandleProjectileWallCollisions();}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049         player\_-\/>Update(dt\_);}
+\DoxyCodeLine{00050         gamebar\_.Update();}
+\DoxyCodeLine{00051     \}}
+\DoxyCodeLine{00052 \}}
+\DoxyCodeLine{00053 \textcolor{comment}{// render game frames}}
+\DoxyCodeLine{00054 \textcolor{keywordtype}{void} Game::RenderGame()}
+\DoxyCodeLine{00055 \{}
+\DoxyCodeLine{00056     window\_-\/>clear();}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058     \textcolor{keywordflow}{if} (gameWon()) \{}
+\DoxyCodeLine{00059         victoryScreen\_.Render(window\_);}
+\DoxyCodeLine{00060     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00061         dungeonMap\_.RenderCurrentRoom(window\_);}
+\DoxyCodeLine{00062         player\_-\/>Render(window\_);}
+\DoxyCodeLine{00063         gamebar\_.Render(window\_);}
+\DoxyCodeLine{00064         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& projectile : projectiles\_) \{}
+\DoxyCodeLine{00065             projectile-\/>Render(window\_);}
+\DoxyCodeLine{00066         \}}
+\DoxyCodeLine{00067         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& monster : dungeonMap\_.GetCurrentRoom()-\/>GetMonsters()) \{}
+\DoxyCodeLine{00068             monster-\/>Render(window\_);}
+\DoxyCodeLine{00069         \}}
+\DoxyCodeLine{00070         \textcolor{keywordflow}{if} (gameLost() == \textcolor{keyword}{true}) \{}
+\DoxyCodeLine{00071             deathtext\_.Render(window\_);}
+\DoxyCodeLine{00072         \}}
+\DoxyCodeLine{00073         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} potion : dungeonMap\_.GetCurrentRoom()-\/>GetPotions()) \{}
+\DoxyCodeLine{00074             potion-\/>Render(window\_);}
+\DoxyCodeLine{00075         \}}
+\DoxyCodeLine{00076     \}}
+\DoxyCodeLine{00077     window\_-\/>display();}
+\DoxyCodeLine{00078 \}}
+\DoxyCodeLine{00079 \textcolor{keywordtype}{bool} Game::Running()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} window\_-\/>isOpen(); \}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081 \textcolor{keywordtype}{void} Game::Events()}
+\DoxyCodeLine{00082 \{}
+\DoxyCodeLine{00083     \textcolor{keywordflow}{while} (window\_-\/>pollEvent(event\_)) \{}
+\DoxyCodeLine{00084         \textcolor{keywordflow}{switch} (event\_.type) \{}
+\DoxyCodeLine{00085         \textcolor{keywordflow}{case} sf::Event::Closed:}
+\DoxyCodeLine{00086             window\_-\/>close();}
+\DoxyCodeLine{00087             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00088         \textcolor{keywordflow}{case} sf::Event::LostFocus:}
+\DoxyCodeLine{00089             paused = \textcolor{keyword}{true};}
+\DoxyCodeLine{00090             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00091         \textcolor{keywordflow}{case} sf::Event::GainedFocus:}
+\DoxyCodeLine{00092             paused = \textcolor{keyword}{false};}
+\DoxyCodeLine{00093             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00094         \textcolor{keywordflow}{case} sf::Event::KeyPressed:}
+\DoxyCodeLine{00095             \textcolor{keywordflow}{if} (event\_.key.code == sf::Keyboard::Num1)}
+\DoxyCodeLine{00096                 player\_-\/>UsePotion(\textcolor{stringliteral}{"{}red"{}});}
+\DoxyCodeLine{00097             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (event\_.key.code == sf::Keyboard::Num2)}
+\DoxyCodeLine{00098                 player\_-\/>UsePotion(\textcolor{stringliteral}{"{}green"{}});}
+\DoxyCodeLine{00099             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (event\_.key.code == sf::Keyboard::Num3)}
+\DoxyCodeLine{00100                 player\_-\/>UsePotion(\textcolor{stringliteral}{"{}yellow"{}});}
+\DoxyCodeLine{00101             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (event\_.key.code == sf::Keyboard::Num4)}
+\DoxyCodeLine{00102                 player\_-\/>UsePotion(\textcolor{stringliteral}{"{}violet"{}});}
+\DoxyCodeLine{00103             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00104         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00105             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00106         \}}
+\DoxyCodeLine{00107     \}}
+\DoxyCodeLine{00108 \}}
+\DoxyCodeLine{00109 \textcolor{comment}{// initalize window}}
+\DoxyCodeLine{00110 \textcolor{keywordtype}{void} Game::initWindow()}
+\DoxyCodeLine{00111 \{}
+\DoxyCodeLine{00112     \textcolor{comment}{// gets resolution and etc.}}
+\DoxyCodeLine{00113     \textcolor{keyword}{auto} desktopMode = sf::VideoMode::getDesktopMode();}
+\DoxyCodeLine{00114     videomode\_ = sf::VideoMode(std::min(VIDEOMODE\_DIMS.x, desktopMode.width), std::min(VIDEOMODE\_DIMS.y, desktopMode.height));}
+\DoxyCodeLine{00115     window\_ = \textcolor{keyword}{new} sf::RenderWindow(videomode\_, \textcolor{stringliteral}{"{}Dungeon Crawler"{}});}
+\DoxyCodeLine{00116 \}}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118 \textcolor{keywordtype}{void} Game::updateDt() \{ dt\_ = dtClock\_.restart().asSeconds(); \}}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120 \textcolor{keywordtype}{void} Game::manageInput()}
+\DoxyCodeLine{00121 \{}
+\DoxyCodeLine{00122     \textcolor{keywordtype}{bool} W = sf::Keyboard::isKeyPressed(sf::Keyboard::W);}
+\DoxyCodeLine{00123     \textcolor{keywordtype}{bool} A = sf::Keyboard::isKeyPressed(sf::Keyboard::A);}
+\DoxyCodeLine{00124     \textcolor{keywordtype}{bool} S = sf::Keyboard::isKeyPressed(sf::Keyboard::S);}
+\DoxyCodeLine{00125     \textcolor{keywordtype}{bool} D = sf::Keyboard::isKeyPressed(sf::Keyboard::D);}
+\DoxyCodeLine{00126     \textcolor{keywordtype}{bool} LSHIFT = sf::Keyboard::isKeyPressed(sf::Keyboard::LShift);}
+\DoxyCodeLine{00127     \textcolor{keywordtype}{bool} LMOUSE = sf::Mouse::isButtonPressed(sf::Mouse::Left);}
+\DoxyCodeLine{00128     \textcolor{keywordtype}{bool} ENTER = sf::Keyboard::isKeyPressed(sf::Keyboard::Return);}
+\DoxyCodeLine{00129     \textcolor{keywordtype}{bool} twoKeys = ((W || S) \&\& (A || D));}
+\DoxyCodeLine{00130     \textcolor{keywordtype}{bool} triedMoving = W || A || S || D;}
+\DoxyCodeLine{00131 }
+\DoxyCodeLine{00132     \textcolor{keywordflow}{if} (twoKeys) \{}
+\DoxyCodeLine{00133         \textcolor{keywordflow}{if} (A) \{}
+\DoxyCodeLine{00134             player\_-\/>MoveLeft(dt\_ / sqrt(2));}
+\DoxyCodeLine{00135         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (D) \{}
+\DoxyCodeLine{00136             player\_-\/>MoveRight(dt\_ / sqrt(2));}
+\DoxyCodeLine{00137         \}}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139         \textcolor{keywordflow}{if} (W) \{}
+\DoxyCodeLine{00140             player\_-\/>MoveUp(dt\_ / sqrt(2));}
+\DoxyCodeLine{00141         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (S) \{}
+\DoxyCodeLine{00142             player\_-\/>MoveDown(dt\_ / sqrt(2));}
+\DoxyCodeLine{00143         \}}
+\DoxyCodeLine{00144     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00145         \textcolor{keywordflow}{if} (A) \{}
+\DoxyCodeLine{00146             player\_-\/>MoveLeft(dt\_);}
+\DoxyCodeLine{00147         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (D) \{}
+\DoxyCodeLine{00148             player\_-\/>MoveRight(dt\_);}
+\DoxyCodeLine{00149         \}}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151         \textcolor{keywordflow}{if} (W) \{}
+\DoxyCodeLine{00152             player\_-\/>MoveUp(dt\_);}
+\DoxyCodeLine{00153         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (S) \{}
+\DoxyCodeLine{00154             player\_-\/>MoveDown(dt\_);}
+\DoxyCodeLine{00155         \}}
+\DoxyCodeLine{00156     \}}
+\DoxyCodeLine{00157 }
+\DoxyCodeLine{00158     \textcolor{keywordflow}{if} (LSHIFT) \{}
+\DoxyCodeLine{00159         player\_-\/>Dash();}
+\DoxyCodeLine{00160     \}}
+\DoxyCodeLine{00161 }
+\DoxyCodeLine{00162     \textcolor{keywordflow}{if} (LMOUSE) \{}
+\DoxyCodeLine{00163         sf::Vector2f mousePos = window\_-\/>mapPixelToCoords(sf::Mouse::getPosition(*window\_));}
+\DoxyCodeLine{00164         addProjectiles(player\_-\/>Attack(mousePos));}
+\DoxyCodeLine{00165     \}}
+\DoxyCodeLine{00166     \textcolor{keywordflow}{if} (ENTER) \{}
+\DoxyCodeLine{00167         \textcolor{keywordflow}{if} (!gameLost()) \{}
+\DoxyCodeLine{00168         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00169             restartGame();}
+\DoxyCodeLine{00170         \}}
+\DoxyCodeLine{00171     \}}
+\DoxyCodeLine{00172 }
+\DoxyCodeLine{00173     \textcolor{keywordflow}{if} (triedMoving) \{}
+\DoxyCodeLine{00174         \textcolor{comment}{// std::cout << player\_-\/>GetPos().x << "{} "{} << player\_-\/>GetPos().y << std::endl;}}
+\DoxyCodeLine{00175         \textcolor{keywordflow}{if} (collidesWithWall(player\_.get())) \{}
+\DoxyCodeLine{00176             player\_-\/>RevertMove();}
+\DoxyCodeLine{00177         \}}
+\DoxyCodeLine{00178         \textcolor{keywordflow}{if} (ShouldChangeRoom()) \{}
+\DoxyCodeLine{00179             projectiles\_.clear();}
+\DoxyCodeLine{00180             dtClock\_.restart(); \textcolor{comment}{// generating monsters makes dt quite big}}
+\DoxyCodeLine{00181         \}}
+\DoxyCodeLine{00182     \}}
+\DoxyCodeLine{00183 \}}
+\DoxyCodeLine{00184 }
+\DoxyCodeLine{00185 \textcolor{keywordtype}{void} Game::managePauseInput()}
+\DoxyCodeLine{00186 \{}
+\DoxyCodeLine{00187     \textcolor{keywordtype}{bool} ESCAPE = sf::Keyboard::isKeyPressed(sf::Keyboard::Escape);}
+\DoxyCodeLine{00188 }
+\DoxyCodeLine{00189     \textcolor{keywordflow}{if} (ESCAPE) \{}
+\DoxyCodeLine{00190         \textcolor{keywordflow}{if} (escapePressedLastTick != ESCAPE) \{}
+\DoxyCodeLine{00191             paused = !paused;}
+\DoxyCodeLine{00192             \textcolor{keywordflow}{if} (!paused) \{}
+\DoxyCodeLine{00193                 dtClock\_.restart();}
+\DoxyCodeLine{00194             \}}
+\DoxyCodeLine{00195         \}}
+\DoxyCodeLine{00196     \}}
+\DoxyCodeLine{00197     escapePressedLastTick = ESCAPE;}
+\DoxyCodeLine{00198 \}}
+\DoxyCodeLine{00199 }
+\DoxyCodeLine{00200 \textcolor{keywordtype}{void} Game::checkCollisions(Character* character, Projectile::Type projectileType)}
+\DoxyCodeLine{00201 \{}
+\DoxyCodeLine{00202     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& projectile : projectiles\_) \{}
+\DoxyCodeLine{00203         \textcolor{keywordflow}{if} (projectile-\/>GetType() == projectileType \&\& !projectile-\/>HasHit(character)) \{}
+\DoxyCodeLine{00204             \textcolor{keywordflow}{if} (Collision::PixelPerfectTest(projectile-\/>GetSprite(), character-\/>GetSprite())) \{}
+\DoxyCodeLine{00205                 \textcolor{keywordflow}{if} (projectileType == Projectile::Type::PlayerProjectile) \{}
+\DoxyCodeLine{00206                     monsterHitSound-\/>PlaySound();}
+\DoxyCodeLine{00207                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (projectileType == Projectile::Type::EnemyProjectile \&\& player\_-\/>IsAlive()) \{}
+\DoxyCodeLine{00208                     playerHitSound-\/>PlaySound();}
+\DoxyCodeLine{00209                 \}}
+\DoxyCodeLine{00210                 projectile-\/>Hit(character);}
+\DoxyCodeLine{00211                 character-\/>TakeDamage(projectile-\/>GetDamage());}
+\DoxyCodeLine{00212                 \textcolor{keywordflow}{if} (!projectile-\/>Penetrates()) \{}
+\DoxyCodeLine{00213                     projectile-\/>Kill();}
+\DoxyCodeLine{00214                 \}}
+\DoxyCodeLine{00215             \}}
+\DoxyCodeLine{00216         \}}
+\DoxyCodeLine{00217     \}}
+\DoxyCodeLine{00218 \}}
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{00220 \textcolor{keywordtype}{void} Game::checkMonsterCollisions()}
+\DoxyCodeLine{00221 \{}
+\DoxyCodeLine{00222     \textcolor{keywordflow}{if} (projectiles\_.empty()) \{}
+\DoxyCodeLine{00223         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00224     \}}
+\DoxyCodeLine{00225     \textcolor{keyword}{auto} currentRoom = dungeonMap\_.GetCurrentRoom();}
+\DoxyCodeLine{00226     std::vector<MonsterSP> deadMonsters;}
+\DoxyCodeLine{00227     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& monster : currentRoom-\/>GetMonsters()) \{}
+\DoxyCodeLine{00228         checkCollisions(monster.get(), Projectile::Type::PlayerProjectile);}
+\DoxyCodeLine{00229         \textcolor{keywordflow}{if} (!monster-\/>IsAlive()) \{}
+\DoxyCodeLine{00230             deadMonsters.push\_back(monster);}
+\DoxyCodeLine{00231             Potion* potion = monster-\/>ReturnPotion();}
+\DoxyCodeLine{00232             \textcolor{keywordflow}{if} (potion != \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{00233                 dungeonMap\_.GetCurrentRoom()-\/>AddPotion(potion);}
+\DoxyCodeLine{00234             \}}
+\DoxyCodeLine{00235         \}}
+\DoxyCodeLine{00236     \}}
+\DoxyCodeLine{00237     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} monster : deadMonsters) \{}
+\DoxyCodeLine{00238         LevelUpSystem::GainXP(player\_.get(), 5.0f);}
+\DoxyCodeLine{00239         currentRoom-\/>deleteMonster(monster);}
+\DoxyCodeLine{00240     \}}
+\DoxyCodeLine{00241 \}}
+\DoxyCodeLine{00242 }
+\DoxyCodeLine{00243 \textcolor{keywordtype}{void} Game::checkPlayerCollisions()}
+\DoxyCodeLine{00244 \{}
+\DoxyCodeLine{00245     \textcolor{keywordflow}{if} (projectiles\_.empty()) \{}
+\DoxyCodeLine{00246         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00247     \}}
+\DoxyCodeLine{00248     checkCollisions(player\_.get(), Projectile::Type::EnemyProjectile);}
+\DoxyCodeLine{00249 \}}
+\DoxyCodeLine{00250 }
+\DoxyCodeLine{00251 \textcolor{keywordtype}{void} Game::checkAndHandleProjectileWallCollisions()}
+\DoxyCodeLine{00252 \{}
+\DoxyCodeLine{00253     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& projectile : projectiles\_) \{}
+\DoxyCodeLine{00254         \textcolor{keywordflow}{if} (collidesWithWall(projectile.get())) \{}
+\DoxyCodeLine{00255             projectile-\/>Kill();}
+\DoxyCodeLine{00256         \}}
+\DoxyCodeLine{00257     \}}
+\DoxyCodeLine{00258 \}}
+\DoxyCodeLine{00259 }
+\DoxyCodeLine{00260 \textcolor{keywordtype}{void} Game::addProjectiles(std::list<ProjectileUP> projectiles)}
+\DoxyCodeLine{00261 \{}
+\DoxyCodeLine{00262     \textcolor{keywordflow}{if} (projectiles.empty()) \{}
+\DoxyCodeLine{00263         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00264     \}}
+\DoxyCodeLine{00265 }
+\DoxyCodeLine{00266     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}\& projectile : projectiles) \{}
+\DoxyCodeLine{00267         projectiles\_.push\_back(std::move(projectile));}
+\DoxyCodeLine{00268     \}}
+\DoxyCodeLine{00269 \}}
+\DoxyCodeLine{00270 }
+\DoxyCodeLine{00271 \textcolor{keywordtype}{void} Game::deletePotion(Potion* p)}
+\DoxyCodeLine{00272 \{}
+\DoxyCodeLine{00273     \textcolor{keyword}{auto}\& potions = dungeonMap\_.GetCurrentRoom()-\/>GetPotions();}
+\DoxyCodeLine{00274     \textcolor{keywordflow}{if} (potions.empty())}
+\DoxyCodeLine{00275         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00276 }
+\DoxyCodeLine{00277     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = potions.begin(); it != potions.end(); ++it) \{}
+\DoxyCodeLine{00278         \textcolor{keywordflow}{if} (*it == p) \{}
+\DoxyCodeLine{00279             it = potions.erase(it);}
+\DoxyCodeLine{00280             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00281         \}}
+\DoxyCodeLine{00282     \}}
+\DoxyCodeLine{00283 \}}
+\DoxyCodeLine{00284 }
+\DoxyCodeLine{00285 \textcolor{keywordtype}{void} Game::updateProjectiles()}
+\DoxyCodeLine{00286 \{}
+\DoxyCodeLine{00287     \textcolor{keywordflow}{if} (projectiles\_.empty())}
+\DoxyCodeLine{00288         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00289 }
+\DoxyCodeLine{00290     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = projectiles\_.begin(); it != projectiles\_.end(); ++it) \{}
+\DoxyCodeLine{00291         \textcolor{keyword}{auto}\& p = *it;}
+\DoxyCodeLine{00292         \textcolor{keywordflow}{if} (!p-\/>IsAlive()) \{}
+\DoxyCodeLine{00293             it = projectiles\_.erase(it);}
+\DoxyCodeLine{00294         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00295             p-\/>Update(dt\_);}
+\DoxyCodeLine{00296         \}}
+\DoxyCodeLine{00297     \}}
+\DoxyCodeLine{00298 \}}
+\DoxyCodeLine{00299 }
+\DoxyCodeLine{00300 \textcolor{keywordtype}{void} Game::updateMonsters()}
+\DoxyCodeLine{00301 \{}
+\DoxyCodeLine{00302     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} monster : dungeonMap\_.GetCurrentRoom()-\/>GetMonsters()) \{}
+\DoxyCodeLine{00303         \textcolor{comment}{// if moved, check collision with walls}}
+\DoxyCodeLine{00304         \textcolor{keywordtype}{bool} monsterMoved = monster-\/>Move(dt\_);}
+\DoxyCodeLine{00305         \textcolor{keywordflow}{if} (monsterMoved \&\& collidesWithWall(monster.get())) \{}
+\DoxyCodeLine{00306             monster-\/>RevertMove();}
+\DoxyCodeLine{00307         \}}
+\DoxyCodeLine{00308         addProjectiles(monster-\/>Attack());}
+\DoxyCodeLine{00309         monster-\/>Update(dt\_);}
+\DoxyCodeLine{00310     \}}
+\DoxyCodeLine{00311 \}}
+\DoxyCodeLine{00312 }
+\DoxyCodeLine{00313 \textcolor{keywordtype}{void} Game::updatePotions()}
+\DoxyCodeLine{00314 \{}
+\DoxyCodeLine{00315     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} potion : dungeonMap\_.GetCurrentRoom()-\/>GetPotions()) \{}
+\DoxyCodeLine{00316         sf::Vector2f poPos = potion-\/>GetSpriteCenter();}
+\DoxyCodeLine{00317         sf::Vector2f plPos = player\_-\/>GetSpriteCenter();}
+\DoxyCodeLine{00318         sf::Vector2f difference = poPos -\/ plPos;}
+\DoxyCodeLine{00319         \textcolor{keywordtype}{float} distance = std::sqrt(difference.x * difference.x + difference.y * difference.y);}
+\DoxyCodeLine{00320         \textcolor{keywordflow}{if} (distance < 50) \{}
+\DoxyCodeLine{00321             player\_-\/>AddPotion(potion);}
+\DoxyCodeLine{00322             deletePotion(potion);}
+\DoxyCodeLine{00323         \}}
+\DoxyCodeLine{00324     \}}
+\DoxyCodeLine{00325 \}}
+\DoxyCodeLine{00326 }
+\DoxyCodeLine{00327 \textcolor{keywordtype}{bool} Game::collidesWithWall(Character* character)}
+\DoxyCodeLine{00328 \{}
+\DoxyCodeLine{00329     \textcolor{keywordflow}{return} !dungeonMap\_.GetCurrentRoom()-\/>positionIsWalkable(character-\/>GetBaseBoxAt(character-\/>GetPos()));}
+\DoxyCodeLine{00330 \}}
+\DoxyCodeLine{00331 \textcolor{keywordtype}{bool} Game::collidesWithWall(Projectile* \textcolor{keywordtype}{object})}
+\DoxyCodeLine{00332 \{}
+\DoxyCodeLine{00333     \textcolor{keywordflow}{return} !dungeonMap\_.GetCurrentRoom()-\/>positionIsPenetratable(object-\/>GetSpriteBounds());}
+\DoxyCodeLine{00334 \}}
+\DoxyCodeLine{00335 }
+\DoxyCodeLine{00336 \textcolor{keywordtype}{bool} Game::ShouldChangeRoom()}
+\DoxyCodeLine{00337 \{}
+\DoxyCodeLine{00338     \textcolor{keywordflow}{if} (videomode\_.width < player\_-\/>GetPos().x) \{}
+\DoxyCodeLine{00339         dungeonMap\_.MovePlayer(Direction::Right);}
+\DoxyCodeLine{00340         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00341     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (player\_-\/>GetPos().x + player\_-\/>GetSpriteBounds().width < 0) \{}
+\DoxyCodeLine{00342         dungeonMap\_.MovePlayer(Direction::Left);}
+\DoxyCodeLine{00343         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00344     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (player\_-\/>GetPos().y + player\_-\/>GetSpriteBounds().height < 0) \{}
+\DoxyCodeLine{00345         dungeonMap\_.MovePlayer(Direction::Up);}
+\DoxyCodeLine{00346         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00347     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (player\_-\/>GetPos().y > videomode\_.height) \{}
+\DoxyCodeLine{00348         dungeonMap\_.MovePlayer(Direction::Down);}
+\DoxyCodeLine{00349         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00350     \}}
+\DoxyCodeLine{00351     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00352 \}}
+\DoxyCodeLine{00353 }
+\DoxyCodeLine{00354 \textcolor{keywordtype}{bool} Game::gameLost()}
+\DoxyCodeLine{00355 \{}
+\DoxyCodeLine{00356     \textcolor{keywordflow}{if} (!player\_-\/>IsAlive()) \{}
+\DoxyCodeLine{00357         gameEnder\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{00358     \}}
+\DoxyCodeLine{00359     \textcolor{keywordflow}{return} gameEnder\_;}
+\DoxyCodeLine{00360 \}}
+\DoxyCodeLine{00361 }
+\DoxyCodeLine{00362 \textcolor{keywordtype}{void} Game::restartGame()}
+\DoxyCodeLine{00363 \{}
+\DoxyCodeLine{00364     dungeonMap\_.ResetMap();}
+\DoxyCodeLine{00365     gameEnder\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{00366     projectiles\_.clear();}
+\DoxyCodeLine{00367     player\_-\/>ClearInventory();}
+\DoxyCodeLine{00368     player\_-\/>ResetCharacterToBeAlive();}
+\DoxyCodeLine{00369 \}}
+\DoxyCodeLine{00370 \textcolor{keywordtype}{bool} Game::gameWon()}
+\DoxyCodeLine{00371 \{}
+\DoxyCodeLine{00372     \textcolor{keywordflow}{return} dungeonMap\_.IsBossRoomCleared();}
+\DoxyCodeLine{00373 \}}
+
+\end{DoxyCode}

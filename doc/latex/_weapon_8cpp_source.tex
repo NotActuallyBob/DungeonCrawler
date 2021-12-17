@@ -1,0 +1,47 @@
+\doxysection{Weapon.\+cpp}
+\label{_weapon_8cpp_source}\index{src/Combat/Weapons/Weapon.cpp@{src/Combat/Weapons/Weapon.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}Combat/Weapons/Weapon.hpp"{}}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 Weapon::Weapon(\textcolor{keywordtype}{int} damage, \textcolor{keywordtype}{int} range, \textcolor{keywordtype}{int} rateOfFire, \textcolor{keywordtype}{float} projectileSpeed, Vector2f projectileSize, \textcolor{keyword}{const} std::string\& spriteLocation)}
+\DoxyCodeLine{00005     : defaultDamage\_(damage)}
+\DoxyCodeLine{00006     , range\_(range)}
+\DoxyCodeLine{00007     , projectileSpeed\_(projectileSpeed)}
+\DoxyCodeLine{00008     , projectileSize\_(projectileSize)}
+\DoxyCodeLine{00009     , speed\_(projectileSpeed)}
+\DoxyCodeLine{00010     , powerUps\_(vector<PowerUp*>())}
+\DoxyCodeLine{00011 \{}
+\DoxyCodeLine{00012     currentDamage\_ = defaultDamage\_;}
+\DoxyCodeLine{00013     spritehelper::CreateSpriteFrom(spriteLocation, projectileSize, sprite\_, texture\_);}
+\DoxyCodeLine{00014     cooldown\_ = 60.0f / rateOfFire;}
+\DoxyCodeLine{00015 \}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 \textcolor{keywordtype}{void} Weapon::AddPowerUp(PowerUp* up)}
+\DoxyCodeLine{00018 \{}
+\DoxyCodeLine{00019     \textcolor{keywordflow}{if} (getPowerUpCount() < maxPowerUps) \{}
+\DoxyCodeLine{00020         powerUps\_.push\_back(up);}
+\DoxyCodeLine{00021     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00022         \textcolor{comment}{// TODO: prompt the user to replace a existing powerUp}}
+\DoxyCodeLine{00023     \}}
+\DoxyCodeLine{00024 \}}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026 \textcolor{keywordtype}{int} Weapon::getPowerUpCount() \{ \textcolor{keywordflow}{return} powerUps\_.size(); \}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 \textcolor{keywordtype}{void} Weapon::SetTextureRect(sf::IntRect rect)}
+\DoxyCodeLine{00029 \{}
+\DoxyCodeLine{00030     sprite\_.setTextureRect(rect);}
+\DoxyCodeLine{00031 \}}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033 \textcolor{keywordtype}{void} Weapon::BoostDamageValue()}
+\DoxyCodeLine{00034 \{}
+\DoxyCodeLine{00035     currentDamage\_ = defaultDamage\_ * damageBoostModifier;}
+\DoxyCodeLine{00036 \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038 \textcolor{keywordtype}{void} Weapon::UnBoostDamageValue()}
+\DoxyCodeLine{00039 \{}
+\DoxyCodeLine{00040     currentDamage\_ = defaultDamage\_;}
+\DoxyCodeLine{00041 \}}
+
+\end{DoxyCode}

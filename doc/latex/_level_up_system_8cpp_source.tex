@@ -1,0 +1,51 @@
+\doxysection{Level\+Up\+System.\+cpp}
+\label{_level_up_system_8cpp_source}\index{src/Utility/LevelUpSystem.cpp@{src/Utility/LevelUpSystem.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}LevelUpSystem.hpp"{}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 std::unordered\_map<Character*, LevelUpInstance> LevelUpSystem::characterLevelMap;}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{00005 \textcolor{keywordtype}{void} LevelUpSystem::AddCharacter(Character* character)}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007     \textcolor{keywordflow}{if} (characterLevelMap.count(character) != 0) \{}
+\DoxyCodeLine{00008         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00009     \}}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011     LevelUpInstance levelUpInstance = LevelUpInstance();}
+\DoxyCodeLine{00012     characterLevelMap[character] = levelUpInstance;}
+\DoxyCodeLine{00013 \}}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015 \textcolor{keywordtype}{void} LevelUpSystem::GainXP(Character* character, \textcolor{keywordtype}{float} amount)}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{if} (characterLevelMap.count(character) == 0) \{}
+\DoxyCodeLine{00018         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00019     \}}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021     characterLevelMap[character].GainXP(amount);}
+\DoxyCodeLine{00022 \}}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024 \textcolor{keywordtype}{void} LevelUpSystem::LevelUp(Character* character)}
+\DoxyCodeLine{00025 \{}
+\DoxyCodeLine{00026     characterLevelMap[character].LevelUp();}
+\DoxyCodeLine{00027 \}}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029 \textcolor{keywordtype}{int} LevelUpSystem::GetLevel(Character* character)}
+\DoxyCodeLine{00030 \{}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{if} (characterLevelMap.count(character) == 0) \{}
+\DoxyCodeLine{00032         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00033     \}}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035     \textcolor{keywordflow}{return} characterLevelMap[character].GetLevel();}
+\DoxyCodeLine{00036 \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038 \textcolor{keywordtype}{float} LevelUpSystem::GetHPModifier(Character* character)}
+\DoxyCodeLine{00039 \{}
+\DoxyCodeLine{00040     \textcolor{keywordflow}{if} (characterLevelMap.count(character) == 0) \{}
+\DoxyCodeLine{00041         \textcolor{keywordflow}{return} 1.0f;}
+\DoxyCodeLine{00042     \}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044     \textcolor{keywordflow}{return} characterLevelMap[character].GetHPModifier();}
+\DoxyCodeLine{00045 \}}
+
+\end{DoxyCode}

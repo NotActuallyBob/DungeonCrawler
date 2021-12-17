@@ -1,0 +1,38 @@
+\hypertarget{_animationhandler_8hpp_source}{}\doxysection{Animationhandler.\+hpp}
+\label{_animationhandler_8hpp_source}\index{src/Animation/Animationhandler.hpp@{src/Animation/Animationhandler.hpp}}
+\mbox{\hyperlink{_animationhandler_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef \_ANIMATIONHANDLER\_CLASS\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define \_ANIMATIONHANDLER\_CLASS\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{animation_8hpp}{animation.hpp}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{typedef} std::shared\_ptr<Animation> \mbox{\hyperlink{_animationhandler_8hpp_adfd3b6f56af226c273ba8521f320743d}{AnimationPS}};}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{enum} \mbox{\hyperlink{_animationhandler_8hpp_a8397ce4d4c2cc2f2c01a8fe5323b1bd0}{AnimationIndex}} \{}
+\DoxyCodeLine{9     \mbox{\hyperlink{_animationhandler_8hpp_a8397ce4d4c2cc2f2c01a8fe5323b1bd0af843f0afcce035774604624a78d47d28}{AnimationUp}},}
+\DoxyCodeLine{10     \mbox{\hyperlink{_animationhandler_8hpp_a8397ce4d4c2cc2f2c01a8fe5323b1bd0ac79825c7d9a0511464a700f35ab47c01}{AnimationDown}},}
+\DoxyCodeLine{11     \mbox{\hyperlink{_animationhandler_8hpp_a8397ce4d4c2cc2f2c01a8fe5323b1bd0ae9539b7f6589368fd681e3315134840a}{AnimationLeft}},}
+\DoxyCodeLine{12     \mbox{\hyperlink{_animationhandler_8hpp_a8397ce4d4c2cc2f2c01a8fe5323b1bd0ab8275c6ad19aa1d3e0de61af1832cbb4}{AnimationRight}},}
+\DoxyCodeLine{13     \mbox{\hyperlink{_animationhandler_8hpp_a8397ce4d4c2cc2f2c01a8fe5323b1bd0a599aa58ad9aec8550ab5f43e2d87d795}{AnimationIdle}},}
+\DoxyCodeLine{14     \mbox{\hyperlink{_animationhandler_8hpp_a8397ce4d4c2cc2f2c01a8fe5323b1bd0a5d423017978e63824867eb11c944c15c}{AnimationDeath}},}
+\DoxyCodeLine{15     \mbox{\hyperlink{_animationhandler_8hpp_a8397ce4d4c2cc2f2c01a8fe5323b1bd0a928f33270be19855038d0245a0fa06a1}{Count}}}
+\DoxyCodeLine{16 \};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_animation_handler}{AnimationHandler}} \{}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_animation_handler_ae10c29a1cb88b70f31034da4b863098c}{AnimationHandler}}()}
+\DoxyCodeLine{22         : animations\_(0) \{\};}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_animation_handler_a741d936bb8dc0814fe2f86b206e30b32}{\string~AnimationHandler}}();}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_animation_handler_ae10c29a1cb88b70f31034da4b863098c}{AnimationHandler}}(\mbox{\hyperlink{_types_8hpp_a2e1c09bb972fc5997dcc8ea0cf5fa447}{uint}} xOffset, \mbox{\hyperlink{_types_8hpp_a2e1c09bb972fc5997dcc8ea0cf5fa447}{uint}} yOffset, \mbox{\hyperlink{_types_8hpp_a2e1c09bb972fc5997dcc8ea0cf5fa447}{uint}} width, \mbox{\hyperlink{_types_8hpp_a2e1c09bb972fc5997dcc8ea0cf5fa447}{uint}} height, \mbox{\hyperlink{_types_8hpp_a2e1c09bb972fc5997dcc8ea0cf5fa447}{uint}} xSpacing, \textcolor{keyword}{const} std::string\& textureLocation, \textcolor{keyword}{const} std::string\& deathTexture);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_animation_handler_a71d056dfafe7806f17e73b034a3ada2e}{setAnimation}}(\mbox{\hyperlink{_animationhandler_8hpp_a8397ce4d4c2cc2f2c01a8fe5323b1bd0}{AnimationIndex}} index);}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_animation}{Animation}}* \mbox{\hyperlink{class_animation_handler_a80a2fda2b40daaef42eeff24dcfb5893}{getAnimation}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{private}:}
+\DoxyCodeLine{29     std::vector<AnimationPS> animations\_;}
+\DoxyCodeLine{30     \mbox{\hyperlink{_animationhandler_8hpp_a8397ce4d4c2cc2f2c01a8fe5323b1bd0}{AnimationIndex}} currentAnimationIndex\_ = \mbox{\hyperlink{_animationhandler_8hpp_a8397ce4d4c2cc2f2c01a8fe5323b1bd0ac79825c7d9a0511464a700f35ab47c01}{AnimationIndex::AnimationDown}};}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

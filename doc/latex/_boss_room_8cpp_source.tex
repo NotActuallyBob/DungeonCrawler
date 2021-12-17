@@ -1,0 +1,76 @@
+\doxysection{Boss\+Room.\+cpp}
+\label{_boss_room_8cpp_source}\index{src/Dungeon/specialrooms/BossRoom.cpp@{src/Dungeon/specialrooms/BossRoom.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}BossRoom.hpp"{}}}
+\DoxyCodeLine{00002 BossRoom::BossRoom(sf::Vector2u window\_size, sf::Vector2i coords)}
+\DoxyCodeLine{00003     : RoomInstance(window\_size, coords)}
+\DoxyCodeLine{00004 \{}
+\DoxyCodeLine{00005     setTiles(window\_size);}
+\DoxyCodeLine{00006 \}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 \textcolor{keywordtype}{void} BossRoom::Enter(PlayerPS player, Direction direction)}
+\DoxyCodeLine{00009 \{}
+\DoxyCodeLine{00010     visited\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{00011     \textcolor{keywordflow}{if} (!cleared\_) \{}
+\DoxyCodeLine{00012         MonsterSP monster;}
+\DoxyCodeLine{00013         \textcolor{keywordflow}{while} (monsters\_.empty()) \{}
+\DoxyCodeLine{00014             BossSpawner bossSpawner = BossSpawner();}
+\DoxyCodeLine{00015             \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{00016                 monster = bossSpawner.SpawnMonster(roomSize\_, player);}
+\DoxyCodeLine{00017             \} \textcolor{keywordflow}{while} (monster == \textcolor{keyword}{nullptr} || !positionIsWalkable(monster-\/>GetBaseBoxAt(monster-\/>GetPos())));}
+\DoxyCodeLine{00018             monster-\/>SetTarget(player);}
+\DoxyCodeLine{00019             monsters\_.push\_back(monster);}
+\DoxyCodeLine{00020         \}}
+\DoxyCodeLine{00021     \}}
+\DoxyCodeLine{00022     player-\/>SetPosAndOldPos(sf::Vector2f(GetEntranceInDirection(direction))); \textcolor{comment}{// prevents us from getting stuck in the wall}}
+\DoxyCodeLine{00023 \}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025 \textcolor{keywordtype}{void} BossRoom::setTiles(sf::Vector2u window\_size)}
+\DoxyCodeLine{00026 \{}
+\DoxyCodeLine{00027     tileVector\_.clear();}
+\DoxyCodeLine{00028     \textcolor{keywordtype}{int} xTileCount = window\_size.x / 64;}
+\DoxyCodeLine{00029     \textcolor{keywordtype}{int} yTileCount = window\_size.y / 64;}
+\DoxyCodeLine{00030     \textcolor{keywordtype}{int} n = 0;}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < yTileCount; ++i) \{}
+\DoxyCodeLine{00032         std::vector<RoomTile*> row;}
+\DoxyCodeLine{00033         \textcolor{keywordtype}{int} k = 0;}
+\DoxyCodeLine{00034         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < xTileCount; ++j) \{}
+\DoxyCodeLine{00035             \textcolor{keywordflow}{if} (i == 0) \{}
+\DoxyCodeLine{00036                 \textcolor{keywordflow}{if} (j == 0) \{}
+\DoxyCodeLine{00037                     row.push\_back(\textcolor{keyword}{new} WallTile(\textcolor{stringliteral}{"{}content/sprites/walls/topwallLEFTSIDE.png"{}}, k, n));}
+\DoxyCodeLine{00038                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (j == xTileCount -\/ 1) \{}
+\DoxyCodeLine{00039                     row.push\_back(\textcolor{keyword}{new} WallTile(\textcolor{stringliteral}{"{}content/sprites/walls/topwallRIGHTSIDE.png"{}}, k, n));}
+\DoxyCodeLine{00040                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00041                     row.push\_back(\textcolor{keyword}{new} WallTile(\textcolor{stringliteral}{"{}content/sprites/walls/wallfront1.png"{}}, k, n));}
+\DoxyCodeLine{00042                 \}}
+\DoxyCodeLine{00043             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i == yTileCount -\/ 1) \{}
+\DoxyCodeLine{00044                 \textcolor{keywordflow}{if} (j == 0) \{}
+\DoxyCodeLine{00045                     row.push\_back(\textcolor{keyword}{new} WallTile(\textcolor{stringliteral}{"{}content/sprites/walls/topwallright.png"{}}, k, n));}
+\DoxyCodeLine{00046                 \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (j == xTileCount -\/ 1) \{}
+\DoxyCodeLine{00047                     row.push\_back(\textcolor{keyword}{new} WallTile(\textcolor{stringliteral}{"{}content/sprites/walls/topwallbottomright.png"{}}, k, n));}
+\DoxyCodeLine{00048                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00049                     row.push\_back(\textcolor{keyword}{new} WallTile(\textcolor{stringliteral}{"{}content/sprites/walls/topwallbottom.png"{}}, k, n));}
+\DoxyCodeLine{00050                 \}}
+\DoxyCodeLine{00051             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i != 0 \&\& j == 0) \{}
+\DoxyCodeLine{00052                 row.push\_back(\textcolor{keyword}{new} WallTile(\textcolor{stringliteral}{"{}content/sprites/walls/topwallLEFTSIDE.png"{}}, k, n));}
+\DoxyCodeLine{00053             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i != 0 \&\& j == xTileCount -\/ 1) \{}
+\DoxyCodeLine{00054                 row.push\_back(\textcolor{keyword}{new} WallTile(\textcolor{stringliteral}{"{}content/sprites/walls/topwallRIGHTSIDE.png"{}}, k, n));}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((i == xTileCount / 3 \&\& j == yTileCount / 2 -\/ 1) || (i == xTileCount / 3 \&\& j == yTileCount + 1) || (i == xTileCount / 3 \&\& j == yTileCount / 2) || (i == xTileCount / 3 \&\& j == yTileCount + 2)) \{}
+\DoxyCodeLine{00057                 row.push\_back(\textcolor{keyword}{new} WallTile(\textcolor{stringliteral}{"{}content/sprites/walls/wallfront1.png"{}}, k, n));}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((i == xTileCount / 3 -\/ 1 \&\& j == yTileCount / 2 -\/ 1) || (i == xTileCount / 3 -\/ 1 \&\& j == yTileCount + 2) || (i == xTileCount / 3 -\/ 1 \&\& j == yTileCount / 2) || (i == xTileCount / 3 -\/ 1 \&\& j == yTileCount + 1)) \{}
+\DoxyCodeLine{00060                 row.push\_back(\textcolor{keyword}{new} WallTile(\textcolor{stringliteral}{"{}content/sprites/walls/wallfront1.png"{}}, k, n));}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00063                 row.push\_back(\textcolor{keyword}{new} FloorTile(\textcolor{stringliteral}{"{}content/sprites/floors/tile1.png"{}}, k, n));}
+\DoxyCodeLine{00064             \}}
+\DoxyCodeLine{00065             k += 64;}
+\DoxyCodeLine{00066         \}}
+\DoxyCodeLine{00067         n += 64;}
+\DoxyCodeLine{00068         tileVector\_.push\_back(row);}
+\DoxyCodeLine{00069     \}}
+\DoxyCodeLine{00070 \}}
+
+\end{DoxyCode}

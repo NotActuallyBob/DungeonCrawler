@@ -1,0 +1,92 @@
+\hypertarget{class_searching_monster}{}\doxysection{Searching\+Monster Class Reference}
+\label{class_searching_monster}\index{SearchingMonster@{SearchingMonster}}
+
+
+\mbox{\hyperlink{class_searching_monster}{Searching\+Monster}} is our only monster that does not shoot projectile but rather directly decreases the healthpoints of the player. It as its name says always walks towards the player.  
+
+
+
+
+{\ttfamily \#include $<$Searching\+Monster.\+hpp$>$}
+
+Inheritance diagram for Searching\+Monster\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_searching_monster}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_searching_monster_a94a93c7b1d1b1418c009aea113a2c675}{Searching\+Monster}} (\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}} player, float x\+Pos, float y\+Pos)
+\item 
+\mbox{\hyperlink{class_searching_monster_aa3cad3a52a55046cf0e296a8209ee10b}{Searching\+Monster}} (\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}} player, sf\+::\+Vector2f pos)
+\item 
+\mbox{\hyperlink{class_searching_monster_aa47c10b293b94fe0deffdd599c8db0f5}{$\sim$\+Searching\+Monster}} ()
+\item 
+virtual std\+::list$<$ \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{Projectile\+UP}} $>$ \mbox{\hyperlink{class_searching_monster_abcd6511050b6ecc18b4fdee766732546}{Attack}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_searching_monster_aee8ee5a68b09c30edb3f322c0cd874fe}{Move}} (float dt)
+\item 
+void \mbox{\hyperlink{class_searching_monster_a4397b6b491f1c014779bc9ee3ff672d8}{init\+Variables}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_searching_monster}{Searching\+Monster}} is our only monster that does not shoot projectile but rather directly decreases the healthpoints of the player. It as its name says always walks towards the player. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_searching_monster_a94a93c7b1d1b1418c009aea113a2c675}\label{class_searching_monster_a94a93c7b1d1b1418c009aea113a2c675}} 
+\index{SearchingMonster@{SearchingMonster}!SearchingMonster@{SearchingMonster}}
+\index{SearchingMonster@{SearchingMonster}!SearchingMonster@{SearchingMonster}}
+\doxysubsubsection{\texorpdfstring{SearchingMonster()}{SearchingMonster()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Searching\+Monster\+::\+Searching\+Monster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}}}]{player,  }\item[{float}]{x\+Pos,  }\item[{float}]{y\+Pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_searching_monster_aa3cad3a52a55046cf0e296a8209ee10b}\label{class_searching_monster_aa3cad3a52a55046cf0e296a8209ee10b}} 
+\index{SearchingMonster@{SearchingMonster}!SearchingMonster@{SearchingMonster}}
+\index{SearchingMonster@{SearchingMonster}!SearchingMonster@{SearchingMonster}}
+\doxysubsubsection{\texorpdfstring{SearchingMonster()}{SearchingMonster()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Searching\+Monster\+::\+Searching\+Monster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}}}]{player,  }\item[{sf\+::\+Vector2f}]{pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_searching_monster_aa47c10b293b94fe0deffdd599c8db0f5}\label{class_searching_monster_aa47c10b293b94fe0deffdd599c8db0f5}} 
+\index{SearchingMonster@{SearchingMonster}!````~SearchingMonster@{$\sim$SearchingMonster}}
+\index{````~SearchingMonster@{$\sim$SearchingMonster}!SearchingMonster@{SearchingMonster}}
+\doxysubsubsection{\texorpdfstring{$\sim$SearchingMonster()}{~SearchingMonster()}}
+{\footnotesize\ttfamily Searching\+Monster\+::$\sim$\+Searching\+Monster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_searching_monster_abcd6511050b6ecc18b4fdee766732546}\label{class_searching_monster_abcd6511050b6ecc18b4fdee766732546}} 
+\index{SearchingMonster@{SearchingMonster}!Attack@{Attack}}
+\index{Attack@{Attack}!SearchingMonster@{SearchingMonster}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily std\+::list$<$ \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{Projectile\+UP}} $>$ Searching\+Monster\+::\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_monster_a65d700523a81fdbf87fd30a838c6e610}{Monster}}.
+
+\mbox{\Hypertarget{class_searching_monster_a4397b6b491f1c014779bc9ee3ff672d8}\label{class_searching_monster_a4397b6b491f1c014779bc9ee3ff672d8}} 
+\index{SearchingMonster@{SearchingMonster}!initVariables@{initVariables}}
+\index{initVariables@{initVariables}!SearchingMonster@{SearchingMonster}}
+\doxysubsubsection{\texorpdfstring{initVariables()}{initVariables()}}
+{\footnotesize\ttfamily void Searching\+Monster\+::init\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_searching_monster_aee8ee5a68b09c30edb3f322c0cd874fe}\label{class_searching_monster_aee8ee5a68b09c30edb3f322c0cd874fe}} 
+\index{SearchingMonster@{SearchingMonster}!Move@{Move}}
+\index{Move@{Move}!SearchingMonster@{SearchingMonster}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily bool Searching\+Monster\+::\+Move (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_monster_af0b3f67e1cc9593b0b657323a25d746e}{Monster}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Actors/\+Monsters/\mbox{\hyperlink{_searching_monster_8hpp}{Searching\+Monster.\+hpp}}\item 
+src/\+Actors/\+Monsters/\mbox{\hyperlink{_searching_monster_8cpp}{Searching\+Monster.\+cpp}}\end{DoxyCompactItemize}

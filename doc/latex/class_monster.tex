@@ -1,0 +1,237 @@
+\hypertarget{class_monster}{}\doxysection{Monster Class Reference}
+\label{class_monster}\index{Monster@{Monster}}
+
+
+\mbox{\hyperlink{class_monster}{Monster}} class, which all our other monsters inherit.  
+
+
+
+
+{\ttfamily \#include $<$monster.\+hpp$>$}
+
+Inheritance diagram for Monster\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.010753cm]{class_monster}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_monster_a21619ba1759b910cd2fd50d858aab338}{$\sim$\+Monster}} ()
+\item 
+\mbox{\hyperlink{class_player}{Player}} \& \mbox{\hyperlink{class_monster_a18a794c3014f40c83a3bf356cf5587a4}{Get\+Player}} () const
+\item 
+virtual std\+::list$<$ \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{Projectile\+UP}} $>$ \mbox{\hyperlink{class_monster_a65d700523a81fdbf87fd30a838c6e610}{Attack}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_monster_aa730079d3f513f17f44ec15a6be35b28}{Update}} (float)
+\item 
+virtual bool \mbox{\hyperlink{class_monster_af0b3f67e1cc9593b0b657323a25d746e}{Move}} (float dt)=0
+\item 
+virtual void \mbox{\hyperlink{class_monster_ac8f61d71151979a78dbf858fdff4d93b}{Render}} (sf\+::\+Render\+Target $\ast$target)
+\item 
+void \mbox{\hyperlink{class_monster_ab90c5c8dc9c3f24e1aa9f79731b875d7}{init\+Variables}} ()
+\item 
+void \mbox{\hyperlink{class_monster_aaa410f8a19211d8c5ddad101d66803df}{Set\+Target}} (\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}} target)
+\item 
+\mbox{\hyperlink{class_potion}{Potion}} $\ast$ \mbox{\hyperlink{class_monster_abb1da5123c06bf7f330dec8c85e65eab}{Return\+Potion}} ()
+\begin{DoxyCompactList}\small\item\em determines if monster is going to drop a potion and what kind of potion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_monster_a43ceac89cceee8b2c4c98a8c35783907}{Monster}} (\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}} player, sf\+::\+Vector2f pos, const std\+::string \&sprite\+File)
+\item 
+\mbox{\hyperlink{class_monster_a29a5eb418e6dd9c603136a01f5be1294}{Monster}} (\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}} player, float x\+Pos, float y\+Pos, const std\+::string \&sprite\+File)
+\item 
+float \mbox{\hyperlink{class_monster_ae67529c2e75e1a0f92c9fe8c5cb54140}{get\+Distance\+To\+Player}} ()
+\item 
+bool \mbox{\hyperlink{class_monster_a1f95f90b2156b9cda7b06b390fb99310}{in\+Range\+Of\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Checks if player is in attack range of monster character based on weapon range. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_monster_ab167b8a33f19b396a555a80d50158bf0}{move\+Towards\+Player}} (float dt)
+\item 
+void \mbox{\hyperlink{class_monster_a1495848858433efb1c03db4531fc30d6}{clamp\+Pos\+To\+Room}} ()
+\begin{DoxyCompactList}\small\item\em clamps the monsters into a room so they can go into corridors \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_player}{Player}} $>$ \mbox{\hyperlink{class_monster_a3d8e2ee749c613b405c830229985a234}{player\+\_\+}}
+\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{class_monster_a08af3b479664015187e92f0d0bbdf0dc}{healthbar\+\_\+}}
+\item 
+float \mbox{\hyperlink{class_monster_ab0137bcc8c652bd858a6fa000f8d23eb}{static\+Damage\+\_\+}} = 5.\+0f
+\item 
+bool \mbox{\hyperlink{class_monster_ad7db690ec6b26faa6959b52deb5357f6}{moved\+Last\+Tick\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_monster}{Monster}} class, which all our other monsters inherit. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_monster_a21619ba1759b910cd2fd50d858aab338}\label{class_monster_a21619ba1759b910cd2fd50d858aab338}} 
+\index{Monster@{Monster}!````~Monster@{$\sim$Monster}}
+\index{````~Monster@{$\sim$Monster}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{$\sim$Monster()}{~Monster()}}
+{\footnotesize\ttfamily Monster\+::$\sim$\+Monster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_monster_a43ceac89cceee8b2c4c98a8c35783907}\label{class_monster_a43ceac89cceee8b2c4c98a8c35783907}} 
+\index{Monster@{Monster}!Monster@{Monster}}
+\index{Monster@{Monster}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{Monster()}{Monster()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Monster\+::\+Monster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}}}]{player,  }\item[{sf\+::\+Vector2f}]{pos,  }\item[{const std\+::string \&}]{sprite\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monster_a29a5eb418e6dd9c603136a01f5be1294}\label{class_monster_a29a5eb418e6dd9c603136a01f5be1294}} 
+\index{Monster@{Monster}!Monster@{Monster}}
+\index{Monster@{Monster}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{Monster()}{Monster()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Monster\+::\+Monster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}}}]{player,  }\item[{float}]{x\+Pos,  }\item[{float}]{y\+Pos,  }\item[{const std\+::string \&}]{sprite\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_monster_a65d700523a81fdbf87fd30a838c6e610}\label{class_monster_a65d700523a81fdbf87fd30a838c6e610}} 
+\index{Monster@{Monster}!Attack@{Attack}}
+\index{Attack@{Attack}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily virtual std\+::list$<$ \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{Projectile\+UP}} $>$ Monster\+::\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_boss_monster_a2ec1678d6f2add0f7273ab8d5a301b72}{Boss\+Monster}}, \mbox{\hyperlink{class_random_monster_a941acf7e060a9665a261476846a5678b}{Random\+Monster}}, \mbox{\hyperlink{class_searching_monster_abcd6511050b6ecc18b4fdee766732546}{Searching\+Monster}}, \mbox{\hyperlink{class_slow_monster_a1525437cc51b9192b420ada9638dc47d}{Slow\+Monster}}, \mbox{\hyperlink{class_sniping_monster_a6b4d5c0cb61e08967a446cc8b1ff81d3}{Sniping\+Monster}}, and \mbox{\hyperlink{class_wall_patrol_monster_a1c9f9deed0bb0a033243ddf044897a24}{Wall\+Patrol\+Monster}}.
+
+\mbox{\Hypertarget{class_monster_a1495848858433efb1c03db4531fc30d6}\label{class_monster_a1495848858433efb1c03db4531fc30d6}} 
+\index{Monster@{Monster}!clampPosToRoom@{clampPosToRoom}}
+\index{clampPosToRoom@{clampPosToRoom}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{clampPosToRoom()}{clampPosToRoom()}}
+{\footnotesize\ttfamily void Monster\+::clamp\+Pos\+To\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+clamps the monsters into a room so they can go into corridors 
+
+\mbox{\Hypertarget{class_monster_ae67529c2e75e1a0f92c9fe8c5cb54140}\label{class_monster_ae67529c2e75e1a0f92c9fe8c5cb54140}} 
+\index{Monster@{Monster}!getDistanceToPlayer@{getDistanceToPlayer}}
+\index{getDistanceToPlayer@{getDistanceToPlayer}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{getDistanceToPlayer()}{getDistanceToPlayer()}}
+{\footnotesize\ttfamily float Monster\+::get\+Distance\+To\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monster_a18a794c3014f40c83a3bf356cf5587a4}\label{class_monster_a18a794c3014f40c83a3bf356cf5587a4}} 
+\index{Monster@{Monster}!GetPlayer@{GetPlayer}}
+\index{GetPlayer@{GetPlayer}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{GetPlayer()}{GetPlayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_player}{Player}} \& Monster\+::\+Get\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_monster_ab90c5c8dc9c3f24e1aa9f79731b875d7}\label{class_monster_ab90c5c8dc9c3f24e1aa9f79731b875d7}} 
+\index{Monster@{Monster}!initVariables@{initVariables}}
+\index{initVariables@{initVariables}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{initVariables()}{initVariables()}}
+{\footnotesize\ttfamily void Monster\+::init\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_monster_a1f95f90b2156b9cda7b06b390fb99310}\label{class_monster_a1f95f90b2156b9cda7b06b390fb99310}} 
+\index{Monster@{Monster}!inRangeOfPlayer@{inRangeOfPlayer}}
+\index{inRangeOfPlayer@{inRangeOfPlayer}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{inRangeOfPlayer()}{inRangeOfPlayer()}}
+{\footnotesize\ttfamily bool Monster\+::in\+Range\+Of\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Checks if player is in attack range of monster character based on weapon range. 
+
+\begin{DoxyReturn}{Returns}
+true if it is 
+
+false if not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monster_af0b3f67e1cc9593b0b657323a25d746e}\label{class_monster_af0b3f67e1cc9593b0b657323a25d746e}} 
+\index{Monster@{Monster}!Move@{Move}}
+\index{Move@{Move}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily virtual bool Monster\+::\+Move (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_character_ae2e7aeef21ec15ae0cff17aee15c6ca0}{Character}}.
+
+
+
+Implemented in \mbox{\hyperlink{class_boss_monster_a3e08beea7748fa58c2de8299063d0d65}{Boss\+Monster}}, \mbox{\hyperlink{class_random_monster_a4f2f4d12ca1ae8471482836187d2f748}{Random\+Monster}}, \mbox{\hyperlink{class_searching_monster_aee8ee5a68b09c30edb3f322c0cd874fe}{Searching\+Monster}}, \mbox{\hyperlink{class_slow_monster_a0c977a815d98fef9bb0f23e931971fbb}{Slow\+Monster}}, \mbox{\hyperlink{class_sniping_monster_af5a89db315172695ccdd0bf83601e139}{Sniping\+Monster}}, and \mbox{\hyperlink{class_wall_patrol_monster_a862ea23ac2104f4093662ec8317ab994}{Wall\+Patrol\+Monster}}.
+
+\mbox{\Hypertarget{class_monster_ab167b8a33f19b396a555a80d50158bf0}\label{class_monster_ab167b8a33f19b396a555a80d50158bf0}} 
+\index{Monster@{Monster}!moveTowardsPlayer@{moveTowardsPlayer}}
+\index{moveTowardsPlayer@{moveTowardsPlayer}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{moveTowardsPlayer()}{moveTowardsPlayer()}}
+{\footnotesize\ttfamily bool Monster\+::move\+Towards\+Player (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monster_ac8f61d71151979a78dbf858fdff4d93b}\label{class_monster_ac8f61d71151979a78dbf858fdff4d93b}} 
+\index{Monster@{Monster}!Render@{Render}}
+\index{Render@{Render}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Monster\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_entity_a034bc6e6506d067bdad46080cbee620c}{Entity}}.
+
+\mbox{\Hypertarget{class_monster_abb1da5123c06bf7f330dec8c85e65eab}\label{class_monster_abb1da5123c06bf7f330dec8c85e65eab}} 
+\index{Monster@{Monster}!ReturnPotion@{ReturnPotion}}
+\index{ReturnPotion@{ReturnPotion}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{ReturnPotion()}{ReturnPotion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_potion}{Potion}} $\ast$ Monster\+::\+Return\+Potion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+determines if monster is going to drop a potion and what kind of potion. 
+
+\begin{DoxyReturn}{Returns}
+Potion$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_monster_aaa410f8a19211d8c5ddad101d66803df}\label{class_monster_aaa410f8a19211d8c5ddad101d66803df}} 
+\index{Monster@{Monster}!SetTarget@{SetTarget}}
+\index{SetTarget@{SetTarget}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{SetTarget()}{SetTarget()}}
+{\footnotesize\ttfamily void Monster\+::\+Set\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}}}]{target }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_monster_aa730079d3f513f17f44ec15a6be35b28}\label{class_monster_aa730079d3f513f17f44ec15a6be35b28}} 
+\index{Monster@{Monster}!Update@{Update}}
+\index{Update@{Update}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Monster\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_character_a72da2201326fe395bea15161cd37bd53}{Character}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_monster_a08af3b479664015187e92f0d0bbdf0dc}\label{class_monster_a08af3b479664015187e92f0d0bbdf0dc}} 
+\index{Monster@{Monster}!healthbar\_@{healthbar\_}}
+\index{healthbar\_@{healthbar\_}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{healthbar\_}{healthbar\_}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Monster\+::healthbar\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monster_ad7db690ec6b26faa6959b52deb5357f6}\label{class_monster_ad7db690ec6b26faa6959b52deb5357f6}} 
+\index{Monster@{Monster}!movedLastTick\_@{movedLastTick\_}}
+\index{movedLastTick\_@{movedLastTick\_}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{movedLastTick\_}{movedLastTick\_}}
+{\footnotesize\ttfamily bool Monster\+::moved\+Last\+Tick\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monster_a3d8e2ee749c613b405c830229985a234}\label{class_monster_a3d8e2ee749c613b405c830229985a234}} 
+\index{Monster@{Monster}!player\_@{player\_}}
+\index{player\_@{player\_}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{player\_}{player\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{class_player}{Player}}$>$ Monster\+::player\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_monster_ab0137bcc8c652bd858a6fa000f8d23eb}\label{class_monster_ab0137bcc8c652bd858a6fa000f8d23eb}} 
+\index{Monster@{Monster}!staticDamage\_@{staticDamage\_}}
+\index{staticDamage\_@{staticDamage\_}!Monster@{Monster}}
+\doxysubsubsection{\texorpdfstring{staticDamage\_}{staticDamage\_}}
+{\footnotesize\ttfamily float Monster\+::static\+Damage\+\_\+ = 5.\+0f\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Actors/\+Monsters/\mbox{\hyperlink{monster_8hpp}{monster.\+hpp}}\item 
+src/\+Actors/\+Monsters/\mbox{\hyperlink{monster_8cpp}{monster.\+cpp}}\end{DoxyCompactItemize}

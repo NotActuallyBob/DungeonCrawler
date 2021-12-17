@@ -1,0 +1,21 @@
+\doxysection{Sound\+Effects.\+cpp}
+\label{_sound_effects_8cpp_source}\index{src/Utility/Sounds/SoundEffects.cpp@{src/Utility/Sounds/SoundEffects.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}SoundEffects.hpp"{}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 SoundEffect::SoundEffect(\textcolor{keyword}{const} std::string\& SoundEffectFilename)}
+\DoxyCodeLine{00004 \{}
+\DoxyCodeLine{00005     \textcolor{keywordflow}{if} (!buffer.loadFromFile(SoundEffectFilename)) \{}
+\DoxyCodeLine{00006         ;}
+\DoxyCodeLine{00007     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00008         effect.setBuffer(buffer);}
+\DoxyCodeLine{00009     \}}
+\DoxyCodeLine{00010 \}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 \textcolor{keywordtype}{void} SoundEffect::PlaySound()}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014     effect.play();}
+\DoxyCodeLine{00015 \}}
+
+\end{DoxyCode}

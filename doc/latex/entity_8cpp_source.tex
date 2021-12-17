@@ -1,0 +1,87 @@
+\doxysection{entity.\+cpp}
+\label{entity_8cpp_source}\index{src/entity.cpp@{src/entity.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}entity.hpp"{}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 Entity::Entity(\textcolor{keyword}{const} std::string\& spriteFile, \textcolor{keywordtype}{float} xPos, \textcolor{keywordtype}{float} yPos, sf::Vector2f spriteDims)}
+\DoxyCodeLine{00004     : pos\_(sf::Vector2f(xPos, yPos))}
+\DoxyCodeLine{00005     , oldPos\_(pos\_)}
+\DoxyCodeLine{00006     , texture\_(sf::Texture())}
+\DoxyCodeLine{00007 \{}
+\DoxyCodeLine{00008     initSprite(spriteFile, spriteDims);}
+\DoxyCodeLine{00009     sprite\_.setPosition(xPos, yPos);}
+\DoxyCodeLine{00010 \}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 Entity::Entity(\textcolor{keyword}{const} std::string\& spriteFile, sf::Vector2f pos, sf::Vector2f spriteDims)}
+\DoxyCodeLine{00013     : Entity(spriteFile, pos.x, pos.y, spriteDims)}
+\DoxyCodeLine{00014 \{}
+\DoxyCodeLine{00015 \}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 Entity::Entity(sf::Sprite\& sprite, \textcolor{keywordtype}{float} xPos, \textcolor{keywordtype}{float} yPos)}
+\DoxyCodeLine{00018     : pos\_(sf::Vector2f(xPos, yPos))}
+\DoxyCodeLine{00019     , oldPos\_(pos\_)}
+\DoxyCodeLine{00020     , sprite\_(sprite)}
+\DoxyCodeLine{00021     , texture\_(sf::Texture())}
+\DoxyCodeLine{00022 \{}
+\DoxyCodeLine{00023 \}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025 Entity::Entity(sf::Sprite\& sprite, sf::Vector2f pos)}
+\DoxyCodeLine{00026     : Entity(sprite, pos.x, pos.y)}
+\DoxyCodeLine{00027 \{}
+\DoxyCodeLine{00028 \}}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030 \textcolor{keyword}{const} sf::Vector2f\& Entity::GetOldPosition()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00031 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00032     \textcolor{keywordflow}{return} oldPos\_;}
+\DoxyCodeLine{00033 \}}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035 sf::FloatRect Entity::GetSpriteBounds()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00036 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00037     \textcolor{keywordflow}{return} sprite\_.getGlobalBounds();}
+\DoxyCodeLine{00038 \}}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040 sf::FloatRect Entity::GetBaseBoxAt(sf::Vector2f pos)\textcolor{keyword}{ const}}
+\DoxyCodeLine{00041 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00042     \textcolor{keyword}{auto} spriteBounds = sprite\_.getGlobalBounds();}
+\DoxyCodeLine{00043     \textcolor{comment}{// set to use new position}}
+\DoxyCodeLine{00044     spriteBounds.left = pos.x;}
+\DoxyCodeLine{00045     spriteBounds.top = pos.y;}
+\DoxyCodeLine{00046     \textcolor{comment}{// use only lower half}}
+\DoxyCodeLine{00047     spriteBounds.height *= 1.0f / 2;}
+\DoxyCodeLine{00048     spriteBounds.top += spriteBounds.height;}
+\DoxyCodeLine{00049     \textcolor{keywordflow}{return} spriteBounds;}
+\DoxyCodeLine{00050 \}}
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052 sf::Vector2f Entity::GetSpriteCenter()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00053 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00054     \textcolor{keyword}{auto} spriteOrigin = GetSpritePosition();}
+\DoxyCodeLine{00055     \textcolor{keyword}{auto} localSpriteBounds = sprite\_.getGlobalBounds();}
+\DoxyCodeLine{00056     spriteOrigin.x += 1.0f / 2 * localSpriteBounds.width;}
+\DoxyCodeLine{00057     spriteOrigin.y += 1.0f / 2 * localSpriteBounds.height;}
+\DoxyCodeLine{00058     \textcolor{keywordflow}{return} spriteOrigin;}
+\DoxyCodeLine{00059 \}}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061 \textcolor{keywordtype}{void} Entity::Render(sf::RenderTarget* target) \{ target-\/>draw(sprite\_); \}}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063 \textcolor{keywordtype}{void} Entity::initSprite(\textcolor{keyword}{const} std::string\& spriteFile, sf::Vector2f spriteDims)}
+\DoxyCodeLine{00064 \{}
+\DoxyCodeLine{00065     \textcolor{keywordflow}{if} (texture\_.loadFromFile(spriteFile)) \{}
+\DoxyCodeLine{00066         sprite\_.setTexture(texture\_);}
+\DoxyCodeLine{00067         sprite\_.setScale(spriteDims);}
+\DoxyCodeLine{00068     \}}
+\DoxyCodeLine{00069 \}}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071 \textcolor{keywordtype}{void} Entity::SetPos(sf::Vector2f pos)}
+\DoxyCodeLine{00072 \{}
+\DoxyCodeLine{00073     pos\_ = pos;}
+\DoxyCodeLine{00074     sprite\_.setPosition(pos\_);}
+\DoxyCodeLine{00075 \}}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077 \textcolor{keywordtype}{void} Entity::SetPosAndOldPos(sf::Vector2f pos)}
+\DoxyCodeLine{00078 \{}
+\DoxyCodeLine{00079     SetPos(pos);}
+\DoxyCodeLine{00080     oldPos\_ = pos;}
+\DoxyCodeLine{00081 \}}
+
+\end{DoxyCode}

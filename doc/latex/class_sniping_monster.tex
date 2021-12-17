@@ -1,0 +1,92 @@
+\hypertarget{class_sniping_monster}{}\doxysection{Sniping\+Monster Class Reference}
+\label{class_sniping_monster}\index{SnipingMonster@{SnipingMonster}}
+
+
+\mbox{\hyperlink{class_sniping_monster}{Sniping\+Monster}} never moves but shoots projectile towards the player with a really big range.  
+
+
+
+
+{\ttfamily \#include $<$Sniping\+Monster.\+hpp$>$}
+
+Inheritance diagram for Sniping\+Monster\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_sniping_monster}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sniping_monster_a50eed39715726503d6d9db4e9d4f483e}{Sniping\+Monster}} (\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}} player, float x\+Pos, float y\+Pos)
+\item 
+\mbox{\hyperlink{class_sniping_monster_a529317e01f71372ccd5194869fef6eb1}{Sniping\+Monster}} (\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}} player, sf\+::\+Vector2f pos)
+\item 
+\mbox{\hyperlink{class_sniping_monster_aa905e5edd0941e4e2dfab03c0a09a47a}{$\sim$\+Sniping\+Monster}} ()
+\item 
+virtual std\+::list$<$ \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{Projectile\+UP}} $>$ \mbox{\hyperlink{class_sniping_monster_a6b4d5c0cb61e08967a446cc8b1ff81d3}{Attack}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_sniping_monster_af5a89db315172695ccdd0bf83601e139}{Move}} (float dt)
+\item 
+void \mbox{\hyperlink{class_sniping_monster_a713e4ae47d7eb4754465d89da022d931}{init\+Variables}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_sniping_monster}{Sniping\+Monster}} never moves but shoots projectile towards the player with a really big range. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sniping_monster_a50eed39715726503d6d9db4e9d4f483e}\label{class_sniping_monster_a50eed39715726503d6d9db4e9d4f483e}} 
+\index{SnipingMonster@{SnipingMonster}!SnipingMonster@{SnipingMonster}}
+\index{SnipingMonster@{SnipingMonster}!SnipingMonster@{SnipingMonster}}
+\doxysubsubsection{\texorpdfstring{SnipingMonster()}{SnipingMonster()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sniping\+Monster\+::\+Sniping\+Monster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}}}]{player,  }\item[{float}]{x\+Pos,  }\item[{float}]{y\+Pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sniping_monster_a529317e01f71372ccd5194869fef6eb1}\label{class_sniping_monster_a529317e01f71372ccd5194869fef6eb1}} 
+\index{SnipingMonster@{SnipingMonster}!SnipingMonster@{SnipingMonster}}
+\index{SnipingMonster@{SnipingMonster}!SnipingMonster@{SnipingMonster}}
+\doxysubsubsection{\texorpdfstring{SnipingMonster()}{SnipingMonster()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sniping\+Monster\+::\+Sniping\+Monster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{Player\+PS}}}]{player,  }\item[{sf\+::\+Vector2f}]{pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sniping_monster_aa905e5edd0941e4e2dfab03c0a09a47a}\label{class_sniping_monster_aa905e5edd0941e4e2dfab03c0a09a47a}} 
+\index{SnipingMonster@{SnipingMonster}!````~SnipingMonster@{$\sim$SnipingMonster}}
+\index{````~SnipingMonster@{$\sim$SnipingMonster}!SnipingMonster@{SnipingMonster}}
+\doxysubsubsection{\texorpdfstring{$\sim$SnipingMonster()}{~SnipingMonster()}}
+{\footnotesize\ttfamily Sniping\+Monster\+::$\sim$\+Sniping\+Monster (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sniping_monster_a6b4d5c0cb61e08967a446cc8b1ff81d3}\label{class_sniping_monster_a6b4d5c0cb61e08967a446cc8b1ff81d3}} 
+\index{SnipingMonster@{SnipingMonster}!Attack@{Attack}}
+\index{Attack@{Attack}!SnipingMonster@{SnipingMonster}}
+\doxysubsubsection{\texorpdfstring{Attack()}{Attack()}}
+{\footnotesize\ttfamily std\+::list$<$ \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{Projectile\+UP}} $>$ Sniping\+Monster\+::\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_monster_a65d700523a81fdbf87fd30a838c6e610}{Monster}}.
+
+\mbox{\Hypertarget{class_sniping_monster_a713e4ae47d7eb4754465d89da022d931}\label{class_sniping_monster_a713e4ae47d7eb4754465d89da022d931}} 
+\index{SnipingMonster@{SnipingMonster}!initVariables@{initVariables}}
+\index{initVariables@{initVariables}!SnipingMonster@{SnipingMonster}}
+\doxysubsubsection{\texorpdfstring{initVariables()}{initVariables()}}
+{\footnotesize\ttfamily void Sniping\+Monster\+::init\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_sniping_monster_af5a89db315172695ccdd0bf83601e139}\label{class_sniping_monster_af5a89db315172695ccdd0bf83601e139}} 
+\index{SnipingMonster@{SnipingMonster}!Move@{Move}}
+\index{Move@{Move}!SnipingMonster@{SnipingMonster}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily bool Sniping\+Monster\+::\+Move (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_monster_af0b3f67e1cc9593b0b657323a25d746e}{Monster}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Actors/\+Monsters/\mbox{\hyperlink{_sniping_monster_8hpp}{Sniping\+Monster.\+hpp}}\item 
+src/\+Actors/\+Monsters/\mbox{\hyperlink{_sniping_monster_8cpp}{Sniping\+Monster.\+cpp}}\end{DoxyCompactItemize}

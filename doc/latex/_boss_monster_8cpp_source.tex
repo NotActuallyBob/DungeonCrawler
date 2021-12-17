@@ -1,0 +1,117 @@
+\doxysection{Boss\+Monster.\+cpp}
+\label{_boss_monster_8cpp_source}\index{src/Actors/Monsters/BossMonster.cpp@{src/Actors/Monsters/BossMonster.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}BossMonster.hpp"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}math.h"{}}}
+\DoxyCodeLine{00003 \textcolor{keyword}{namespace }\{}
+\DoxyCodeLine{00004 \textcolor{keyword}{const} std::string monsterSpriteFileLocation = \textcolor{stringliteral}{"{}content/sprites/monsters/ratking.png"{}};}
+\DoxyCodeLine{00005 \}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 BossMonster::BossMonster(PlayerPS player, sf::Vector2f pos)}
+\DoxyCodeLine{00008     : Monster(player, pos, monsterSpriteFileLocation)}
+\DoxyCodeLine{00009 \{}
+\DoxyCodeLine{00010 \}}
+\DoxyCodeLine{00011 BossMonster::BossMonster(PlayerPS player, \textcolor{keywordtype}{float} xPos, \textcolor{keywordtype}{float} yPos)}
+\DoxyCodeLine{00012     : Monster(player, sf::Vector2f(xPos, yPos), monsterSpriteFileLocation)}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014     initVariables();}
+\DoxyCodeLine{00015 \}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 BossMonster::\string~BossMonster() \{ \}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019 \textcolor{keywordtype}{bool} BossMonster::Move(\textcolor{keywordtype}{float} dt)}
+\DoxyCodeLine{00020 \{}
+\DoxyCodeLine{00021     elapsedTurnTime\_ += dt;}
+\DoxyCodeLine{00022     \textcolor{keywordflow}{if} (elapsedTurnTime\_ > durationUntilTurn\_ || !movedLastTick\_) \{}
+\DoxyCodeLine{00023         elapsedTurnTime\_ = 0.0f;}
+\DoxyCodeLine{00024         currentDir\_ = randomhelper::RandomIntBetween(1, 4);}
+\DoxyCodeLine{00025         durationUntilTurn\_ = randomhelper::RandomFloatBetween(0.2f, 1.0f);}
+\DoxyCodeLine{00026     \}}
+\DoxyCodeLine{00027     \textcolor{keywordflow}{if} (currentDir\_ == 1) \{}
+\DoxyCodeLine{00028         MoveDown(dt);}
+\DoxyCodeLine{00029     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (currentDir\_ == 2) \{}
+\DoxyCodeLine{00030         MoveLeft(dt);}
+\DoxyCodeLine{00031     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (currentDir\_ == 3) \{}
+\DoxyCodeLine{00032         MoveUp(dt);}
+\DoxyCodeLine{00033     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00034         MoveRight(dt);}
+\DoxyCodeLine{00035     \}}
+\DoxyCodeLine{00036     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00037 \}}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039 std::list<ProjectileUP> BossMonster::Attack()}
+\DoxyCodeLine{00040 \{}
+\DoxyCodeLine{00041     \textcolor{keywordflow}{if} ((!CanAttack || !HasWeapon() || !IsAlive()) \&\& inRangeOfPlayer()) \{}
+\DoxyCodeLine{00042         \textcolor{keywordflow}{return} emptyList();}
+\DoxyCodeLine{00043     \}}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     sf::Vector2f centerPos = GetSpriteCenter();}
+\DoxyCodeLine{00046     \textcolor{keywordflow}{if} (attackStyle\_ == 0) \{}
+\DoxyCodeLine{00047         ResetAttackCooldown();}
+\DoxyCodeLine{00048         std::list<ProjectileUP> listOfBulletsToAdd;}
+\DoxyCodeLine{00049         \textcolor{keywordflow}{while} (nofBulletsShot\_ < nofBulletsInCircle\_) \{}
+\DoxyCodeLine{00050             sf::Vector2f shootPos = sf::Vector2f(centerPos.x + 1 * sin(angle\_), centerPos.y -\/ 1 * cos(angle\_));}
+\DoxyCodeLine{00051             std::list<ProjectileUP> subListToAdd = shotProjectileList(shootPos);}
+\DoxyCodeLine{00052             listOfBulletsToAdd.merge(subListToAdd);}
+\DoxyCodeLine{00053             iterateAngle();}
+\DoxyCodeLine{00054             nofBulletsShot\_ += 1;}
+\DoxyCodeLine{00055         \}}
+\DoxyCodeLine{00056         iterateAttackStyle();}
+\DoxyCodeLine{00057         \textcolor{keywordflow}{return} listOfBulletsToAdd;}
+\DoxyCodeLine{00058     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (attackStyle\_ == 1) \{}
+\DoxyCodeLine{00059         \textcolor{keywordflow}{if} (attackLoopClock\_.getElapsedTime().asSeconds() >= spritalAttackCooldownLength\_) \{}
+\DoxyCodeLine{00060             attackLoopClock\_.restart();}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062             sf::Vector2f shootPos = sf::Vector2f(centerPos.x + 1 * sin(angle\_), centerPos.y -\/ 1 * cos(angle\_));}
+\DoxyCodeLine{00063             nofBulletsShot\_ += 1;}
+\DoxyCodeLine{00064             iterateAngle();}
+\DoxyCodeLine{00065             \textcolor{keywordflow}{if} (nofBulletsShot\_ == nofBulletsInCircle\_) \{}
+\DoxyCodeLine{00066                 iterateAttackStyle();}
+\DoxyCodeLine{00067                 ResetAttackCooldown();}
+\DoxyCodeLine{00068             \}}
+\DoxyCodeLine{00069             \textcolor{keywordflow}{return} shotProjectileList(shootPos);}
+\DoxyCodeLine{00070         \}}
+\DoxyCodeLine{00071     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (attackStyle\_ == 2) \{}
+\DoxyCodeLine{00072         \textcolor{keywordflow}{if} (attackLoopClock\_.getElapsedTime().asSeconds() >= normalAttackCooldownLength\_) \{}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074             attackLoopClock\_.restart();}
+\DoxyCodeLine{00075             nofBulletsShot\_ += 1;}
+\DoxyCodeLine{00076             \textcolor{keywordflow}{if} (nofBulletsShot\_ == nofBulletsToShootTowardsPlayer\_) \{}
+\DoxyCodeLine{00077                 iterateAttackStyle();}
+\DoxyCodeLine{00078                 ResetAttackCooldown();}
+\DoxyCodeLine{00079             \}}
+\DoxyCodeLine{00080             \textcolor{keywordflow}{return} shotProjectileList(player\_-\/>GetSpriteCenter());}
+\DoxyCodeLine{00081         \}}
+\DoxyCodeLine{00082     \}}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084     \textcolor{keywordflow}{return} emptyList();}
+\DoxyCodeLine{00085 \}}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087 \textcolor{keywordtype}{void} BossMonster::initVariables()}
+\DoxyCodeLine{00088 \{}
+\DoxyCodeLine{00089     SwordWeapon* bossSword = \textcolor{keyword}{new} SwordWeapon(10, 1000, 60, 400, sf::Vector2f(2000, 2000), \textcolor{stringliteral}{"{}content/sprites/projectiles/projectiles.png"{}});}
+\DoxyCodeLine{00090     bossSword-\/>SetTextureRect(\{ 400, 215, 10, 15 \});}
+\DoxyCodeLine{00091     Equip(bossSword);}
+\DoxyCodeLine{00092     hitpoints\_ = 300;}
+\DoxyCodeLine{00093     SetNormalSpeed(300.0f);}
+\DoxyCodeLine{00094 \}}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096 \textcolor{keywordtype}{void} BossMonster::iterateAngle()}
+\DoxyCodeLine{00097 \{}
+\DoxyCodeLine{00098     angle\_ += 2 * M\_PI / nofBulletsInCircle\_;}
+\DoxyCodeLine{00099     \textcolor{keywordflow}{if} (angle\_ == 2 * M\_PI) \{}
+\DoxyCodeLine{00100         angle\_ = 0.0f;}
+\DoxyCodeLine{00101     \}}
+\DoxyCodeLine{00102 \}}
+\DoxyCodeLine{00103 }
+\DoxyCodeLine{00104 \textcolor{keywordtype}{void} BossMonster::iterateAttackStyle()}
+\DoxyCodeLine{00105 \{}
+\DoxyCodeLine{00106     nofBulletsShot\_ = 0;}
+\DoxyCodeLine{00107     attackStyle\_ += 1;}
+\DoxyCodeLine{00108     \textcolor{keywordflow}{if} (attackStyle\_ == nofattackStyles\_) \{}
+\DoxyCodeLine{00109         attackStyle\_ = 0;}
+\DoxyCodeLine{00110     \}}
+\DoxyCodeLine{00111 \}}
+
+\end{DoxyCode}

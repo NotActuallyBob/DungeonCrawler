@@ -1,0 +1,87 @@
+\hypertarget{character_8hpp_source}{}\doxysection{character.\+hpp}
+\label{character_8hpp_source}\index{src/Actors/character.hpp@{src/Actors/character.hpp}}
+\mbox{\hyperlink{character_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef \_CHARACTER\_CLASS\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define \_CHARACTER\_CLASS\_}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_projectile_8hpp}{Combat/Projectile.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{comment}{//\#include "{}Interfaces/ICollidable.hpp"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_animationhandler_8hpp}{Animation/Animationhandler.hpp}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_weapon_8hpp}{Combat/Weapons/Weapon.hpp}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_level_up_system_8hpp}{Utility/LevelUpSystem.hpp}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_random_helper_8hpp}{Utility/RandomHelper.hpp}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{entity_8hpp}{entity.hpp}}"{}}}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_character}{Character}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_entity}{Entity}} \textcolor{comment}{/*, public ICollidable*/} \{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_character_a4dc49b9e2e2cef997db1b66b90d2641c}{Character}}(\textcolor{keyword}{const} std::string\& filename, sf::Vector2f pos, \textcolor{keywordtype}{bool} animated = \textcolor{keyword}{false});}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_character_a9e9be564d05ded80962b2045aa70b3fc}{\string~Character}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_a72da2201326fe395bea15161cd37bd53}{Update}}(\textcolor{keywordtype}{float} dt) = 0;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_aab09840fca8c49338d42452fdd14e336}{Equip}}(\mbox{\hyperlink{class_weapon}{Weapon}}* weapon);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_a36f2f7e1a340bf0f706d3e1531b1033e}{initVariables}}();}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_a17709de2abb000b15be2ad1665a5c2d5}{TakeDamage}}(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_a3f133fa7a39191612e20f4b28a048f29}{Heal}}(\textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_character_a7e443d91ccbef36e3bba3079e29d91c3}{GetHitPoints}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{51     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_a18095520ae360be2d6fa1b2abdf2a2bf}{IsAlive}}();}
+\DoxyCodeLine{58     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_ad7df88922b7ed22e5c95f6a2a46c4b40}{HasWeapon}}();}
+\DoxyCodeLine{65     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_ae810ef46dbaee618c24b8ced5b8abc8e}{Idle}}();}
+\DoxyCodeLine{72     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_a0de9ef40d4abffe9d204433eaf825b86}{Dead}}();}
+\DoxyCodeLine{80     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_a6812ffbbc14ce9e4367f16c6dcea976e}{MoveLeft}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{88     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_ac5318818ce2d595050fdf2ba6a61a228}{MoveRight}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{96     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_a1bc80f4938001a2d909f1c80d0587822}{MoveDown}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{104     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_a1c185b3f7ce00ef7b5273088ddae1c52}{MoveUp}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{105     \textcolor{comment}{// For subclasses, should be = 0}}
+\DoxyCodeLine{106     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_ae2e7aeef21ec15ae0cff17aee15c6ca0}{Move}}(\textcolor{keywordtype}{float})}
+\DoxyCodeLine{107     \{}
+\DoxyCodeLine{108         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{109     \}}
+\DoxyCodeLine{114     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_a75477ffca10fab9d20f4df7d76f485e2}{RevertMove}}();}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_a1203f6cb2ab6fc307ef2b3d693927bd8}{ResetAttackCooldown}}();}
+\DoxyCodeLine{117     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_character_aba43496adfe6c7f4a0a1e2a0fedd9160}{GetAttackCooldownLeft}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_character_a81cacbcb076a27322d772641618ca48a}{attackCooldownLeft}}; \};}
+\DoxyCodeLine{118     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_character_ac172f1d9ef83accb7862c6fe133d6395}{GetAttackCooldownLength}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_character_a3614ffae9de0f433b97491e8e2a0791f}{attackCooldownLength\_}}; \};}
+\DoxyCodeLine{119     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_aef811ed92e9fd73229206b12528cd9c6}{CanAttack}};}
+\DoxyCodeLine{120     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_character_a41b6be79ed9e5ae3c445f5e712665d53}{GetMaxHP}}();}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_adf96263ce3623a05960694e2283b1c4d}{SetNormalSpeed}}(\textcolor{keywordtype}{float} value);}
+\DoxyCodeLine{123     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_ace6e5e81a08ea253fab1ee879277b2fd}{ResetCharacterToBeAlive}}();}
+\DoxyCodeLine{124     \textcolor{comment}{/*}}
+\DoxyCodeLine{125 \textcolor{comment}{    // for ICollidable}}
+\DoxyCodeLine{126 \textcolor{comment}{    virtual sf::FloatRect GetBoundingBox() \{ return sprite\_.getGlobalBounds(); \}}}
+\DoxyCodeLine{127 \textcolor{comment}{    virtual void ProcessCollision(ICollidable* object);}}
+\DoxyCodeLine{128 \textcolor{comment}{    virtual ICollidable::EntityType GetEntityType();}}
+\DoxyCodeLine{129 \textcolor{comment}{    */}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{132     \textcolor{comment}{/*void GetHitBy(Projectile\& projectile);*/}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134     \mbox{\hyperlink{class_weapon}{Weapon}}* \mbox{\hyperlink{class_character_aed2ffa9a610dc584aaa76d3dd3d0e276}{weapon\_}};}
+\DoxyCodeLine{135     \mbox{\hyperlink{class_projectile_ae0d6ce4b663618b4105d2f3a483ff2eb}{Projectile::Type}} \mbox{\hyperlink{class_character_a1c5ca366673b276430737867821cdcce}{characterProjectileType\_}};}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137     sf::Vector2f \mbox{\hyperlink{class_character_a6fc550ad118a372dc1dea876f1f6ef8d}{startPos}};}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_character_a5a17a8c51316ce52c881cc2ac14f7ed5}{hitpoints\_}};}
+\DoxyCodeLine{140     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_character_a7c241fd46acd84326ccbfe7223e5b81b}{currentMaxHitpoints\_}};}
+\DoxyCodeLine{141     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_character_a77be16c8a9bfe7a29b220c4baa3697bc}{defaultMaxHitpoints\_}};}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_aa369d8e3bdeff0d5a4ca3b51fee558a0}{hasAnimation\_}};}
+\DoxyCodeLine{144     \mbox{\hyperlink{class_animation_handler}{AnimationHandler}} \mbox{\hyperlink{class_character_a8cc93026f8466f695f93d62a3b4a1a7a}{animationHandler\_}};}
+\DoxyCodeLine{145     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_character_aa1b82727b3e04a5cb03831cad9e3e675}{currentSpeed\_}};}
+\DoxyCodeLine{146     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_character_a68f67c046dedbdca1b915bf2e2ed1559}{defaultSpeed\_}};}
+\DoxyCodeLine{147     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_aa94ad1a30a2e506f2204f4ff33a038a4}{left\_or\_right\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{148     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_a83f3ee911af2f52a638288f8e2580cfa}{generalUpdate}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{149     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_character_ac4ef19a9b5ae7e84206a21c423926570}{invincibility\_frame\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{150     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_character_a3614ffae9de0f433b97491e8e2a0791f}{attackCooldownLength\_}};}
+\DoxyCodeLine{151     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_character_a81cacbcb076a27322d772641618ca48a}{attackCooldownLeft}};}
+\DoxyCodeLine{152     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_character_af43f423979d182adfa11f2eb0a867894}{updateAttackCooldown}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{153     std::list<ProjectileUP> \mbox{\hyperlink{class_character_a2d503ab604d5641f84acd5b5f0cbfdba}{emptyList}}();}
+\DoxyCodeLine{154     std::list<ProjectileUP> \mbox{\hyperlink{class_character_a018da360cacf8ed4ba06dd4247c32939}{shotProjectileList}}(sf::Vector2f aimPos);}
+\DoxyCodeLine{155 \};}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

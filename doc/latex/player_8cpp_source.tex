@@ -1,0 +1,166 @@
+\doxysection{player.\+cpp}
+\label{player_8cpp_source}\index{src/Actors/player.cpp@{src/Actors/player.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}Actors/player.hpp"{}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{namespace }\{}
+\DoxyCodeLine{00004 \textcolor{keyword}{const} std::string PLAYER\_DEATH\_SPRITE = \textcolor{stringliteral}{"{}content/sprites/characters/deathanimation.png"{}};}
+\DoxyCodeLine{00005 \textcolor{keyword}{const} std::string PLAYER\_SPRITE = \textcolor{stringliteral}{"{}content/sprites/characters/SpriteSheet.png"{}};}
+\DoxyCodeLine{00006 \}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 Player::Player()}
+\DoxyCodeLine{00009     : Character(PLAYER\_SPRITE, sf::Vector2f(200, 200), true)}
+\DoxyCodeLine{00010 \{}
+\DoxyCodeLine{00011     initVariables();}
+\DoxyCodeLine{00012 \}}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014 \textcolor{keywordtype}{void} Player::Update(\textcolor{keywordtype}{float} dt)}
+\DoxyCodeLine{00015 \{}
+\DoxyCodeLine{00016     \textcolor{keywordflow}{if} (hasAnimation\_) \{}
+\DoxyCodeLine{00017         \textcolor{keywordflow}{if} (IsAlive()) \{}
+\DoxyCodeLine{00018             deadAnimationPlayed = \textcolor{keyword}{false};}
+\DoxyCodeLine{00019             dt\_time = 0;}
+\DoxyCodeLine{00020             \textcolor{keywordflow}{if} (oldPos\_.x == pos\_.x \&\& oldPos\_.y == pos\_.y) \{}
+\DoxyCodeLine{00021                 Idle();}
+\DoxyCodeLine{00022             \}}
+\DoxyCodeLine{00023             animationHandler\_.getAnimation()-\/>Update(dt);}
+\DoxyCodeLine{00024             animationHandler\_.getAnimation()-\/>AnimationToSprite(sprite\_);}
+\DoxyCodeLine{00025         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00026             Dead();}
+\DoxyCodeLine{00027             \textcolor{keywordflow}{if} (deadAnimationPlayed == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{00028                 animationHandler\_.getAnimation()-\/>Update(dt);}
+\DoxyCodeLine{00029                 animationHandler\_.getAnimation()-\/>AnimationToSprite(sprite\_);}
+\DoxyCodeLine{00030                 dt\_time += dt;}
+\DoxyCodeLine{00031                 \textcolor{keywordflow}{if} (dt\_time > 0.73) \{}
+\DoxyCodeLine{00032                     deadAnimationPlayed = \textcolor{keyword}{true};}
+\DoxyCodeLine{00033                 \};}
+\DoxyCodeLine{00034             \}}
+\DoxyCodeLine{00035         \}}
+\DoxyCodeLine{00036     \}}
+\DoxyCodeLine{00037     \textcolor{keywordflow}{if} (IsAlive()) \{}
+\DoxyCodeLine{00038         generalUpdate(dt);}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040         updateDashCooldown(dt);}
+\DoxyCodeLine{00041     \}}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043     \textcolor{keywordflow}{if} (IsDashing) \{}
+\DoxyCodeLine{00044         currentSpeed\_ = dashSpeed\_;}
+\DoxyCodeLine{00045         invincibility\_frame\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{00046     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00047         invincibility\_frame\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{00048         currentSpeed\_ = defaultSpeed\_;}
+\DoxyCodeLine{00049     \}}
+\DoxyCodeLine{00050 \}}
+\DoxyCodeLine{00051 }
+\DoxyCodeLine{00052 \textcolor{keywordtype}{void} Player::Dash()}
+\DoxyCodeLine{00053 \{}
+\DoxyCodeLine{00054     \textcolor{keywordflow}{if} (CanDash) \{}
+\DoxyCodeLine{00055         \textcolor{keywordflow}{if} (dashesBoosted\_ > 0) \{}
+\DoxyCodeLine{00056             dashCurrentDurationLength\_ = dashDefaultDurationLength\_ * dashLengthBoostModifier;}
+\DoxyCodeLine{00057             dashesBoosted\_ -\/= 1;}
+\DoxyCodeLine{00058         \}}
+\DoxyCodeLine{00059         IsDashing = \textcolor{keyword}{true};}
+\DoxyCodeLine{00060         dashDurationLeft\_ = dashCurrentDurationLength\_;}
+\DoxyCodeLine{00061         ResetDashCooldown();}
+\DoxyCodeLine{00062     \}}
+\DoxyCodeLine{00063 \}}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065 \textcolor{keywordtype}{void} Player::initVariables()}
+\DoxyCodeLine{00066 \{}
+\DoxyCodeLine{00067     dashCooldownLength\_ = 1.0f;}
+\DoxyCodeLine{00068     dashCooldownLeft\_ = 0.0f;}
+\DoxyCodeLine{00069     CanDash = \textcolor{keyword}{true};}
+\DoxyCodeLine{00070     IsDashing = \textcolor{keyword}{false};}
+\DoxyCodeLine{00071     dashDefaultDurationLength\_ = 0.25f;}
+\DoxyCodeLine{00072     dashCurrentDurationLength\_ = dashDefaultDurationLength\_;}
+\DoxyCodeLine{00073     dashDurationLeft\_ = 0.0f;}
+\DoxyCodeLine{00074     SetNormalSpeed(300.0f);}
+\DoxyCodeLine{00075     dashSpeed\_ = defaultSpeed\_ * 3;}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077     attacksBoosted\_ = 0;}
+\DoxyCodeLine{00078     dashesBoosted\_ = 0;}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080     characterProjectileType\_ = Projectile::Type::PlayerProjectile;}
+\DoxyCodeLine{00081 \}}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083 \textcolor{keywordtype}{void} Player::ResetDashCooldown()}
+\DoxyCodeLine{00084 \{}
+\DoxyCodeLine{00085     dashCooldownLeft\_ = dashCooldownLength\_;}
+\DoxyCodeLine{00086     CanDash = \textcolor{keyword}{false};}
+\DoxyCodeLine{00087 \}}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089 \textcolor{keywordtype}{void} Player::updateDashCooldown(\textcolor{keywordtype}{float} dt)}
+\DoxyCodeLine{00090 \{}
+\DoxyCodeLine{00091     dashCooldownLeft\_ = std::max(0.0f, dashCooldownLeft\_ -\/ dt);}
+\DoxyCodeLine{00092     \textcolor{keywordflow}{if} (dashCooldownLeft\_ <= 0.0f) \{}
+\DoxyCodeLine{00093         CanDash = \textcolor{keyword}{true};}
+\DoxyCodeLine{00094     \}}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096     \textcolor{keywordflow}{if} (IsDashing) \{}
+\DoxyCodeLine{00097         dashDurationLeft\_ -\/= dt;}
+\DoxyCodeLine{00098     \}}
+\DoxyCodeLine{00099     \textcolor{keywordflow}{if} (dashDurationLeft\_ <= 0) \{}
+\DoxyCodeLine{00100         dashCurrentDurationLength\_ = dashDefaultDurationLength\_;}
+\DoxyCodeLine{00101         IsDashing = \textcolor{keyword}{false};}
+\DoxyCodeLine{00102     \}}
+\DoxyCodeLine{00103 \}}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{00105 std::list<ProjectileUP> Player::Attack(sf::Vector2f aimPos)}
+\DoxyCodeLine{00106 \{}
+\DoxyCodeLine{00107     \textcolor{keywordflow}{if} (!CanAttack || !HasWeapon() || !IsAlive()) \{}
+\DoxyCodeLine{00108         \textcolor{keywordflow}{return} emptyList();}
+\DoxyCodeLine{00109     \}}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111     ResetAttackCooldown();}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113     \textcolor{keywordflow}{if} (attacksBoosted\_ > 0) \{}
+\DoxyCodeLine{00114         weapon\_-\/>BoostDamageValue();}
+\DoxyCodeLine{00115         attacksBoosted\_ -\/= 1;}
+\DoxyCodeLine{00116     \}}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118     \textcolor{keyword}{auto} res = shotProjectileList(aimPos);}
+\DoxyCodeLine{00119     weapon\_-\/>UnBoostDamageValue();}
+\DoxyCodeLine{00120     \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{00121 \}}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123 \textcolor{keywordtype}{void} Player::AddPotion(Potion* potion)}
+\DoxyCodeLine{00124 \{}
+\DoxyCodeLine{00125     inventory\_.push\_back(potion);}
+\DoxyCodeLine{00126 \}}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128 \textcolor{keywordtype}{void} Player::UsePotion(\textcolor{keyword}{const} std::string\& colour)}
+\DoxyCodeLine{00129 \{}
+\DoxyCodeLine{00130     \textcolor{keywordtype}{bool} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{00131     \textcolor{keyword}{auto} it = inventory\_.begin();}
+\DoxyCodeLine{00132     \textcolor{keywordflow}{while} (it != inventory\_.end() \&\& !found) \{}
+\DoxyCodeLine{00133         \textcolor{keywordflow}{if} ((*it)-\/>GetColour() == colour) \{}
+\DoxyCodeLine{00134             \textcolor{keywordflow}{if} (colour == \textcolor{stringliteral}{"{}violet"{}}) \{}
+\DoxyCodeLine{00135                 attacksBoosted\_ += 10;}
+\DoxyCodeLine{00136             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (colour == \textcolor{stringliteral}{"{}yellow"{}}) \{}
+\DoxyCodeLine{00137                 dashesBoosted\_ += 3;}
+\DoxyCodeLine{00138             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00139                 Heal((*it)-\/>GetHealthIncrease());}
+\DoxyCodeLine{00140             \}}
+\DoxyCodeLine{00141             it = inventory\_.erase(it);}
+\DoxyCodeLine{00142             found = \textcolor{keyword}{true};}
+\DoxyCodeLine{00143         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00144             ++it;}
+\DoxyCodeLine{00145         \}}
+\DoxyCodeLine{00146     \}}
+\DoxyCodeLine{00147 \}}
+\DoxyCodeLine{00148 }
+\DoxyCodeLine{00149 \textcolor{keywordtype}{void} Player::ClearInventory()}
+\DoxyCodeLine{00150 \{}
+\DoxyCodeLine{00151     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} potion : inventory\_) \{}
+\DoxyCodeLine{00152         \textcolor{keyword}{delete} potion;}
+\DoxyCodeLine{00153     \}}
+\DoxyCodeLine{00154     inventory\_.clear();}
+\DoxyCodeLine{00155 \}}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157 std::vector<Potion*> Player::GetInventory()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00158 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00159     \textcolor{keywordflow}{return} inventory\_;}
+\DoxyCodeLine{00160 \}}
+
+\end{DoxyCode}

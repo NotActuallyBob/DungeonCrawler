@@ -1,0 +1,49 @@
+\hypertarget{entity_8hpp_source}{}\doxysection{entity.\+hpp}
+\label{entity_8hpp_source}\index{src/entity.hpp@{src/entity.hpp}}
+\mbox{\hyperlink{entity_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef \_ENTITY\_CLASS\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define \_ENTITY\_CLASS\_}}
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_entity}{Entity}} \{}
+\DoxyCodeLine{6 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_entity_a8b2bd69eee2677d95bf21f6d6dea78ce}{Entity}}(\textcolor{keyword}{const} std::string\& spriteLocation, \textcolor{keywordtype}{float} xPos, \textcolor{keywordtype}{float} yPos, sf::Vector2f spriteDims);}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_entity_a8b2bd69eee2677d95bf21f6d6dea78ce}{Entity}}(\textcolor{keyword}{const} std::string\& spirteLocation, sf::Vector2f pos, sf::Vector2f spriteDims);}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_entity_a8b2bd69eee2677d95bf21f6d6dea78ce}{Entity}}(sf::Sprite\& sprite, \textcolor{keywordtype}{float} xPos, \textcolor{keywordtype}{float} yPos);}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_entity_a8b2bd69eee2677d95bf21f6d6dea78ce}{Entity}}(sf::Sprite\& sprite, sf::Vector2f pos);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_entity_a588098978eea6a3486b7361605ff3f0f}{\string~Entity}}() \{\};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{27     \textcolor{keyword}{const} sf::Sprite\& \mbox{\hyperlink{class_entity_ac3b42d06a4fd2970637fa3ae9c97eb2a}{GetSprite}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_entity_a4b53d16db25bf36bbacdbc07fa2b069e}{sprite\_}}; \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{34     \textcolor{keyword}{const} sf::Vector2f\& \mbox{\hyperlink{class_entity_ab5d22607f1b68566ccf5c5658f08a0ba}{GetPos}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_entity_afff3cfba8a9c8e60d8a33771f5736cdf}{pos\_}}; \}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{41     \textcolor{keyword}{const} sf::Vector2i \mbox{\hyperlink{class_entity_a6012ec4d2cf29e94bef8775978bb2908}{GetPosI}}() \{ \textcolor{keywordflow}{return} sf::Vector2i(\mbox{\hyperlink{class_entity_afff3cfba8a9c8e60d8a33771f5736cdf}{pos\_}}); \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{48     sf::Vector2f \mbox{\hyperlink{class_entity_a6be3a18731e507b2cdcb33d43c4322fa}{GetSpritePosition}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_entity_a4b53d16db25bf36bbacdbc07fa2b069e}{sprite\_}}.getPosition(); \} \textcolor{comment}{// might be unnecessary, because sprite pos should be same as that returned of GetPos()}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{55     sf::Vector2f \mbox{\hyperlink{class_entity_aaf6d6677fac3c26996f0a22c284fbdff}{GetSpriteCenter}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{62     \textcolor{keyword}{const} sf::Vector2f\& \mbox{\hyperlink{class_entity_aa672c03b23223d91936d54ce6f625d41}{GetOldPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     sf::FloatRect \mbox{\hyperlink{class_entity_abf4e31d55dabcb9da5951766e99af924}{GetSpriteBounds}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{65     sf::FloatRect \mbox{\hyperlink{class_entity_ad9470f32401df192b733af6c51145a8d}{GetBaseBoxAt}}(sf::Vector2f pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_entity_a8a200d4dfb49aa86291857fcdcfa349d}{SetPos}}(sf::Vector2f pos);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{79     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_entity_a3abaf8ad7ffd6e55ed40a67de119a576}{SetPosAndOldPos}}(sf::Vector2f pos);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_entity_a034bc6e6506d067bdad46080cbee620c}{Render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_entity_a1273b9d27b8f2dc3c2faad6cafe447e4}{initSprite}}(\textcolor{keyword}{const} std::string\& spriteLocation, sf::Vector2f spriteDims);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     sf::Vector2f \mbox{\hyperlink{class_entity_afff3cfba8a9c8e60d8a33771f5736cdf}{pos\_}};}
+\DoxyCodeLine{87     sf::Vector2f \mbox{\hyperlink{class_entity_a7f6a0ca6022fabab2652227d00efc62d}{oldPos\_}};}
+\DoxyCodeLine{88     sf::Sprite \mbox{\hyperlink{class_entity_a4b53d16db25bf36bbacdbc07fa2b069e}{sprite\_}};}
+\DoxyCodeLine{89     sf::Texture \mbox{\hyperlink{class_entity_af244bb9ceeaeff3a210448292a6f2654}{texture\_}};}
+\DoxyCodeLine{90 \};}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

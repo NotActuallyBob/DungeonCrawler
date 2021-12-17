@@ -1,0 +1,192 @@
+\doxysection{map.\+cpp}
+\label{map_8cpp_source}\index{src/Dungeon/map.cpp@{src/Dungeon/map.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}map.hpp"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 Map::Map(sf::Vector2u size, \textcolor{keywordtype}{int} noRooms, PlayerPS player)}
+\DoxyCodeLine{00005     : roomSize\_(size)}
+\DoxyCodeLine{00006     , currentPos\_(\{ 0, 0 \})}
+\DoxyCodeLine{00007     , player\_(player)}
+\DoxyCodeLine{00008     , spawnCoords\_(currentPos\_)}
+\DoxyCodeLine{00009 \{}
+\DoxyCodeLine{00010     srand(time(NULL));}
+\DoxyCodeLine{00011     CreateDungeon(noRooms);}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = dungeon\_.begin(); it != dungeon\_.end(); it++) \{}
+\DoxyCodeLine{00014         it-\/>second-\/>renderSpriteBackground();}
+\DoxyCodeLine{00015     \}}
+\DoxyCodeLine{00016 \}}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018 Map::\string~Map()}
+\DoxyCodeLine{00019 \{}
+\DoxyCodeLine{00020     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = dungeon\_.begin(); it != dungeon\_.end(); it++) \{}
+\DoxyCodeLine{00021         \textcolor{keyword}{delete} it-\/>second;}
+\DoxyCodeLine{00022     \}}
+\DoxyCodeLine{00023 \}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025 \textcolor{keywordtype}{void} Map::RenderCurrentRoom(sf::RenderTarget* window)}
+\DoxyCodeLine{00026 \{}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028     GetCurrentRoom()-\/>Render(window);}
+\DoxyCodeLine{00029 \}}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031 \textcolor{keywordtype}{void} Map::CreateDungeon(\textcolor{keywordtype}{int} noRooms)}
+\DoxyCodeLine{00032 \{}
+\DoxyCodeLine{00033     addStartingRoomToDungeon(roomSize\_, currentPos\_);}
+\DoxyCodeLine{00034     \textcolor{keywordtype}{int} i = 1;}
+\DoxyCodeLine{00035     std::map<std::pair<int, int>, std::set<Direction>> wallsToBreak;}
+\DoxyCodeLine{00036     \textcolor{keywordflow}{while} (i < noRooms) \{}
+\DoxyCodeLine{00037         RoomInstance* roomToGenFrom = getRandomRoom();}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039         \textcolor{keywordflow}{if} (roomToGenFrom-\/>HasDirectionsLeft()) \{}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041             Direction directionToGenInto = roomToGenFrom-\/>RemoveRandomDirection();}
+\DoxyCodeLine{00042             \textcolor{keyword}{auto} newPos = roomToGenFrom-\/>GetCoords() + DirToVec(directionToGenInto);}
+\DoxyCodeLine{00043             \textcolor{keywordflow}{if} (GetRoomAt(newPos) == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{00044                 \textcolor{keyword}{auto} newRoom = addRoomToDungeon(roomSize\_, newPos);}
+\DoxyCodeLine{00045                 wallsToBreak[getKey(roomToGenFrom-\/>GetCoords())].insert(directionToGenInto);}
+\DoxyCodeLine{00046                 wallsToBreak[getKey(newRoom-\/>GetCoords())].insert((direction::GetOppositeDir(directionToGenInto)));}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048                 i += 1;}
+\DoxyCodeLine{00049             \}}
+\DoxyCodeLine{00050         \}}
+\DoxyCodeLine{00051     \}}
+\DoxyCodeLine{00052 }
+\DoxyCodeLine{00053     \textcolor{keyword}{auto} bossCoords = findBossRoom(wallsToBreak);}
+\DoxyCodeLine{00054     RoomInstance* bossRoom = \textcolor{keyword}{new} BossRoom(roomSize\_, sf::Vector2i(bossCoords.first, bossCoords.second));}
+\DoxyCodeLine{00055     \textcolor{keyword}{delete} dungeon\_[bossCoords];}
+\DoxyCodeLine{00056     dungeon\_[bossCoords] = bossRoom;}
+\DoxyCodeLine{00057     bossCoords\_ = sf::Vector2i(bossCoords.first, bossCoords.second);}
+\DoxyCodeLine{00058     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} room : wallsToBreak) \{}
+\DoxyCodeLine{00059         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} dir : room.second) \{}
+\DoxyCodeLine{00060             dungeon\_[room.first]-\/>CreateExit(dir);}
+\DoxyCodeLine{00061         \}}
+\DoxyCodeLine{00062     \}}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064     currentPos\_ = \{ 0, 0 \};}
+\DoxyCodeLine{00065 \}}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067 \textcolor{keywordtype}{void} Map::MovePlayer(Direction dir)}
+\DoxyCodeLine{00068 \{}
+\DoxyCodeLine{00069     GetCurrentRoom()-\/>Exit();}
+\DoxyCodeLine{00070     Move(dir);}
+\DoxyCodeLine{00071     GetCurrentRoom()-\/>Enter(player\_, dir);}
+\DoxyCodeLine{00072 \}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074 \textcolor{keywordtype}{void} Map::Move(Direction dir)}
+\DoxyCodeLine{00075 \{}
+\DoxyCodeLine{00076     currentPos\_ += DirToVec(dir);}
+\DoxyCodeLine{00077 \}}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079 RoomInstance* Map::GetRoomAt(sf::Vector2i coord)}
+\DoxyCodeLine{00080 \{}
+\DoxyCodeLine{00081     \textcolor{keywordflow}{if} (dungeon\_.count(getKey(coord))) \{}
+\DoxyCodeLine{00082         \textcolor{keywordflow}{return} dungeon\_[getKey(coord)];}
+\DoxyCodeLine{00083     \}}
+\DoxyCodeLine{00084     \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00085 \}}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087 RoomInstance* Map::GetRoomInDir(Direction dir)}
+\DoxyCodeLine{00088 \{}
+\DoxyCodeLine{00089     \textcolor{keyword}{auto} oldPos = currentPos\_;}
+\DoxyCodeLine{00090     Move(dir);}
+\DoxyCodeLine{00091     RoomInstance* room = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00092     \textcolor{keywordflow}{if} (dungeon\_.count(getKey())) \{}
+\DoxyCodeLine{00093         room = dungeon\_[getKey()];}
+\DoxyCodeLine{00094     \}}
+\DoxyCodeLine{00095     currentPos\_ = oldPos;}
+\DoxyCodeLine{00096     \textcolor{keywordflow}{return} room;}
+\DoxyCodeLine{00097 \}}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099 sf::Vector2i Map::DirToVec(Direction direction)}
+\DoxyCodeLine{00100 \{}
+\DoxyCodeLine{00101     \textcolor{keywordflow}{switch} (direction) \{}
+\DoxyCodeLine{00102     \textcolor{keywordflow}{case} Direction::Up:}
+\DoxyCodeLine{00103         \textcolor{keywordflow}{return} sf::Vector2i(0, 1);}
+\DoxyCodeLine{00104     \textcolor{keywordflow}{case} Direction::Down:}
+\DoxyCodeLine{00105         \textcolor{keywordflow}{return} sf::Vector2i(0, -\/1);}
+\DoxyCodeLine{00106     \textcolor{keywordflow}{case} Direction::Left:}
+\DoxyCodeLine{00107         \textcolor{keywordflow}{return} sf::Vector2i(-\/1, 0);}
+\DoxyCodeLine{00108     \textcolor{keywordflow}{case} Direction::Right:}
+\DoxyCodeLine{00109         \textcolor{keywordflow}{return} sf::Vector2i(1, 0);}
+\DoxyCodeLine{00110     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00111         \textcolor{keywordflow}{return} sf::Vector2i(0, 0);}
+\DoxyCodeLine{00112     \}}
+\DoxyCodeLine{00113 \}}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115 RoomInstance* Map::GetCurrentRoom()}
+\DoxyCodeLine{00116 \{}
+\DoxyCodeLine{00117     \textcolor{keywordflow}{return} dungeon\_[getKey()];}
+\DoxyCodeLine{00118 \}}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120 RoomInstance* Map::GetSpawnRoom()}
+\DoxyCodeLine{00121 \{}
+\DoxyCodeLine{00122     \textcolor{keywordflow}{return} GetRoomAt(spawnCoords\_);}
+\DoxyCodeLine{00123 \}}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00125 \textcolor{keywordtype}{bool} Map::IsBossRoomCleared()}
+\DoxyCodeLine{00126 \{}
+\DoxyCodeLine{00127     \textcolor{keywordflow}{if} ((GetRoomAt(bossCoords\_)-\/>IsVisisted()) \&\& GetRoomAt(bossCoords\_)-\/>monsterCleared()) \{}
+\DoxyCodeLine{00128         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00129     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00130         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00131     \}}
+\DoxyCodeLine{00132 \}}
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{00134 std::pair<int, int> Map::findBossRoom(std::map<std::pair<int, int>, std::set<Direction>> coordsAndPaths)}
+\DoxyCodeLine{00135 \{}
+\DoxyCodeLine{00136     std::pair<int, int> maxCoord = std::make\_pair(0, 0);}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138     \textcolor{keywordtype}{size\_t} allowedBossRoomEntrances = 1;}
+\DoxyCodeLine{00139     \textcolor{keywordflow}{while} (maxCoord.first == 0 \&\& maxCoord.second == 0) \{}
+\DoxyCodeLine{00140         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = coordsAndPaths.begin(); it != coordsAndPaths.end(); it++) \{}
+\DoxyCodeLine{00141             \textcolor{keyword}{auto} coord = it-\/>first;}
+\DoxyCodeLine{00142             \textcolor{keywordflow}{if} (abs(coord.first) > abs(maxCoord.first) \&\& abs(coord.second) > abs(maxCoord.second) \&\& it-\/>second.size() <= allowedBossRoomEntrances) \{}
+\DoxyCodeLine{00143                 maxCoord = coord;}
+\DoxyCodeLine{00144             \}}
+\DoxyCodeLine{00145         \}}
+\DoxyCodeLine{00146         allowedBossRoomEntrances += 1;}
+\DoxyCodeLine{00147     \}}
+\DoxyCodeLine{00148 }
+\DoxyCodeLine{00149     \textcolor{keywordflow}{return} maxCoord;}
+\DoxyCodeLine{00150 \}}
+\DoxyCodeLine{00151 }
+\DoxyCodeLine{00152 std::pair<int, int> Map::getKey()}
+\DoxyCodeLine{00153 \{}
+\DoxyCodeLine{00154     \textcolor{keywordflow}{return} std::make\_pair(currentPos\_.x, currentPos\_.y);}
+\DoxyCodeLine{00155 \}}
+\DoxyCodeLine{00156 std::pair<int, int> Map::getKey(sf::Vector2i coord)}
+\DoxyCodeLine{00157 \{}
+\DoxyCodeLine{00158     \textcolor{keywordflow}{return} std::make\_pair(coord.x, coord.y);}
+\DoxyCodeLine{00159 \}}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{00161 RoomInstance* Map::getRandomRoom()}
+\DoxyCodeLine{00162 \{}
+\DoxyCodeLine{00163     std::pair<int, int> coordsToGenFrom = existingRoomCoords\_[randomhelper::RandomIntBetween(0, existingRoomCoords\_.size() -\/ 1)];}
+\DoxyCodeLine{00164     RoomInstance* roomToGenFrom = dungeon\_[coordsToGenFrom];}
+\DoxyCodeLine{00165     \textcolor{keywordflow}{return} roomToGenFrom;}
+\DoxyCodeLine{00166 \}}
+\DoxyCodeLine{00167 }
+\DoxyCodeLine{00168 RoomInstance* Map::addRoomToDungeon(sf::Vector2u roomSize, sf::Vector2i coords)}
+\DoxyCodeLine{00169 \{}
+\DoxyCodeLine{00170     RoomInstance* room = \textcolor{keyword}{new} RoomInstance(roomSize, coords);}
+\DoxyCodeLine{00171     existingRoomCoords\_.push\_back(getKey(coords));}
+\DoxyCodeLine{00172     dungeon\_[getKey(coords)] = room;}
+\DoxyCodeLine{00173     \textcolor{keywordflow}{return} room;}
+\DoxyCodeLine{00174 \}}
+\DoxyCodeLine{00175 }
+\DoxyCodeLine{00176 \textcolor{keywordtype}{void} Map::addStartingRoomToDungeon(sf::Vector2u roomSize, sf::Vector2i coords)}
+\DoxyCodeLine{00177 \{}
+\DoxyCodeLine{00178     RoomInstance* rootRoom = \textcolor{keyword}{new} StartingRoom(roomSize, coords);}
+\DoxyCodeLine{00179     existingRoomCoords\_.push\_back(getKey(coords));}
+\DoxyCodeLine{00180     dungeon\_[getKey(coords)] = rootRoom;}
+\DoxyCodeLine{00181 \}}
+\DoxyCodeLine{00182 }
+\DoxyCodeLine{00183 \textcolor{keywordtype}{void} Map::ResetMap()}
+\DoxyCodeLine{00184 \{}
+\DoxyCodeLine{00185     currentPos\_ = \{ 0, 0 \};}
+\DoxyCodeLine{00186 \}}
+
+\end{DoxyCode}

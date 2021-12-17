@@ -1,0 +1,29 @@
+\hypertarget{animation_8hpp_source}{}\doxysection{animation.\+hpp}
+\label{animation_8hpp_source}\index{src/Animation/animation.hpp@{src/Animation/animation.hpp}}
+\mbox{\hyperlink{animation_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef \_ANIMATION\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define \_ANIMATION\_}}
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_animation}{Animation}} \{}
+\DoxyCodeLine{7 \textcolor{keyword}{public}:}
+\DoxyCodeLine{8     \mbox{\hyperlink{class_animation_a4c294d8ee848291f5da25a7d6360601f}{Animation}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_animation_a4c294d8ee848291f5da25a7d6360601f}{Animation}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height, \textcolor{keywordtype}{int} spacing, \textcolor{keyword}{const} std::string\& textureName);}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_animation_a401b68793d4fbf48d481c030ee4b2a16}{\string~Animation}}() \{ \}}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_animation_a1d2b1876e1f2330cc206851af938582d}{AnimationToSprite}}(sf::Sprite\& sprite) \textcolor{keyword}{const};}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_animation_a1871db60d1fb351aeb77ada38dd4dd9c}{Update}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{private}:}
+\DoxyCodeLine{34     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} nFrames\_ = 5;}
+\DoxyCodeLine{35     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{float} holdTime\_ = 0.15f;}
+\DoxyCodeLine{36     sf::Texture texture\_;}
+\DoxyCodeLine{37     sf::IntRect frames\_[nFrames\_];}
+\DoxyCodeLine{38     \textcolor{keywordtype}{int} iFrame\_ = 0;}
+\DoxyCodeLine{39     \textcolor{keywordtype}{float} time\_ = 0.0f;}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} NextFrame();}
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

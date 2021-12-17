@@ -1,0 +1,58 @@
+\hypertarget{_collision_8hpp_source}{}\doxysection{Collision.\+hpp}
+\label{_collision_8hpp_source}\index{src/Utility/Collision.hpp@{src/Utility/Collision.hpp}}
+\mbox{\hyperlink{_collision_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * File:   collision.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Authors: Nick Koirala (original version), ahnonay (SFML2 compatibility)}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ * Collision Detection and handling class}}
+\DoxyCodeLine{6 \textcolor{comment}{ * For SFML2.}}
+\DoxyCodeLine{7 \textcolor{comment}{}}
+\DoxyCodeLine{8 \textcolor{comment}{ Notice from the original version:}}
+\DoxyCodeLine{9 \textcolor{comment}{}}
+\DoxyCodeLine{10 \textcolor{comment}{ (c) 2009 -\/ LittleMonkey Ltd}}
+\DoxyCodeLine{11 \textcolor{comment}{}}
+\DoxyCodeLine{12 \textcolor{comment}{ This software is provided 'as-\/is', without any express or}}
+\DoxyCodeLine{13 \textcolor{comment}{ implied warranty. In no event will the authors be held}}
+\DoxyCodeLine{14 \textcolor{comment}{ liable for any damages arising from the use of this software.}}
+\DoxyCodeLine{15 \textcolor{comment}{}}
+\DoxyCodeLine{16 \textcolor{comment}{ Permission is granted to anyone to use this software for any purpose,}}
+\DoxyCodeLine{17 \textcolor{comment}{ including commercial applications, and to alter it and redistribute}}
+\DoxyCodeLine{18 \textcolor{comment}{ it freely, subject to the following restrictions:}}
+\DoxyCodeLine{19 \textcolor{comment}{}}
+\DoxyCodeLine{20 \textcolor{comment}{ 1. The origin of this software must not be misrepresented;}}
+\DoxyCodeLine{21 \textcolor{comment}{ you must not claim that you wrote the original software.}}
+\DoxyCodeLine{22 \textcolor{comment}{ If you use this software in a product, an acknowledgment}}
+\DoxyCodeLine{23 \textcolor{comment}{ in the product documentation would be appreciated but}}
+\DoxyCodeLine{24 \textcolor{comment}{ is not required.}}
+\DoxyCodeLine{25 \textcolor{comment}{}}
+\DoxyCodeLine{26 \textcolor{comment}{ 2. Altered source versions must be plainly marked as such,}}
+\DoxyCodeLine{27 \textcolor{comment}{ and must not be misrepresented as being the original software.}}
+\DoxyCodeLine{28 \textcolor{comment}{}}
+\DoxyCodeLine{29 \textcolor{comment}{ 3. This notice may not be removed or altered from any}}
+\DoxyCodeLine{30 \textcolor{comment}{ source distribution.}}
+\DoxyCodeLine{31 \textcolor{comment}{}}
+\DoxyCodeLine{32 \textcolor{comment}{ *}}
+\DoxyCodeLine{33 \textcolor{comment}{ * Created on 30 January 2009, 11:02}}
+\DoxyCodeLine{34 \textcolor{comment}{ */}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#ifndef COLLISION\_H}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define COLLISION\_H}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_collision}{Collision}} \{}
+\DoxyCodeLine{50 \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespace_collision_a0d2e2c89d02bbdf787657b636d967cde}{PixelPerfectTest}}(\textcolor{keyword}{const} sf::Sprite\& Object1, \textcolor{keyword}{const} sf::Sprite\& Object2, sf::Uint8 AlphaLimit = 0);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{59 \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespace_collision_a22b8e23d7fc5cb243d4365d1c179cf39}{CreateTextureAndBitmask}}(sf::Texture\& LoadInto, \textcolor{keyword}{const} std::string\& Filename);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{66 \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespace_collision_af2f8835beee81b76d04311c794c36c0f}{CircleTest}}(\textcolor{keyword}{const} sf::Sprite\& Object1, \textcolor{keyword}{const} sf::Sprite\& Object2);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{72 \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespace_collision_a6f5945d467e629017010b139062919c6}{BoundingBoxTest}}(\textcolor{keyword}{const} sf::Sprite\& Object1, \textcolor{keyword}{const} sf::Sprite\& Object2);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 sf::Vector2f \mbox{\hyperlink{namespace_collision_ab89344d6c5a4b044135d8a1a6d17f517}{GetSpriteCenter}}(\textcolor{keyword}{const} sf::Sprite\& Object);}
+\DoxyCodeLine{75 sf::Vector2f \mbox{\hyperlink{namespace_collision_a2ad656979d56aa721a733b7cb479ea86}{GetSpriteSize}}(\textcolor{keyword}{const} sf::Sprite\& Object);}
+\DoxyCodeLine{76 \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* COLLISION\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

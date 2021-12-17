@@ -1,0 +1,28 @@
+\hypertarget{_potion_8hpp_source}{}\doxysection{Potion.\+hpp}
+\label{_potion_8hpp_source}\index{src/Combat/Health/Potion.hpp@{src/Combat/Health/Potion.hpp}}
+\mbox{\hyperlink{_potion_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef \_POTION\_CLASS\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define \_POTION\_CLASS\_}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{entity_8hpp}{entity.hpp}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_potion}{Potion}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_entity}{Entity}} \{}
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_potion_a6266979168bf2ae161bc688b6220c23c}{Potion}}(\textcolor{keyword}{const} std::string\& spritefile, sf::Vector2f pos, \textcolor{keywordtype}{int} healthIncrease, \textcolor{keyword}{const} std::string\& colour);}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_potion_a0b00fae165c3fbd031ee949e8bf46f22}{\string~Potion}}() \{\};}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{18     \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{class_potion_a1775dd8277b75bf924ebb134eb12789e}{GetColour}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_potion_a18c20b5f0e1e7c623e621bb4b1b8a9a4}{GetHealthIncrease}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_potion_ade4bf42a18834c568183691ea571b06b}{healthIncrease\_}};}
+\DoxyCodeLine{29     std::string \mbox{\hyperlink{class_potion_a240120d31676903defeb2d276f8863a9}{colour\_}};}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,57 @@
+\hypertarget{room_tile_8hpp_source}{}\doxysection{room\+Tile.\+hpp}
+\label{room_tile_8hpp_source}\index{src/Dungeon/Tiles/roomTile.hpp@{src/Dungeon/Tiles/roomTile.hpp}}
+\mbox{\hyperlink{room_tile_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_ROOM\_TILE\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_ROOM\_TILE\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_p_c_h_8hpp}{PCH.hpp}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_room_tile}{RoomTile}} \{}
+\DoxyCodeLine{7 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_room_tile_a78fe92dc7696e8074a41585f2b60b9f7}{RoomTile}}(std::string texture, \textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y, \textcolor{keywordtype}{bool} walkable, \textcolor{keywordtype}{bool} penetratable);}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     \textcolor{keyword}{const} sf::Vector2f \mbox{\hyperlink{class_room_tile_a5ad3ea4233665333360ce3d2578b5375}{getSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{20     \textcolor{keyword}{const} sf::Vector2f\& \mbox{\hyperlink{class_room_tile_a8dfb31c6abaea11bb8f4cfe6111ff4e6}{getPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{21     \textcolor{keyword}{const} sf::FloatRect \mbox{\hyperlink{class_room_tile_aadd0a51dad5e0fc26c2475530cc44954}{getBoundingBox}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{22     \textcolor{keyword}{const} sf::Sprite\& \mbox{\hyperlink{class_room_tile_a9a928b449c4eebb0a4d0d010277dfb54}{getSprite}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_room_tile_a1fbeb58b078c775cc9e591fdbc46bc26}{isWalkable}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{24     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_room_tile_a996d320e89aa517730de335cf1fff674}{isPenetratable}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{private}:}
+\DoxyCodeLine{27     sf::Vector2f position;}
+\DoxyCodeLine{28     sf::Texture tileTexture;}
+\DoxyCodeLine{29     sf::Sprite tileSprite;}
+\DoxyCodeLine{30     \textcolor{keywordtype}{bool} walkable\_;}
+\DoxyCodeLine{31     \textcolor{keywordtype}{bool} penetratable\_;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} setTileTexture(std::string);}
+\DoxyCodeLine{34 \};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{class }\mbox{\hyperlink{class_wall_tile}{WallTile}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_room_tile}{RoomTile}} \{}
+\DoxyCodeLine{37 \textcolor{keyword}{public}:}
+\DoxyCodeLine{38     \mbox{\hyperlink{class_wall_tile_ab7347d22dfcbb1c23aaa334e35e5f1b5}{WallTile}}(std::string texture, \textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y)}
+\DoxyCodeLine{39         : \mbox{\hyperlink{class_room_tile}{RoomTile}}(texture, x, y, false, false)}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{48 \textcolor{keyword}{class }\mbox{\hyperlink{class_front_wall_tile}{FrontWallTile}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_room_tile}{RoomTile}} \{}
+\DoxyCodeLine{49 \textcolor{keyword}{public}:}
+\DoxyCodeLine{50     \mbox{\hyperlink{class_front_wall_tile_afd3985a104dc59055f93ac6d0b0f96a5}{FrontWallTile}}(std::string texture, \textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y)}
+\DoxyCodeLine{51         : \mbox{\hyperlink{class_room_tile}{RoomTile}}(texture, x, y, false, true)}
+\DoxyCodeLine{52     \{}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 \};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keyword}{class }\mbox{\hyperlink{class_floor_tile}{FloorTile}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_room_tile}{RoomTile}} \{}
+\DoxyCodeLine{57 \textcolor{keyword}{public}:}
+\DoxyCodeLine{58     \mbox{\hyperlink{class_floor_tile_aae4c617d8cea0e25e63302f9e1eca33b}{FloorTile}}(std::string texture, \textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y)}
+\DoxyCodeLine{59         : \mbox{\hyperlink{class_room_tile}{RoomTile}}(texture, x, y, true, true)}
+\DoxyCodeLine{60     \{}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62 \};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

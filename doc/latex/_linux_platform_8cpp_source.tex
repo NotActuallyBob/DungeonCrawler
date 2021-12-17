@@ -1,0 +1,61 @@
+\doxysection{Linux\+Platform.\+cpp}
+\label{_linux_platform_8cpp_source}\index{src/Platform/Unix/LinuxPlatform.cpp@{src/Platform/Unix/LinuxPlatform.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#ifdef \_\_linux\_\_}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{    \#include "{}Platform/Unix/LinuxPlatform.hpp"{}}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{preprocessor}{    \#include <X11/Xlib.h>}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{keyword}{namespace }util}
+\DoxyCodeLine{00007 \{}
+\DoxyCodeLine{00008 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00009 \textcolor{comment}{ *}}
+\DoxyCodeLine{00010 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00011 LinuxPlatform::LinuxPlatform()}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013     \textcolor{comment}{// TODO: Investigate further}}
+\DoxyCodeLine{00014     XInitThreads();}
+\DoxyCodeLine{00015 \}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00018 \textcolor{comment}{ *}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00020 \textcolor{keywordtype}{void} LinuxPlatform::setIcon(\textcolor{keyword}{const} sf::WindowHandle\& inHandle)}
+\DoxyCodeLine{00021 \{}
+\DoxyCodeLine{00022     UNUSED(inHandle);}
+\DoxyCodeLine{00023 \}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00026 \textcolor{comment}{ *}}
+\DoxyCodeLine{00027 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00028 \textcolor{keywordtype}{void} LinuxPlatform::toggleFullscreen(\textcolor{keyword}{const} sf::WindowHandle\& inHandle, \textcolor{keyword}{const} sf::Uint32 inStyle, \textcolor{keyword}{const} \textcolor{keywordtype}{bool} inWindowed, \textcolor{keyword}{const} sf::Vector2u\& inResolution)}
+\DoxyCodeLine{00029 \{}
+\DoxyCodeLine{00030     UNUSED(inHandle);}
+\DoxyCodeLine{00031     UNUSED(inStyle);}
+\DoxyCodeLine{00032     UNUSED(inWindowed);}
+\DoxyCodeLine{00033     UNUSED(inResolution);}
+\DoxyCodeLine{00034 \}}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00037 \textcolor{comment}{ *}}
+\DoxyCodeLine{00038 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00039 \textcolor{keywordtype}{float} LinuxPlatform::getScreenScalingFactor(\textcolor{keyword}{const} sf::WindowHandle\& inHandle)}
+\DoxyCodeLine{00040 \{}
+\DoxyCodeLine{00041     UNUSED(inHandle);}
+\DoxyCodeLine{00042     \textcolor{keywordflow}{return} 1.0f;}
+\DoxyCodeLine{00043 \}}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{00046 \textcolor{comment}{ *}}
+\DoxyCodeLine{00047 \textcolor{comment}{ *****************************************************************************/}}
+\DoxyCodeLine{00048 \textcolor{keywordtype}{int} LinuxPlatform::getRefreshRate(\textcolor{keyword}{const} sf::WindowHandle\& inHandle)}
+\DoxyCodeLine{00049 \{}
+\DoxyCodeLine{00050     UNUSED(inHandle);}
+\DoxyCodeLine{00051     \textcolor{keywordflow}{return} 59;}
+\DoxyCodeLine{00052 \}}
+\DoxyCodeLine{00053 \}}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_\_linux\_\_}}
+
+\end{DoxyCode}

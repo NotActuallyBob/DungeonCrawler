@@ -6,7 +6,10 @@
 #include "Actors/character.hpp"
 #include "Actors/player.hpp"
 #include "Combat/Health/HealthPotions.hpp"
-
+/**
+ * @brief Monster class, which all our other monsters inherit.
+ *
+ */
 class Monster : public Character {
 public:
     virtual ~Monster();
@@ -18,6 +21,11 @@ public:
     virtual void Render(sf::RenderTarget* target);
     void initVariables();
     void SetTarget(PlayerPS target);
+    /**
+     * @brief determines if monster is going to drop a potion and what kind of potion.
+     *
+     * @return Potion*
+     */
     Potion* ReturnPotion();
 
 protected:
@@ -27,11 +35,20 @@ protected:
     sf::RectangleShape healthbar_;
     float staticDamage_ = 5.0f;
     float getDistanceToPlayer();
+    /**
+     * @brief Checks if player is in attack range of monster character based on weapon range
+     *
+     * @return true if it is
+     * @return false if not
+     */
     bool inRangeOfPlayer();
     bool movedLastTick_;
 
     bool moveTowardsPlayer(float dt);
-
+    /**
+     * @brief clamps the monsters into a room so they can go into corridors
+     *
+     */
     void clampPosToRoom();
 };
 

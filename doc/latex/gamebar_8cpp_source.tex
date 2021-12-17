@@ -1,0 +1,137 @@
+\doxysection{gamebar.\+cpp}
+\label{gamebar_8cpp_source}\index{src/gamebar.cpp@{src/gamebar.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}gamebar.hpp"{}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 \textcolor{keyword}{namespace }\{}
+\DoxyCodeLine{00004 \textcolor{keyword}{const} \textcolor{keywordtype}{float} HEIGHT = 100;}
+\DoxyCodeLine{00005 \textcolor{keyword}{const} \textcolor{keywordtype}{float} WIDTH = 1280;}
+\DoxyCodeLine{00006 \}}
+\DoxyCodeLine{00007 }
+\DoxyCodeLine{00008 Gamebar::Gamebar(PlayerPS player)}
+\DoxyCodeLine{00009     : player\_(player)}
+\DoxyCodeLine{00010 \{}
+\DoxyCodeLine{00011     sf::RectangleShape background(sf::Vector2f(WIDTH, HEIGHT));}
+\DoxyCodeLine{00012     background.setFillColor(sf::Color::Black);}
+\DoxyCodeLine{00013     background.setPosition(0, 0);}
+\DoxyCodeLine{00014     background\_ = background;}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016     sf::RectangleShape greenBar(sf::Vector2f(100, 30));}
+\DoxyCodeLine{00017     greenBar.setFillColor(sf::Color::Green);}
+\DoxyCodeLine{00018     greenBar.setPosition(50, 5);}
+\DoxyCodeLine{00019     greenBar\_ = greenBar;}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021     redBar\_ = greenBar;}
+\DoxyCodeLine{00022     redBar\_.setFillColor(sf::Color::Red);}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024     violetBar\_ = greenBar;}
+\DoxyCodeLine{00025     violetBar\_.setFillColor(sf::Color::Magenta);}
+\DoxyCodeLine{00026     violetBar\_.setPosition(200, 5);}
+\DoxyCodeLine{00027     violetBar\_.setSize(sf::Vector2f(100 -\/ 100 * (player\_-\/>GetAttackCooldownLeft() / player\_-\/>GetAttackCooldownLength()), 30));}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     yellowBar\_ = greenBar;}
+\DoxyCodeLine{00030     yellowBar\_.setFillColor(sf::Color::Yellow);}
+\DoxyCodeLine{00031     yellowBar\_.setPosition(350, 5);}
+\DoxyCodeLine{00032     yellowBar\_.setSize(sf::Vector2f(100 -\/ player\_-\/>GetDashCooldownLeft() * 50, 30));}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     \textcolor{keywordflow}{if} (!font\_.loadFromFile(\textcolor{stringliteral}{"{}content/fonts/arial.ttf"{}})) \{}
+\DoxyCodeLine{00035         std::cout << \textcolor{stringliteral}{"{}load failed"{}} << std::endl;}
+\DoxyCodeLine{00036     \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     spritehelper::CreateSpriteFrom(\textcolor{stringliteral}{"{}content/sprites/potions/red\_potion.png"{}}, sf::Vector2f(0.4, 0.4), redsprite\_, redtexture\_);}
+\DoxyCodeLine{00039     spritehelper::CreateSpriteFrom(\textcolor{stringliteral}{"{}content/sprites/potions/green\_potion.png"{}}, sf::Vector2f(0.4, 0.4), greensprite\_, greentexture\_);}
+\DoxyCodeLine{00040     spritehelper::CreateSpriteFrom(\textcolor{stringliteral}{"{}content/sprites/potions/yellow\_potion.png"{}}, sf::Vector2f(0.4, 0.4), yellowsprite\_, yellowtexture\_);}
+\DoxyCodeLine{00041     spritehelper::CreateSpriteFrom(\textcolor{stringliteral}{"{}content/sprites/potions/violet\_potion.png"{}}, sf::Vector2f(0.4, 0.4), violetsprite\_, violettexture\_);}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043     redsprite\_.setPosition(redpos\_);}
+\DoxyCodeLine{00044     greensprite\_.setPosition(greenpos\_);}
+\DoxyCodeLine{00045     yellowsprite\_.setPosition(yellowpos\_);}
+\DoxyCodeLine{00046     violetsprite\_.setPosition(violetpos\_);}
+\DoxyCodeLine{00047 \}}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049 \textcolor{keywordtype}{void} Gamebar::Render(sf::RenderTarget* target)}
+\DoxyCodeLine{00050 \{}
+\DoxyCodeLine{00051     \textcolor{comment}{// target-\/>draw(background\_);}}
+\DoxyCodeLine{00052     target-\/>draw(redBar\_);}
+\DoxyCodeLine{00053     target-\/>draw(greenBar\_);}
+\DoxyCodeLine{00054     target-\/>draw(violetBar\_);}
+\DoxyCodeLine{00055     target-\/>draw(yellowBar\_);}
+\DoxyCodeLine{00056 }
+\DoxyCodeLine{00057     sf::Text hp;}
+\DoxyCodeLine{00058     hp.setFont(font\_);}
+\DoxyCodeLine{00059     hp.setString(std::to\_string(player\_-\/>GetHitPoints()));}
+\DoxyCodeLine{00060     hp.setCharacterSize(25);}
+\DoxyCodeLine{00061     \textcolor{keyword}{auto} hpPositionX = greenBar\_.getPosition().x + greenBar\_.getSize().x + 5;}
+\DoxyCodeLine{00062     hp.setPosition(hpPositionX, greenBar\_.getPosition().y);}
+\DoxyCodeLine{00063     hp.setFillColor(sf::Color::White);}
+\DoxyCodeLine{00064     target-\/>draw(hp);}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066     RenderInventory(target);}
+\DoxyCodeLine{00067 \}}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069 \textcolor{keywordtype}{void} Gamebar::Update()}
+\DoxyCodeLine{00070 \{}
+\DoxyCodeLine{00071     \textcolor{keywordtype}{int} newGreenWidth = std::max(0, std::min(100, 100 * player\_-\/>GetHitPoints() / player\_-\/>GetMaxHP()));}
+\DoxyCodeLine{00072     greenBar\_.setSize(sf::Vector2f(newGreenWidth, 30));}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074     \textcolor{keywordtype}{int} newVioletWidth = 100 -\/ 100 * (player\_-\/>GetAttackCooldownLeft() / player\_-\/>GetAttackCooldownLength());}
+\DoxyCodeLine{00075     violetBar\_.setSize(sf::Vector2f(newVioletWidth, 30));}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077     \textcolor{keywordtype}{int} newYellowWidth = 100 -\/ 100 * (player\_-\/>GetDashCooldownLeft() / player\_-\/>GetDashCooldownLength());}
+\DoxyCodeLine{00078     yellowBar\_.setSize(sf::Vector2f(newYellowWidth, 30));}
+\DoxyCodeLine{00079 \}}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081 \textcolor{keywordtype}{void} Gamebar::RenderInventory(sf::RenderTarget* target)}
+\DoxyCodeLine{00082 \{}
+\DoxyCodeLine{00083     std::vector<Potion*> inv = player\_-\/>GetInventory();}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085     \textcolor{keywordtype}{int} red = 0;}
+\DoxyCodeLine{00086     \textcolor{keywordtype}{int} green = 0;}
+\DoxyCodeLine{00087     \textcolor{keywordtype}{int} yellow = 0;}
+\DoxyCodeLine{00088     \textcolor{keywordtype}{int} violet = 0;}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00090     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} i : inv) \{}
+\DoxyCodeLine{00091         \textcolor{keywordflow}{if} (i-\/>GetColour() == \textcolor{stringliteral}{"{}red"{}})}
+\DoxyCodeLine{00092             red += 1;}
+\DoxyCodeLine{00093         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i-\/>GetColour() == \textcolor{stringliteral}{"{}green"{}})}
+\DoxyCodeLine{00094             green += 1;}
+\DoxyCodeLine{00095         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i-\/>GetColour() == \textcolor{stringliteral}{"{}yellow"{}})}
+\DoxyCodeLine{00096             yellow += 1;}
+\DoxyCodeLine{00097         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i-\/>GetColour() == \textcolor{stringliteral}{"{}violet"{}})}
+\DoxyCodeLine{00098             violet += 1;}
+\DoxyCodeLine{00099     \}}
+\DoxyCodeLine{00100     sf::Text nofred;}
+\DoxyCodeLine{00101     sf::Text nofgreen;}
+\DoxyCodeLine{00102     sf::Text nofyellow;}
+\DoxyCodeLine{00103     sf::Text nofviolet;}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{00105     nofred.setString(\textcolor{stringliteral}{"{}x"{}} + std::to\_string(red));}
+\DoxyCodeLine{00106     nofgreen.setString(\textcolor{stringliteral}{"{}x"{}} + std::to\_string(green));}
+\DoxyCodeLine{00107     nofyellow.setString(\textcolor{stringliteral}{"{}x"{}} + std::to\_string(yellow));}
+\DoxyCodeLine{00108     nofviolet.setString(\textcolor{stringliteral}{"{}x"{}} + std::to\_string(violet));}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{00110     std::vector<sf::Text> amounts;}
+\DoxyCodeLine{00111     amounts.push\_back(nofred);}
+\DoxyCodeLine{00112     amounts.push\_back(nofgreen);}
+\DoxyCodeLine{00113     amounts.push\_back(nofyellow);}
+\DoxyCodeLine{00114     amounts.push\_back(nofviolet);}
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116     \textcolor{keywordtype}{float} xcoord = 0;}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{00118     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} a : amounts) \{}
+\DoxyCodeLine{00119         a.setFont(font\_);}
+\DoxyCodeLine{00120         a.setCharacterSize(25);}
+\DoxyCodeLine{00121         a.setPosition(820 + xcoord, 5);}
+\DoxyCodeLine{00122         a.setFillColor(sf::Color::White);}
+\DoxyCodeLine{00123         target-\/>draw(a);}
+\DoxyCodeLine{00124         xcoord += 100;}
+\DoxyCodeLine{00125     \}}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127     target-\/>draw(redsprite\_);}
+\DoxyCodeLine{00128     target-\/>draw(greensprite\_);}
+\DoxyCodeLine{00129     target-\/>draw(yellowsprite\_);}
+\DoxyCodeLine{00130     target-\/>draw(violetsprite\_);}
+\DoxyCodeLine{00131 \}}
+
+\end{DoxyCode}

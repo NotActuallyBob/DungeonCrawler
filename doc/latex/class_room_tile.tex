@@ -1,0 +1,100 @@
+\hypertarget{class_room_tile}{}\doxysection{Room\+Tile Class Reference}
+\label{class_room_tile}\index{RoomTile@{RoomTile}}
+
+
+{\ttfamily \#include $<$room\+Tile.\+hpp$>$}
+
+Inheritance diagram for Room\+Tile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_room_tile}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_room_tile_a78fe92dc7696e8074a41585f2b60b9f7}{Room\+Tile}} (std\+::string texture, float x, float y, bool walkable, bool penetratable)
+\begin{DoxyCompactList}\small\item\em Construct a new Room Tile object. \end{DoxyCompactList}\item 
+const sf\+::\+Vector2f \mbox{\hyperlink{class_room_tile_a5ad3ea4233665333360ce3d2578b5375}{get\+Size}} () const
+\item 
+const sf\+::\+Vector2f \& \mbox{\hyperlink{class_room_tile_a8dfb31c6abaea11bb8f4cfe6111ff4e6}{get\+Position}} () const
+\item 
+const sf\+::\+Float\+Rect \mbox{\hyperlink{class_room_tile_aadd0a51dad5e0fc26c2475530cc44954}{get\+Bounding\+Box}} () const
+\item 
+const sf\+::\+Sprite \& \mbox{\hyperlink{class_room_tile_a9a928b449c4eebb0a4d0d010277dfb54}{get\+Sprite}} () const
+\item 
+bool \mbox{\hyperlink{class_room_tile_a1fbeb58b078c775cc9e591fdbc46bc26}{is\+Walkable}} () const
+\item 
+bool \mbox{\hyperlink{class_room_tile_a996d320e89aa517730de335cf1fff674}{is\+Penetratable}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_room_tile_a78fe92dc7696e8074a41585f2b60b9f7}\label{class_room_tile_a78fe92dc7696e8074a41585f2b60b9f7}} 
+\index{RoomTile@{RoomTile}!RoomTile@{RoomTile}}
+\index{RoomTile@{RoomTile}!RoomTile@{RoomTile}}
+\doxysubsubsection{\texorpdfstring{RoomTile()}{RoomTile()}}
+{\footnotesize\ttfamily Room\+Tile\+::\+Room\+Tile (\begin{DoxyParamCaption}\item[{std\+::string}]{texture,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{bool}]{walkable,  }\item[{bool}]{penetratable }\end{DoxyParamCaption})}
+
+
+
+Construct a new Room Tile object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & texture of the tile \\
+\hline
+{\em x} & location in x-\/axis \\
+\hline
+{\em y} & location in y-\/axis \\
+\hline
+{\em walkable} & is it a walkable tile or not \\
+\hline
+{\em penetratable} & can projectiles penetrate the tile \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_room_tile_aadd0a51dad5e0fc26c2475530cc44954}\label{class_room_tile_aadd0a51dad5e0fc26c2475530cc44954}} 
+\index{RoomTile@{RoomTile}!getBoundingBox@{getBoundingBox}}
+\index{getBoundingBox@{getBoundingBox}!RoomTile@{RoomTile}}
+\doxysubsubsection{\texorpdfstring{getBoundingBox()}{getBoundingBox()}}
+{\footnotesize\ttfamily const sf\+::\+Float\+Rect Room\+Tile\+::get\+Bounding\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_tile_a8dfb31c6abaea11bb8f4cfe6111ff4e6}\label{class_room_tile_a8dfb31c6abaea11bb8f4cfe6111ff4e6}} 
+\index{RoomTile@{RoomTile}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!RoomTile@{RoomTile}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily const sf\+::\+Vector2f \& Room\+Tile\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_tile_a5ad3ea4233665333360ce3d2578b5375}\label{class_room_tile_a5ad3ea4233665333360ce3d2578b5375}} 
+\index{RoomTile@{RoomTile}!getSize@{getSize}}
+\index{getSize@{getSize}!RoomTile@{RoomTile}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily const sf\+::\+Vector2f Room\+Tile\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_tile_a9a928b449c4eebb0a4d0d010277dfb54}\label{class_room_tile_a9a928b449c4eebb0a4d0d010277dfb54}} 
+\index{RoomTile@{RoomTile}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!RoomTile@{RoomTile}}
+\doxysubsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily const sf\+::\+Sprite \& Room\+Tile\+::get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_tile_a996d320e89aa517730de335cf1fff674}\label{class_room_tile_a996d320e89aa517730de335cf1fff674}} 
+\index{RoomTile@{RoomTile}!isPenetratable@{isPenetratable}}
+\index{isPenetratable@{isPenetratable}!RoomTile@{RoomTile}}
+\doxysubsubsection{\texorpdfstring{isPenetratable()}{isPenetratable()}}
+{\footnotesize\ttfamily bool Room\+Tile\+::is\+Penetratable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_tile_a1fbeb58b078c775cc9e591fdbc46bc26}\label{class_room_tile_a1fbeb58b078c775cc9e591fdbc46bc26}} 
+\index{RoomTile@{RoomTile}!isWalkable@{isWalkable}}
+\index{isWalkable@{isWalkable}!RoomTile@{RoomTile}}
+\doxysubsubsection{\texorpdfstring{isWalkable()}{isWalkable()}}
+{\footnotesize\ttfamily bool Room\+Tile\+::is\+Walkable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Dungeon/\+Tiles/\mbox{\hyperlink{room_tile_8hpp}{room\+Tile.\+hpp}}\item 
+src/\+Dungeon/\+Tiles/\mbox{\hyperlink{room_tile_8cpp}{room\+Tile.\+cpp}}\end{DoxyCompactItemize}

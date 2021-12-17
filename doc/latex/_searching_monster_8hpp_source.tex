@@ -1,0 +1,32 @@
+\hypertarget{_searching_monster_8hpp_source}{}\doxysection{Searching\+Monster.\+hpp}
+\label{_searching_monster_8hpp_source}\index{src/Actors/Monsters/SearchingMonster.hpp@{src/Actors/Monsters/SearchingMonster.hpp}}
+\mbox{\hyperlink{_searching_monster_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef \_SEARCHING\_MONSTER\_CLASS\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define \_SEARCHING\_MONSTER\_CLASS\_}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{character_8hpp}{Actors/character.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{player_8hpp}{Actors/player.hpp}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{monster_8hpp}{monster.hpp}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_searching_monster}{SearchingMonster}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_monster}{Monster}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_searching_monster_a94a93c7b1d1b1418c009aea113a2c675}{SearchingMonster}}(\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} player, \textcolor{keywordtype}{float} xPos, \textcolor{keywordtype}{float} yPos);}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_searching_monster_a94a93c7b1d1b1418c009aea113a2c675}{SearchingMonster}}(\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} player, sf::Vector2f pos);}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_searching_monster_aa47c10b293b94fe0deffdd599c8db0f5}{\string~SearchingMonster}}();}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keyword}{virtual} std::list<ProjectileUP> \mbox{\hyperlink{class_searching_monster_abcd6511050b6ecc18b4fdee766732546}{Attack}}();}
+\DoxyCodeLine{21     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_searching_monster_aee8ee5a68b09c30edb3f322c0cd874fe}{Move}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_searching_monster_a4397b6b491f1c014779bc9ee3ff672d8}{initVariables}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{private}:}
+\DoxyCodeLine{26     sf::Clock cooldown\_;}
+\DoxyCodeLine{27     std::string name\_ = \textcolor{stringliteral}{"{}Sir Chi"{}};}
+\DoxyCodeLine{28 \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

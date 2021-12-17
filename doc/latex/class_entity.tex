@@ -1,0 +1,283 @@
+\hypertarget{class_entity}{}\doxysection{Entity Class Reference}
+\label{class_entity}\index{Entity@{Entity}}
+
+
+{\ttfamily \#include $<$entity.\+hpp$>$}
+
+Inheritance diagram for Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.007169cm]{class_entity}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_entity_a8b2bd69eee2677d95bf21f6d6dea78ce}{Entity}} (const std\+::string \&sprite\+Location, float x\+Pos, float y\+Pos, sf\+::\+Vector2f sprite\+Dims)
+\begin{DoxyCompactList}\small\item\em Construct a new game \mbox{\hyperlink{class_entity}{Entity}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_entity_a7d7c47d75947627de151b220589397b4}{Entity}} (const std\+::string \&spirte\+Location, sf\+::\+Vector2f pos, sf\+::\+Vector2f sprite\+Dims)
+\item 
+\mbox{\hyperlink{class_entity_a6dc11f9164ddb932e5f2582f7c4ee23e}{Entity}} (sf\+::\+Sprite \&sprite, float x\+Pos, float y\+Pos)
+\item 
+\mbox{\hyperlink{class_entity_a6e030866b2183df30aa4e50e3f436a71}{Entity}} (sf\+::\+Sprite \&sprite, sf\+::\+Vector2f pos)
+\item 
+virtual \mbox{\hyperlink{class_entity_a588098978eea6a3486b7361605ff3f0f}{$\sim$\+Entity}} ()
+\item 
+const sf\+::\+Sprite \& \mbox{\hyperlink{class_entity_ac3b42d06a4fd2970637fa3ae9c97eb2a}{Get\+Sprite}} () const
+\begin{DoxyCompactList}\small\item\em Get the entity\textquotesingle{}s sprite. \end{DoxyCompactList}\item 
+const sf\+::\+Vector2f \& \mbox{\hyperlink{class_entity_ab5d22607f1b68566ccf5c5658f08a0ba}{Get\+Pos}} () const
+\begin{DoxyCompactList}\small\item\em Get the entity position as a Vector2f. \end{DoxyCompactList}\item 
+const sf\+::\+Vector2i \mbox{\hyperlink{class_entity_a6012ec4d2cf29e94bef8775978bb2908}{Get\+PosI}} ()
+\begin{DoxyCompactList}\small\item\em Get the entity postions. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_entity_a6be3a18731e507b2cdcb33d43c4322fa}{Get\+Sprite\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the entitys sprite. \end{DoxyCompactList}\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_entity_aaf6d6677fac3c26996f0a22c284fbdff}{Get\+Sprite\+Center}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the entitys sprite center. \end{DoxyCompactList}\item 
+const sf\+::\+Vector2f \& \mbox{\hyperlink{class_entity_aa672c03b23223d91936d54ce6f625d41}{Get\+Old\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the Enitys position during the last game tick. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \mbox{\hyperlink{class_entity_abf4e31d55dabcb9da5951766e99af924}{Get\+Sprite\+Bounds}} () const
+\item 
+sf\+::\+Float\+Rect \mbox{\hyperlink{class_entity_ad9470f32401df192b733af6c51145a8d}{Get\+Base\+Box\+At}} (sf\+::\+Vector2f pos) const
+\item 
+void \mbox{\hyperlink{class_entity_a8a200d4dfb49aa86291857fcdcfa349d}{Set\+Pos}} (sf\+::\+Vector2f pos)
+\begin{DoxyCompactList}\small\item\em Function to set the position and sprite position of the entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_entity_a3abaf8ad7ffd6e55ed40a67de119a576}{Set\+Pos\+And\+Old\+Pos}} (sf\+::\+Vector2f pos)
+\begin{DoxyCompactList}\small\item\em Function to set both the old\+Pos\+\_\+, pos\+\_\+ and sprite position of the entity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_entity_a034bc6e6506d067bdad46080cbee620c}{Render}} (sf\+::\+Render\+Target $\ast$target)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_entity_a1273b9d27b8f2dc3c2faad6cafe447e4}{init\+Sprite}} (const std\+::string \&sprite\+Location, sf\+::\+Vector2f sprite\+Dims)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_entity_afff3cfba8a9c8e60d8a33771f5736cdf}{pos\+\_\+}}
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{class_entity_a7f6a0ca6022fabab2652227d00efc62d}{old\+Pos\+\_\+}}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{class_entity_a4b53d16db25bf36bbacdbc07fa2b069e}{sprite\+\_\+}}
+\item 
+sf\+::\+Texture \mbox{\hyperlink{class_entity_af244bb9ceeaeff3a210448292a6f2654}{texture\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_entity_a8b2bd69eee2677d95bf21f6d6dea78ce}\label{class_entity_a8b2bd69eee2677d95bf21f6d6dea78ce}} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sprite\+Location,  }\item[{float}]{x\+Pos,  }\item[{float}]{y\+Pos,  }\item[{sf\+::\+Vector2f}]{sprite\+Dims }\end{DoxyParamCaption})}
+
+
+
+Construct a new game \mbox{\hyperlink{class_entity}{Entity}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Location} & path to the sprite \\
+\hline
+{\em x\+Pos} & x-\/choord for left side \\
+\hline
+{\em y\+Pos} & y-\/choord for top \\
+\hline
+{\em sprite\+Dims} & !scaling of sprite! \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_entity_a7d7c47d75947627de151b220589397b4}\label{class_entity_a7d7c47d75947627de151b220589397b4}} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{spirte\+Location,  }\item[{sf\+::\+Vector2f}]{pos,  }\item[{sf\+::\+Vector2f}]{sprite\+Dims }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_entity_a6dc11f9164ddb932e5f2582f7c4ee23e}\label{class_entity_a6dc11f9164ddb932e5f2582f7c4ee23e}} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{sf\+::\+Sprite \&}]{sprite,  }\item[{float}]{x\+Pos,  }\item[{float}]{y\+Pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_entity_a6e030866b2183df30aa4e50e3f436a71}\label{class_entity_a6e030866b2183df30aa4e50e3f436a71}} 
+\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{sf\+::\+Sprite \&}]{sprite,  }\item[{sf\+::\+Vector2f}]{pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_entity_a588098978eea6a3486b7361605ff3f0f}\label{class_entity_a588098978eea6a3486b7361605ff3f0f}} 
+\index{Entity@{Entity}!````~Entity@{$\sim$Entity}}
+\index{````~Entity@{$\sim$Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{$\sim$Entity()}{~Entity()}}
+{\footnotesize\ttfamily virtual Entity\+::$\sim$\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_entity_ad9470f32401df192b733af6c51145a8d}\label{class_entity_ad9470f32401df192b733af6c51145a8d}} 
+\index{Entity@{Entity}!GetBaseBoxAt@{GetBaseBoxAt}}
+\index{GetBaseBoxAt@{GetBaseBoxAt}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{GetBaseBoxAt()}{GetBaseBoxAt()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect Entity\+::\+Get\+Base\+Box\+At (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{pos }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_entity_aa672c03b23223d91936d54ce6f625d41}\label{class_entity_aa672c03b23223d91936d54ce6f625d41}} 
+\index{Entity@{Entity}!GetOldPosition@{GetOldPosition}}
+\index{GetOldPosition@{GetOldPosition}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{GetOldPosition()}{GetOldPosition()}}
+{\footnotesize\ttfamily const sf\+::\+Vector2f \& Entity\+::\+Get\+Old\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the position of the Enitys position during the last game tick. 
+
+\begin{DoxyReturn}{Returns}
+const sf\+::\+Vector2f\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_entity_ab5d22607f1b68566ccf5c5658f08a0ba}\label{class_entity_ab5d22607f1b68566ccf5c5658f08a0ba}} 
+\index{Entity@{Entity}!GetPos@{GetPos}}
+\index{GetPos@{GetPos}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{GetPos()}{GetPos()}}
+{\footnotesize\ttfamily const sf\+::\+Vector2f \& Entity\+::\+Get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the entity position as a Vector2f. 
+
+\begin{DoxyReturn}{Returns}
+const sf\+::\+Vector2f\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_entity_a6012ec4d2cf29e94bef8775978bb2908}\label{class_entity_a6012ec4d2cf29e94bef8775978bb2908}} 
+\index{Entity@{Entity}!GetPosI@{GetPosI}}
+\index{GetPosI@{GetPosI}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{GetPosI()}{GetPosI()}}
+{\footnotesize\ttfamily const sf\+::\+Vector2i Entity\+::\+Get\+PosI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the entity postions. 
+
+\begin{DoxyReturn}{Returns}
+const sf\+::\+Vector2i 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_entity_ac3b42d06a4fd2970637fa3ae9c97eb2a}\label{class_entity_ac3b42d06a4fd2970637fa3ae9c97eb2a}} 
+\index{Entity@{Entity}!GetSprite@{GetSprite}}
+\index{GetSprite@{GetSprite}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{GetSprite()}{GetSprite()}}
+{\footnotesize\ttfamily const sf\+::\+Sprite \& Entity\+::\+Get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the entity\textquotesingle{}s sprite. 
+
+\begin{DoxyReturn}{Returns}
+const sf\+::\+Sprite\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_entity_abf4e31d55dabcb9da5951766e99af924}\label{class_entity_abf4e31d55dabcb9da5951766e99af924}} 
+\index{Entity@{Entity}!GetSpriteBounds@{GetSpriteBounds}}
+\index{GetSpriteBounds@{GetSpriteBounds}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{GetSpriteBounds()}{GetSpriteBounds()}}
+{\footnotesize\ttfamily sf\+::\+Float\+Rect Entity\+::\+Get\+Sprite\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_entity_aaf6d6677fac3c26996f0a22c284fbdff}\label{class_entity_aaf6d6677fac3c26996f0a22c284fbdff}} 
+\index{Entity@{Entity}!GetSpriteCenter@{GetSpriteCenter}}
+\index{GetSpriteCenter@{GetSpriteCenter}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{GetSpriteCenter()}{GetSpriteCenter()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Entity\+::\+Get\+Sprite\+Center (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the position of the entitys sprite center. 
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Vector2f 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_entity_a6be3a18731e507b2cdcb33d43c4322fa}\label{class_entity_a6be3a18731e507b2cdcb33d43c4322fa}} 
+\index{Entity@{Entity}!GetSpritePosition@{GetSpritePosition}}
+\index{GetSpritePosition@{GetSpritePosition}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{GetSpritePosition()}{GetSpritePosition()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Entity\+::\+Get\+Sprite\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the position of the entitys sprite. 
+
+\begin{DoxyReturn}{Returns}
+sf\+::\+Vector2f 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_entity_a1273b9d27b8f2dc3c2faad6cafe447e4}\label{class_entity_a1273b9d27b8f2dc3c2faad6cafe447e4}} 
+\index{Entity@{Entity}!initSprite@{initSprite}}
+\index{initSprite@{initSprite}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{initSprite()}{initSprite()}}
+{\footnotesize\ttfamily void Entity\+::init\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sprite\+Location,  }\item[{sf\+::\+Vector2f}]{sprite\+Dims }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_entity_a034bc6e6506d067bdad46080cbee620c}\label{class_entity_a034bc6e6506d067bdad46080cbee620c}} 
+\index{Entity@{Entity}!Render@{Render}}
+\index{Render@{Render}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily void Entity\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Target $\ast$}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_monster_ac8f61d71151979a78dbf858fdff4d93b}{Monster}}.
+
+\mbox{\Hypertarget{class_entity_a8a200d4dfb49aa86291857fcdcfa349d}\label{class_entity_a8a200d4dfb49aa86291857fcdcfa349d}} 
+\index{Entity@{Entity}!SetPos@{SetPos}}
+\index{SetPos@{SetPos}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{SetPos()}{SetPos()}}
+{\footnotesize\ttfamily void Entity\+::\+Set\+Pos (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{pos }\end{DoxyParamCaption})}
+
+
+
+Function to set the position and sprite position of the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & the new position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_entity_a3abaf8ad7ffd6e55ed40a67de119a576}\label{class_entity_a3abaf8ad7ffd6e55ed40a67de119a576}} 
+\index{Entity@{Entity}!SetPosAndOldPos@{SetPosAndOldPos}}
+\index{SetPosAndOldPos@{SetPosAndOldPos}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{SetPosAndOldPos()}{SetPosAndOldPos()}}
+{\footnotesize\ttfamily void Entity\+::\+Set\+Pos\+And\+Old\+Pos (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{pos }\end{DoxyParamCaption})}
+
+
+
+Function to set both the old\+Pos\+\_\+, pos\+\_\+ and sprite position of the entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & the new position \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_entity_a7f6a0ca6022fabab2652227d00efc62d}\label{class_entity_a7f6a0ca6022fabab2652227d00efc62d}} 
+\index{Entity@{Entity}!oldPos\_@{oldPos\_}}
+\index{oldPos\_@{oldPos\_}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{oldPos\_}{oldPos\_}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Entity\+::old\+Pos\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_entity_afff3cfba8a9c8e60d8a33771f5736cdf}\label{class_entity_afff3cfba8a9c8e60d8a33771f5736cdf}} 
+\index{Entity@{Entity}!pos\_@{pos\_}}
+\index{pos\_@{pos\_}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{pos\_}{pos\_}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Entity\+::pos\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_entity_a4b53d16db25bf36bbacdbc07fa2b069e}\label{class_entity_a4b53d16db25bf36bbacdbc07fa2b069e}} 
+\index{Entity@{Entity}!sprite\_@{sprite\_}}
+\index{sprite\_@{sprite\_}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{sprite\_}{sprite\_}}
+{\footnotesize\ttfamily sf\+::\+Sprite Entity\+::sprite\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_entity_af244bb9ceeaeff3a210448292a6f2654}\label{class_entity_af244bb9ceeaeff3a210448292a6f2654}} 
+\index{Entity@{Entity}!texture\_@{texture\_}}
+\index{texture\_@{texture\_}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{texture\_}{texture\_}}
+{\footnotesize\ttfamily sf\+::\+Texture Entity\+::texture\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{entity_8hpp}{entity.\+hpp}}\item 
+src/\mbox{\hyperlink{entity_8cpp}{entity.\+cpp}}\end{DoxyCompactItemize}

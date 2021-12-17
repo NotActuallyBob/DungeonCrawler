@@ -1,0 +1,29 @@
+\doxysection{Bow\+Weapon.\+cpp}
+\label{_bow_weapon_8cpp_source}\index{src/Combat/Weapons/BowWeapon.cpp@{src/Combat/Weapons/BowWeapon.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include "{}Combat/Weapons/BowWeapon.hpp"{}}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 BowWeapon::BowWeapon(\textcolor{keywordtype}{int} damage, \textcolor{keywordtype}{int} range, \textcolor{keywordtype}{int} rateOfFire, \textcolor{keywordtype}{float} projectileSpeed, Vector2f projectileSize, \textcolor{keyword}{const} std::string\& spriteLocation)}
+\DoxyCodeLine{00005     : Weapon(damage, range, rateOfFire, projectileSpeed, projectileSize, spriteLocation)}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007     penetrates\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{00008     spritehelper::SetScale(projectileSize, sprite\_);}
+\DoxyCodeLine{00009     \textcolor{comment}{// sets scale and origin of sprite}}
+\DoxyCodeLine{00010 \}}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 ProjectileUP BowWeapon::Use(Vector2f dir, Vector2f origin)}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014     \textcolor{comment}{// have to rotate the projectile}}
+\DoxyCodeLine{00015     spritehelper::RotateSprite(dir, sprite\_);}
+\DoxyCodeLine{00016     spritehelper::SetOriginBottomCenter(sprite\_);}
+\DoxyCodeLine{00017     ProjectileUP p(\textcolor{keyword}{new} Projectile(sprite\_, origin, \textcolor{keyword}{true}));}
+\DoxyCodeLine{00018     p-\/>SetDirection(dir);}
+\DoxyCodeLine{00019     p-\/>SetDamage(currentDamage\_);}
+\DoxyCodeLine{00020     p-\/>SetDistanceLifeSpan(range\_);}
+\DoxyCodeLine{00021     p-\/>SetProjectileSpeed(projectileSpeed\_);}
+\DoxyCodeLine{00022     \textcolor{keywordflow}{return} p;}
+\DoxyCodeLine{00023 \}}
+
+\end{DoxyCode}

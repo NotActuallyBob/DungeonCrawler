@@ -1,0 +1,22 @@
+\hypertarget{_i_platform_8hpp_source}{}\doxysection{IPlatform.\+hpp}
+\label{_i_platform_8hpp_source}\index{src/Platform/IPlatform.hpp@{src/Platform/IPlatform.hpp}}
+\mbox{\hyperlink{_i_platform_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef UTIL\_IPLATFORM\_HELPER\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define UTIL\_IPLATFORM\_HELPER\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceutil}{util}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6     \textcolor{keyword}{struct }\mbox{\hyperlink{structutil_1_1_i_platform}{IPlatform}}}
+\DoxyCodeLine{7     \{}
+\DoxyCodeLine{8         \textcolor{keyword}{virtual} \mbox{\hyperlink{structutil_1_1_i_platform_a0871cdb2e3ba111b58d910af8d78f740}{\string~IPlatform}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{9         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{structutil_1_1_i_platform_aabac4c4af05614dee6065f226519bd94}{setIcon}}(\textcolor{keyword}{const} sf::WindowHandle \&inHandle) = 0;}
+\DoxyCodeLine{10         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{structutil_1_1_i_platform_abc6f5e66cfbadd1b3111cde2c728d16c}{toggleFullscreen}}(\textcolor{keyword}{const} sf::WindowHandle \&inHandle, \textcolor{keyword}{const} sf::Uint32 inStyle, \textcolor{keyword}{const} \textcolor{keywordtype}{bool} inWindowed, \textcolor{keyword}{const} sf::Vector2u \&inResolution) = 0;}
+\DoxyCodeLine{11         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{structutil_1_1_i_platform_aaca0f786f9a1aad4cd016dd98fcd85b7}{getRefreshRate}}(\textcolor{keyword}{const} sf::WindowHandle \&inHandle) = 0;}
+\DoxyCodeLine{12         \textcolor{keyword}{virtual} \textcolor{keywordtype}{float} \mbox{\hyperlink{structutil_1_1_i_platform_aff4e642e55143a4d7925411ff56970ab}{getScreenScalingFactor}}(\textcolor{keyword}{const} sf::WindowHandle \&inHandle) = 0;}
+\DoxyCodeLine{13     \};}
+\DoxyCodeLine{14 \}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// UTIL\_IPLATFORM\_HELPER\_HPP}}
+
+\end{DoxyCode}

@@ -1,0 +1,33 @@
+\hypertarget{_wall_patrol_monster_8hpp_source}{}\doxysection{Wall\+Patrol\+Monster.\+hpp}
+\label{_wall_patrol_monster_8hpp_source}\index{src/Actors/Monsters/WallPatrolMonster.hpp@{src/Actors/Monsters/WallPatrolMonster.hpp}}
+\mbox{\hyperlink{_wall_patrol_monster_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef \_WALL\_PATROL\_MONSTER\_CLASS\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define \_WALL\_PATROL\_MONSTER\_CLASS\_}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{character_8hpp}{Actors/character.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{player_8hpp}{Actors/player.hpp}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_sword_weapon_8hpp}{Combat/Weapons/SwordWeapon.hpp}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{monster_8hpp}{monster.hpp}}"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_wall_patrol_monster}{WallPatrolMonster}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_monster}{Monster}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_wall_patrol_monster_a8e7db48b1d7737d180d148be3b900a66}{WallPatrolMonster}}(\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} player, \textcolor{keywordtype}{float} xPos, \textcolor{keywordtype}{float} yPos);}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_wall_patrol_monster_a8e7db48b1d7737d180d148be3b900a66}{WallPatrolMonster}}(\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} player, sf::Vector2f pos);}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_wall_patrol_monster_a30f342e542394e268e8aa81ed3874c5d}{\string~WallPatrolMonster}}();}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keyword}{virtual} std::list<ProjectileUP> \mbox{\hyperlink{class_wall_patrol_monster_a1c9f9deed0bb0a033243ddf044897a24}{Attack}}();}
+\DoxyCodeLine{22     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_wall_patrol_monster_a862ea23ac2104f4093662ec8317ab994}{Move}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_wall_patrol_monster_aebf041dea42d9b66dfff255d9902fd5d}{initVariables}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{private}:}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} currentDir\_ = 1;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} changeDirection();}
+\DoxyCodeLine{29 \};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,33 @@
+\doxysection{Animationhandler.\+cpp}
+\label{_animationhandler_8cpp_source}\index{src/Animation/Animationhandler.cpp@{src/Animation/Animationhandler.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}Animationhandler.hpp"{}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 AnimationHandler::AnimationHandler(uint xOffset, uint yOffset, uint width, uint height, uint xSpacing, \textcolor{keyword}{const} std::string\& textureLocation, \textcolor{keyword}{const} std::string\& deathTexture)}
+\DoxyCodeLine{00004     : animations\_(AnimationIndex::Count)}
+\DoxyCodeLine{00005 \{}
+\DoxyCodeLine{00006     animations\_[uint(AnimationIndex::AnimationDeath)] = AnimationPS(\textcolor{keyword}{new} Animation(0, 0, 64, 64, 0, deathTexture));}
+\DoxyCodeLine{00007     animations\_[uint(AnimationIndex::AnimationIdle)] = AnimationPS(\textcolor{keyword}{new} Animation(xOffset, 0, width, height, xSpacing, textureLocation));}
+\DoxyCodeLine{00008     animations\_[uint(AnimationIndex::AnimationLeft)] = AnimationPS(\textcolor{keyword}{new} Animation(xOffset, yOffset + height, width, height, xSpacing, textureLocation));}
+\DoxyCodeLine{00009     animations\_[uint(AnimationIndex::AnimationRight)] = AnimationPS(\textcolor{keyword}{new} Animation(xOffset, yOffset + height * 2, width, height, xSpacing, textureLocation));}
+\DoxyCodeLine{00010     animations\_[uint(AnimationIndex::AnimationUp)] = AnimationPS(\textcolor{keyword}{new} Animation(xOffset, yOffset + height * 3, width, height, xSpacing, textureLocation));}
+\DoxyCodeLine{00011     animations\_[uint(AnimationIndex::AnimationDown)] = AnimationPS(\textcolor{keyword}{new} Animation(xOffset, yOffset + height * 4, width, height, xSpacing, textureLocation));}
+\DoxyCodeLine{00012 \}}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014 AnimationHandler::\string~AnimationHandler()}
+\DoxyCodeLine{00015 \{}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 \}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019 \textcolor{keywordtype}{void} AnimationHandler::setAnimation(AnimationIndex index)}
+\DoxyCodeLine{00020 \{}
+\DoxyCodeLine{00021     currentAnimationIndex\_ = index;}
+\DoxyCodeLine{00022 \}}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024 Animation* AnimationHandler::getAnimation()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00025 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00026     \textcolor{keywordflow}{return} animations\_[currentAnimationIndex\_].get();}
+\DoxyCodeLine{00027 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,104 @@
+\hypertarget{class_animation}{}\doxysection{Animation Class Reference}
+\label{class_animation}\index{Animation@{Animation}}
+
+
+\mbox{\hyperlink{class_animation}{Animation}} build the characters animation frames from spritesheet and displays them to achive an animated sprite.  
+
+
+
+
+{\ttfamily \#include $<$animation.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_animation_a4c294d8ee848291f5da25a7d6360601f}{Animation}} ()=default
+\item 
+\mbox{\hyperlink{class_animation_a3bf3a61e86f92fd6a9768c0df7b086ff}{Animation}} (int x, int y, int width, int height, int spacing, const std\+::string \&texture\+Name)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_animation}{Animation}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_animation_a401b68793d4fbf48d481c030ee4b2a16}{$\sim$\+Animation}} ()
+\item 
+void \mbox{\hyperlink{class_animation_a1d2b1876e1f2330cc206851af938582d}{Animation\+To\+Sprite}} (sf\+::\+Sprite \&sprite) const
+\begin{DoxyCompactList}\small\item\em sets the right texture to sprite \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_animation_a1871db60d1fb351aeb77ada38dd4dd9c}{Update}} (float dt)
+\begin{DoxyCompactList}\small\item\em updates the sprite based on time passed \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_animation}{Animation}} build the characters animation frames from spritesheet and displays them to achive an animated sprite. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_animation_a4c294d8ee848291f5da25a7d6360601f}\label{class_animation_a4c294d8ee848291f5da25a7d6360601f}} 
+\index{Animation@{Animation}!Animation@{Animation}}
+\index{Animation@{Animation}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Animation()}{Animation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Animation\+::\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_animation_a3bf3a61e86f92fd6a9768c0df7b086ff}\label{class_animation_a3bf3a61e86f92fd6a9768c0df7b086ff}} 
+\index{Animation@{Animation}!Animation@{Animation}}
+\index{Animation@{Animation}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Animation()}{Animation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Animation\+::\+Animation (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{spacing,  }\item[{const std\+::string \&}]{texture\+Name }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_animation}{Animation}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate of rectangle defining the sprite in spritesheet \\
+\hline
+{\em y} & y-\/coordinate of rectangle defining the sprite in spritesheet \\
+\hline
+{\em width} & width of the character in animation \\
+\hline
+{\em height} & height of the character in animation \\
+\hline
+{\em texture\+Name} & the spritesheet animation pulls from to create the animation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_animation_a401b68793d4fbf48d481c030ee4b2a16}\label{class_animation_a401b68793d4fbf48d481c030ee4b2a16}} 
+\index{Animation@{Animation}!````~Animation@{$\sim$Animation}}
+\index{````~Animation@{$\sim$Animation}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{$\sim$Animation()}{~Animation()}}
+{\footnotesize\ttfamily Animation\+::$\sim$\+Animation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_animation_a1d2b1876e1f2330cc206851af938582d}\label{class_animation_a1d2b1876e1f2330cc206851af938582d}} 
+\index{Animation@{Animation}!AnimationToSprite@{AnimationToSprite}}
+\index{AnimationToSprite@{AnimationToSprite}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{AnimationToSprite()}{AnimationToSprite()}}
+{\footnotesize\ttfamily void Animation\+::\+Animation\+To\+Sprite (\begin{DoxyParamCaption}\item[{sf\+::\+Sprite \&}]{sprite }\end{DoxyParamCaption}) const}
+
+
+
+sets the right texture to sprite 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & sprite which the texuture is added to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_animation_a1871db60d1fb351aeb77ada38dd4dd9c}\label{class_animation_a1871db60d1fb351aeb77ada38dd4dd9c}} 
+\index{Animation@{Animation}!Update@{Update}}
+\index{Update@{Update}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Animation\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})}
+
+
+
+updates the sprite based on time passed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & time parameter \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Animation/\mbox{\hyperlink{animation_8hpp}{animation.\+hpp}}\item 
+src/\+Animation/\mbox{\hyperlink{animation_8cpp}{animation.\+cpp}}\end{DoxyCompactItemize}

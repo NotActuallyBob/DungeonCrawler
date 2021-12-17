@@ -1,0 +1,30 @@
+\hypertarget{_level_up_system_8hpp_source}{}\doxysection{Level\+Up\+System.\+hpp}
+\label{_level_up_system_8hpp_source}\index{src/Utility/LevelUpSystem.hpp@{src/Utility/LevelUpSystem.hpp}}
+\mbox{\hyperlink{_level_up_system_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{character_8hpp}{Actors/character.hpp}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_level_up_instance_8hpp}{LevelUpInstance.hpp}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef \_LevelUpSystem\_CLASS\_}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define \_LevelUpSystem\_CLASS\_}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_level_up_system}{LevelUpSystem}} \{}
+\DoxyCodeLine{10 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_level_up_system_a596202df95040f008ad1158fabb7ced8}{AddCharacter}}(\mbox{\hyperlink{class_character}{Character}}* character);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{24     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_level_up_system_af23f857e6fbb331813e8f3be3440176e}{GainXP}}(\mbox{\hyperlink{class_character}{Character}}* character, \textcolor{keywordtype}{float} amount);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{31     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_level_up_system_ac44b5ce7e5bfdc0fb1ae43bc943085cf}{LevelUp}}(\mbox{\hyperlink{class_character}{Character}}* character);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{39     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_level_up_system_ab8758fa4c37ccd52e874c8cee3731978}{GetLevel}}(\mbox{\hyperlink{class_character}{Character}}* character);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{47     \textcolor{keyword}{static} \textcolor{keywordtype}{float} \mbox{\hyperlink{class_level_up_system_a90506d14517841865263b633eb53e567}{GetHPModifier}}(\mbox{\hyperlink{class_character}{Character}}* character);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \textcolor{keyword}{static} std::unordered\_map<Character*, LevelUpInstance> \mbox{\hyperlink{class_level_up_system_a69fdc056fe3e24804772277db95a0955}{characterLevelMap}};}
+\DoxyCodeLine{50 \};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

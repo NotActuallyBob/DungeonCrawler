@@ -1,0 +1,1375 @@
+\begin{theindex}
+
+  \item {\_ANIMATIONHANDLER\_CLASS\_}
+    \subitem {Animationhandler.hpp}, \hyperpage{140}
+  \item {\_ANIMATION\_}
+    \subitem {animation.hpp}, \hyperpage{139}
+  \item {\_BOSS\_MONSTER\_CLASS\_}
+    \subitem {BossMonster.hpp}, \hyperpage{126}
+  \item {\_BOSS\_SPAWNER\_CLASS\_}
+    \subitem {BossSpawner.hpp}, \hyperpage{129}
+  \item {\_BOWWEAPON\_CLASS\_}
+    \subitem {BowWeapon.hpp}, \hyperpage{146}
+  \item {\_CHARACTER\_CLASS\_}
+    \subitem {character.hpp}, \hyperpage{124}
+  \item {\_COLLIDABLE\_INTERFACE\_}
+    \subitem {ICollidable.hpp}, \hyperpage{162}
+  \item {\_COLLISIONSYSTEM\_CLASS\_}
+    \subitem {CollisionSystem.hpp}, \hyperpage{161}
+  \item {\_ENTITY\_CLASS\_}
+    \subitem {entity.hpp}, \hyperpage{157}
+  \item {\_GAMEBAR\_CLASS\_}
+    \subitem {gamebar.hpp}, \hyperpage{160}
+  \item {\_GAME\_CLASS\_}
+    \subitem {game.hpp}, \hyperpage{158}
+  \item {\_HEALTHPOTIONS\_CLASS\_}
+    \subitem {HealthPotions.hpp}, \hyperpage{142}
+  \item {\_LevelUpInstance\_CLASS\_}
+    \subitem {LevelUpInstance.hpp}, \hyperpage{170}
+  \item {\_LevelUpSystem\_CLASS\_}
+    \subitem {LevelUpSystem.hpp}, \hyperpage{171}
+  \item {\_MAP\_}
+    \subitem {map.hpp}, \hyperpage{150}
+  \item {\_MONSTERSPAWNER\_CLASS\_}
+    \subitem {MonsterSpawner.hpp}, \hyperpage{130}
+  \item {\_MONSTER\_CLASS\_}
+    \subitem {monster.hpp}, \hyperpage{127}
+  \item {\_PLAYER\_CLASS\_}
+    \subitem {player.hpp}, \hyperpage{137}
+  \item {\_POTION\_CLASS\_}
+    \subitem {Potion.hpp}, \hyperpage{143}
+  \item {\_POWERUP\_CLASS\_}
+    \subitem {PowerUp.hpp}, \hyperpage{144}
+  \item {\_Projectile\_CLASS\_}
+    \subitem {Projectile.hpp}, \hyperpage{145}
+  \item {\_RANDOMHELPER\_}
+    \subitem {RandomHelper.hpp}, \hyperpage{173}
+  \item {\_RANDOM\_MONSTER\_CLASS\_}
+    \subitem {RandomMonster.hpp}, \hyperpage{132}
+  \item {\_SEARCHING\_MONSTER\_CLASS\_}
+    \subitem {SearchingMonster.hpp}, \hyperpage{133}
+  \item {\_SLOW\_MONSTER\_CLASS\_}
+    \subitem {SlowMonster.hpp}, \hyperpage{134}
+  \item {\_SNIPING\_MONSTER\_CLASS\_}
+    \subitem {SnipingMonster.hpp}, \hyperpage{135}
+  \item {\_SPRITEHELPER\_}
+    \subitem {SpriteHelper.hpp}, \hyperpage{176}
+  \item {\_STARTING\_ROOM\_CLASS\_}
+    \subitem {startingRoom.hpp}, \hyperpage{154}
+  \item {\_SWORDWEAPON\_CLASS\_}
+    \subitem {SwordWeapon.hpp}, \hyperpage{147}
+  \item {\_WALL\_PATROL\_MONSTER\_CLASS\_}
+    \subitem {WallPatrolMonster.hpp}, \hyperpage{136}
+  \item {\_WEAPON\_CLASS\_}
+    \subitem {Weapon.hpp}, \hyperpage{148}
+  \item {$\sim$Animation}
+    \subitem {Animation}, \hyperpage{18}
+  \item {$\sim$AnimationHandler}
+    \subitem {AnimationHandler}, \hyperpage{20}
+  \item {$\sim$BitmaskManager}
+    \subitem {Collision::BitmaskManager}, \hyperpage{21}
+  \item {$\sim$BossMonster}
+    \subitem {BossMonster}, \hyperpage{23}
+  \item {$\sim$BossRoom}
+    \subitem {BossRoom}, \hyperpage{25}
+  \item {$\sim$BossSpawner}
+    \subitem {BossSpawner}, \hyperpage{27}
+  \item {$\sim$BowWeapon}
+    \subitem {BowWeapon}, \hyperpage{28}
+  \item {$\sim$Character}
+    \subitem {Character}, \hyperpage{30}
+  \item {$\sim$Entity}
+    \subitem {Entity}, \hyperpage{41}
+  \item {$\sim$Game}
+    \subitem {Game}, \hyperpage{47}
+  \item {$\sim$ICollidable}
+    \subitem {ICollidable}, \hyperpage{51}
+  \item {$\sim$IPlatform}
+    \subitem {util::IPlatform}, \hyperpage{52}
+  \item {$\sim$Map}
+    \subitem {Map}, \hyperpage{60}
+  \item {$\sim$Monster}
+    \subitem {Monster}, \hyperpage{64}
+  \item {$\sim$MonsterSpawner}
+    \subitem {MonsterSpawner}, \hyperpage{68}
+  \item {$\sim$Player}
+    \subitem {Player}, \hyperpage{71}
+  \item {$\sim$Potion}
+    \subitem {Potion}, \hyperpage{76}
+  \item {$\sim$PowerUp}
+    \subitem {PowerUp}, \hyperpage{77}
+  \item {$\sim$RandomMonster}
+    \subitem {RandomMonster}, \hyperpage{86}
+  \item {$\sim$RoomInstance}
+    \subitem {RoomInstance}, \hyperpage{90}
+  \item {$\sim$ScreenText}
+    \subitem {ScreenText}, \hyperpage{100}
+  \item {$\sim$SearchingMonster}
+    \subitem {SearchingMonster}, \hyperpage{101}
+  \item {$\sim$SlowMonster}
+    \subitem {SlowMonster}, \hyperpage{103}
+  \item {$\sim$SnipingMonster}
+    \subitem {SnipingMonster}, \hyperpage{105}
+  \item {$\sim$SoundEffect}
+    \subitem {SoundEffect}, \hyperpage{106}
+  \item {$\sim$StartingRoom}
+    \subitem {StartingRoom}, \hyperpage{108}
+  \item {$\sim$SwordWeapon}
+    \subitem {SwordWeapon}, \hyperpage{109}
+  \item {$\sim$TreasureRoom}
+    \subitem {TreasureRoom}, \hyperpage{110}
+  \item {$\sim$WallPatrolMonster}
+    \subitem {WallPatrolMonster}, \hyperpage{113}
+  \item {$\sim$Weapon}
+    \subitem {Weapon}, \hyperpage{115}
+
+  \indexspace
+
+  \item {AddCharacter}
+    \subitem {LevelUpSystem}, \hyperpage{56}
+  \item {AddPotion}
+    \subitem {Player}, \hyperpage{72}
+    \subitem {RoomInstance}, \hyperpage{90}
+  \item {AddPowerUp}
+    \subitem {Weapon}, \hyperpage{116}
+  \item {AddToCollisionList}
+    \subitem {CollisionSystem}, \hyperpage{39}
+  \item {Animation}, \hyperpage{17}
+    \subitem {$\sim$Animation}, \hyperpage{18}
+    \subitem {Animation}, \hyperpage{17}
+    \subitem {AnimationToSprite}, \hyperpage{18}
+    \subitem {Update}, \hyperpage{18}
+  \item {animation.hpp}
+    \subitem {\_ANIMATION\_}, \hyperpage{139}
+  \item {AnimationDeath}
+    \subitem {Animationhandler.hpp}, \hyperpage{140}
+  \item {AnimationDown}
+    \subitem {Animationhandler.hpp}, \hyperpage{140}
+  \item {AnimationHandler}, \hyperpage{20}
+    \subitem {$\sim$AnimationHandler}, \hyperpage{20}
+    \subitem {AnimationHandler}, \hyperpage{20}
+    \subitem {getAnimation}, \hyperpage{21}
+    \subitem {setAnimation}, \hyperpage{21}
+  \item {Animationhandler.hpp}
+    \subitem {\_ANIMATIONHANDLER\_CLASS\_}, \hyperpage{140}
+    \subitem {AnimationDeath}, \hyperpage{140}
+    \subitem {AnimationDown}, \hyperpage{140}
+    \subitem {AnimationIdle}, \hyperpage{140}
+    \subitem {AnimationIndex}, \hyperpage{140}
+    \subitem {AnimationLeft}, \hyperpage{140}
+    \subitem {AnimationPS}, \hyperpage{140}
+    \subitem {AnimationRight}, \hyperpage{140}
+    \subitem {AnimationUp}, \hyperpage{140}
+    \subitem {Count}, \hyperpage{140}
+  \item {animationHandler\_}
+    \subitem {Character}, \hyperpage{36}
+  \item {AnimationIdle}
+    \subitem {Animationhandler.hpp}, \hyperpage{140}
+  \item {AnimationIndex}
+    \subitem {Animationhandler.hpp}, \hyperpage{140}
+  \item {AnimationLeft}
+    \subitem {Animationhandler.hpp}, \hyperpage{140}
+  \item {AnimationPS}
+    \subitem {Animationhandler.hpp}, \hyperpage{140}
+  \item {AnimationRight}
+    \subitem {Animationhandler.hpp}, \hyperpage{140}
+  \item {AnimationToSprite}
+    \subitem {Animation}, \hyperpage{18}
+  \item {AnimationUp}
+    \subitem {Animationhandler.hpp}, \hyperpage{140}
+  \item {Attack}
+    \subitem {BossMonster}, \hyperpage{23}
+    \subitem {Monster}, \hyperpage{64}
+    \subitem {Player}, \hyperpage{73}
+    \subitem {RandomMonster}, \hyperpage{86}
+    \subitem {SearchingMonster}, \hyperpage{101}
+    \subitem {SlowMonster}, \hyperpage{103}
+    \subitem {SnipingMonster}, \hyperpage{105}
+    \subitem {WallPatrolMonster}, \hyperpage{113}
+  \item {attackCooldownLeft}
+    \subitem {Character}, \hyperpage{36}
+    \subitem {Weapon}, \hyperpage{117}
+  \item {attackCooldownLength\_}
+    \subitem {Character}, \hyperpage{36}
+    \subitem {Weapon}, \hyperpage{117}
+
+  \indexspace
+
+  \item {Bitmasks}
+    \subitem {Collision}, \hyperpage{13}
+  \item {BoostDamageValue}
+    \subitem {Weapon}, \hyperpage{116}
+  \item {BossMonster}, \hyperpage{22}
+    \subitem {$\sim$BossMonster}, \hyperpage{23}
+    \subitem {Attack}, \hyperpage{23}
+    \subitem {BossMonster}, \hyperpage{23}
+    \subitem {initVariables}, \hyperpage{24}
+    \subitem {Move}, \hyperpage{24}
+  \item {BossMonster.hpp}
+    \subitem {\_BOSS\_MONSTER\_CLASS\_}, \hyperpage{126}
+  \item {BossRoom}, \hyperpage{24}
+    \subitem {$\sim$BossRoom}, \hyperpage{25}
+    \subitem {BossRoom}, \hyperpage{25}
+    \subitem {Enter}, \hyperpage{25}
+    \subitem {setTiles}, \hyperpage{26}
+  \item {BossSpawner}, \hyperpage{26}
+    \subitem {$\sim$BossSpawner}, \hyperpage{27}
+    \subitem {BossSpawner}, \hyperpage{26}
+    \subitem {SpawnMonster}, \hyperpage{27}
+  \item {BossSpawner.hpp}
+    \subitem {\_BOSS\_SPAWNER\_CLASS\_}, \hyperpage{129}
+  \item {BoundingBoxTest}
+    \subitem {Collision}, \hyperpage{11}
+  \item {BowWeapon}, \hyperpage{27}
+    \subitem {$\sim$BowWeapon}, \hyperpage{28}
+    \subitem {BowWeapon}, \hyperpage{28}
+    \subitem {Use}, \hyperpage{28}
+  \item {BowWeapon.hpp}
+    \subitem {\_BOWWEAPON\_CLASS\_}, \hyperpage{146}
+
+  \indexspace
+
+  \item {C\_PIXELS}
+    \subitem {game.cpp}, \hyperpage{158}
+  \item {C\_PIXELS\_delta}
+    \subitem {character.cpp}, \hyperpage{123}
+  \item {C\_PIXELS\_X}
+    \subitem {character.cpp}, \hyperpage{123}
+  \item {C\_PIXELS\_Y}
+    \subitem {character.cpp}, \hyperpage{123}
+  \item {C\_SCALE}
+    \subitem {character.cpp}, \hyperpage{124}
+  \item {C\_X}
+    \subitem {character.cpp}, \hyperpage{124}
+  \item {CanAttack}
+    \subitem {Character}, \hyperpage{36}
+  \item {CanDash}
+    \subitem {Player}, \hyperpage{75}
+  \item {Character}, \hyperpage{28}
+    \subitem {$\sim$Character}, \hyperpage{30}
+    \subitem {animationHandler\_}, \hyperpage{36}
+    \subitem {attackCooldownLeft}, \hyperpage{36}
+    \subitem {attackCooldownLength\_}, \hyperpage{36}
+    \subitem {CanAttack}, \hyperpage{36}
+    \subitem {Character}, \hyperpage{30}
+    \subitem {characterProjectileType\_}, \hyperpage{37}
+    \subitem {currentMaxHitpoints\_}, \hyperpage{37}
+    \subitem {currentSpeed\_}, \hyperpage{37}
+    \subitem {Dead}, \hyperpage{30}
+    \subitem {defaultMaxHitpoints\_}, \hyperpage{37}
+    \subitem {defaultSpeed\_}, \hyperpage{37}
+    \subitem {emptyList}, \hyperpage{31}
+    \subitem {Equip}, \hyperpage{31}
+    \subitem {generalUpdate}, \hyperpage{31}
+    \subitem {GetAttackCooldownLeft}, \hyperpage{31}
+    \subitem {GetAttackCooldownLength}, \hyperpage{31}
+    \subitem {GetHitPoints}, \hyperpage{31}
+    \subitem {GetMaxHP}, \hyperpage{32}
+    \subitem {hasAnimation\_}, \hyperpage{37}
+    \subitem {HasWeapon}, \hyperpage{32}
+    \subitem {Heal}, \hyperpage{32}
+    \subitem {hitpoints\_}, \hyperpage{37}
+    \subitem {Idle}, \hyperpage{32}
+    \subitem {initVariables}, \hyperpage{32}
+    \subitem {invincibility\_frame\_}, \hyperpage{37}
+    \subitem {IsAlive}, \hyperpage{33}
+    \subitem {left\_or\_right\_}, \hyperpage{38}
+    \subitem {Move}, \hyperpage{33}
+    \subitem {MoveDown}, \hyperpage{33}
+    \subitem {MoveLeft}, \hyperpage{33}
+    \subitem {MoveRight}, \hyperpage{34}
+    \subitem {MoveUp}, \hyperpage{34}
+    \subitem {ResetAttackCooldown}, \hyperpage{35}
+    \subitem {ResetCharacterToBeAlive}, \hyperpage{35}
+    \subitem {RevertMove}, \hyperpage{35}
+    \subitem {SetNormalSpeed}, \hyperpage{35}
+    \subitem {shotProjectileList}, \hyperpage{35}
+    \subitem {startPos}, \hyperpage{38}
+    \subitem {TakeDamage}, \hyperpage{35}
+    \subitem {Update}, \hyperpage{36}
+    \subitem {updateAttackCooldown}, \hyperpage{36}
+    \subitem {weapon\_}, \hyperpage{38}
+  \item {character}
+    \subitem {ICollidable}, \hyperpage{51}
+  \item {character.cpp}
+    \subitem {C\_PIXELS\_delta}, \hyperpage{123}
+    \subitem {C\_PIXELS\_X}, \hyperpage{123}
+    \subitem {C\_PIXELS\_Y}, \hyperpage{123}
+    \subitem {C\_SCALE}, \hyperpage{124}
+    \subitem {C\_X}, \hyperpage{124}
+  \item {character.hpp}
+    \subitem {\_CHARACTER\_CLASS\_}, \hyperpage{124}
+  \item {characterLevelMap}
+    \subitem {LevelUpSystem}, \hyperpage{57}
+  \item {characterProjectileType\_}
+    \subitem {Character}, \hyperpage{37}
+  \item {CircleTest}
+    \subitem {Collision}, \hyperpage{11}
+  \item {clampPosToRoom}
+    \subitem {Monster}, \hyperpage{64}
+  \item {cleared\_}
+    \subitem {RoomInstance}, \hyperpage{96}
+  \item {ClearInventory}
+    \subitem {Player}, \hyperpage{73}
+  \item {Collision}, \hyperpage{11}
+    \subitem {Bitmasks}, \hyperpage{13}
+    \subitem {BoundingBoxTest}, \hyperpage{11}
+    \subitem {CircleTest}, \hyperpage{11}
+    \subitem {CreateTextureAndBitmask}, \hyperpage{12}
+    \subitem {GetSpriteCenter}, \hyperpage{12}
+    \subitem {GetSpriteSize}, \hyperpage{12}
+    \subitem {PixelPerfectTest}, \hyperpage{12}
+  \item {Collision::BitmaskManager}, \hyperpage{21}
+    \subitem {$\sim$BitmaskManager}, \hyperpage{21}
+    \subitem {CreateMask}, \hyperpage{21}
+    \subitem {GetMask}, \hyperpage{22}
+    \subitem {GetPixel}, \hyperpage{22}
+  \item {Collision::OrientedBoundingBox}, \hyperpage{69}
+    \subitem {OrientedBoundingBox}, \hyperpage{70}
+    \subitem {Points}, \hyperpage{70}
+    \subitem {ProjectOntoAxis}, \hyperpage{70}
+  \item {CollisionSystem}, \hyperpage{38}
+    \subitem {AddToCollisionList}, \hyperpage{39}
+    \subitem {CollisionSystem}, \hyperpage{39}
+    \subitem {ProcessCollisionList}, \hyperpage{39}
+    \subitem {RemoveFromCollisionList}, \hyperpage{39}
+  \item {CollisionSystem.hpp}
+    \subitem {\_COLLISIONSYSTEM\_CLASS\_}, \hyperpage{161}
+  \item {colour\_}
+    \subitem {Potion}, \hyperpage{77}
+  \item {Connect}
+    \subitem {RoomInstance}, \hyperpage{91}
+  \item {cooldown\_}
+    \subitem {Weapon}, \hyperpage{117}
+  \item {coords\_}
+    \subitem {RoomInstance}, \hyperpage{96}
+  \item {Count}
+    \subitem {Animationhandler.hpp}, \hyperpage{140}
+    \subitem {roomInstance.hpp}, \hyperpage{152}
+  \item {CreateDungeon}
+    \subitem {Map}, \hyperpage{60}
+  \item {CreateExit}
+    \subitem {RoomInstance}, \hyperpage{91}
+  \item {CreateMask}
+    \subitem {Collision::BitmaskManager}, \hyperpage{21}
+  \item {CreateSpriteFrom}
+    \subitem {spritehelper}, \hyperpage{14}
+  \item {CreateTextureAndBitmask}
+    \subitem {Collision}, \hyperpage{12}
+  \item {currentDamage\_}
+    \subitem {Weapon}, \hyperpage{117}
+  \item {currentMaxHitpoints\_}
+    \subitem {Character}, \hyperpage{37}
+  \item {currentSpeed\_}
+    \subitem {Character}, \hyperpage{37}
+
+  \indexspace
+
+  \item {damageBoostModifier}
+    \subitem {Weapon}, \hyperpage{117}
+  \item {Dash}
+    \subitem {Player}, \hyperpage{73}
+  \item {Dead}
+    \subitem {Character}, \hyperpage{30}
+  \item {defaultDamage\_}
+    \subitem {Weapon}, \hyperpage{117}
+  \item {defaultMaxHitpoints\_}
+    \subitem {Character}, \hyperpage{37}
+  \item {defaultSpeed\_}
+    \subitem {Character}, \hyperpage{37}
+  \item {deleteMonster}
+    \subitem {RoomInstance}, \hyperpage{91}
+  \item {Direction}
+    \subitem {roomInstance.hpp}, \hyperpage{151}
+  \item {direction}, \hyperpage{13}
+    \subitem {GetOppositeDir}, \hyperpage{13}
+  \item {directionsLeft\_}
+    \subitem {RoomInstance}, \hyperpage{96}
+  \item {DirToVec}
+    \subitem {Map}, \hyperpage{60}
+  \item {Down}
+    \subitem {roomInstance.hpp}, \hyperpage{152}
+
+  \indexspace
+
+  \item {emptyList}
+    \subitem {Character}, \hyperpage{31}
+  \item {EnemyProjectile}
+    \subitem {Projectile}, \hyperpage{79}
+  \item {Enter}
+    \subitem {BossRoom}, \hyperpage{25}
+    \subitem {RoomInstance}, \hyperpage{91}
+  \item {Entity}, \hyperpage{39}
+    \subitem {$\sim$Entity}, \hyperpage{41}
+    \subitem {Entity}, \hyperpage{40, 41}
+    \subitem {GetBaseBoxAt}, \hyperpage{41}
+    \subitem {GetOldPosition}, \hyperpage{42}
+    \subitem {GetPos}, \hyperpage{42}
+    \subitem {GetPosI}, \hyperpage{42}
+    \subitem {GetSprite}, \hyperpage{42}
+    \subitem {GetSpriteBounds}, \hyperpage{43}
+    \subitem {GetSpriteCenter}, \hyperpage{43}
+    \subitem {GetSpritePosition}, \hyperpage{43}
+    \subitem {initSprite}, \hyperpage{43}
+    \subitem {oldPos\_}, \hyperpage{44}
+    \subitem {pos\_}, \hyperpage{44}
+    \subitem {Render}, \hyperpage{43}
+    \subitem {SetPos}, \hyperpage{44}
+    \subitem {SetPosAndOldPos}, \hyperpage{44}
+    \subitem {sprite\_}, \hyperpage{44}
+    \subitem {texture\_}, \hyperpage{45}
+  \item {entity.hpp}
+    \subitem {\_ENTITY\_CLASS\_}, \hyperpage{157}
+  \item {EntityType}
+    \subitem {ICollidable}, \hyperpage{51}
+  \item {Equip}
+    \subitem {Character}, \hyperpage{31}
+  \item {Events}
+    \subitem {Game}, \hyperpage{47}
+  \item {Exit}
+    \subitem {RoomInstance}, \hyperpage{92}
+
+  \indexspace
+
+  \item {FloorTile}, \hyperpage{45}
+    \subitem {FloorTile}, \hyperpage{45}
+  \item {FrontWallTile}, \hyperpage{46}
+    \subitem {FrontWallTile}, \hyperpage{46}
+
+  \indexspace
+
+  \item {GainXP}
+    \subitem {LevelUpInstance}, \hyperpage{54}
+    \subitem {LevelUpSystem}, \hyperpage{56}
+  \item {Game}, \hyperpage{46}
+    \subitem {$\sim$Game}, \hyperpage{47}
+    \subitem {Events}, \hyperpage{47}
+    \subitem {Game}, \hyperpage{47}
+    \subitem {RenderGame}, \hyperpage{47}
+    \subitem {Running}, \hyperpage{47}
+    \subitem {UpdateGame}, \hyperpage{48}
+  \item {game.cpp}
+    \subitem {C\_PIXELS}, \hyperpage{158}
+  \item {game.hpp}
+    \subitem {\_GAME\_CLASS\_}, \hyperpage{158}
+  \item {Gamebar}, \hyperpage{48}
+    \subitem {Gamebar}, \hyperpage{48, 49}
+    \subitem {Render}, \hyperpage{49}
+    \subitem {RenderInventory}, \hyperpage{49}
+    \subitem {Update}, \hyperpage{49}
+  \item {gamebar.hpp}
+    \subitem {\_GAMEBAR\_CLASS\_}, \hyperpage{160}
+  \item {generalUpdate}
+    \subitem {Character}, \hyperpage{31}
+  \item {getAnimation}
+    \subitem {AnimationHandler}, \hyperpage{21}
+  \item {GetAttackCooldown}
+    \subitem {Weapon}, \hyperpage{116}
+  \item {GetAttackCooldownLeft}
+    \subitem {Character}, \hyperpage{31}
+  \item {GetAttackCooldownLength}
+    \subitem {Character}, \hyperpage{31}
+  \item {GetBaseBoxAt}
+    \subitem {Entity}, \hyperpage{41}
+  \item {GetBoundingBox}
+    \subitem {ICollidable}, \hyperpage{51}
+  \item {getBoundingBox}
+    \subitem {RoomTile}, \hyperpage{98}
+  \item {GetColour}
+    \subitem {Potion}, \hyperpage{76}
+  \item {GetCoords}
+    \subitem {RoomInstance}, \hyperpage{92}
+  \item {GetCurrentRoom}
+    \subitem {Map}, \hyperpage{61}
+  \item {GetDamage}
+    \subitem {Projectile}, \hyperpage{79}
+  \item {GetDashCooldownLeft}
+    \subitem {Player}, \hyperpage{73}
+  \item {GetDashCooldownLength}
+    \subitem {Player}, \hyperpage{73}
+  \item {GetDirection}
+    \subitem {Projectile}, \hyperpage{80}
+  \item {GetDistanceLifeSpan}
+    \subitem {Projectile}, \hyperpage{80}
+  \item {getDistanceToPlayer}
+    \subitem {Monster}, \hyperpage{65}
+  \item {GetEntityType}
+    \subitem {ICollidable}, \hyperpage{52}
+  \item {GetEntranceInDirection}
+    \subitem {RoomInstance}, \hyperpage{92}
+  \item {GetHealthIncrease}
+    \subitem {Potion}, \hyperpage{76}
+  \item {GetHitPoints}
+    \subitem {Character}, \hyperpage{31}
+  \item {GetHPModifier}
+    \subitem {LevelUpInstance}, \hyperpage{54}
+    \subitem {LevelUpSystem}, \hyperpage{56}
+  \item {GetInventory}
+    \subitem {Player}, \hyperpage{73}
+  \item {GetLevel}
+    \subitem {LevelUpInstance}, \hyperpage{55}
+    \subitem {LevelUpSystem}, \hyperpage{57}
+  \item {GetMask}
+    \subitem {Collision::BitmaskManager}, \hyperpage{22}
+  \item {GetMaxHP}
+    \subitem {Character}, \hyperpage{32}
+  \item {GetMonsterAmount}
+    \subitem {MonsterSpawner}, \hyperpage{68}
+  \item {GetMonsters}
+    \subitem {RoomInstance}, \hyperpage{92}
+  \item {GetOldPosition}
+    \subitem {Entity}, \hyperpage{42}
+  \item {GetOppositeDir}
+    \subitem {direction}, \hyperpage{13}
+  \item {GetPixel}
+    \subitem {Collision::BitmaskManager}, \hyperpage{22}
+  \item {GetPlayer}
+    \subitem {Monster}, \hyperpage{65}
+  \item {GetPos}
+    \subitem {Entity}, \hyperpage{42}
+  \item {GetPosI}
+    \subitem {Entity}, \hyperpage{42}
+  \item {getPosition}
+    \subitem {RoomTile}, \hyperpage{98}
+  \item {GetPotions}
+    \subitem {RoomInstance}, \hyperpage{92}
+  \item {getPowerUpCount}
+    \subitem {Weapon}, \hyperpage{116}
+  \item {GetProjectileSpeed}
+    \subitem {Projectile}, \hyperpage{80}
+  \item {getRandomMonster}
+    \subitem {MonsterSpawner}, \hyperpage{68}
+  \item {GetRange}
+    \subitem {Weapon}, \hyperpage{116}
+  \item {getRefreshRate}
+    \subitem {util::IPlatform}, \hyperpage{53}
+    \subitem {util::LinuxPlatform}, \hyperpage{58}
+    \subitem {util::WindowsPlatform}, \hyperpage{120}
+  \item {GetRoomInDir}
+    \subitem {Map}, \hyperpage{61}
+    \subitem {RoomInstance}, \hyperpage{93}
+  \item {getRoomTilesAt}
+    \subitem {RoomInstance}, \hyperpage{93}
+  \item {getScreenScalingFactor}
+    \subitem {util::IPlatform}, \hyperpage{53}
+    \subitem {util::LinuxPlatform}, \hyperpage{58}
+    \subitem {util::WindowsPlatform}, \hyperpage{120}
+  \item {getSize}
+    \subitem {RoomTile}, \hyperpage{98}
+  \item {GetSpawnRoom}
+    \subitem {Map}, \hyperpage{61}
+  \item {GetSprite}
+    \subitem {Entity}, \hyperpage{42}
+  \item {getSprite}
+    \subitem {RoomTile}, \hyperpage{98}
+  \item {GetSpriteBounds}
+    \subitem {Entity}, \hyperpage{43}
+  \item {GetSpriteCenter}
+    \subitem {Collision}, \hyperpage{12}
+    \subitem {Entity}, \hyperpage{43}
+  \item {GetSpritePosition}
+    \subitem {Entity}, \hyperpage{43}
+  \item {GetSpriteSize}
+    \subitem {Collision}, \hyperpage{12}
+  \item {GetStartPosition}
+    \subitem {Projectile}, \hyperpage{80}
+  \item {getTiles}
+    \subitem {RoomInstance}, \hyperpage{93}
+  \item {GetTimeExisted}
+    \subitem {Projectile}, \hyperpage{81}
+  \item {GetTimeLifeSpan}
+    \subitem {Projectile}, \hyperpage{81}
+  \item {GetType}
+    \subitem {Projectile}, \hyperpage{81}
+  \item {GreenPotion}, \hyperpage{50}
+    \subitem {GreenPotion}, \hyperpage{50}
+
+  \indexspace
+
+  \item {hasAnimation\_}
+    \subitem {Character}, \hyperpage{37}
+  \item {HasDirectionsLeft}
+    \subitem {RoomInstance}, \hyperpage{93}
+  \item {HasHit}
+    \subitem {Projectile}, \hyperpage{81}
+  \item {HasWeapon}
+    \subitem {Character}, \hyperpage{32}
+  \item {Heal}
+    \subitem {Character}, \hyperpage{32}
+  \item {healthbar\_}
+    \subitem {Monster}, \hyperpage{66}
+  \item {healthIncrease\_}
+    \subitem {Potion}, \hyperpage{77}
+  \item {HealthPotions.hpp}
+    \subitem {\_HEALTHPOTIONS\_CLASS\_}, \hyperpage{142}
+  \item {Hit}
+    \subitem {Projectile}, \hyperpage{82}
+  \item {hitpoints\_}
+    \subitem {Character}, \hyperpage{37}
+
+  \indexspace
+
+  \item {ICollidable}, \hyperpage{50}
+    \subitem {$\sim$ICollidable}, \hyperpage{51}
+    \subitem {character}, \hyperpage{51}
+    \subitem {EntityType}, \hyperpage{51}
+    \subitem {GetBoundingBox}, \hyperpage{51}
+    \subitem {GetEntityType}, \hyperpage{52}
+    \subitem {ProcessCollision}, \hyperpage{52}
+    \subitem {projectile}, \hyperpage{51}
+    \subitem {tile}, \hyperpage{51}
+  \item {ICollidable.hpp}
+    \subitem {\_COLLIDABLE\_INTERFACE\_}, \hyperpage{162}
+  \item {Idle}
+    \subitem {Character}, \hyperpage{32}
+  \item {initSprite}
+    \subitem {Entity}, \hyperpage{43}
+  \item {initVariables}
+    \subitem {BossMonster}, \hyperpage{24}
+    \subitem {Character}, \hyperpage{32}
+    \subitem {Monster}, \hyperpage{65}
+    \subitem {Player}, \hyperpage{74}
+    \subitem {RandomMonster}, \hyperpage{87}
+    \subitem {SearchingMonster}, \hyperpage{101}
+    \subitem {SlowMonster}, \hyperpage{103}
+    \subitem {SnipingMonster}, \hyperpage{105}
+    \subitem {WallPatrolMonster}, \hyperpage{113}
+  \item {inRangeOfPlayer}
+    \subitem {Monster}, \hyperpage{65}
+  \item {invincibility\_frame\_}
+    \subitem {Character}, \hyperpage{37}
+  \item {IsAlive}
+    \subitem {Character}, \hyperpage{33}
+    \subitem {Projectile}, \hyperpage{82}
+  \item {IsBossRoomCleared}
+    \subitem {Map}, \hyperpage{61}
+  \item {IsCleared}
+    \subitem {RoomInstance}, \hyperpage{93}
+  \item {IsDashing}
+    \subitem {Player}, \hyperpage{75}
+  \item {isPenetratable}
+    \subitem {RoomTile}, \hyperpage{99}
+  \item {IsVisisted}
+    \subitem {RoomInstance}, \hyperpage{94}
+  \item {isWalkable}
+    \subitem {RoomTile}, \hyperpage{99}
+
+  \indexspace
+
+  \item {Kill}
+    \subitem {Projectile}, \hyperpage{82}
+
+  \indexspace
+
+  \item {Left}
+    \subitem {roomInstance.hpp}, \hyperpage{152}
+  \item {left\_or\_right\_}
+    \subitem {Character}, \hyperpage{38}
+  \item {LevelUp}
+    \subitem {LevelUpInstance}, \hyperpage{55}
+    \subitem {LevelUpSystem}, \hyperpage{57}
+  \item {LevelUpInstance}, \hyperpage{54}
+    \subitem {GainXP}, \hyperpage{54}
+    \subitem {GetHPModifier}, \hyperpage{54}
+    \subitem {GetLevel}, \hyperpage{55}
+    \subitem {LevelUp}, \hyperpage{55}
+    \subitem {LevelUpInstance}, \hyperpage{54}
+  \item {LevelUpInstance.hpp}
+    \subitem {\_LevelUpInstance\_CLASS\_}, \hyperpage{170}
+  \item {LevelUpSystem}, \hyperpage{55}
+    \subitem {AddCharacter}, \hyperpage{56}
+    \subitem {characterLevelMap}, \hyperpage{57}
+    \subitem {GainXP}, \hyperpage{56}
+    \subitem {GetHPModifier}, \hyperpage{56}
+    \subitem {GetLevel}, \hyperpage{57}
+    \subitem {LevelUp}, \hyperpage{57}
+  \item {LevelUpSystem.hpp}
+    \subitem {\_LevelUpSystem\_CLASS\_}, \hyperpage{171}
+  \item {LinuxPlatform}
+    \subitem {util::LinuxPlatform}, \hyperpage{58}
+  \item {llong}
+    \subitem {Types.hpp}, \hyperpage{176}
+
+  \indexspace
+
+  \item {main}
+    \subitem {Main.cpp}, \hyperpage{172}
+  \item {Main.cpp}
+    \subitem {main}, \hyperpage{172}
+  \item {MANIFEST\_RESOURCE\_ID}
+    \subitem {Resource.h}, \hyperpage{166}
+  \item {Map}, \hyperpage{59}
+    \subitem {$\sim$Map}, \hyperpage{60}
+    \subitem {CreateDungeon}, \hyperpage{60}
+    \subitem {DirToVec}, \hyperpage{60}
+    \subitem {GetCurrentRoom}, \hyperpage{61}
+    \subitem {GetRoomInDir}, \hyperpage{61}
+    \subitem {GetSpawnRoom}, \hyperpage{61}
+    \subitem {IsBossRoomCleared}, \hyperpage{61}
+    \subitem {Map}, \hyperpage{60}
+    \subitem {MovePlayer}, \hyperpage{62}
+    \subitem {RenderCurrentRoom}, \hyperpage{62}
+    \subitem {ResetMap}, \hyperpage{62}
+  \item {map.hpp}
+    \subitem {\_MAP\_}, \hyperpage{150}
+  \item {maxPowerUps}
+    \subitem {Weapon}, \hyperpage{118}
+  \item {Monster}, \hyperpage{63}
+    \subitem {$\sim$Monster}, \hyperpage{64}
+    \subitem {Attack}, \hyperpage{64}
+    \subitem {clampPosToRoom}, \hyperpage{64}
+    \subitem {getDistanceToPlayer}, \hyperpage{65}
+    \subitem {GetPlayer}, \hyperpage{65}
+    \subitem {healthbar\_}, \hyperpage{66}
+    \subitem {initVariables}, \hyperpage{65}
+    \subitem {inRangeOfPlayer}, \hyperpage{65}
+    \subitem {Monster}, \hyperpage{64}
+    \subitem {Move}, \hyperpage{65}
+    \subitem {movedLastTick\_}, \hyperpage{67}
+    \subitem {moveTowardsPlayer}, \hyperpage{65}
+    \subitem {player\_}, \hyperpage{67}
+    \subitem {Render}, \hyperpage{66}
+    \subitem {ReturnPotion}, \hyperpage{66}
+    \subitem {SetTarget}, \hyperpage{66}
+    \subitem {staticDamage\_}, \hyperpage{67}
+    \subitem {Update}, \hyperpage{66}
+  \item {monster.hpp}
+    \subitem {\_MONSTER\_CLASS\_}, \hyperpage{127}
+  \item {monsterCleared}
+    \subitem {RoomInstance}, \hyperpage{94}
+  \item {monsterCount\_}
+    \subitem {MonsterSpawner}, \hyperpage{69}
+  \item {monsters\_}
+    \subitem {RoomInstance}, \hyperpage{96}
+  \item {MonsterSP}
+    \subitem {MonsterSpawner.hpp}, \hyperpage{130}
+  \item {MonsterSpawner}, \hyperpage{67}
+    \subitem {$\sim$MonsterSpawner}, \hyperpage{68}
+    \subitem {GetMonsterAmount}, \hyperpage{68}
+    \subitem {getRandomMonster}, \hyperpage{68}
+    \subitem {monsterCount\_}, \hyperpage{69}
+    \subitem {MonsterSpawner}, \hyperpage{68}
+    \subitem {monsterTypeCount\_}, \hyperpage{69}
+    \subitem {SetMonsterAmount}, \hyperpage{68}
+    \subitem {SpawnMonster}, \hyperpage{69}
+  \item {MonsterSpawner.hpp}
+    \subitem {\_MONSTERSPAWNER\_CLASS\_}, \hyperpage{130}
+    \subitem {MonsterSP}, \hyperpage{130}
+    \subitem {MonsterSpawnerUP}, \hyperpage{130}
+  \item {MonsterSpawnerUP}
+    \subitem {MonsterSpawner.hpp}, \hyperpage{130}
+  \item {monsterTypeCount\_}
+    \subitem {MonsterSpawner}, \hyperpage{69}
+  \item {Move}
+    \subitem {BossMonster}, \hyperpage{24}
+    \subitem {Character}, \hyperpage{33}
+    \subitem {Monster}, \hyperpage{65}
+    \subitem {RandomMonster}, \hyperpage{87}
+    \subitem {SearchingMonster}, \hyperpage{102}
+    \subitem {SlowMonster}, \hyperpage{104}
+    \subitem {SnipingMonster}, \hyperpage{105}
+    \subitem {WallPatrolMonster}, \hyperpage{113}
+  \item {movedLastTick\_}
+    \subitem {Monster}, \hyperpage{67}
+  \item {MoveDown}
+    \subitem {Character}, \hyperpage{33}
+  \item {MoveLeft}
+    \subitem {Character}, \hyperpage{33}
+  \item {MovePlayer}
+    \subitem {Map}, \hyperpage{62}
+  \item {MoveRight}
+    \subitem {Character}, \hyperpage{34}
+  \item {moveTowardsPlayer}
+    \subitem {Monster}, \hyperpage{65}
+  \item {MoveUp}
+    \subitem {Character}, \hyperpage{34}
+
+  \indexspace
+
+  \item {NDEBUG}
+    \subitem {PCH.hpp}, \hyperpage{163}
+
+  \indexspace
+
+  \item {oldPos\_}
+    \subitem {Entity}, \hyperpage{44}
+  \item {OrientedBoundingBox}
+    \subitem {Collision::OrientedBoundingBox}, \hyperpage{70}
+
+  \indexspace
+
+  \item {PCH.hpp}
+    \subitem {NDEBUG}, \hyperpage{163}
+    \subitem {UNUSED}, \hyperpage{163}
+  \item {Penetrates}
+    \subitem {Projectile}, \hyperpage{82}
+  \item {penetrates\_}
+    \subitem {Weapon}, \hyperpage{118}
+  \item {PI}
+    \subitem {SpriteHelper.cpp}, \hyperpage{175}
+  \item {PixelPerfectTest}
+    \subitem {Collision}, \hyperpage{12}
+  \item {Player}, \hyperpage{70}
+    \subitem {$\sim$Player}, \hyperpage{71}
+    \subitem {AddPotion}, \hyperpage{72}
+    \subitem {Attack}, \hyperpage{73}
+    \subitem {CanDash}, \hyperpage{75}
+    \subitem {ClearInventory}, \hyperpage{73}
+    \subitem {Dash}, \hyperpage{73}
+    \subitem {GetDashCooldownLeft}, \hyperpage{73}
+    \subitem {GetDashCooldownLength}, \hyperpage{73}
+    \subitem {GetInventory}, \hyperpage{73}
+    \subitem {initVariables}, \hyperpage{74}
+    \subitem {IsDashing}, \hyperpage{75}
+    \subitem {Player}, \hyperpage{71}
+    \subitem {ResetDashCooldown}, \hyperpage{74}
+    \subitem {Update}, \hyperpage{74}
+    \subitem {UsePotion}, \hyperpage{74}
+  \item {player.hpp}
+    \subitem {\_PLAYER\_CLASS\_}, \hyperpage{137}
+    \subitem {PlayerPS}, \hyperpage{137}
+  \item {player\_}
+    \subitem {Monster}, \hyperpage{67}
+  \item {PlayerProjectile}
+    \subitem {Projectile}, \hyperpage{79}
+  \item {PlayerPS}
+    \subitem {player.hpp}, \hyperpage{137}
+  \item {PlaySound}
+    \subitem {SoundEffect}, \hyperpage{106}
+  \item {Points}
+    \subitem {Collision::OrientedBoundingBox}, \hyperpage{70}
+  \item {pos\_}
+    \subitem {Entity}, \hyperpage{44}
+  \item {positionIsPenetratable}
+    \subitem {RoomInstance}, \hyperpage{94}
+  \item {positionIsWalkable}
+    \subitem {RoomInstance}, \hyperpage{94}
+  \item {Potion}, \hyperpage{75}
+    \subitem {$\sim$Potion}, \hyperpage{76}
+    \subitem {colour\_}, \hyperpage{77}
+    \subitem {GetColour}, \hyperpage{76}
+    \subitem {GetHealthIncrease}, \hyperpage{76}
+    \subitem {healthIncrease\_}, \hyperpage{77}
+    \subitem {Potion}, \hyperpage{76}
+  \item {Potion.hpp}
+    \subitem {\_POTION\_CLASS\_}, \hyperpage{143}
+  \item {potions\_}
+    \subitem {RoomInstance}, \hyperpage{96}
+  \item {PowerUp}, \hyperpage{77}
+    \subitem {$\sim$PowerUp}, \hyperpage{77}
+    \subitem {PowerUp}, \hyperpage{77}
+  \item {PowerUp.hpp}
+    \subitem {\_POWERUP\_CLASS\_}, \hyperpage{144}
+  \item {powerUps\_}
+    \subitem {Weapon}, \hyperpage{118}
+  \item {ProcessCollision}
+    \subitem {ICollidable}, \hyperpage{52}
+  \item {ProcessCollisionList}
+    \subitem {CollisionSystem}, \hyperpage{39}
+  \item {Projectile}, \hyperpage{78}
+    \subitem {EnemyProjectile}, \hyperpage{79}
+    \subitem {GetDamage}, \hyperpage{79}
+    \subitem {GetDirection}, \hyperpage{80}
+    \subitem {GetDistanceLifeSpan}, \hyperpage{80}
+    \subitem {GetProjectileSpeed}, \hyperpage{80}
+    \subitem {GetStartPosition}, \hyperpage{80}
+    \subitem {GetTimeExisted}, \hyperpage{81}
+    \subitem {GetTimeLifeSpan}, \hyperpage{81}
+    \subitem {GetType}, \hyperpage{81}
+    \subitem {HasHit}, \hyperpage{81}
+    \subitem {Hit}, \hyperpage{82}
+    \subitem {IsAlive}, \hyperpage{82}
+    \subitem {Kill}, \hyperpage{82}
+    \subitem {Penetrates}, \hyperpage{82}
+    \subitem {PlayerProjectile}, \hyperpage{79}
+    \subitem {Projectile}, \hyperpage{79}
+    \subitem {SetDamage}, \hyperpage{83}
+    \subitem {SetDirection}, \hyperpage{83}
+    \subitem {SetDistanceLifeSpan}, \hyperpage{83}
+    \subitem {SetProjectileSpeed}, \hyperpage{84}
+    \subitem {SetSprite}, \hyperpage{84}
+    \subitem {SetTimeLifeSpan}, \hyperpage{84}
+    \subitem {SetType}, \hyperpage{84}
+    \subitem {Type}, \hyperpage{79}
+    \subitem {Update}, \hyperpage{85}
+  \item {projectile}
+    \subitem {ICollidable}, \hyperpage{51}
+  \item {Projectile.hpp}
+    \subitem {\_Projectile\_CLASS\_}, \hyperpage{145}
+    \subitem {ProjectileUP}, \hyperpage{145}
+  \item {projectileSize\_}
+    \subitem {Weapon}, \hyperpage{118}
+  \item {projectileSpeed\_}
+    \subitem {Weapon}, \hyperpage{118}
+  \item {ProjectileUP}
+    \subitem {Projectile.hpp}, \hyperpage{145}
+  \item {ProjectOntoAxis}
+    \subitem {Collision::OrientedBoundingBox}, \hyperpage{70}
+
+  \indexspace
+
+  \item {RandomFloatBetween}
+    \subitem {randomhelper}, \hyperpage{13}
+  \item {randomhelper}, \hyperpage{13}
+    \subitem {RandomFloatBetween}, \hyperpage{13}
+    \subitem {RandomIntBetween}, \hyperpage{13}
+  \item {RandomHelper.hpp}
+    \subitem {\_RANDOMHELPER\_}, \hyperpage{173}
+  \item {RandomIntBetween}
+    \subitem {randomhelper}, \hyperpage{13}
+  \item {RandomMonster}, \hyperpage{85}
+    \subitem {$\sim$RandomMonster}, \hyperpage{86}
+    \subitem {Attack}, \hyperpage{86}
+    \subitem {initVariables}, \hyperpage{87}
+    \subitem {Move}, \hyperpage{87}
+    \subitem {RandomMonster}, \hyperpage{86}
+  \item {RandomMonster.hpp}
+    \subitem {\_RANDOM\_MONSTER\_CLASS\_}, \hyperpage{132}
+  \item {range\_}
+    \subitem {Weapon}, \hyperpage{118}
+  \item {RedPotion}, \hyperpage{87}
+    \subitem {RedPotion}, \hyperpage{88}
+  \item {RemoveDirection}
+    \subitem {RoomInstance}, \hyperpage{94}
+  \item {RemoveFromCollisionList}
+    \subitem {CollisionSystem}, \hyperpage{39}
+  \item {RemoveRandomDirection}
+    \subitem {RoomInstance}, \hyperpage{95}
+  \item {Render}
+    \subitem {Entity}, \hyperpage{43}
+    \subitem {Gamebar}, \hyperpage{49}
+    \subitem {Monster}, \hyperpage{66}
+    \subitem {RoomInstance}, \hyperpage{95}
+  \item {RenderCurrentRoom}
+    \subitem {Map}, \hyperpage{62}
+  \item {RenderGame}
+    \subitem {Game}, \hyperpage{47}
+  \item {RenderInventory}
+    \subitem {Gamebar}, \hyperpage{49}
+  \item {renderSpriteBackground}
+    \subitem {RoomInstance}, \hyperpage{95}
+  \item {ResetAttackCooldown}
+    \subitem {Character}, \hyperpage{35}
+  \item {ResetCharacterToBeAlive}
+    \subitem {Character}, \hyperpage{35}
+  \item {ResetDashCooldown}
+    \subitem {Player}, \hyperpage{74}
+  \item {ResetMap}
+    \subitem {Map}, \hyperpage{62}
+  \item {Resource.h}
+    \subitem {MANIFEST\_RESOURCE\_ID}, \hyperpage{166}
+    \subitem {WIN32\_ICON\_MAIN}, \hyperpage{166}
+  \item {ReturnPotion}
+    \subitem {Monster}, \hyperpage{66}
+  \item {RevertMove}
+    \subitem {Character}, \hyperpage{35}
+  \item {Right}
+    \subitem {roomInstance.hpp}, \hyperpage{152}
+  \item {roomBackground}
+    \subitem {RoomInstance}, \hyperpage{96}
+  \item {RoomInstance}, \hyperpage{88}
+    \subitem {$\sim$RoomInstance}, \hyperpage{90}
+    \subitem {AddPotion}, \hyperpage{90}
+    \subitem {cleared\_}, \hyperpage{96}
+    \subitem {Connect}, \hyperpage{91}
+    \subitem {coords\_}, \hyperpage{96}
+    \subitem {CreateExit}, \hyperpage{91}
+    \subitem {deleteMonster}, \hyperpage{91}
+    \subitem {directionsLeft\_}, \hyperpage{96}
+    \subitem {Enter}, \hyperpage{91}
+    \subitem {Exit}, \hyperpage{92}
+    \subitem {GetCoords}, \hyperpage{92}
+    \subitem {GetEntranceInDirection}, \hyperpage{92}
+    \subitem {GetMonsters}, \hyperpage{92}
+    \subitem {GetPotions}, \hyperpage{92}
+    \subitem {GetRoomInDir}, \hyperpage{93}
+    \subitem {getRoomTilesAt}, \hyperpage{93}
+    \subitem {getTiles}, \hyperpage{93}
+    \subitem {HasDirectionsLeft}, \hyperpage{93}
+    \subitem {IsCleared}, \hyperpage{93}
+    \subitem {IsVisisted}, \hyperpage{94}
+    \subitem {monsterCleared}, \hyperpage{94}
+    \subitem {monsters\_}, \hyperpage{96}
+    \subitem {positionIsPenetratable}, \hyperpage{94}
+    \subitem {positionIsWalkable}, \hyperpage{94}
+    \subitem {potions\_}, \hyperpage{96}
+    \subitem {RemoveDirection}, \hyperpage{94}
+    \subitem {RemoveRandomDirection}, \hyperpage{95}
+    \subitem {Render}, \hyperpage{95}
+    \subitem {renderSpriteBackground}, \hyperpage{95}
+    \subitem {roomBackground}, \hyperpage{96}
+    \subitem {RoomInstance}, \hyperpage{90}
+    \subitem {roomSize\_}, \hyperpage{96}
+    \subitem {roomTexture}, \hyperpage{96}
+    \subitem {setTiles}, \hyperpage{95}
+    \subitem {spawner\_}, \hyperpage{97}
+    \subitem {tileVector\_}, \hyperpage{97}
+    \subitem {visited\_}, \hyperpage{97}
+  \item {roomInstance.hpp}
+    \subitem {Count}, \hyperpage{152}
+    \subitem {Direction}, \hyperpage{151}
+    \subitem {Down}, \hyperpage{152}
+    \subitem {Left}, \hyperpage{152}
+    \subitem {Right}, \hyperpage{152}
+    \subitem {Up}, \hyperpage{152}
+  \item {roomSize\_}
+    \subitem {RoomInstance}, \hyperpage{96}
+  \item {roomTexture}
+    \subitem {RoomInstance}, \hyperpage{96}
+  \item {RoomTile}, \hyperpage{97}
+    \subitem {getBoundingBox}, \hyperpage{98}
+    \subitem {getPosition}, \hyperpage{98}
+    \subitem {getSize}, \hyperpage{98}
+    \subitem {getSprite}, \hyperpage{98}
+    \subitem {isPenetratable}, \hyperpage{99}
+    \subitem {isWalkable}, \hyperpage{99}
+    \subitem {RoomTile}, \hyperpage{98}
+  \item {RotateSprite}
+    \subitem {spritehelper}, \hyperpage{14}
+  \item {Running}
+    \subitem {Game}, \hyperpage{47}
+
+  \indexspace
+
+  \item {ScreenText}, \hyperpage{99}
+    \subitem {$\sim$ScreenText}, \hyperpage{100}
+    \subitem {ScreenText}, \hyperpage{99}
+  \item {SearchingMonster}, \hyperpage{100}
+    \subitem {$\sim$SearchingMonster}, \hyperpage{101}
+    \subitem {Attack}, \hyperpage{101}
+    \subitem {initVariables}, \hyperpage{101}
+    \subitem {Move}, \hyperpage{102}
+    \subitem {SearchingMonster}, \hyperpage{101}
+  \item {SearchingMonster.hpp}
+    \subitem {\_SEARCHING\_MONSTER\_CLASS\_}, \hyperpage{133}
+  \item {setAnimation}
+    \subitem {AnimationHandler}, \hyperpage{21}
+  \item {SetDamage}
+    \subitem {Projectile}, \hyperpage{83}
+  \item {SetDirection}
+    \subitem {Projectile}, \hyperpage{83}
+  \item {SetDistanceLifeSpan}
+    \subitem {Projectile}, \hyperpage{83}
+  \item {setIcon}
+    \subitem {util::IPlatform}, \hyperpage{53}
+    \subitem {util::LinuxPlatform}, \hyperpage{58}
+    \subitem {util::WindowsPlatform}, \hyperpage{120}
+  \item {SetMonsterAmount}
+    \subitem {MonsterSpawner}, \hyperpage{68}
+  \item {SetNormalSpeed}
+    \subitem {Character}, \hyperpage{35}
+  \item {SetOriginBottomCenter}
+    \subitem {spritehelper}, \hyperpage{14}
+  \item {SetPos}
+    \subitem {Entity}, \hyperpage{44}
+  \item {SetPosAndOldPos}
+    \subitem {Entity}, \hyperpage{44}
+  \item {SetProjectileSpeed}
+    \subitem {Projectile}, \hyperpage{84}
+  \item {SetScale}
+    \subitem {spritehelper}, \hyperpage{14}
+  \item {SetSprite}
+    \subitem {Projectile}, \hyperpage{84}
+  \item {SetTarget}
+    \subitem {Monster}, \hyperpage{66}
+  \item {SetTextureRect}
+    \subitem {Weapon}, \hyperpage{116}
+  \item {setTiles}
+    \subitem {BossRoom}, \hyperpage{26}
+    \subitem {RoomInstance}, \hyperpage{95}
+    \subitem {StartingRoom}, \hyperpage{108}
+    \subitem {TreasureRoom}, \hyperpage{110}
+  \item {SetTimeLifeSpan}
+    \subitem {Projectile}, \hyperpage{84}
+  \item {SetType}
+    \subitem {Projectile}, \hyperpage{84}
+  \item {shotProjectileList}
+    \subitem {Character}, \hyperpage{35}
+  \item {SlowMonster}, \hyperpage{102}
+    \subitem {$\sim$SlowMonster}, \hyperpage{103}
+    \subitem {Attack}, \hyperpage{103}
+    \subitem {initVariables}, \hyperpage{103}
+    \subitem {Move}, \hyperpage{104}
+    \subitem {SlowMonster}, \hyperpage{103}
+  \item {SlowMonster.hpp}
+    \subitem {\_SLOW\_MONSTER\_CLASS\_}, \hyperpage{134}
+  \item {SnipingMonster}, \hyperpage{104}
+    \subitem {$\sim$SnipingMonster}, \hyperpage{105}
+    \subitem {Attack}, \hyperpage{105}
+    \subitem {initVariables}, \hyperpage{105}
+    \subitem {Move}, \hyperpage{105}
+    \subitem {SnipingMonster}, \hyperpage{105}
+  \item {SnipingMonster.hpp}
+    \subitem {\_SNIPING\_MONSTER\_CLASS\_}, \hyperpage{135}
+  \item {SoundEffect}, \hyperpage{106}
+    \subitem {$\sim$SoundEffect}, \hyperpage{106}
+    \subitem {PlaySound}, \hyperpage{106}
+    \subitem {SoundEffect}, \hyperpage{106}
+  \item {spawner\_}
+    \subitem {RoomInstance}, \hyperpage{97}
+  \item {SpawnMonster}
+    \subitem {BossSpawner}, \hyperpage{27}
+    \subitem {MonsterSpawner}, \hyperpage{69}
+  \item {speed\_}
+    \subitem {Weapon}, \hyperpage{118}
+  \item {sprite\_}
+    \subitem {Entity}, \hyperpage{44}
+    \subitem {Weapon}, \hyperpage{118}
+  \item {spritehelper}, \hyperpage{14}
+    \subitem {CreateSpriteFrom}, \hyperpage{14}
+    \subitem {RotateSprite}, \hyperpage{14}
+    \subitem {SetOriginBottomCenter}, \hyperpage{14}
+    \subitem {SetScale}, \hyperpage{14}
+  \item {SpriteHelper.cpp}
+    \subitem {PI}, \hyperpage{175}
+  \item {SpriteHelper.hpp}
+    \subitem {\_SPRITEHELPER\_}, \hyperpage{176}
+  \item {src/Actors/character.cpp}, \hyperpage{123}
+  \item {src/Actors/character.hpp}, \hyperpage{124, 125}
+  \item {src/Actors/Monsters/BossMonster.cpp}, \hyperpage{126}
+  \item {src/Actors/Monsters/BossMonster.hpp}, \hyperpage{126}
+  \item {src/Actors/Monsters/monster.cpp}, \hyperpage{127}
+  \item {src/Actors/Monsters/monster.hpp}, \hyperpage{127, 128}
+  \item {src/Actors/Monsters/MonsterSpawner/BossSpawner.cpp}, 
+		\hyperpage{128}
+  \item {src/Actors/Monsters/MonsterSpawner/BossSpawner.hpp}, 
+		\hyperpage{128, 129}
+  \item {src/Actors/Monsters/MonsterSpawner/MonsterSpawner.cpp}, 
+		\hyperpage{129}
+  \item {src/Actors/Monsters/MonsterSpawner/MonsterSpawner.hpp}, 
+		\hyperpage{129}, \hyperpage{131}
+  \item {src/Actors/Monsters/RandomMonster.cpp}, \hyperpage{131}
+  \item {src/Actors/Monsters/RandomMonster.hpp}, \hyperpage{131, 132}
+  \item {src/Actors/Monsters/SearchingMonster.cpp}, \hyperpage{132}
+  \item {src/Actors/Monsters/SearchingMonster.hpp}, 
+		\hyperpage{132, 133}
+  \item {src/Actors/Monsters/SlowMonster.cpp}, \hyperpage{133}
+  \item {src/Actors/Monsters/SlowMonster.hpp}, \hyperpage{133, 134}
+  \item {src/Actors/Monsters/SnipingMonster.cpp}, \hyperpage{134}
+  \item {src/Actors/Monsters/SnipingMonster.hpp}, \hyperpage{135}
+  \item {src/Actors/Monsters/WallPatrolMonster.cpp}, \hyperpage{136}
+  \item {src/Actors/Monsters/WallPatrolMonster.hpp}, \hyperpage{136}
+  \item {src/Actors/player.cpp}, \hyperpage{137}
+  \item {src/Actors/player.hpp}, \hyperpage{137, 138}
+  \item {src/Animation/animation.cpp}, \hyperpage{138}
+  \item {src/Animation/animation.hpp}, \hyperpage{138, 139}
+  \item {src/Animation/Animationhandler.cpp}, \hyperpage{139}
+  \item {src/Animation/Animationhandler.hpp}, \hyperpage{139}, 
+		\hyperpage{141}
+  \item {src/Combat/CircularProjectile.hpp}, \hyperpage{141}
+  \item {src/Combat/Health/HealthPotions.hpp}, \hyperpage{141, 142}
+  \item {src/Combat/Health/Potion.cpp}, \hyperpage{142}
+  \item {src/Combat/Health/Potion.hpp}, \hyperpage{143}
+  \item {src/Combat/PowerUps/PowerUp.hpp}, \hyperpage{143, 144}
+  \item {src/Combat/projectile.cpp}, \hyperpage{144}
+  \item {src/Combat/Projectile.hpp}, \hyperpage{144, 145}
+  \item {src/Combat/Weapons/BowWeapon.cpp}, \hyperpage{146}
+  \item {src/Combat/Weapons/BowWeapon.hpp}, \hyperpage{146, 147}
+  \item {src/Combat/Weapons/SwordWeapon.cpp}, \hyperpage{147}
+  \item {src/Combat/Weapons/SwordWeapon.hpp}, \hyperpage{147, 148}
+  \item {src/Combat/Weapons/Weapon.cpp}, \hyperpage{148}
+  \item {src/Combat/Weapons/Weapon.hpp}, \hyperpage{148, 149}
+  \item {src/Dungeon/map.cpp}, \hyperpage{149}
+  \item {src/Dungeon/map.hpp}, \hyperpage{149, 150}
+  \item {src/Dungeon/roomInstance.cpp}, \hyperpage{151}
+  \item {src/Dungeon/roomInstance.hpp}, \hyperpage{151, 152}
+  \item {src/Dungeon/specialrooms/BossRoom.cpp}, \hyperpage{153}
+  \item {src/Dungeon/specialrooms/BossRoom.hpp}, \hyperpage{153}
+  \item {src/Dungeon/specialrooms/startingRoom.cpp}, \hyperpage{154}
+  \item {src/Dungeon/specialrooms/startingRoom.hpp}, \hyperpage{154}
+  \item {src/Dungeon/specialrooms/TreasureRoom.cpp}, \hyperpage{154}
+  \item {src/Dungeon/specialrooms/TreasureRoom.hpp}, \hyperpage{155}
+  \item {src/Dungeon/Tiles/roomTile.cpp}, \hyperpage{155}
+  \item {src/Dungeon/Tiles/roomTile.hpp}, \hyperpage{155, 156}
+  \item {src/entity.cpp}, \hyperpage{156}
+  \item {src/entity.hpp}, \hyperpage{156, 157}
+  \item {src/game.cpp}, \hyperpage{157}
+  \item {src/game.hpp}, \hyperpage{158, 159}
+  \item {src/gamebar.cpp}, \hyperpage{159}
+  \item {src/gamebar.hpp}, \hyperpage{160}
+  \item {src/Interfaces/CollisionSystem.hpp}, \hyperpage{161}
+  \item {src/Interfaces/ICollidable.hpp}, \hyperpage{162}
+  \item {src/PCH.hpp}, \hyperpage{163, 164}
+  \item {src/Platform/IPlatform.hpp}, \hyperpage{164, 165}
+  \item {src/Platform/Platform.hpp}, \hyperpage{165}
+  \item {src/Platform/Unix/LinuxPlatform.cpp}, \hyperpage{165}
+  \item {src/Platform/Unix/LinuxPlatform.hpp}, \hyperpage{165, 166}
+  \item {src/Platform/Win32/Resource.h}, \hyperpage{166, 167}
+  \item {src/Platform/Win32/WindowsPlatform.cpp}, \hyperpage{167}
+  \item {src/Platform/Win32/WindowsPlatform.hpp}, \hyperpage{167}
+  \item {src/readme.md}, \hyperpage{168}
+  \item {src/Utility/Collision.cpp}, \hyperpage{168}
+  \item {src/Utility/Collision.hpp}, \hyperpage{168, 169}
+  \item {src/Utility/FileSystem.hpp}, \hyperpage{169}
+  \item {src/Utility/LevelUpInstance.cpp}, \hyperpage{170}
+  \item {src/Utility/LevelUpInstance.hpp}, \hyperpage{170, 171}
+  \item {src/Utility/LevelUpSystem.cpp}, \hyperpage{171}
+  \item {src/Utility/LevelUpSystem.hpp}, \hyperpage{171, 172}
+  \item {src/Utility/Main.cpp}, \hyperpage{172}
+  \item {src/Utility/RandomHelper.cpp}, \hyperpage{172}
+  \item {src/Utility/RandomHelper.hpp}, \hyperpage{173}
+  \item {src/Utility/ScreenText.cpp}, \hyperpage{173}
+  \item {src/Utility/ScreenText.hpp}, \hyperpage{174}
+  \item {src/Utility/Sounds/SoundEffects.cpp}, \hyperpage{174}
+  \item {src/Utility/Sounds/SoundEffects.hpp}, \hyperpage{174}
+  \item {src/Utility/SpriteHelper.cpp}, \hyperpage{175}
+  \item {src/Utility/SpriteHelper.hpp}, \hyperpage{175, 176}
+  \item {src/Utility/Types.hpp}, \hyperpage{176, 177}
+  \item {StartingRoom}, \hyperpage{107}
+    \subitem {$\sim$StartingRoom}, \hyperpage{108}
+    \subitem {setTiles}, \hyperpage{108}
+    \subitem {StartingRoom}, \hyperpage{107, 108}
+  \item {startingRoom.hpp}
+    \subitem {\_STARTING\_ROOM\_CLASS\_}, \hyperpage{154}
+  \item {startPos}
+    \subitem {Character}, \hyperpage{38}
+  \item {staticDamage\_}
+    \subitem {Monster}, \hyperpage{67}
+  \item {SwordWeapon}, \hyperpage{108}
+    \subitem {$\sim$SwordWeapon}, \hyperpage{109}
+    \subitem {SwordWeapon}, \hyperpage{109}
+    \subitem {Use}, \hyperpage{109}
+  \item {SwordWeapon.hpp}
+    \subitem {\_SWORDWEAPON\_CLASS\_}, \hyperpage{147}
+
+  \indexspace
+
+  \item {TakeDamage}
+    \subitem {Character}, \hyperpage{35}
+  \item {texture\_}
+    \subitem {Entity}, \hyperpage{45}
+    \subitem {Weapon}, \hyperpage{119}
+  \item {tile}
+    \subitem {ICollidable}, \hyperpage{51}
+  \item {tileVector\_}
+    \subitem {RoomInstance}, \hyperpage{97}
+  \item {toggleFullscreen}
+    \subitem {util::IPlatform}, \hyperpage{53}
+    \subitem {util::LinuxPlatform}, \hyperpage{59}
+    \subitem {util::WindowsPlatform}, \hyperpage{120}
+  \item {TreasureRoom}, \hyperpage{109}
+    \subitem {$\sim$TreasureRoom}, \hyperpage{110}
+    \subitem {setTiles}, \hyperpage{110}
+    \subitem {TreasureRoom}, \hyperpage{110}
+  \item {Type}
+    \subitem {Projectile}, \hyperpage{79}
+  \item {Types.hpp}
+    \subitem {llong}, \hyperpage{176}
+    \subitem {uchar}, \hyperpage{176}
+    \subitem {uint}, \hyperpage{177}
+    \subitem {ullong}, \hyperpage{177}
+    \subitem {ushort}, \hyperpage{177}
+
+  \indexspace
+
+  \item {uchar}
+    \subitem {Types.hpp}, \hyperpage{176}
+  \item {uint}
+    \subitem {Types.hpp}, \hyperpage{177}
+  \item {ullong}
+    \subitem {Types.hpp}, \hyperpage{177}
+  \item {UnBoostDamageValue}
+    \subitem {Weapon}, \hyperpage{116}
+  \item {UNUSED}
+    \subitem {PCH.hpp}, \hyperpage{163}
+  \item {Up}
+    \subitem {roomInstance.hpp}, \hyperpage{152}
+  \item {Update}
+    \subitem {Animation}, \hyperpage{18}
+    \subitem {Character}, \hyperpage{36}
+    \subitem {Gamebar}, \hyperpage{49}
+    \subitem {Monster}, \hyperpage{66}
+    \subitem {Player}, \hyperpage{74}
+    \subitem {Projectile}, \hyperpage{85}
+  \item {updateAttackCooldown}
+    \subitem {Character}, \hyperpage{36}
+  \item {UpdateGame}
+    \subitem {Game}, \hyperpage{48}
+  \item {Use}
+    \subitem {BowWeapon}, \hyperpage{28}
+    \subitem {SwordWeapon}, \hyperpage{109}
+    \subitem {Weapon}, \hyperpage{117}
+  \item {UsePotion}
+    \subitem {Player}, \hyperpage{74}
+  \item {ushort}
+    \subitem {Types.hpp}, \hyperpage{177}
+  \item {util}, \hyperpage{15}
+  \item {util::IPlatform}, \hyperpage{52}
+    \subitem {$\sim$IPlatform}, \hyperpage{52}
+    \subitem {getRefreshRate}, \hyperpage{53}
+    \subitem {getScreenScalingFactor}, \hyperpage{53}
+    \subitem {setIcon}, \hyperpage{53}
+    \subitem {toggleFullscreen}, \hyperpage{53}
+  \item {util::LinuxPlatform}, \hyperpage{58}
+    \subitem {getRefreshRate}, \hyperpage{58}
+    \subitem {getScreenScalingFactor}, \hyperpage{58}
+    \subitem {LinuxPlatform}, \hyperpage{58}
+    \subitem {setIcon}, \hyperpage{58}
+    \subitem {toggleFullscreen}, \hyperpage{59}
+  \item {util::WindowsPlatform}, \hyperpage{119}
+    \subitem {getRefreshRate}, \hyperpage{120}
+    \subitem {getScreenScalingFactor}, \hyperpage{120}
+    \subitem {setIcon}, \hyperpage{120}
+    \subitem {toggleFullscreen}, \hyperpage{120}
+    \subitem {WindowsPlatform}, \hyperpage{119}
+
+  \indexspace
+
+  \item {VioletPotion}, \hyperpage{111}
+    \subitem {VioletPotion}, \hyperpage{111}
+  \item {visited\_}
+    \subitem {RoomInstance}, \hyperpage{97}
+
+  \indexspace
+
+  \item {WallPatrolMonster}, \hyperpage{112}
+    \subitem {$\sim$WallPatrolMonster}, \hyperpage{113}
+    \subitem {Attack}, \hyperpage{113}
+    \subitem {initVariables}, \hyperpage{113}
+    \subitem {Move}, \hyperpage{113}
+    \subitem {WallPatrolMonster}, \hyperpage{112}
+  \item {WallPatrolMonster.hpp}
+    \subitem {\_WALL\_PATROL\_MONSTER\_CLASS\_}, \hyperpage{136}
+  \item {WallTile}, \hyperpage{114}
+    \subitem {WallTile}, \hyperpage{114}
+  \item {Weapon}, \hyperpage{114}
+    \subitem {$\sim$Weapon}, \hyperpage{115}
+    \subitem {AddPowerUp}, \hyperpage{116}
+    \subitem {attackCooldownLeft}, \hyperpage{117}
+    \subitem {attackCooldownLength\_}, \hyperpage{117}
+    \subitem {BoostDamageValue}, \hyperpage{116}
+    \subitem {cooldown\_}, \hyperpage{117}
+    \subitem {currentDamage\_}, \hyperpage{117}
+    \subitem {damageBoostModifier}, \hyperpage{117}
+    \subitem {defaultDamage\_}, \hyperpage{117}
+    \subitem {GetAttackCooldown}, \hyperpage{116}
+    \subitem {getPowerUpCount}, \hyperpage{116}
+    \subitem {GetRange}, \hyperpage{116}
+    \subitem {maxPowerUps}, \hyperpage{118}
+    \subitem {penetrates\_}, \hyperpage{118}
+    \subitem {powerUps\_}, \hyperpage{118}
+    \subitem {projectileSize\_}, \hyperpage{118}
+    \subitem {projectileSpeed\_}, \hyperpage{118}
+    \subitem {range\_}, \hyperpage{118}
+    \subitem {SetTextureRect}, \hyperpage{116}
+    \subitem {speed\_}, \hyperpage{118}
+    \subitem {sprite\_}, \hyperpage{118}
+    \subitem {texture\_}, \hyperpage{119}
+    \subitem {UnBoostDamageValue}, \hyperpage{116}
+    \subitem {Use}, \hyperpage{117}
+    \subitem {Weapon}, \hyperpage{115}
+  \item {Weapon.hpp}
+    \subitem {\_WEAPON\_CLASS\_}, \hyperpage{148}
+  \item {weapon\_}
+    \subitem {Character}, \hyperpage{38}
+  \item {WIN32\_ICON\_MAIN}
+    \subitem {Resource.h}, \hyperpage{166}
+  \item {WindowsPlatform}
+    \subitem {util::WindowsPlatform}, \hyperpage{119}
+
+  \indexspace
+
+  \item {YellowPotion}, \hyperpage{121}
+    \subitem {YellowPotion}, \hyperpage{121}
+
+\end{theindex}

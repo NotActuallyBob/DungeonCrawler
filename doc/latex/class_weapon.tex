@@ -1,0 +1,240 @@
+\hypertarget{class_weapon}{}\doxysection{Weapon Class Reference}
+\label{class_weapon}\index{Weapon@{Weapon}}
+
+
+{\ttfamily \#include $<$Weapon.\+hpp$>$}
+
+Inheritance diagram for Weapon\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_weapon}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_weapon_a760ffc526351bd14fa03d96a171b6e78}{Weapon}} (int damage, int range, int rate\+Of\+Fire, float projectile\+Speed, Vector2f projectile\+Size, const std\+::string \&sprite\+Location)
+\item 
+virtual \mbox{\hyperlink{class_weapon_ac5f7305f5d08c48003c826e6e73f37da}{$\sim$\+Weapon}} ()
+\item 
+virtual \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{Projectile\+UP}} \mbox{\hyperlink{class_weapon_acf05bc02ada0b8b7c064072fbd2c2706}{Use}} (Vector2f dir, Vector2f origin)=0
+\item 
+void \mbox{\hyperlink{class_weapon_aa4d20872dbf1a6dbbf4d2d3c01b51cad}{Add\+Power\+Up}} (\mbox{\hyperlink{class_power_up}{Power\+Up}} $\ast$up)
+\item 
+float \mbox{\hyperlink{class_weapon_a2a06385027149fed1e627993e15b5001}{Get\+Attack\+Cooldown}} ()
+\item 
+float \mbox{\hyperlink{class_weapon_a9823c8899e84b1dd8e4d313c2768ac7a}{Get\+Range}} ()
+\item 
+void \mbox{\hyperlink{class_weapon_af574dccf8ae5515bab4cc94b81608310}{Set\+Texture\+Rect}} (sf\+::\+Int\+Rect rect)
+\item 
+void \mbox{\hyperlink{class_weapon_abecf92ce115fd76c14742711b2bd8de0}{Boost\+Damage\+Value}} ()
+\item 
+void \mbox{\hyperlink{class_weapon_a85ed54e052fb96a4887dd441eea1d681}{Un\+Boost\+Damage\+Value}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_weapon_abb091e56c15430cbc13707a8085d1139}{get\+Power\+Up\+Count}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_weapon_afcffeadd4f72dfbb7286a9a6d5cf281a}{default\+Damage\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_weapon_a750d4319c3ff324264d71437de96c1ad}{current\+Damage\+\_\+}}
+\item 
+float \mbox{\hyperlink{class_weapon_a2e6465310781305f066d74f406c3b960}{damage\+Boost\+Modifier}} = 1.\+1f
+\item 
+int \mbox{\hyperlink{class_weapon_a7ff23a65649ad1a69f1c4a3ea6855fcd}{range\+\_\+}}
+\item 
+float \mbox{\hyperlink{class_weapon_ae94946d9bd33b24d6ac1353fe2c8a39c}{projectile\+Speed\+\_\+}}
+\item 
+Vector2f \mbox{\hyperlink{class_weapon_aafb1cd040c2eb1483fa59a0cf07597e6}{projectile\+Size\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_weapon_a86045d6a750bbe0a4156aabcbb5be868}{speed\+\_\+}}
+\item 
+bool \mbox{\hyperlink{class_weapon_a838869f30e8efe60fef6f342cf735cbc}{penetrates\+\_\+}} = false
+\item 
+const int \mbox{\hyperlink{class_weapon_a36cb600633f83c713133d82fd60d4b87}{max\+Power\+Ups}} = 3
+\item 
+Sprite \mbox{\hyperlink{class_weapon_a9a5c192a9cacc8aeee9ec3a1e99b4146}{sprite\+\_\+}}
+\item 
+Texture \mbox{\hyperlink{class_weapon_af2f8e16c755ff73ff619ed0a43a730cf}{texture\+\_\+}}
+\item 
+vector$<$ \mbox{\hyperlink{class_power_up}{Power\+Up}} $\ast$ $>$ \mbox{\hyperlink{class_weapon_ae135a49f63abbed5ed11b7c5bd79e1a1}{power\+Ups\+\_\+}}
+\item 
+float \mbox{\hyperlink{class_weapon_ace5a7b10dfe5092f90b1df030010f754}{cooldown\+\_\+}}
+\item 
+float \mbox{\hyperlink{class_weapon_afa5640ded22e84de740fa53188937aa7}{attack\+Cooldown\+Length\+\_\+}}
+\item 
+float \mbox{\hyperlink{class_weapon_afd86e35acc9b7a3df9c37dff9912d533}{attack\+Cooldown\+Left}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_weapon_a760ffc526351bd14fa03d96a171b6e78}\label{class_weapon_a760ffc526351bd14fa03d96a171b6e78}} 
+\index{Weapon@{Weapon}!Weapon@{Weapon}}
+\index{Weapon@{Weapon}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{Weapon()}{Weapon()}}
+{\footnotesize\ttfamily Weapon\+::\+Weapon (\begin{DoxyParamCaption}\item[{int}]{damage,  }\item[{int}]{range,  }\item[{int}]{rate\+Of\+Fire,  }\item[{float}]{projectile\+Speed,  }\item[{Vector2f}]{projectile\+Size,  }\item[{const std\+::string \&}]{sprite\+Location }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_weapon_ac5f7305f5d08c48003c826e6e73f37da}\label{class_weapon_ac5f7305f5d08c48003c826e6e73f37da}} 
+\index{Weapon@{Weapon}!````~Weapon@{$\sim$Weapon}}
+\index{````~Weapon@{$\sim$Weapon}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{$\sim$Weapon()}{~Weapon()}}
+{\footnotesize\ttfamily virtual Weapon\+::$\sim$\+Weapon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_weapon_aa4d20872dbf1a6dbbf4d2d3c01b51cad}\label{class_weapon_aa4d20872dbf1a6dbbf4d2d3c01b51cad}} 
+\index{Weapon@{Weapon}!AddPowerUp@{AddPowerUp}}
+\index{AddPowerUp@{AddPowerUp}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{AddPowerUp()}{AddPowerUp()}}
+{\footnotesize\ttfamily void Weapon\+::\+Add\+Power\+Up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_power_up}{Power\+Up}} $\ast$}]{up }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_weapon_abecf92ce115fd76c14742711b2bd8de0}\label{class_weapon_abecf92ce115fd76c14742711b2bd8de0}} 
+\index{Weapon@{Weapon}!BoostDamageValue@{BoostDamageValue}}
+\index{BoostDamageValue@{BoostDamageValue}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{BoostDamageValue()}{BoostDamageValue()}}
+{\footnotesize\ttfamily void Weapon\+::\+Boost\+Damage\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_weapon_a2a06385027149fed1e627993e15b5001}\label{class_weapon_a2a06385027149fed1e627993e15b5001}} 
+\index{Weapon@{Weapon}!GetAttackCooldown@{GetAttackCooldown}}
+\index{GetAttackCooldown@{GetAttackCooldown}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{GetAttackCooldown()}{GetAttackCooldown()}}
+{\footnotesize\ttfamily float Weapon\+::\+Get\+Attack\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_weapon_abb091e56c15430cbc13707a8085d1139}\label{class_weapon_abb091e56c15430cbc13707a8085d1139}} 
+\index{Weapon@{Weapon}!getPowerUpCount@{getPowerUpCount}}
+\index{getPowerUpCount@{getPowerUpCount}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{getPowerUpCount()}{getPowerUpCount()}}
+{\footnotesize\ttfamily int Weapon\+::get\+Power\+Up\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_a9823c8899e84b1dd8e4d313c2768ac7a}\label{class_weapon_a9823c8899e84b1dd8e4d313c2768ac7a}} 
+\index{Weapon@{Weapon}!GetRange@{GetRange}}
+\index{GetRange@{GetRange}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{GetRange()}{GetRange()}}
+{\footnotesize\ttfamily float Weapon\+::\+Get\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_weapon_af574dccf8ae5515bab4cc94b81608310}\label{class_weapon_af574dccf8ae5515bab4cc94b81608310}} 
+\index{Weapon@{Weapon}!SetTextureRect@{SetTextureRect}}
+\index{SetTextureRect@{SetTextureRect}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{SetTextureRect()}{SetTextureRect()}}
+{\footnotesize\ttfamily void Weapon\+::\+Set\+Texture\+Rect (\begin{DoxyParamCaption}\item[{sf\+::\+Int\+Rect}]{rect }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_weapon_a85ed54e052fb96a4887dd441eea1d681}\label{class_weapon_a85ed54e052fb96a4887dd441eea1d681}} 
+\index{Weapon@{Weapon}!UnBoostDamageValue@{UnBoostDamageValue}}
+\index{UnBoostDamageValue@{UnBoostDamageValue}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{UnBoostDamageValue()}{UnBoostDamageValue()}}
+{\footnotesize\ttfamily void Weapon\+::\+Un\+Boost\+Damage\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_weapon_acf05bc02ada0b8b7c064072fbd2c2706}\label{class_weapon_acf05bc02ada0b8b7c064072fbd2c2706}} 
+\index{Weapon@{Weapon}!Use@{Use}}
+\index{Use@{Use}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{Use()}{Use()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_projectile_8hpp_a2dc1829609de5e328db932a997331008}{Projectile\+UP}} Weapon\+::\+Use (\begin{DoxyParamCaption}\item[{Vector2f}]{dir,  }\item[{Vector2f}]{origin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_bow_weapon_a34d25dd26082ef655abb8f42c51d623d}{Bow\+Weapon}}, and \mbox{\hyperlink{class_sword_weapon_affea84c8ee3e9ef3daac7a42a2f0f5a7}{Sword\+Weapon}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_weapon_afd86e35acc9b7a3df9c37dff9912d533}\label{class_weapon_afd86e35acc9b7a3df9c37dff9912d533}} 
+\index{Weapon@{Weapon}!attackCooldownLeft@{attackCooldownLeft}}
+\index{attackCooldownLeft@{attackCooldownLeft}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{attackCooldownLeft}{attackCooldownLeft}}
+{\footnotesize\ttfamily float Weapon\+::attack\+Cooldown\+Left\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_afa5640ded22e84de740fa53188937aa7}\label{class_weapon_afa5640ded22e84de740fa53188937aa7}} 
+\index{Weapon@{Weapon}!attackCooldownLength\_@{attackCooldownLength\_}}
+\index{attackCooldownLength\_@{attackCooldownLength\_}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{attackCooldownLength\_}{attackCooldownLength\_}}
+{\footnotesize\ttfamily float Weapon\+::attack\+Cooldown\+Length\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_ace5a7b10dfe5092f90b1df030010f754}\label{class_weapon_ace5a7b10dfe5092f90b1df030010f754}} 
+\index{Weapon@{Weapon}!cooldown\_@{cooldown\_}}
+\index{cooldown\_@{cooldown\_}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{cooldown\_}{cooldown\_}}
+{\footnotesize\ttfamily float Weapon\+::cooldown\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_a750d4319c3ff324264d71437de96c1ad}\label{class_weapon_a750d4319c3ff324264d71437de96c1ad}} 
+\index{Weapon@{Weapon}!currentDamage\_@{currentDamage\_}}
+\index{currentDamage\_@{currentDamage\_}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{currentDamage\_}{currentDamage\_}}
+{\footnotesize\ttfamily int Weapon\+::current\+Damage\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_a2e6465310781305f066d74f406c3b960}\label{class_weapon_a2e6465310781305f066d74f406c3b960}} 
+\index{Weapon@{Weapon}!damageBoostModifier@{damageBoostModifier}}
+\index{damageBoostModifier@{damageBoostModifier}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{damageBoostModifier}{damageBoostModifier}}
+{\footnotesize\ttfamily float Weapon\+::damage\+Boost\+Modifier = 1.\+1f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_afcffeadd4f72dfbb7286a9a6d5cf281a}\label{class_weapon_afcffeadd4f72dfbb7286a9a6d5cf281a}} 
+\index{Weapon@{Weapon}!defaultDamage\_@{defaultDamage\_}}
+\index{defaultDamage\_@{defaultDamage\_}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{defaultDamage\_}{defaultDamage\_}}
+{\footnotesize\ttfamily int Weapon\+::default\+Damage\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_a36cb600633f83c713133d82fd60d4b87}\label{class_weapon_a36cb600633f83c713133d82fd60d4b87}} 
+\index{Weapon@{Weapon}!maxPowerUps@{maxPowerUps}}
+\index{maxPowerUps@{maxPowerUps}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{maxPowerUps}{maxPowerUps}}
+{\footnotesize\ttfamily const int Weapon\+::max\+Power\+Ups = 3\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_a838869f30e8efe60fef6f342cf735cbc}\label{class_weapon_a838869f30e8efe60fef6f342cf735cbc}} 
+\index{Weapon@{Weapon}!penetrates\_@{penetrates\_}}
+\index{penetrates\_@{penetrates\_}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{penetrates\_}{penetrates\_}}
+{\footnotesize\ttfamily bool Weapon\+::penetrates\+\_\+ = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_ae135a49f63abbed5ed11b7c5bd79e1a1}\label{class_weapon_ae135a49f63abbed5ed11b7c5bd79e1a1}} 
+\index{Weapon@{Weapon}!powerUps\_@{powerUps\_}}
+\index{powerUps\_@{powerUps\_}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{powerUps\_}{powerUps\_}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_power_up}{Power\+Up}}$\ast$$>$ Weapon\+::power\+Ups\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_aafb1cd040c2eb1483fa59a0cf07597e6}\label{class_weapon_aafb1cd040c2eb1483fa59a0cf07597e6}} 
+\index{Weapon@{Weapon}!projectileSize\_@{projectileSize\_}}
+\index{projectileSize\_@{projectileSize\_}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{projectileSize\_}{projectileSize\_}}
+{\footnotesize\ttfamily Vector2f Weapon\+::projectile\+Size\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_ae94946d9bd33b24d6ac1353fe2c8a39c}\label{class_weapon_ae94946d9bd33b24d6ac1353fe2c8a39c}} 
+\index{Weapon@{Weapon}!projectileSpeed\_@{projectileSpeed\_}}
+\index{projectileSpeed\_@{projectileSpeed\_}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{projectileSpeed\_}{projectileSpeed\_}}
+{\footnotesize\ttfamily float Weapon\+::projectile\+Speed\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_a7ff23a65649ad1a69f1c4a3ea6855fcd}\label{class_weapon_a7ff23a65649ad1a69f1c4a3ea6855fcd}} 
+\index{Weapon@{Weapon}!range\_@{range\_}}
+\index{range\_@{range\_}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{range\_}{range\_}}
+{\footnotesize\ttfamily int Weapon\+::range\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_a86045d6a750bbe0a4156aabcbb5be868}\label{class_weapon_a86045d6a750bbe0a4156aabcbb5be868}} 
+\index{Weapon@{Weapon}!speed\_@{speed\_}}
+\index{speed\_@{speed\_}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{speed\_}{speed\_}}
+{\footnotesize\ttfamily int Weapon\+::speed\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_a9a5c192a9cacc8aeee9ec3a1e99b4146}\label{class_weapon_a9a5c192a9cacc8aeee9ec3a1e99b4146}} 
+\index{Weapon@{Weapon}!sprite\_@{sprite\_}}
+\index{sprite\_@{sprite\_}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{sprite\_}{sprite\_}}
+{\footnotesize\ttfamily Sprite Weapon\+::sprite\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_weapon_af2f8e16c755ff73ff619ed0a43a730cf}\label{class_weapon_af2f8e16c755ff73ff619ed0a43a730cf}} 
+\index{Weapon@{Weapon}!texture\_@{texture\_}}
+\index{texture\_@{texture\_}!Weapon@{Weapon}}
+\doxysubsubsection{\texorpdfstring{texture\_}{texture\_}}
+{\footnotesize\ttfamily Texture Weapon\+::texture\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Combat/\+Weapons/\mbox{\hyperlink{_weapon_8hpp}{Weapon.\+hpp}}\item 
+src/\+Combat/\+Weapons/\mbox{\hyperlink{_weapon_8cpp}{Weapon.\+cpp}}\end{DoxyCompactItemize}

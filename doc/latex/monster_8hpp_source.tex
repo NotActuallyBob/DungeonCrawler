@@ -1,0 +1,42 @@
+\hypertarget{monster_8hpp_source}{}\doxysection{monster.\+hpp}
+\label{monster_8hpp_source}\index{src/Actors/Monsters/monster.hpp@{src/Actors/Monsters/monster.hpp}}
+\mbox{\hyperlink{monster_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef \_MONSTER\_CLASS\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define \_MONSTER\_CLASS\_}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{character_8hpp}{Actors/character.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{player_8hpp}{Actors/player.hpp}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_health_potions_8hpp}{Combat/Health/HealthPotions.hpp}}"{}}}
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_monster}{Monster}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_character}{Character}} \{}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_monster_a21619ba1759b910cd2fd50d858aab338}{\string~Monster}}();}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \mbox{\hyperlink{class_player}{Player}}\& \mbox{\hyperlink{class_monster_a18a794c3014f40c83a3bf356cf5587a4}{GetPlayer}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{18     \textcolor{keyword}{virtual} std::list<ProjectileUP> \mbox{\hyperlink{class_monster_a65d700523a81fdbf87fd30a838c6e610}{Attack}}() = 0;}
+\DoxyCodeLine{19     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_monster_aa730079d3f513f17f44ec15a6be35b28}{Update}}(\textcolor{keywordtype}{float});}
+\DoxyCodeLine{20     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_monster_af0b3f67e1cc9593b0b657323a25d746e}{Move}}(\textcolor{keywordtype}{float} dt) = 0;}
+\DoxyCodeLine{21     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_monster_ac8f61d71151979a78dbf858fdff4d93b}{Render}}(sf::RenderTarget* target);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_monster_ab90c5c8dc9c3f24e1aa9f79731b875d7}{initVariables}}();}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_monster_aaa410f8a19211d8c5ddad101d66803df}{SetTarget}}(\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} target);}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_potion}{Potion}}* \mbox{\hyperlink{class_monster_abb1da5123c06bf7f330dec8c85e65eab}{ReturnPotion}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_monster_a43ceac89cceee8b2c4c98a8c35783907}{Monster}}(\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} player, sf::Vector2f pos, \textcolor{keyword}{const} std::string\& spriteFile);}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_monster_a43ceac89cceee8b2c4c98a8c35783907}{Monster}}(\mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} player, \textcolor{keywordtype}{float} xPos, \textcolor{keywordtype}{float} yPos, \textcolor{keyword}{const} std::string\& spriteFile);}
+\DoxyCodeLine{34     std::shared\_ptr<Player> \mbox{\hyperlink{class_monster_a3d8e2ee749c613b405c830229985a234}{player\_}};}
+\DoxyCodeLine{35     sf::RectangleShape \mbox{\hyperlink{class_monster_a08af3b479664015187e92f0d0bbdf0dc}{healthbar\_}};}
+\DoxyCodeLine{36     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_monster_ab0137bcc8c652bd858a6fa000f8d23eb}{staticDamage\_}} = 5.0f;}
+\DoxyCodeLine{37     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_monster_ae67529c2e75e1a0f92c9fe8c5cb54140}{getDistanceToPlayer}}();}
+\DoxyCodeLine{44     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_monster_a1f95f90b2156b9cda7b06b390fb99310}{inRangeOfPlayer}}();}
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_monster_ad7db690ec6b26faa6959b52deb5357f6}{movedLastTick\_}};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_monster_ab167b8a33f19b396a555a80d50158bf0}{moveTowardsPlayer}}(\textcolor{keywordtype}{float} dt);}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_monster_a1495848858433efb1c03db4531fc30d6}{clampPosToRoom}}();}
+\DoxyCodeLine{53 \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,63 @@
+\hypertarget{map_8hpp_source}{}\doxysection{map.\+hpp}
+\label{map_8hpp_source}\index{src/Dungeon/map.hpp@{src/Dungeon/map.hpp}}
+\mbox{\hyperlink{map_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#ifndef \_MAP\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define \_MAP\_}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{player_8hpp}{Actors/player.hpp}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_boss_room_8hpp}{Dungeon/specialrooms/BossRoom.hpp}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_treasure_room_8hpp}{Dungeon/specialrooms/TreasureRoom.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{starting_room_8hpp}{Dungeon/specialrooms/startingRoom.hpp}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_p_c_h_8hpp}{PCH.hpp}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{room_instance_8hpp}{roomInstance.hpp}}"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{class_map}{Map}} \{}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_map_ab7d0fd68a8dd0c924ffdd5ea802faccf}{Map}}(sf::Vector2u sizeOfRooms, \textcolor{keywordtype}{int} noRooms, \mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} player);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \mbox{\hyperlink{class_map_aa403fbe09394ccf39747588f5168e3b2}{\string~Map}}();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_map_a4e75304a826f38166d1cb52fdbce7c95}{RenderCurrentRoom}}(sf::RenderTarget* target);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_map_aa1146b7b32f8895f9178e96e0506021b}{CreateDungeon}}(\textcolor{keywordtype}{int} noRooms);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_map_a45b65115a6a2a14264acfa5ca50f2a94}{MovePlayer}}(\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{50     \mbox{\hyperlink{class_room_instance}{RoomInstance}}* \mbox{\hyperlink{class_map_a91265020d35a6f195efdefe2d5abfdff}{GetRoomInDir}}(\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{namespacedirection}{direction}});}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{58     sf::Vector2i \mbox{\hyperlink{class_map_a5e66d7c4ec1a678afb616b036433c846}{DirToVec}}(\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{namespacedirection}{direction}});}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{65     \mbox{\hyperlink{class_room_instance}{RoomInstance}}* \mbox{\hyperlink{class_map_a08f6e91181740add51eb3ebd28b16127}{GetCurrentRoom}}();}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{72     \mbox{\hyperlink{class_room_instance}{RoomInstance}}* \mbox{\hyperlink{class_map_a64a536447d070ff7fcaf128205ebb908}{GetSpawnRoom}}();}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_map_a2ff18c2b1d7e3e165260ee155f8dcead}{ResetMap}}();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_map_ad9f36344a313ab45eca56c91a3509f8e}{IsBossRoomCleared}}();}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{keyword}{private}:}
+\DoxyCodeLine{85     std::pair<int, int> findBossRoom(std::map<std::pair<int, int>, std::set<Direction>> coordsAndWalls);}
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} Move(\mbox{\hyperlink{room_instance_8hpp_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir);}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{94     \mbox{\hyperlink{class_room_instance}{RoomInstance}}* GetRoomAt(sf::Vector2i coord);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{101     std::pair<int, int> getKey();}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{108     std::pair<int, int> getKey(sf::Vector2i coord);}
+\DoxyCodeLine{109     \mbox{\hyperlink{class_room_instance}{RoomInstance}}* getRandomRoom();}
+\DoxyCodeLine{110     \mbox{\hyperlink{class_room_instance}{RoomInstance}}* addRoomToDungeon(sf::Vector2u roomSize, sf::Vector2i coords);}
+\DoxyCodeLine{111     \textcolor{keywordtype}{void} addStartingRoomToDungeon(sf::Vector2u roomSize, sf::Vector2i coords);}
+\DoxyCodeLine{112     sf::Vector2u roomSize\_;}
+\DoxyCodeLine{113     sf::Vector2i currentPos\_;}
+\DoxyCodeLine{114     \mbox{\hyperlink{player_8hpp_a3d194c56bed887de0b1be8a3d1854501}{PlayerPS}} player\_;}
+\DoxyCodeLine{115     sf::Vector2i spawnCoords\_;}
+\DoxyCodeLine{116     sf::Vector2i bossCoords\_;}
+\DoxyCodeLine{117     std::map<std::pair<int, int>, \mbox{\hyperlink{class_room_instance}{RoomInstance}}*> dungeon\_; \textcolor{comment}{// cant use vector2i as a key}}
+\DoxyCodeLine{118     std::vector<std::pair<int, int>> existingRoomCoords\_;}
+\DoxyCodeLine{119 \};}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

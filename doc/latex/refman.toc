@@ -1,0 +1,782 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Source content}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Namespace Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Namespace List}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Hierarchical Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Class Hierarchy}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Class Index}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Class List}{7}{section.4.1}
+\contentsline {chapter}{\numberline {5}File Index}{9}{chapter.5}
+\contentsline {section}{\numberline {5.1}File List}{9}{section.5.1}
+\contentsline {chapter}{\numberline {6}Namespace Documentation}{11}{chapter.6}
+\contentsline {section}{\numberline {6.1}Collision Namespace Reference}{11}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Function Documentation}{11}{subsection.6.1.1}
+\contentsline {subsubsection}{\numberline {6.1.1.1}BoundingBoxTest()}{11}{subsubsection.6.1.1.1}
+\contentsline {subsubsection}{\numberline {6.1.1.2}CircleTest()}{12}{subsubsection.6.1.1.2}
+\contentsline {subsubsection}{\numberline {6.1.1.3}CreateTextureAndBitmask()}{12}{subsubsection.6.1.1.3}
+\contentsline {subsubsection}{\numberline {6.1.1.4}GetSpriteCenter()}{12}{subsubsection.6.1.1.4}
+\contentsline {subsubsection}{\numberline {6.1.1.5}GetSpriteSize()}{12}{subsubsection.6.1.1.5}
+\contentsline {subsubsection}{\numberline {6.1.1.6}PixelPerfectTest()}{12}{subsubsection.6.1.1.6}
+\contentsline {subsection}{\numberline {6.1.2}Variable Documentation}{13}{subsection.6.1.2}
+\contentsline {subsubsection}{\numberline {6.1.2.1}Bitmasks}{13}{subsubsection.6.1.2.1}
+\contentsline {section}{\numberline {6.2}direction Namespace Reference}{13}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Function Documentation}{13}{subsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.1.1}GetOppositeDir()}{13}{subsubsection.6.2.1.1}
+\contentsline {section}{\numberline {6.3}randomhelper Namespace Reference}{13}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Function Documentation}{13}{subsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.1.1}RandomFloatBetween()}{13}{subsubsection.6.3.1.1}
+\contentsline {subsubsection}{\numberline {6.3.1.2}RandomIntBetween()}{14}{subsubsection.6.3.1.2}
+\contentsline {section}{\numberline {6.4}spritehelper Namespace Reference}{14}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Function Documentation}{14}{subsection.6.4.1}
+\contentsline {subsubsection}{\numberline {6.4.1.1}CreateSpriteFrom()}{14}{subsubsection.6.4.1.1}
+\contentsline {subsubsection}{\numberline {6.4.1.2}RotateSprite()}{14}{subsubsection.6.4.1.2}
+\contentsline {subsubsection}{\numberline {6.4.1.3}SetOriginBottomCenter()}{14}{subsubsection.6.4.1.3}
+\contentsline {subsubsection}{\numberline {6.4.1.4}SetScale()}{15}{subsubsection.6.4.1.4}
+\contentsline {section}{\numberline {6.5}util Namespace Reference}{15}{section.6.5}
+\contentsline {chapter}{\numberline {7}Class Documentation}{17}{chapter.7}
+\contentsline {section}{\numberline {7.1}Animation Class Reference}{17}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{17}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Constructor \& Destructor Documentation}{17}{subsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.2.1}Animation()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{17}{subsubsection.7.1.2.1}
+\contentsline {subsubsection}{\numberline {7.1.2.2}Animation()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{18}{subsubsection.7.1.2.2}
+\contentsline {subsubsection}{\numberline {7.1.2.3}$\sim $Animation()}{18}{subsubsection.7.1.2.3}
+\contentsline {subsection}{\numberline {7.1.3}Member Function Documentation}{18}{subsection.7.1.3}
+\contentsline {subsubsection}{\numberline {7.1.3.1}AnimationToSprite()}{18}{subsubsection.7.1.3.1}
+\contentsline {subsubsection}{\numberline {7.1.3.2}Update()}{18}{subsubsection.7.1.3.2}
+\contentsline {section}{\numberline {7.2}Animation\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Handler Class Reference}{20}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Constructor \& Destructor Documentation}{20}{subsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.1.1}AnimationHandler()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{20}{subsubsection.7.2.1.1}
+\contentsline {subsubsection}{\numberline {7.2.1.2}$\sim $AnimationHandler()}{20}{subsubsection.7.2.1.2}
+\contentsline {subsubsection}{\numberline {7.2.1.3}AnimationHandler()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{20}{subsubsection.7.2.1.3}
+\contentsline {subsection}{\numberline {7.2.2}Member Function Documentation}{21}{subsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.2.1}getAnimation()}{21}{subsubsection.7.2.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2.2}setAnimation()}{21}{subsubsection.7.2.2.2}
+\contentsline {section}{\numberline {7.3}Collision\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Bitmask\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Manager Class Reference}{21}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Constructor \& Destructor Documentation}{21}{subsection.7.3.1}
+\contentsline {subsubsection}{\numberline {7.3.1.1}$\sim $BitmaskManager()}{21}{subsubsection.7.3.1.1}
+\contentsline {subsection}{\numberline {7.3.2}Member Function Documentation}{21}{subsection.7.3.2}
+\contentsline {subsubsection}{\numberline {7.3.2.1}CreateMask()}{22}{subsubsection.7.3.2.1}
+\contentsline {subsubsection}{\numberline {7.3.2.2}GetMask()}{22}{subsubsection.7.3.2.2}
+\contentsline {subsubsection}{\numberline {7.3.2.3}GetPixel()}{22}{subsubsection.7.3.2.3}
+\contentsline {section}{\numberline {7.4}Boss\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster Class Reference}{22}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{23}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Constructor \& Destructor Documentation}{23}{subsection.7.4.2}
+\contentsline {subsubsection}{\numberline {7.4.2.1}BossMonster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{23}{subsubsection.7.4.2.1}
+\contentsline {subsubsection}{\numberline {7.4.2.2}BossMonster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{23}{subsubsection.7.4.2.2}
+\contentsline {subsubsection}{\numberline {7.4.2.3}$\sim $BossMonster()}{23}{subsubsection.7.4.2.3}
+\contentsline {subsection}{\numberline {7.4.3}Member Function Documentation}{23}{subsection.7.4.3}
+\contentsline {subsubsection}{\numberline {7.4.3.1}Attack()}{24}{subsubsection.7.4.3.1}
+\contentsline {subsubsection}{\numberline {7.4.3.2}initVariables()}{24}{subsubsection.7.4.3.2}
+\contentsline {subsubsection}{\numberline {7.4.3.3}Move()}{24}{subsubsection.7.4.3.3}
+\contentsline {section}{\numberline {7.5}Boss\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room Class Reference}{24}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{25}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Constructor \& Destructor Documentation}{25}{subsection.7.5.2}
+\contentsline {subsubsection}{\numberline {7.5.2.1}BossRoom()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{25}{subsubsection.7.5.2.1}
+\contentsline {subsubsection}{\numberline {7.5.2.2}BossRoom()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{25}{subsubsection.7.5.2.2}
+\contentsline {subsubsection}{\numberline {7.5.2.3}$\sim $BossRoom()}{25}{subsubsection.7.5.2.3}
+\contentsline {subsection}{\numberline {7.5.3}Member Function Documentation}{25}{subsection.7.5.3}
+\contentsline {subsubsection}{\numberline {7.5.3.1}Enter()}{25}{subsubsection.7.5.3.1}
+\contentsline {subsubsection}{\numberline {7.5.3.2}setTiles()}{26}{subsubsection.7.5.3.2}
+\contentsline {section}{\numberline {7.6}Boss\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spawner Class Reference}{26}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Constructor \& Destructor Documentation}{26}{subsection.7.6.1}
+\contentsline {subsubsection}{\numberline {7.6.1.1}BossSpawner()}{27}{subsubsection.7.6.1.1}
+\contentsline {subsubsection}{\numberline {7.6.1.2}$\sim $BossSpawner()}{27}{subsubsection.7.6.1.2}
+\contentsline {subsection}{\numberline {7.6.2}Member Function Documentation}{27}{subsection.7.6.2}
+\contentsline {subsubsection}{\numberline {7.6.2.1}SpawnMonster()}{27}{subsubsection.7.6.2.1}
+\contentsline {section}{\numberline {7.7}Bow\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapon Class Reference}{27}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Constructor \& Destructor Documentation}{28}{subsection.7.7.1}
+\contentsline {subsubsection}{\numberline {7.7.1.1}BowWeapon()}{28}{subsubsection.7.7.1.1}
+\contentsline {subsubsection}{\numberline {7.7.1.2}$\sim $BowWeapon()}{28}{subsubsection.7.7.1.2}
+\contentsline {subsection}{\numberline {7.7.2}Member Function Documentation}{28}{subsection.7.7.2}
+\contentsline {subsubsection}{\numberline {7.7.2.1}Use()}{28}{subsubsection.7.7.2.1}
+\contentsline {section}{\numberline {7.8}Character Class Reference}{28}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}Detailed Description}{30}{subsection.7.8.1}
+\contentsline {subsection}{\numberline {7.8.2}Constructor \& Destructor Documentation}{30}{subsection.7.8.2}
+\contentsline {subsubsection}{\numberline {7.8.2.1}Character()}{30}{subsubsection.7.8.2.1}
+\contentsline {subsubsection}{\numberline {7.8.2.2}$\sim $Character()}{30}{subsubsection.7.8.2.2}
+\contentsline {subsection}{\numberline {7.8.3}Member Function Documentation}{30}{subsection.7.8.3}
+\contentsline {subsubsection}{\numberline {7.8.3.1}Dead()}{31}{subsubsection.7.8.3.1}
+\contentsline {subsubsection}{\numberline {7.8.3.2}emptyList()}{31}{subsubsection.7.8.3.2}
+\contentsline {subsubsection}{\numberline {7.8.3.3}Equip()}{31}{subsubsection.7.8.3.3}
+\contentsline {subsubsection}{\numberline {7.8.3.4}generalUpdate()}{31}{subsubsection.7.8.3.4}
+\contentsline {subsubsection}{\numberline {7.8.3.5}GetAttackCooldownLeft()}{31}{subsubsection.7.8.3.5}
+\contentsline {subsubsection}{\numberline {7.8.3.6}GetAttackCooldownLength()}{31}{subsubsection.7.8.3.6}
+\contentsline {subsubsection}{\numberline {7.8.3.7}GetHitPoints()}{32}{subsubsection.7.8.3.7}
+\contentsline {subsubsection}{\numberline {7.8.3.8}GetMaxHP()}{32}{subsubsection.7.8.3.8}
+\contentsline {subsubsection}{\numberline {7.8.3.9}HasWeapon()}{32}{subsubsection.7.8.3.9}
+\contentsline {subsubsection}{\numberline {7.8.3.10}Heal()}{32}{subsubsection.7.8.3.10}
+\contentsline {subsubsection}{\numberline {7.8.3.11}Idle()}{32}{subsubsection.7.8.3.11}
+\contentsline {subsubsection}{\numberline {7.8.3.12}initVariables()}{33}{subsubsection.7.8.3.12}
+\contentsline {subsubsection}{\numberline {7.8.3.13}IsAlive()}{33}{subsubsection.7.8.3.13}
+\contentsline {subsubsection}{\numberline {7.8.3.14}Move()}{33}{subsubsection.7.8.3.14}
+\contentsline {subsubsection}{\numberline {7.8.3.15}MoveDown()}{33}{subsubsection.7.8.3.15}
+\contentsline {subsubsection}{\numberline {7.8.3.16}MoveLeft()}{34}{subsubsection.7.8.3.16}
+\contentsline {subsubsection}{\numberline {7.8.3.17}MoveRight()}{34}{subsubsection.7.8.3.17}
+\contentsline {subsubsection}{\numberline {7.8.3.18}MoveUp()}{34}{subsubsection.7.8.3.18}
+\contentsline {subsubsection}{\numberline {7.8.3.19}ResetAttackCooldown()}{35}{subsubsection.7.8.3.19}
+\contentsline {subsubsection}{\numberline {7.8.3.20}ResetCharacterToBeAlive()}{35}{subsubsection.7.8.3.20}
+\contentsline {subsubsection}{\numberline {7.8.3.21}RevertMove()}{35}{subsubsection.7.8.3.21}
+\contentsline {subsubsection}{\numberline {7.8.3.22}SetNormalSpeed()}{35}{subsubsection.7.8.3.22}
+\contentsline {subsubsection}{\numberline {7.8.3.23}shotProjectileList()}{35}{subsubsection.7.8.3.23}
+\contentsline {subsubsection}{\numberline {7.8.3.24}TakeDamage()}{35}{subsubsection.7.8.3.24}
+\contentsline {subsubsection}{\numberline {7.8.3.25}Update()}{36}{subsubsection.7.8.3.25}
+\contentsline {subsubsection}{\numberline {7.8.3.26}updateAttackCooldown()}{36}{subsubsection.7.8.3.26}
+\contentsline {subsection}{\numberline {7.8.4}Member Data Documentation}{36}{subsection.7.8.4}
+\contentsline {subsubsection}{\numberline {7.8.4.1}animationHandler\_}{36}{subsubsection.7.8.4.1}
+\contentsline {subsubsection}{\numberline {7.8.4.2}attackCooldownLeft}{36}{subsubsection.7.8.4.2}
+\contentsline {subsubsection}{\numberline {7.8.4.3}attackCooldownLength\_}{36}{subsubsection.7.8.4.3}
+\contentsline {subsubsection}{\numberline {7.8.4.4}CanAttack}{37}{subsubsection.7.8.4.4}
+\contentsline {subsubsection}{\numberline {7.8.4.5}characterProjectileType\_}{37}{subsubsection.7.8.4.5}
+\contentsline {subsubsection}{\numberline {7.8.4.6}currentMaxHitpoints\_}{37}{subsubsection.7.8.4.6}
+\contentsline {subsubsection}{\numberline {7.8.4.7}currentSpeed\_}{37}{subsubsection.7.8.4.7}
+\contentsline {subsubsection}{\numberline {7.8.4.8}defaultMaxHitpoints\_}{37}{subsubsection.7.8.4.8}
+\contentsline {subsubsection}{\numberline {7.8.4.9}defaultSpeed\_}{37}{subsubsection.7.8.4.9}
+\contentsline {subsubsection}{\numberline {7.8.4.10}hasAnimation\_}{37}{subsubsection.7.8.4.10}
+\contentsline {subsubsection}{\numberline {7.8.4.11}hitpoints\_}{37}{subsubsection.7.8.4.11}
+\contentsline {subsubsection}{\numberline {7.8.4.12}invincibility\_frame\_}{38}{subsubsection.7.8.4.12}
+\contentsline {subsubsection}{\numberline {7.8.4.13}left\_or\_right\_}{38}{subsubsection.7.8.4.13}
+\contentsline {subsubsection}{\numberline {7.8.4.14}startPos}{38}{subsubsection.7.8.4.14}
+\contentsline {subsubsection}{\numberline {7.8.4.15}weapon\_}{38}{subsubsection.7.8.4.15}
+\contentsline {section}{\numberline {7.9}Collision\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}System Class Reference}{38}{section.7.9}
+\contentsline {subsection}{\numberline {7.9.1}Detailed Description}{38}{subsection.7.9.1}
+\contentsline {subsection}{\numberline {7.9.2}Constructor \& Destructor Documentation}{39}{subsection.7.9.2}
+\contentsline {subsubsection}{\numberline {7.9.2.1}CollisionSystem()}{39}{subsubsection.7.9.2.1}
+\contentsline {subsection}{\numberline {7.9.3}Member Function Documentation}{39}{subsection.7.9.3}
+\contentsline {subsubsection}{\numberline {7.9.3.1}AddToCollisionList()}{39}{subsubsection.7.9.3.1}
+\contentsline {subsubsection}{\numberline {7.9.3.2}ProcessCollisionList()}{39}{subsubsection.7.9.3.2}
+\contentsline {subsubsection}{\numberline {7.9.3.3}RemoveFromCollisionList()}{39}{subsubsection.7.9.3.3}
+\contentsline {section}{\numberline {7.10}Entity Class Reference}{39}{section.7.10}
+\contentsline {subsection}{\numberline {7.10.1}Constructor \& Destructor Documentation}{40}{subsection.7.10.1}
+\contentsline {subsubsection}{\numberline {7.10.1.1}Entity()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/4]}}{40}{subsubsection.7.10.1.1}
+\contentsline {subsubsection}{\numberline {7.10.1.2}Entity()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/4]}}{41}{subsubsection.7.10.1.2}
+\contentsline {subsubsection}{\numberline {7.10.1.3}Entity()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/4]}}{41}{subsubsection.7.10.1.3}
+\contentsline {subsubsection}{\numberline {7.10.1.4}Entity()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [4/4]}}{41}{subsubsection.7.10.1.4}
+\contentsline {subsubsection}{\numberline {7.10.1.5}$\sim $Entity()}{41}{subsubsection.7.10.1.5}
+\contentsline {subsection}{\numberline {7.10.2}Member Function Documentation}{41}{subsection.7.10.2}
+\contentsline {subsubsection}{\numberline {7.10.2.1}GetBaseBoxAt()}{42}{subsubsection.7.10.2.1}
+\contentsline {subsubsection}{\numberline {7.10.2.2}GetOldPosition()}{42}{subsubsection.7.10.2.2}
+\contentsline {subsubsection}{\numberline {7.10.2.3}GetPos()}{42}{subsubsection.7.10.2.3}
+\contentsline {subsubsection}{\numberline {7.10.2.4}GetPosI()}{42}{subsubsection.7.10.2.4}
+\contentsline {subsubsection}{\numberline {7.10.2.5}GetSprite()}{43}{subsubsection.7.10.2.5}
+\contentsline {subsubsection}{\numberline {7.10.2.6}GetSpriteBounds()}{43}{subsubsection.7.10.2.6}
+\contentsline {subsubsection}{\numberline {7.10.2.7}GetSpriteCenter()}{43}{subsubsection.7.10.2.7}
+\contentsline {subsubsection}{\numberline {7.10.2.8}GetSpritePosition()}{43}{subsubsection.7.10.2.8}
+\contentsline {subsubsection}{\numberline {7.10.2.9}initSprite()}{43}{subsubsection.7.10.2.9}
+\contentsline {subsubsection}{\numberline {7.10.2.10}Render()}{44}{subsubsection.7.10.2.10}
+\contentsline {subsubsection}{\numberline {7.10.2.11}SetPos()}{44}{subsubsection.7.10.2.11}
+\contentsline {subsubsection}{\numberline {7.10.2.12}SetPosAndOldPos()}{44}{subsubsection.7.10.2.12}
+\contentsline {subsection}{\numberline {7.10.3}Member Data Documentation}{44}{subsection.7.10.3}
+\contentsline {subsubsection}{\numberline {7.10.3.1}oldPos\_}{44}{subsubsection.7.10.3.1}
+\contentsline {subsubsection}{\numberline {7.10.3.2}pos\_}{44}{subsubsection.7.10.3.2}
+\contentsline {subsubsection}{\numberline {7.10.3.3}sprite\_}{45}{subsubsection.7.10.3.3}
+\contentsline {subsubsection}{\numberline {7.10.3.4}texture\_}{45}{subsubsection.7.10.3.4}
+\contentsline {section}{\numberline {7.11}Floor\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tile Class Reference}{45}{section.7.11}
+\contentsline {subsection}{\numberline {7.11.1}Constructor \& Destructor Documentation}{45}{subsection.7.11.1}
+\contentsline {subsubsection}{\numberline {7.11.1.1}FloorTile()}{45}{subsubsection.7.11.1.1}
+\contentsline {section}{\numberline {7.12}Front\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Wall\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tile Class Reference}{46}{section.7.12}
+\contentsline {subsection}{\numberline {7.12.1}Detailed Description}{46}{subsection.7.12.1}
+\contentsline {subsection}{\numberline {7.12.2}Constructor \& Destructor Documentation}{46}{subsection.7.12.2}
+\contentsline {subsubsection}{\numberline {7.12.2.1}FrontWallTile()}{46}{subsubsection.7.12.2.1}
+\contentsline {section}{\numberline {7.13}Game Class Reference}{46}{section.7.13}
+\contentsline {subsection}{\numberline {7.13.1}Constructor \& Destructor Documentation}{47}{subsection.7.13.1}
+\contentsline {subsubsection}{\numberline {7.13.1.1}Game()}{47}{subsubsection.7.13.1.1}
+\contentsline {subsubsection}{\numberline {7.13.1.2}$\sim $Game()}{47}{subsubsection.7.13.1.2}
+\contentsline {subsection}{\numberline {7.13.2}Member Function Documentation}{47}{subsection.7.13.2}
+\contentsline {subsubsection}{\numberline {7.13.2.1}Events()}{47}{subsubsection.7.13.2.1}
+\contentsline {subsubsection}{\numberline {7.13.2.2}RenderGame()}{47}{subsubsection.7.13.2.2}
+\contentsline {subsubsection}{\numberline {7.13.2.3}Running()}{48}{subsubsection.7.13.2.3}
+\contentsline {subsubsection}{\numberline {7.13.2.4}UpdateGame()}{48}{subsubsection.7.13.2.4}
+\contentsline {section}{\numberline {7.14}Gamebar Class Reference}{48}{section.7.14}
+\contentsline {subsection}{\numberline {7.14.1}Constructor \& Destructor Documentation}{48}{subsection.7.14.1}
+\contentsline {subsubsection}{\numberline {7.14.1.1}Gamebar()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{48}{subsubsection.7.14.1.1}
+\contentsline {subsubsection}{\numberline {7.14.1.2}Gamebar()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{49}{subsubsection.7.14.1.2}
+\contentsline {subsection}{\numberline {7.14.2}Member Function Documentation}{49}{subsection.7.14.2}
+\contentsline {subsubsection}{\numberline {7.14.2.1}Render()}{49}{subsubsection.7.14.2.1}
+\contentsline {subsubsection}{\numberline {7.14.2.2}RenderInventory()}{49}{subsubsection.7.14.2.2}
+\contentsline {subsubsection}{\numberline {7.14.2.3}Update()}{49}{subsubsection.7.14.2.3}
+\contentsline {section}{\numberline {7.15}Green\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Potion Class Reference}{50}{section.7.15}
+\contentsline {subsection}{\numberline {7.15.1}Detailed Description}{50}{subsection.7.15.1}
+\contentsline {subsection}{\numberline {7.15.2}Constructor \& Destructor Documentation}{50}{subsection.7.15.2}
+\contentsline {subsubsection}{\numberline {7.15.2.1}GreenPotion()}{50}{subsubsection.7.15.2.1}
+\contentsline {section}{\numberline {7.16}ICollidable Class Reference}{50}{section.7.16}
+\contentsline {subsection}{\numberline {7.16.1}Detailed Description}{51}{subsection.7.16.1}
+\contentsline {subsection}{\numberline {7.16.2}Member Enumeration Documentation}{51}{subsection.7.16.2}
+\contentsline {subsubsection}{\numberline {7.16.2.1}EntityType}{51}{subsubsection.7.16.2.1}
+\contentsline {subsection}{\numberline {7.16.3}Constructor \& Destructor Documentation}{51}{subsection.7.16.3}
+\contentsline {subsubsection}{\numberline {7.16.3.1}$\sim $ICollidable()}{51}{subsubsection.7.16.3.1}
+\contentsline {subsection}{\numberline {7.16.4}Member Function Documentation}{51}{subsection.7.16.4}
+\contentsline {subsubsection}{\numberline {7.16.4.1}GetBoundingBox()}{52}{subsubsection.7.16.4.1}
+\contentsline {subsubsection}{\numberline {7.16.4.2}GetEntityType()}{52}{subsubsection.7.16.4.2}
+\contentsline {subsubsection}{\numberline {7.16.4.3}ProcessCollision()}{52}{subsubsection.7.16.4.3}
+\contentsline {section}{\numberline {7.17}util\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::IPlatform Struct Reference}{52}{section.7.17}
+\contentsline {subsection}{\numberline {7.17.1}Constructor \& Destructor Documentation}{52}{subsection.7.17.1}
+\contentsline {subsubsection}{\numberline {7.17.1.1}$\sim $IPlatform()}{53}{subsubsection.7.17.1.1}
+\contentsline {subsection}{\numberline {7.17.2}Member Function Documentation}{53}{subsection.7.17.2}
+\contentsline {subsubsection}{\numberline {7.17.2.1}getRefreshRate()}{53}{subsubsection.7.17.2.1}
+\contentsline {subsubsection}{\numberline {7.17.2.2}getScreenScalingFactor()}{53}{subsubsection.7.17.2.2}
+\contentsline {subsubsection}{\numberline {7.17.2.3}setIcon()}{53}{subsubsection.7.17.2.3}
+\contentsline {subsubsection}{\numberline {7.17.2.4}toggleFullscreen()}{53}{subsubsection.7.17.2.4}
+\contentsline {section}{\numberline {7.18}Level\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Instance Class Reference}{54}{section.7.18}
+\contentsline {subsection}{\numberline {7.18.1}Constructor \& Destructor Documentation}{54}{subsection.7.18.1}
+\contentsline {subsubsection}{\numberline {7.18.1.1}LevelUpInstance()}{54}{subsubsection.7.18.1.1}
+\contentsline {subsection}{\numberline {7.18.2}Member Function Documentation}{54}{subsection.7.18.2}
+\contentsline {subsubsection}{\numberline {7.18.2.1}GainXP()}{54}{subsubsection.7.18.2.1}
+\contentsline {subsubsection}{\numberline {7.18.2.2}GetHPModifier()}{55}{subsubsection.7.18.2.2}
+\contentsline {subsubsection}{\numberline {7.18.2.3}GetLevel()}{55}{subsubsection.7.18.2.3}
+\contentsline {subsubsection}{\numberline {7.18.2.4}LevelUp()}{55}{subsubsection.7.18.2.4}
+\contentsline {section}{\numberline {7.19}Level\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}System Class Reference}{55}{section.7.19}
+\contentsline {subsection}{\numberline {7.19.1}Member Function Documentation}{56}{subsection.7.19.1}
+\contentsline {subsubsection}{\numberline {7.19.1.1}AddCharacter()}{56}{subsubsection.7.19.1.1}
+\contentsline {subsubsection}{\numberline {7.19.1.2}GainXP()}{56}{subsubsection.7.19.1.2}
+\contentsline {subsubsection}{\numberline {7.19.1.3}GetHPModifier()}{56}{subsubsection.7.19.1.3}
+\contentsline {subsubsection}{\numberline {7.19.1.4}GetLevel()}{57}{subsubsection.7.19.1.4}
+\contentsline {subsubsection}{\numberline {7.19.1.5}LevelUp()}{57}{subsubsection.7.19.1.5}
+\contentsline {subsection}{\numberline {7.19.2}Member Data Documentation}{57}{subsection.7.19.2}
+\contentsline {subsubsection}{\numberline {7.19.2.1}characterLevelMap}{57}{subsubsection.7.19.2.1}
+\contentsline {section}{\numberline {7.20}util\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Linux\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform Struct Reference}{58}{section.7.20}
+\contentsline {subsection}{\numberline {7.20.1}Constructor \& Destructor Documentation}{58}{subsection.7.20.1}
+\contentsline {subsubsection}{\numberline {7.20.1.1}LinuxPlatform()}{58}{subsubsection.7.20.1.1}
+\contentsline {subsection}{\numberline {7.20.2}Member Function Documentation}{58}{subsection.7.20.2}
+\contentsline {subsubsection}{\numberline {7.20.2.1}getRefreshRate()}{58}{subsubsection.7.20.2.1}
+\contentsline {subsubsection}{\numberline {7.20.2.2}getScreenScalingFactor()}{58}{subsubsection.7.20.2.2}
+\contentsline {subsubsection}{\numberline {7.20.2.3}setIcon()}{59}{subsubsection.7.20.2.3}
+\contentsline {subsubsection}{\numberline {7.20.2.4}toggleFullscreen()}{59}{subsubsection.7.20.2.4}
+\contentsline {section}{\numberline {7.21}Map Class Reference}{59}{section.7.21}
+\contentsline {subsection}{\numberline {7.21.1}Constructor \& Destructor Documentation}{60}{subsection.7.21.1}
+\contentsline {subsubsection}{\numberline {7.21.1.1}Map()}{60}{subsubsection.7.21.1.1}
+\contentsline {subsubsection}{\numberline {7.21.1.2}$\sim $Map()}{60}{subsubsection.7.21.1.2}
+\contentsline {subsection}{\numberline {7.21.2}Member Function Documentation}{60}{subsection.7.21.2}
+\contentsline {subsubsection}{\numberline {7.21.2.1}CreateDungeon()}{60}{subsubsection.7.21.2.1}
+\contentsline {subsubsection}{\numberline {7.21.2.2}DirToVec()}{60}{subsubsection.7.21.2.2}
+\contentsline {subsubsection}{\numberline {7.21.2.3}GetCurrentRoom()}{61}{subsubsection.7.21.2.3}
+\contentsline {subsubsection}{\numberline {7.21.2.4}GetRoomInDir()}{61}{subsubsection.7.21.2.4}
+\contentsline {subsubsection}{\numberline {7.21.2.5}GetSpawnRoom()}{61}{subsubsection.7.21.2.5}
+\contentsline {subsubsection}{\numberline {7.21.2.6}IsBossRoomCleared()}{62}{subsubsection.7.21.2.6}
+\contentsline {subsubsection}{\numberline {7.21.2.7}MovePlayer()}{62}{subsubsection.7.21.2.7}
+\contentsline {subsubsection}{\numberline {7.21.2.8}RenderCurrentRoom()}{62}{subsubsection.7.21.2.8}
+\contentsline {subsubsection}{\numberline {7.21.2.9}ResetMap()}{62}{subsubsection.7.21.2.9}
+\contentsline {section}{\numberline {7.22}Monster Class Reference}{63}{section.7.22}
+\contentsline {subsection}{\numberline {7.22.1}Detailed Description}{64}{subsection.7.22.1}
+\contentsline {subsection}{\numberline {7.22.2}Constructor \& Destructor Documentation}{64}{subsection.7.22.2}
+\contentsline {subsubsection}{\numberline {7.22.2.1}$\sim $Monster()}{64}{subsubsection.7.22.2.1}
+\contentsline {subsubsection}{\numberline {7.22.2.2}Monster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{64}{subsubsection.7.22.2.2}
+\contentsline {subsubsection}{\numberline {7.22.2.3}Monster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{64}{subsubsection.7.22.2.3}
+\contentsline {subsection}{\numberline {7.22.3}Member Function Documentation}{64}{subsection.7.22.3}
+\contentsline {subsubsection}{\numberline {7.22.3.1}Attack()}{64}{subsubsection.7.22.3.1}
+\contentsline {subsubsection}{\numberline {7.22.3.2}clampPosToRoom()}{65}{subsubsection.7.22.3.2}
+\contentsline {subsubsection}{\numberline {7.22.3.3}getDistanceToPlayer()}{65}{subsubsection.7.22.3.3}
+\contentsline {subsubsection}{\numberline {7.22.3.4}GetPlayer()}{65}{subsubsection.7.22.3.4}
+\contentsline {subsubsection}{\numberline {7.22.3.5}initVariables()}{65}{subsubsection.7.22.3.5}
+\contentsline {subsubsection}{\numberline {7.22.3.6}inRangeOfPlayer()}{65}{subsubsection.7.22.3.6}
+\contentsline {subsubsection}{\numberline {7.22.3.7}Move()}{65}{subsubsection.7.22.3.7}
+\contentsline {subsubsection}{\numberline {7.22.3.8}moveTowardsPlayer()}{66}{subsubsection.7.22.3.8}
+\contentsline {subsubsection}{\numberline {7.22.3.9}Render()}{66}{subsubsection.7.22.3.9}
+\contentsline {subsubsection}{\numberline {7.22.3.10}ReturnPotion()}{66}{subsubsection.7.22.3.10}
+\contentsline {subsubsection}{\numberline {7.22.3.11}SetTarget()}{66}{subsubsection.7.22.3.11}
+\contentsline {subsubsection}{\numberline {7.22.3.12}Update()}{66}{subsubsection.7.22.3.12}
+\contentsline {subsection}{\numberline {7.22.4}Member Data Documentation}{66}{subsection.7.22.4}
+\contentsline {subsubsection}{\numberline {7.22.4.1}healthbar\_}{67}{subsubsection.7.22.4.1}
+\contentsline {subsubsection}{\numberline {7.22.4.2}movedLastTick\_}{67}{subsubsection.7.22.4.2}
+\contentsline {subsubsection}{\numberline {7.22.4.3}player\_}{67}{subsubsection.7.22.4.3}
+\contentsline {subsubsection}{\numberline {7.22.4.4}staticDamage\_}{67}{subsubsection.7.22.4.4}
+\contentsline {section}{\numberline {7.23}Monster\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spawner Class Reference}{67}{section.7.23}
+\contentsline {subsection}{\numberline {7.23.1}Constructor \& Destructor Documentation}{68}{subsection.7.23.1}
+\contentsline {subsubsection}{\numberline {7.23.1.1}MonsterSpawner()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{68}{subsubsection.7.23.1.1}
+\contentsline {subsubsection}{\numberline {7.23.1.2}MonsterSpawner()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{68}{subsubsection.7.23.1.2}
+\contentsline {subsubsection}{\numberline {7.23.1.3}$\sim $MonsterSpawner()}{68}{subsubsection.7.23.1.3}
+\contentsline {subsection}{\numberline {7.23.2}Member Function Documentation}{68}{subsection.7.23.2}
+\contentsline {subsubsection}{\numberline {7.23.2.1}GetMonsterAmount()}{68}{subsubsection.7.23.2.1}
+\contentsline {subsubsection}{\numberline {7.23.2.2}getRandomMonster()}{68}{subsubsection.7.23.2.2}
+\contentsline {subsubsection}{\numberline {7.23.2.3}SetMonsterAmount()}{69}{subsubsection.7.23.2.3}
+\contentsline {subsubsection}{\numberline {7.23.2.4}SpawnMonster()}{69}{subsubsection.7.23.2.4}
+\contentsline {subsection}{\numberline {7.23.3}Member Data Documentation}{69}{subsection.7.23.3}
+\contentsline {subsubsection}{\numberline {7.23.3.1}monsterCount\_}{69}{subsubsection.7.23.3.1}
+\contentsline {subsubsection}{\numberline {7.23.3.2}monsterTypeCount\_}{69}{subsubsection.7.23.3.2}
+\contentsline {section}{\numberline {7.24}Collision\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Oriented\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Bounding\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Box Class Reference}{69}{section.7.24}
+\contentsline {subsection}{\numberline {7.24.1}Constructor \& Destructor Documentation}{70}{subsection.7.24.1}
+\contentsline {subsubsection}{\numberline {7.24.1.1}OrientedBoundingBox()}{70}{subsubsection.7.24.1.1}
+\contentsline {subsection}{\numberline {7.24.2}Member Function Documentation}{70}{subsection.7.24.2}
+\contentsline {subsubsection}{\numberline {7.24.2.1}ProjectOntoAxis()}{70}{subsubsection.7.24.2.1}
+\contentsline {subsection}{\numberline {7.24.3}Member Data Documentation}{70}{subsection.7.24.3}
+\contentsline {subsubsection}{\numberline {7.24.3.1}Points}{70}{subsubsection.7.24.3.1}
+\contentsline {section}{\numberline {7.25}Player Class Reference}{70}{section.7.25}
+\contentsline {subsection}{\numberline {7.25.1}Detailed Description}{71}{subsection.7.25.1}
+\contentsline {subsection}{\numberline {7.25.2}Constructor \& Destructor Documentation}{71}{subsection.7.25.2}
+\contentsline {subsubsection}{\numberline {7.25.2.1}Player()}{71}{subsubsection.7.25.2.1}
+\contentsline {subsubsection}{\numberline {7.25.2.2}$\sim $Player()}{71}{subsubsection.7.25.2.2}
+\contentsline {subsection}{\numberline {7.25.3}Member Function Documentation}{72}{subsection.7.25.3}
+\contentsline {subsubsection}{\numberline {7.25.3.1}AddPotion()}{72}{subsubsection.7.25.3.1}
+\contentsline {subsubsection}{\numberline {7.25.3.2}Attack()}{73}{subsubsection.7.25.3.2}
+\contentsline {subsubsection}{\numberline {7.25.3.3}ClearInventory()}{73}{subsubsection.7.25.3.3}
+\contentsline {subsubsection}{\numberline {7.25.3.4}Dash()}{73}{subsubsection.7.25.3.4}
+\contentsline {subsubsection}{\numberline {7.25.3.5}GetDashCooldownLeft()}{73}{subsubsection.7.25.3.5}
+\contentsline {subsubsection}{\numberline {7.25.3.6}GetDashCooldownLength()}{73}{subsubsection.7.25.3.6}
+\contentsline {subsubsection}{\numberline {7.25.3.7}GetInventory()}{74}{subsubsection.7.25.3.7}
+\contentsline {subsubsection}{\numberline {7.25.3.8}initVariables()}{74}{subsubsection.7.25.3.8}
+\contentsline {subsubsection}{\numberline {7.25.3.9}ResetDashCooldown()}{74}{subsubsection.7.25.3.9}
+\contentsline {subsubsection}{\numberline {7.25.3.10}Update()}{74}{subsubsection.7.25.3.10}
+\contentsline {subsubsection}{\numberline {7.25.3.11}UsePotion()}{74}{subsubsection.7.25.3.11}
+\contentsline {subsection}{\numberline {7.25.4}Member Data Documentation}{75}{subsection.7.25.4}
+\contentsline {subsubsection}{\numberline {7.25.4.1}CanDash}{75}{subsubsection.7.25.4.1}
+\contentsline {subsubsection}{\numberline {7.25.4.2}IsDashing}{75}{subsubsection.7.25.4.2}
+\contentsline {section}{\numberline {7.26}Potion Class Reference}{75}{section.7.26}
+\contentsline {subsection}{\numberline {7.26.1}Constructor \& Destructor Documentation}{76}{subsection.7.26.1}
+\contentsline {subsubsection}{\numberline {7.26.1.1}Potion()}{76}{subsubsection.7.26.1.1}
+\contentsline {subsubsection}{\numberline {7.26.1.2}$\sim $Potion()}{76}{subsubsection.7.26.1.2}
+\contentsline {subsection}{\numberline {7.26.2}Member Function Documentation}{76}{subsection.7.26.2}
+\contentsline {subsubsection}{\numberline {7.26.2.1}GetColour()}{76}{subsubsection.7.26.2.1}
+\contentsline {subsubsection}{\numberline {7.26.2.2}GetHealthIncrease()}{76}{subsubsection.7.26.2.2}
+\contentsline {subsection}{\numberline {7.26.3}Member Data Documentation}{77}{subsection.7.26.3}
+\contentsline {subsubsection}{\numberline {7.26.3.1}colour\_}{77}{subsubsection.7.26.3.1}
+\contentsline {subsubsection}{\numberline {7.26.3.2}healthIncrease\_}{77}{subsubsection.7.26.3.2}
+\contentsline {section}{\numberline {7.27}Power\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up Class Reference}{77}{section.7.27}
+\contentsline {subsection}{\numberline {7.27.1}Constructor \& Destructor Documentation}{77}{subsection.7.27.1}
+\contentsline {subsubsection}{\numberline {7.27.1.1}PowerUp()}{77}{subsubsection.7.27.1.1}
+\contentsline {subsubsection}{\numberline {7.27.1.2}$\sim $PowerUp()}{77}{subsubsection.7.27.1.2}
+\contentsline {section}{\numberline {7.28}Projectile Class Reference}{78}{section.7.28}
+\contentsline {subsection}{\numberline {7.28.1}Member Enumeration Documentation}{79}{subsection.7.28.1}
+\contentsline {subsubsection}{\numberline {7.28.1.1}Type}{79}{subsubsection.7.28.1.1}
+\contentsline {subsection}{\numberline {7.28.2}Constructor \& Destructor Documentation}{79}{subsection.7.28.2}
+\contentsline {subsubsection}{\numberline {7.28.2.1}Projectile()}{79}{subsubsection.7.28.2.1}
+\contentsline {subsection}{\numberline {7.28.3}Member Function Documentation}{79}{subsection.7.28.3}
+\contentsline {subsubsection}{\numberline {7.28.3.1}GetDamage()}{80}{subsubsection.7.28.3.1}
+\contentsline {subsubsection}{\numberline {7.28.3.2}GetDirection()}{80}{subsubsection.7.28.3.2}
+\contentsline {subsubsection}{\numberline {7.28.3.3}GetDistanceLifeSpan()}{80}{subsubsection.7.28.3.3}
+\contentsline {subsubsection}{\numberline {7.28.3.4}GetProjectileSpeed()}{80}{subsubsection.7.28.3.4}
+\contentsline {subsubsection}{\numberline {7.28.3.5}GetStartPosition()}{81}{subsubsection.7.28.3.5}
+\contentsline {subsubsection}{\numberline {7.28.3.6}GetTimeExisted()}{81}{subsubsection.7.28.3.6}
+\contentsline {subsubsection}{\numberline {7.28.3.7}GetTimeLifeSpan()}{81}{subsubsection.7.28.3.7}
+\contentsline {subsubsection}{\numberline {7.28.3.8}GetType()}{81}{subsubsection.7.28.3.8}
+\contentsline {subsubsection}{\numberline {7.28.3.9}HasHit()}{81}{subsubsection.7.28.3.9}
+\contentsline {subsubsection}{\numberline {7.28.3.10}Hit()}{82}{subsubsection.7.28.3.10}
+\contentsline {subsubsection}{\numberline {7.28.3.11}IsAlive()}{82}{subsubsection.7.28.3.11}
+\contentsline {subsubsection}{\numberline {7.28.3.12}Kill()}{82}{subsubsection.7.28.3.12}
+\contentsline {subsubsection}{\numberline {7.28.3.13}Penetrates()}{83}{subsubsection.7.28.3.13}
+\contentsline {subsubsection}{\numberline {7.28.3.14}SetDamage()}{83}{subsubsection.7.28.3.14}
+\contentsline {subsubsection}{\numberline {7.28.3.15}SetDirection()}{83}{subsubsection.7.28.3.15}
+\contentsline {subsubsection}{\numberline {7.28.3.16}SetDistanceLifeSpan()}{83}{subsubsection.7.28.3.16}
+\contentsline {subsubsection}{\numberline {7.28.3.17}SetProjectileSpeed()}{84}{subsubsection.7.28.3.17}
+\contentsline {subsubsection}{\numberline {7.28.3.18}SetSprite()}{84}{subsubsection.7.28.3.18}
+\contentsline {subsubsection}{\numberline {7.28.3.19}SetTimeLifeSpan()}{84}{subsubsection.7.28.3.19}
+\contentsline {subsubsection}{\numberline {7.28.3.20}SetType()}{85}{subsubsection.7.28.3.20}
+\contentsline {subsubsection}{\numberline {7.28.3.21}Update()}{85}{subsubsection.7.28.3.21}
+\contentsline {section}{\numberline {7.29}Random\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster Class Reference}{85}{section.7.29}
+\contentsline {subsection}{\numberline {7.29.1}Detailed Description}{86}{subsection.7.29.1}
+\contentsline {subsection}{\numberline {7.29.2}Constructor \& Destructor Documentation}{86}{subsection.7.29.2}
+\contentsline {subsubsection}{\numberline {7.29.2.1}RandomMonster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{86}{subsubsection.7.29.2.1}
+\contentsline {subsubsection}{\numberline {7.29.2.2}RandomMonster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{86}{subsubsection.7.29.2.2}
+\contentsline {subsubsection}{\numberline {7.29.2.3}$\sim $RandomMonster()}{86}{subsubsection.7.29.2.3}
+\contentsline {subsection}{\numberline {7.29.3}Member Function Documentation}{86}{subsection.7.29.3}
+\contentsline {subsubsection}{\numberline {7.29.3.1}Attack()}{87}{subsubsection.7.29.3.1}
+\contentsline {subsubsection}{\numberline {7.29.3.2}initVariables()}{87}{subsubsection.7.29.3.2}
+\contentsline {subsubsection}{\numberline {7.29.3.3}Move()}{87}{subsubsection.7.29.3.3}
+\contentsline {section}{\numberline {7.30}Red\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Potion Class Reference}{87}{section.7.30}
+\contentsline {subsection}{\numberline {7.30.1}Detailed Description}{88}{subsection.7.30.1}
+\contentsline {subsection}{\numberline {7.30.2}Constructor \& Destructor Documentation}{88}{subsection.7.30.2}
+\contentsline {subsubsection}{\numberline {7.30.2.1}RedPotion()}{88}{subsubsection.7.30.2.1}
+\contentsline {section}{\numberline {7.31}Room\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Instance Class Reference}{88}{section.7.31}
+\contentsline {subsection}{\numberline {7.31.1}Detailed Description}{90}{subsection.7.31.1}
+\contentsline {subsection}{\numberline {7.31.2}Constructor \& Destructor Documentation}{90}{subsection.7.31.2}
+\contentsline {subsubsection}{\numberline {7.31.2.1}RoomInstance()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/3]}}{90}{subsubsection.7.31.2.1}
+\contentsline {subsubsection}{\numberline {7.31.2.2}RoomInstance()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/3]}}{90}{subsubsection.7.31.2.2}
+\contentsline {subsubsection}{\numberline {7.31.2.3}RoomInstance()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [3/3]}}{90}{subsubsection.7.31.2.3}
+\contentsline {subsubsection}{\numberline {7.31.2.4}$\sim $RoomInstance()}{90}{subsubsection.7.31.2.4}
+\contentsline {subsection}{\numberline {7.31.3}Member Function Documentation}{90}{subsection.7.31.3}
+\contentsline {subsubsection}{\numberline {7.31.3.1}AddPotion()}{91}{subsubsection.7.31.3.1}
+\contentsline {subsubsection}{\numberline {7.31.3.2}Connect()}{91}{subsubsection.7.31.3.2}
+\contentsline {subsubsection}{\numberline {7.31.3.3}CreateExit()}{91}{subsubsection.7.31.3.3}
+\contentsline {subsubsection}{\numberline {7.31.3.4}deleteMonster()}{91}{subsubsection.7.31.3.4}
+\contentsline {subsubsection}{\numberline {7.31.3.5}Enter()}{92}{subsubsection.7.31.3.5}
+\contentsline {subsubsection}{\numberline {7.31.3.6}Exit()}{92}{subsubsection.7.31.3.6}
+\contentsline {subsubsection}{\numberline {7.31.3.7}GetCoords()}{92}{subsubsection.7.31.3.7}
+\contentsline {subsubsection}{\numberline {7.31.3.8}GetEntranceInDirection()}{92}{subsubsection.7.31.3.8}
+\contentsline {subsubsection}{\numberline {7.31.3.9}GetMonsters()}{92}{subsubsection.7.31.3.9}
+\contentsline {subsubsection}{\numberline {7.31.3.10}GetPotions()}{93}{subsubsection.7.31.3.10}
+\contentsline {subsubsection}{\numberline {7.31.3.11}GetRoomInDir()}{93}{subsubsection.7.31.3.11}
+\contentsline {subsubsection}{\numberline {7.31.3.12}getRoomTilesAt()}{93}{subsubsection.7.31.3.12}
+\contentsline {subsubsection}{\numberline {7.31.3.13}getTiles()}{93}{subsubsection.7.31.3.13}
+\contentsline {subsubsection}{\numberline {7.31.3.14}HasDirectionsLeft()}{93}{subsubsection.7.31.3.14}
+\contentsline {subsubsection}{\numberline {7.31.3.15}IsCleared()}{94}{subsubsection.7.31.3.15}
+\contentsline {subsubsection}{\numberline {7.31.3.16}IsVisisted()}{94}{subsubsection.7.31.3.16}
+\contentsline {subsubsection}{\numberline {7.31.3.17}monsterCleared()}{94}{subsubsection.7.31.3.17}
+\contentsline {subsubsection}{\numberline {7.31.3.18}positionIsPenetratable()}{94}{subsubsection.7.31.3.18}
+\contentsline {subsubsection}{\numberline {7.31.3.19}positionIsWalkable()}{94}{subsubsection.7.31.3.19}
+\contentsline {subsubsection}{\numberline {7.31.3.20}RemoveDirection()}{94}{subsubsection.7.31.3.20}
+\contentsline {subsubsection}{\numberline {7.31.3.21}RemoveRandomDirection()}{95}{subsubsection.7.31.3.21}
+\contentsline {subsubsection}{\numberline {7.31.3.22}Render()}{95}{subsubsection.7.31.3.22}
+\contentsline {subsubsection}{\numberline {7.31.3.23}renderSpriteBackground()}{95}{subsubsection.7.31.3.23}
+\contentsline {subsubsection}{\numberline {7.31.3.24}setTiles()}{95}{subsubsection.7.31.3.24}
+\contentsline {subsection}{\numberline {7.31.4}Member Data Documentation}{96}{subsection.7.31.4}
+\contentsline {subsubsection}{\numberline {7.31.4.1}cleared\_}{96}{subsubsection.7.31.4.1}
+\contentsline {subsubsection}{\numberline {7.31.4.2}coords\_}{96}{subsubsection.7.31.4.2}
+\contentsline {subsubsection}{\numberline {7.31.4.3}directionsLeft\_}{96}{subsubsection.7.31.4.3}
+\contentsline {subsubsection}{\numberline {7.31.4.4}monsters\_}{96}{subsubsection.7.31.4.4}
+\contentsline {subsubsection}{\numberline {7.31.4.5}potions\_}{96}{subsubsection.7.31.4.5}
+\contentsline {subsubsection}{\numberline {7.31.4.6}roomBackground}{96}{subsubsection.7.31.4.6}
+\contentsline {subsubsection}{\numberline {7.31.4.7}roomSize\_}{96}{subsubsection.7.31.4.7}
+\contentsline {subsubsection}{\numberline {7.31.4.8}roomTexture}{97}{subsubsection.7.31.4.8}
+\contentsline {subsubsection}{\numberline {7.31.4.9}spawner\_}{97}{subsubsection.7.31.4.9}
+\contentsline {subsubsection}{\numberline {7.31.4.10}tileVector\_}{97}{subsubsection.7.31.4.10}
+\contentsline {subsubsection}{\numberline {7.31.4.11}visited\_}{97}{subsubsection.7.31.4.11}
+\contentsline {section}{\numberline {7.32}Room\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tile Class Reference}{97}{section.7.32}
+\contentsline {subsection}{\numberline {7.32.1}Constructor \& Destructor Documentation}{98}{subsection.7.32.1}
+\contentsline {subsubsection}{\numberline {7.32.1.1}RoomTile()}{98}{subsubsection.7.32.1.1}
+\contentsline {subsection}{\numberline {7.32.2}Member Function Documentation}{98}{subsection.7.32.2}
+\contentsline {subsubsection}{\numberline {7.32.2.1}getBoundingBox()}{98}{subsubsection.7.32.2.1}
+\contentsline {subsubsection}{\numberline {7.32.2.2}getPosition()}{98}{subsubsection.7.32.2.2}
+\contentsline {subsubsection}{\numberline {7.32.2.3}getSize()}{98}{subsubsection.7.32.2.3}
+\contentsline {subsubsection}{\numberline {7.32.2.4}getSprite()}{99}{subsubsection.7.32.2.4}
+\contentsline {subsubsection}{\numberline {7.32.2.5}isPenetratable()}{99}{subsubsection.7.32.2.5}
+\contentsline {subsubsection}{\numberline {7.32.2.6}isWalkable()}{99}{subsubsection.7.32.2.6}
+\contentsline {section}{\numberline {7.33}Screen\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Text Class Reference}{99}{section.7.33}
+\contentsline {subsection}{\numberline {7.33.1}Constructor \& Destructor Documentation}{99}{subsection.7.33.1}
+\contentsline {subsubsection}{\numberline {7.33.1.1}ScreenText()}{100}{subsubsection.7.33.1.1}
+\contentsline {subsubsection}{\numberline {7.33.1.2}$\sim $ScreenText()}{100}{subsubsection.7.33.1.2}
+\contentsline {section}{\numberline {7.34}Searching\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster Class Reference}{100}{section.7.34}
+\contentsline {subsection}{\numberline {7.34.1}Detailed Description}{101}{subsection.7.34.1}
+\contentsline {subsection}{\numberline {7.34.2}Constructor \& Destructor Documentation}{101}{subsection.7.34.2}
+\contentsline {subsubsection}{\numberline {7.34.2.1}SearchingMonster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{101}{subsubsection.7.34.2.1}
+\contentsline {subsubsection}{\numberline {7.34.2.2}SearchingMonster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{101}{subsubsection.7.34.2.2}
+\contentsline {subsubsection}{\numberline {7.34.2.3}$\sim $SearchingMonster()}{101}{subsubsection.7.34.2.3}
+\contentsline {subsection}{\numberline {7.34.3}Member Function Documentation}{101}{subsection.7.34.3}
+\contentsline {subsubsection}{\numberline {7.34.3.1}Attack()}{101}{subsubsection.7.34.3.1}
+\contentsline {subsubsection}{\numberline {7.34.3.2}initVariables()}{102}{subsubsection.7.34.3.2}
+\contentsline {subsubsection}{\numberline {7.34.3.3}Move()}{102}{subsubsection.7.34.3.3}
+\contentsline {section}{\numberline {7.35}Slow\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster Class Reference}{102}{section.7.35}
+\contentsline {subsection}{\numberline {7.35.1}Detailed Description}{103}{subsection.7.35.1}
+\contentsline {subsection}{\numberline {7.35.2}Constructor \& Destructor Documentation}{103}{subsection.7.35.2}
+\contentsline {subsubsection}{\numberline {7.35.2.1}SlowMonster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{103}{subsubsection.7.35.2.1}
+\contentsline {subsubsection}{\numberline {7.35.2.2}SlowMonster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{103}{subsubsection.7.35.2.2}
+\contentsline {subsubsection}{\numberline {7.35.2.3}$\sim $SlowMonster()}{103}{subsubsection.7.35.2.3}
+\contentsline {subsection}{\numberline {7.35.3}Member Function Documentation}{103}{subsection.7.35.3}
+\contentsline {subsubsection}{\numberline {7.35.3.1}Attack()}{103}{subsubsection.7.35.3.1}
+\contentsline {subsubsection}{\numberline {7.35.3.2}initVariables()}{104}{subsubsection.7.35.3.2}
+\contentsline {subsubsection}{\numberline {7.35.3.3}Move()}{104}{subsubsection.7.35.3.3}
+\contentsline {section}{\numberline {7.36}Sniping\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster Class Reference}{104}{section.7.36}
+\contentsline {subsection}{\numberline {7.36.1}Detailed Description}{104}{subsection.7.36.1}
+\contentsline {subsection}{\numberline {7.36.2}Constructor \& Destructor Documentation}{105}{subsection.7.36.2}
+\contentsline {subsubsection}{\numberline {7.36.2.1}SnipingMonster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{105}{subsubsection.7.36.2.1}
+\contentsline {subsubsection}{\numberline {7.36.2.2}SnipingMonster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{105}{subsubsection.7.36.2.2}
+\contentsline {subsubsection}{\numberline {7.36.2.3}$\sim $SnipingMonster()}{105}{subsubsection.7.36.2.3}
+\contentsline {subsection}{\numberline {7.36.3}Member Function Documentation}{105}{subsection.7.36.3}
+\contentsline {subsubsection}{\numberline {7.36.3.1}Attack()}{105}{subsubsection.7.36.3.1}
+\contentsline {subsubsection}{\numberline {7.36.3.2}initVariables()}{105}{subsubsection.7.36.3.2}
+\contentsline {subsubsection}{\numberline {7.36.3.3}Move()}{106}{subsubsection.7.36.3.3}
+\contentsline {section}{\numberline {7.37}Sound\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Effect Class Reference}{106}{section.7.37}
+\contentsline {subsection}{\numberline {7.37.1}Constructor \& Destructor Documentation}{106}{subsection.7.37.1}
+\contentsline {subsubsection}{\numberline {7.37.1.1}SoundEffect()}{106}{subsubsection.7.37.1.1}
+\contentsline {subsubsection}{\numberline {7.37.1.2}$\sim $SoundEffect()}{106}{subsubsection.7.37.1.2}
+\contentsline {subsection}{\numberline {7.37.2}Member Function Documentation}{106}{subsection.7.37.2}
+\contentsline {subsubsection}{\numberline {7.37.2.1}PlaySound()}{107}{subsubsection.7.37.2.1}
+\contentsline {section}{\numberline {7.38}Starting\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room Class Reference}{107}{section.7.38}
+\contentsline {subsection}{\numberline {7.38.1}Constructor \& Destructor Documentation}{107}{subsection.7.38.1}
+\contentsline {subsubsection}{\numberline {7.38.1.1}StartingRoom()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{107}{subsubsection.7.38.1.1}
+\contentsline {subsubsection}{\numberline {7.38.1.2}StartingRoom()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{108}{subsubsection.7.38.1.2}
+\contentsline {subsubsection}{\numberline {7.38.1.3}$\sim $StartingRoom()}{108}{subsubsection.7.38.1.3}
+\contentsline {subsection}{\numberline {7.38.2}Member Function Documentation}{108}{subsection.7.38.2}
+\contentsline {subsubsection}{\numberline {7.38.2.1}setTiles()}{108}{subsubsection.7.38.2.1}
+\contentsline {section}{\numberline {7.39}Sword\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapon Class Reference}{108}{section.7.39}
+\contentsline {subsection}{\numberline {7.39.1}Constructor \& Destructor Documentation}{109}{subsection.7.39.1}
+\contentsline {subsubsection}{\numberline {7.39.1.1}SwordWeapon()}{109}{subsubsection.7.39.1.1}
+\contentsline {subsubsection}{\numberline {7.39.1.2}$\sim $SwordWeapon()}{109}{subsubsection.7.39.1.2}
+\contentsline {subsection}{\numberline {7.39.2}Member Function Documentation}{109}{subsection.7.39.2}
+\contentsline {subsubsection}{\numberline {7.39.2.1}Use()}{109}{subsubsection.7.39.2.1}
+\contentsline {section}{\numberline {7.40}Treasure\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room Class Reference}{109}{section.7.40}
+\contentsline {subsection}{\numberline {7.40.1}Detailed Description}{110}{subsection.7.40.1}
+\contentsline {subsection}{\numberline {7.40.2}Constructor \& Destructor Documentation}{110}{subsection.7.40.2}
+\contentsline {subsubsection}{\numberline {7.40.2.1}TreasureRoom()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{110}{subsubsection.7.40.2.1}
+\contentsline {subsubsection}{\numberline {7.40.2.2}TreasureRoom()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{110}{subsubsection.7.40.2.2}
+\contentsline {subsubsection}{\numberline {7.40.2.3}$\sim $TreasureRoom()}{110}{subsubsection.7.40.2.3}
+\contentsline {subsection}{\numberline {7.40.3}Member Function Documentation}{110}{subsection.7.40.3}
+\contentsline {subsubsection}{\numberline {7.40.3.1}setTiles()}{110}{subsubsection.7.40.3.1}
+\contentsline {section}{\numberline {7.41}Violet\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Potion Class Reference}{111}{section.7.41}
+\contentsline {subsection}{\numberline {7.41.1}Detailed Description}{111}{subsection.7.41.1}
+\contentsline {subsection}{\numberline {7.41.2}Constructor \& Destructor Documentation}{111}{subsection.7.41.2}
+\contentsline {subsubsection}{\numberline {7.41.2.1}VioletPotion()}{111}{subsubsection.7.41.2.1}
+\contentsline {section}{\numberline {7.42}Wall\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Patrol\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster Class Reference}{112}{section.7.42}
+\contentsline {subsection}{\numberline {7.42.1}Detailed Description}{112}{subsection.7.42.1}
+\contentsline {subsection}{\numberline {7.42.2}Constructor \& Destructor Documentation}{112}{subsection.7.42.2}
+\contentsline {subsubsection}{\numberline {7.42.2.1}WallPatrolMonster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{112}{subsubsection.7.42.2.1}
+\contentsline {subsubsection}{\numberline {7.42.2.2}WallPatrolMonster()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{113}{subsubsection.7.42.2.2}
+\contentsline {subsubsection}{\numberline {7.42.2.3}$\sim $WallPatrolMonster()}{113}{subsubsection.7.42.2.3}
+\contentsline {subsection}{\numberline {7.42.3}Member Function Documentation}{113}{subsection.7.42.3}
+\contentsline {subsubsection}{\numberline {7.42.3.1}Attack()}{113}{subsubsection.7.42.3.1}
+\contentsline {subsubsection}{\numberline {7.42.3.2}initVariables()}{113}{subsubsection.7.42.3.2}
+\contentsline {subsubsection}{\numberline {7.42.3.3}Move()}{113}{subsubsection.7.42.3.3}
+\contentsline {section}{\numberline {7.43}Wall\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tile Class Reference}{114}{section.7.43}
+\contentsline {subsection}{\numberline {7.43.1}Constructor \& Destructor Documentation}{114}{subsection.7.43.1}
+\contentsline {subsubsection}{\numberline {7.43.1.1}WallTile()}{114}{subsubsection.7.43.1.1}
+\contentsline {section}{\numberline {7.44}Weapon Class Reference}{114}{section.7.44}
+\contentsline {subsection}{\numberline {7.44.1}Constructor \& Destructor Documentation}{115}{subsection.7.44.1}
+\contentsline {subsubsection}{\numberline {7.44.1.1}Weapon()}{115}{subsubsection.7.44.1.1}
+\contentsline {subsubsection}{\numberline {7.44.1.2}$\sim $Weapon()}{116}{subsubsection.7.44.1.2}
+\contentsline {subsection}{\numberline {7.44.2}Member Function Documentation}{116}{subsection.7.44.2}
+\contentsline {subsubsection}{\numberline {7.44.2.1}AddPowerUp()}{116}{subsubsection.7.44.2.1}
+\contentsline {subsubsection}{\numberline {7.44.2.2}BoostDamageValue()}{116}{subsubsection.7.44.2.2}
+\contentsline {subsubsection}{\numberline {7.44.2.3}GetAttackCooldown()}{116}{subsubsection.7.44.2.3}
+\contentsline {subsubsection}{\numberline {7.44.2.4}getPowerUpCount()}{116}{subsubsection.7.44.2.4}
+\contentsline {subsubsection}{\numberline {7.44.2.5}GetRange()}{116}{subsubsection.7.44.2.5}
+\contentsline {subsubsection}{\numberline {7.44.2.6}SetTextureRect()}{116}{subsubsection.7.44.2.6}
+\contentsline {subsubsection}{\numberline {7.44.2.7}UnBoostDamageValue()}{117}{subsubsection.7.44.2.7}
+\contentsline {subsubsection}{\numberline {7.44.2.8}Use()}{117}{subsubsection.7.44.2.8}
+\contentsline {subsection}{\numberline {7.44.3}Member Data Documentation}{117}{subsection.7.44.3}
+\contentsline {subsubsection}{\numberline {7.44.3.1}attackCooldownLeft}{117}{subsubsection.7.44.3.1}
+\contentsline {subsubsection}{\numberline {7.44.3.2}attackCooldownLength\_}{117}{subsubsection.7.44.3.2}
+\contentsline {subsubsection}{\numberline {7.44.3.3}cooldown\_}{117}{subsubsection.7.44.3.3}
+\contentsline {subsubsection}{\numberline {7.44.3.4}currentDamage\_}{117}{subsubsection.7.44.3.4}
+\contentsline {subsubsection}{\numberline {7.44.3.5}damageBoostModifier}{117}{subsubsection.7.44.3.5}
+\contentsline {subsubsection}{\numberline {7.44.3.6}defaultDamage\_}{118}{subsubsection.7.44.3.6}
+\contentsline {subsubsection}{\numberline {7.44.3.7}maxPowerUps}{118}{subsubsection.7.44.3.7}
+\contentsline {subsubsection}{\numberline {7.44.3.8}penetrates\_}{118}{subsubsection.7.44.3.8}
+\contentsline {subsubsection}{\numberline {7.44.3.9}powerUps\_}{118}{subsubsection.7.44.3.9}
+\contentsline {subsubsection}{\numberline {7.44.3.10}projectileSize\_}{118}{subsubsection.7.44.3.10}
+\contentsline {subsubsection}{\numberline {7.44.3.11}projectileSpeed\_}{118}{subsubsection.7.44.3.11}
+\contentsline {subsubsection}{\numberline {7.44.3.12}range\_}{118}{subsubsection.7.44.3.12}
+\contentsline {subsubsection}{\numberline {7.44.3.13}speed\_}{118}{subsubsection.7.44.3.13}
+\contentsline {subsubsection}{\numberline {7.44.3.14}sprite\_}{119}{subsubsection.7.44.3.14}
+\contentsline {subsubsection}{\numberline {7.44.3.15}texture\_}{119}{subsubsection.7.44.3.15}
+\contentsline {section}{\numberline {7.45}util\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Windows\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform Struct Reference}{119}{section.7.45}
+\contentsline {subsection}{\numberline {7.45.1}Constructor \& Destructor Documentation}{119}{subsection.7.45.1}
+\contentsline {subsubsection}{\numberline {7.45.1.1}WindowsPlatform()}{119}{subsubsection.7.45.1.1}
+\contentsline {subsection}{\numberline {7.45.2}Member Function Documentation}{120}{subsection.7.45.2}
+\contentsline {subsubsection}{\numberline {7.45.2.1}getRefreshRate()}{120}{subsubsection.7.45.2.1}
+\contentsline {subsubsection}{\numberline {7.45.2.2}getScreenScalingFactor()}{120}{subsubsection.7.45.2.2}
+\contentsline {subsubsection}{\numberline {7.45.2.3}setIcon()}{120}{subsubsection.7.45.2.3}
+\contentsline {subsubsection}{\numberline {7.45.2.4}toggleFullscreen()}{120}{subsubsection.7.45.2.4}
+\contentsline {section}{\numberline {7.46}Yellow\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Potion Class Reference}{121}{section.7.46}
+\contentsline {subsection}{\numberline {7.46.1}Detailed Description}{121}{subsection.7.46.1}
+\contentsline {subsection}{\numberline {7.46.2}Constructor \& Destructor Documentation}{121}{subsection.7.46.2}
+\contentsline {subsubsection}{\numberline {7.46.2.1}YellowPotion()}{121}{subsubsection.7.46.2.1}
+\contentsline {chapter}{\numberline {8}File Documentation}{123}{chapter.8}
+\contentsline {section}{\numberline {8.1}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/character.cpp File Reference}{123}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Macro Definition Documentation}{123}{subsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.1.1}C\_PIXELS\_delta}{123}{subsubsection.8.1.1.1}
+\contentsline {subsubsection}{\numberline {8.1.1.2}C\_PIXELS\_X}{123}{subsubsection.8.1.1.2}
+\contentsline {subsubsection}{\numberline {8.1.1.3}C\_PIXELS\_Y}{124}{subsubsection.8.1.1.3}
+\contentsline {subsubsection}{\numberline {8.1.1.4}C\_SCALE}{124}{subsubsection.8.1.1.4}
+\contentsline {subsubsection}{\numberline {8.1.1.5}C\_X}{124}{subsubsection.8.1.1.5}
+\contentsline {section}{\numberline {8.2}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/character.hpp File Reference}{124}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Macro Definition Documentation}{124}{subsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.1.1}\_CHARACTER\_CLASS\_}{124}{subsubsection.8.2.1.1}
+\contentsline {section}{\numberline {8.3}character.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{125}{section.8.3}
+\contentsline {section}{\numberline {8.4}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Boss\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.cpp File Reference}{126}{section.8.4}
+\contentsline {section}{\numberline {8.5}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Boss\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.hpp File Reference}{126}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}Macro Definition Documentation}{126}{subsection.8.5.1}
+\contentsline {subsubsection}{\numberline {8.5.1.1}\_BOSS\_MONSTER\_CLASS\_}{126}{subsubsection.8.5.1.1}
+\contentsline {section}{\numberline {8.6}Boss\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{126}{section.8.6}
+\contentsline {section}{\numberline {8.7}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/monster.cpp File Reference}{127}{section.8.7}
+\contentsline {section}{\numberline {8.8}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/monster.hpp File Reference}{127}{section.8.8}
+\contentsline {subsection}{\numberline {8.8.1}Macro Definition Documentation}{127}{subsection.8.8.1}
+\contentsline {subsubsection}{\numberline {8.8.1.1}\_MONSTER\_CLASS\_}{127}{subsubsection.8.8.1.1}
+\contentsline {section}{\numberline {8.9}monster.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{128}{section.8.9}
+\contentsline {section}{\numberline {8.10}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spawner/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Boss\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spawner.cpp File Reference}{128}{section.8.10}
+\contentsline {section}{\numberline {8.11}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spawner/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Boss\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spawner.hpp File Reference}{128}{section.8.11}
+\contentsline {subsection}{\numberline {8.11.1}Macro Definition Documentation}{129}{subsection.8.11.1}
+\contentsline {subsubsection}{\numberline {8.11.1.1}\_BOSS\_SPAWNER\_CLASS\_}{129}{subsubsection.8.11.1.1}
+\contentsline {section}{\numberline {8.12}Boss\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spawner.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{129}{section.8.12}
+\contentsline {section}{\numberline {8.13}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spawner/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spawner.cpp File Reference}{129}{section.8.13}
+\contentsline {section}{\numberline {8.14}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spawner/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spawner.hpp File Reference}{129}{section.8.14}
+\contentsline {subsection}{\numberline {8.14.1}Macro Definition Documentation}{130}{subsection.8.14.1}
+\contentsline {subsubsection}{\numberline {8.14.1.1}\_MONSTERSPAWNER\_CLASS\_}{130}{subsubsection.8.14.1.1}
+\contentsline {subsection}{\numberline {8.14.2}Typedef Documentation}{130}{subsection.8.14.2}
+\contentsline {subsubsection}{\numberline {8.14.2.1}MonsterSP}{130}{subsubsection.8.14.2.1}
+\contentsline {subsubsection}{\numberline {8.14.2.2}MonsterSpawnerUP}{130}{subsubsection.8.14.2.2}
+\contentsline {section}{\numberline {8.15}Monster\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Spawner.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{131}{section.8.15}
+\contentsline {section}{\numberline {8.16}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Random\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.cpp File Reference}{131}{section.8.16}
+\contentsline {section}{\numberline {8.17}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Random\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.hpp File Reference}{131}{section.8.17}
+\contentsline {subsection}{\numberline {8.17.1}Macro Definition Documentation}{132}{subsection.8.17.1}
+\contentsline {subsubsection}{\numberline {8.17.1.1}\_RANDOM\_MONSTER\_CLASS\_}{132}{subsubsection.8.17.1.1}
+\contentsline {section}{\numberline {8.18}Random\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{132}{section.8.18}
+\contentsline {section}{\numberline {8.19}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Searching\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.cpp File Reference}{132}{section.8.19}
+\contentsline {section}{\numberline {8.20}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Searching\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.hpp File Reference}{132}{section.8.20}
+\contentsline {subsection}{\numberline {8.20.1}Macro Definition Documentation}{133}{subsection.8.20.1}
+\contentsline {subsubsection}{\numberline {8.20.1.1}\_SEARCHING\_MONSTER\_CLASS\_}{133}{subsubsection.8.20.1.1}
+\contentsline {section}{\numberline {8.21}Searching\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{133}{section.8.21}
+\contentsline {section}{\numberline {8.22}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Slow\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.cpp File Reference}{133}{section.8.22}
+\contentsline {section}{\numberline {8.23}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Slow\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.hpp File Reference}{133}{section.8.23}
+\contentsline {subsection}{\numberline {8.23.1}Macro Definition Documentation}{134}{subsection.8.23.1}
+\contentsline {subsubsection}{\numberline {8.23.1.1}\_SLOW\_MONSTER\_CLASS\_}{134}{subsubsection.8.23.1.1}
+\contentsline {section}{\numberline {8.24}Slow\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{134}{section.8.24}
+\contentsline {section}{\numberline {8.25}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Sniping\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.cpp File Reference}{134}{section.8.25}
+\contentsline {section}{\numberline {8.26}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Sniping\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.hpp File Reference}{135}{section.8.26}
+\contentsline {subsection}{\numberline {8.26.1}Macro Definition Documentation}{135}{subsection.8.26.1}
+\contentsline {subsubsection}{\numberline {8.26.1.1}\_SNIPING\_MONSTER\_CLASS\_}{135}{subsubsection.8.26.1.1}
+\contentsline {section}{\numberline {8.27}Sniping\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{135}{section.8.27}
+\contentsline {section}{\numberline {8.28}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Wall\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Patrol\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.cpp File Reference}{136}{section.8.28}
+\contentsline {section}{\numberline {8.29}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monsters/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Wall\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Patrol\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.hpp File Reference}{136}{section.8.29}
+\contentsline {subsection}{\numberline {8.29.1}Macro Definition Documentation}{136}{subsection.8.29.1}
+\contentsline {subsubsection}{\numberline {8.29.1.1}\_WALL\_PATROL\_MONSTER\_CLASS\_}{136}{subsubsection.8.29.1.1}
+\contentsline {section}{\numberline {8.30}Wall\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Patrol\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Monster.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{136}{section.8.30}
+\contentsline {section}{\numberline {8.31}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/player.cpp File Reference}{137}{section.8.31}
+\contentsline {section}{\numberline {8.32}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Actors/player.hpp File Reference}{137}{section.8.32}
+\contentsline {subsection}{\numberline {8.32.1}Macro Definition Documentation}{137}{subsection.8.32.1}
+\contentsline {subsubsection}{\numberline {8.32.1.1}\_PLAYER\_CLASS\_}{137}{subsubsection.8.32.1.1}
+\contentsline {subsection}{\numberline {8.32.2}Typedef Documentation}{137}{subsection.8.32.2}
+\contentsline {subsubsection}{\numberline {8.32.2.1}PlayerPS}{137}{subsubsection.8.32.2.1}
+\contentsline {section}{\numberline {8.33}player.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{138}{section.8.33}
+\contentsline {section}{\numberline {8.34}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Animation/animation.cpp File Reference}{138}{section.8.34}
+\contentsline {section}{\numberline {8.35}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Animation/animation.hpp File Reference}{138}{section.8.35}
+\contentsline {subsection}{\numberline {8.35.1}Macro Definition Documentation}{139}{subsection.8.35.1}
+\contentsline {subsubsection}{\numberline {8.35.1.1}\_ANIMATION\_}{139}{subsubsection.8.35.1.1}
+\contentsline {section}{\numberline {8.36}animation.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{139}{section.8.36}
+\contentsline {section}{\numberline {8.37}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Animation/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Animationhandler.cpp File Reference}{139}{section.8.37}
+\contentsline {section}{\numberline {8.38}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Animation/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Animationhandler.hpp File Reference}{139}{section.8.38}
+\contentsline {subsection}{\numberline {8.38.1}Macro Definition Documentation}{140}{subsection.8.38.1}
+\contentsline {subsubsection}{\numberline {8.38.1.1}\_ANIMATIONHANDLER\_CLASS\_}{140}{subsubsection.8.38.1.1}
+\contentsline {subsection}{\numberline {8.38.2}Typedef Documentation}{140}{subsection.8.38.2}
+\contentsline {subsubsection}{\numberline {8.38.2.1}AnimationPS}{140}{subsubsection.8.38.2.1}
+\contentsline {subsection}{\numberline {8.38.3}Enumeration Type Documentation}{140}{subsection.8.38.3}
+\contentsline {subsubsection}{\numberline {8.38.3.1}AnimationIndex}{140}{subsubsection.8.38.3.1}
+\contentsline {section}{\numberline {8.39}Animationhandler.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{141}{section.8.39}
+\contentsline {section}{\numberline {8.40}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Circular\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Projectile.hpp File Reference}{141}{section.8.40}
+\contentsline {section}{\numberline {8.41}Circular\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Projectile.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{141}{section.8.41}
+\contentsline {section}{\numberline {8.42}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Health/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Health\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Potions.hpp File Reference}{141}{section.8.42}
+\contentsline {subsection}{\numberline {8.42.1}Macro Definition Documentation}{142}{subsection.8.42.1}
+\contentsline {subsubsection}{\numberline {8.42.1.1}\_HEALTHPOTIONS\_CLASS\_}{142}{subsubsection.8.42.1.1}
+\contentsline {section}{\numberline {8.43}Health\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Potions.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{142}{section.8.43}
+\contentsline {section}{\numberline {8.44}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Health/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Potion.cpp File Reference}{142}{section.8.44}
+\contentsline {section}{\numberline {8.45}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Health/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Potion.hpp File Reference}{143}{section.8.45}
+\contentsline {subsection}{\numberline {8.45.1}Macro Definition Documentation}{143}{subsection.8.45.1}
+\contentsline {subsubsection}{\numberline {8.45.1.1}\_POTION\_CLASS\_}{143}{subsubsection.8.45.1.1}
+\contentsline {section}{\numberline {8.46}Potion.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{143}{section.8.46}
+\contentsline {section}{\numberline {8.47}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Power\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Ups/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Power\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up.hpp File Reference}{143}{section.8.47}
+\contentsline {subsection}{\numberline {8.47.1}Macro Definition Documentation}{144}{subsection.8.47.1}
+\contentsline {subsubsection}{\numberline {8.47.1.1}\_POWERUP\_CLASS\_}{144}{subsubsection.8.47.1.1}
+\contentsline {section}{\numberline {8.48}Power\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{144}{section.8.48}
+\contentsline {section}{\numberline {8.49}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/projectile.cpp File Reference}{144}{section.8.49}
+\contentsline {section}{\numberline {8.50}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Projectile.hpp File Reference}{144}{section.8.50}
+\contentsline {subsection}{\numberline {8.50.1}Macro Definition Documentation}{145}{subsection.8.50.1}
+\contentsline {subsubsection}{\numberline {8.50.1.1}\_Projectile\_CLASS\_}{145}{subsubsection.8.50.1.1}
+\contentsline {subsection}{\numberline {8.50.2}Typedef Documentation}{145}{subsection.8.50.2}
+\contentsline {subsubsection}{\numberline {8.50.2.1}ProjectileUP}{145}{subsubsection.8.50.2.1}
+\contentsline {section}{\numberline {8.51}Projectile.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{145}{section.8.51}
+\contentsline {section}{\numberline {8.52}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapons/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Bow\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapon.cpp File Reference}{146}{section.8.52}
+\contentsline {section}{\numberline {8.53}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapons/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Bow\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapon.hpp File Reference}{146}{section.8.53}
+\contentsline {subsection}{\numberline {8.53.1}Macro Definition Documentation}{146}{subsection.8.53.1}
+\contentsline {subsubsection}{\numberline {8.53.1.1}\_BOWWEAPON\_CLASS\_}{147}{subsubsection.8.53.1.1}
+\contentsline {section}{\numberline {8.54}Bow\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapon.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{147}{section.8.54}
+\contentsline {section}{\numberline {8.55}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapons/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Sword\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapon.cpp File Reference}{147}{section.8.55}
+\contentsline {section}{\numberline {8.56}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapons/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Sword\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapon.hpp File Reference}{147}{section.8.56}
+\contentsline {subsection}{\numberline {8.56.1}Macro Definition Documentation}{147}{subsection.8.56.1}
+\contentsline {subsubsection}{\numberline {8.56.1.1}\_SWORDWEAPON\_CLASS\_}{147}{subsubsection.8.56.1.1}
+\contentsline {section}{\numberline {8.57}Sword\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapon.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{148}{section.8.57}
+\contentsline {section}{\numberline {8.58}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapons/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapon.cpp File Reference}{148}{section.8.58}
+\contentsline {section}{\numberline {8.59}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Combat/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapons/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Weapon.hpp File Reference}{148}{section.8.59}
+\contentsline {subsection}{\numberline {8.59.1}Macro Definition Documentation}{148}{subsection.8.59.1}
+\contentsline {subsubsection}{\numberline {8.59.1.1}\_WEAPON\_CLASS\_}{148}{subsubsection.8.59.1.1}
+\contentsline {section}{\numberline {8.60}Weapon.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{149}{section.8.60}
+\contentsline {section}{\numberline {8.61}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dungeon/map.cpp File Reference}{149}{section.8.61}
+\contentsline {section}{\numberline {8.62}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dungeon/map.hpp File Reference}{149}{section.8.62}
+\contentsline {subsection}{\numberline {8.62.1}Macro Definition Documentation}{150}{subsection.8.62.1}
+\contentsline {subsubsection}{\numberline {8.62.1.1}\_MAP\_}{150}{subsubsection.8.62.1.1}
+\contentsline {section}{\numberline {8.63}map.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{150}{section.8.63}
+\contentsline {section}{\numberline {8.64}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dungeon/room\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Instance.cpp File Reference}{151}{section.8.64}
+\contentsline {section}{\numberline {8.65}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dungeon/room\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Instance.hpp File Reference}{151}{section.8.65}
+\contentsline {subsection}{\numberline {8.65.1}Enumeration Type Documentation}{151}{subsection.8.65.1}
+\contentsline {subsubsection}{\numberline {8.65.1.1}Direction}{151}{subsubsection.8.65.1.1}
+\contentsline {section}{\numberline {8.66}room\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Instance.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{152}{section.8.66}
+\contentsline {section}{\numberline {8.67}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dungeon/specialrooms/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Boss\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room.cpp File Reference}{153}{section.8.67}
+\contentsline {section}{\numberline {8.68}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dungeon/specialrooms/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Boss\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room.hpp File Reference}{153}{section.8.68}
+\contentsline {section}{\numberline {8.69}Boss\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{153}{section.8.69}
+\contentsline {section}{\numberline {8.70}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dungeon/specialrooms/starting\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room.cpp File Reference}{154}{section.8.70}
+\contentsline {section}{\numberline {8.71}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dungeon/specialrooms/starting\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room.hpp File Reference}{154}{section.8.71}
+\contentsline {subsection}{\numberline {8.71.1}Macro Definition Documentation}{154}{subsection.8.71.1}
+\contentsline {subsubsection}{\numberline {8.71.1.1}\_STARTING\_ROOM\_CLASS\_}{154}{subsubsection.8.71.1.1}
+\contentsline {section}{\numberline {8.72}starting\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{154}{section.8.72}
+\contentsline {section}{\numberline {8.73}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dungeon/specialrooms/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Treasure\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room.cpp File Reference}{154}{section.8.73}
+\contentsline {section}{\numberline {8.74}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dungeon/specialrooms/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Treasure\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room.hpp File Reference}{155}{section.8.74}
+\contentsline {section}{\numberline {8.75}Treasure\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Room.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{155}{section.8.75}
+\contentsline {section}{\numberline {8.76}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dungeon/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tiles/room\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tile.cpp File Reference}{155}{section.8.76}
+\contentsline {section}{\numberline {8.77}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Dungeon/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tiles/room\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tile.hpp File Reference}{155}{section.8.77}
+\contentsline {section}{\numberline {8.78}room\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Tile.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{156}{section.8.78}
+\contentsline {section}{\numberline {8.79}src/entity.cpp File Reference}{156}{section.8.79}
+\contentsline {section}{\numberline {8.80}src/entity.hpp File Reference}{156}{section.8.80}
+\contentsline {subsection}{\numberline {8.80.1}Macro Definition Documentation}{157}{subsection.8.80.1}
+\contentsline {subsubsection}{\numberline {8.80.1.1}\_ENTITY\_CLASS\_}{157}{subsubsection.8.80.1.1}
+\contentsline {section}{\numberline {8.81}entity.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{157}{section.8.81}
+\contentsline {section}{\numberline {8.82}src/game.cpp File Reference}{157}{section.8.82}
+\contentsline {subsection}{\numberline {8.82.1}Macro Definition Documentation}{158}{subsection.8.82.1}
+\contentsline {subsubsection}{\numberline {8.82.1.1}C\_PIXELS}{158}{subsubsection.8.82.1.1}
+\contentsline {section}{\numberline {8.83}src/game.hpp File Reference}{158}{section.8.83}
+\contentsline {subsection}{\numberline {8.83.1}Macro Definition Documentation}{158}{subsection.8.83.1}
+\contentsline {subsubsection}{\numberline {8.83.1.1}\_GAME\_CLASS\_}{158}{subsubsection.8.83.1.1}
+\contentsline {section}{\numberline {8.84}game.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{159}{section.8.84}
+\contentsline {section}{\numberline {8.85}src/gamebar.cpp File Reference}{159}{section.8.85}
+\contentsline {section}{\numberline {8.86}src/gamebar.hpp File Reference}{160}{section.8.86}
+\contentsline {subsection}{\numberline {8.86.1}Macro Definition Documentation}{160}{subsection.8.86.1}
+\contentsline {subsubsection}{\numberline {8.86.1.1}\_GAMEBAR\_CLASS\_}{160}{subsubsection.8.86.1.1}
+\contentsline {section}{\numberline {8.87}gamebar.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{160}{section.8.87}
+\contentsline {section}{\numberline {8.88}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Interfaces/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Collision\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}System.hpp File Reference}{161}{section.8.88}
+\contentsline {subsection}{\numberline {8.88.1}Macro Definition Documentation}{161}{subsection.8.88.1}
+\contentsline {subsubsection}{\numberline {8.88.1.1}\_COLLISIONSYSTEM\_CLASS\_}{161}{subsubsection.8.88.1.1}
+\contentsline {section}{\numberline {8.89}Collision\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}System.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{161}{section.8.89}
+\contentsline {section}{\numberline {8.90}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Interfaces/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}ICollidable.hpp File Reference}{162}{section.8.90}
+\contentsline {subsection}{\numberline {8.90.1}Macro Definition Documentation}{162}{subsection.8.90.1}
+\contentsline {subsubsection}{\numberline {8.90.1.1}\_COLLIDABLE\_INTERFACE\_}{162}{subsubsection.8.90.1.1}
+\contentsline {section}{\numberline {8.91}ICollidable.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{162}{section.8.91}
+\contentsline {section}{\numberline {8.92}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}PCH.hpp File Reference}{163}{section.8.92}
+\contentsline {subsection}{\numberline {8.92.1}Macro Definition Documentation}{163}{subsection.8.92.1}
+\contentsline {subsubsection}{\numberline {8.92.1.1}NDEBUG}{163}{subsubsection.8.92.1.1}
+\contentsline {subsubsection}{\numberline {8.92.1.2}UNUSED}{163}{subsubsection.8.92.1.2}
+\contentsline {section}{\numberline {8.93}PCH.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{164}{section.8.93}
+\contentsline {section}{\numberline {8.94}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}IPlatform.hpp File Reference}{164}{section.8.94}
+\contentsline {section}{\numberline {8.95}IPlatform.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{165}{section.8.95}
+\contentsline {section}{\numberline {8.96}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform.hpp File Reference}{165}{section.8.96}
+\contentsline {section}{\numberline {8.97}Platform.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{165}{section.8.97}
+\contentsline {section}{\numberline {8.98}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Unix/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Linux\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform.cpp File Reference}{165}{section.8.98}
+\contentsline {section}{\numberline {8.99}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Unix/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Linux\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform.hpp File Reference}{165}{section.8.99}
+\contentsline {section}{\numberline {8.100}Linux\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{166}{section.8.100}
+\contentsline {section}{\numberline {8.101}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Win32/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Resource.h File Reference}{166}{section.8.101}
+\contentsline {subsection}{\numberline {8.101.1}Macro Definition Documentation}{166}{subsection.8.101.1}
+\contentsline {subsubsection}{\numberline {8.101.1.1}MANIFEST\_RESOURCE\_ID}{166}{subsubsection.8.101.1.1}
+\contentsline {subsubsection}{\numberline {8.101.1.2}WIN32\_ICON\_MAIN}{167}{subsubsection.8.101.1.2}
+\contentsline {section}{\numberline {8.102}Resource.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{167}{section.8.102}
+\contentsline {section}{\numberline {8.103}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Win32/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Windows\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform.cpp File Reference}{167}{section.8.103}
+\contentsline {section}{\numberline {8.104}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Win32/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Windows\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform.hpp File Reference}{167}{section.8.104}
+\contentsline {section}{\numberline {8.105}Windows\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Platform.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{167}{section.8.105}
+\contentsline {section}{\numberline {8.106}src/readme.md File Reference}{168}{section.8.106}
+\contentsline {section}{\numberline {8.107}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Collision.cpp File Reference}{168}{section.8.107}
+\contentsline {section}{\numberline {8.108}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Collision.hpp File Reference}{168}{section.8.108}
+\contentsline {section}{\numberline {8.109}Collision.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{169}{section.8.109}
+\contentsline {section}{\numberline {8.110}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}File\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}System.hpp File Reference}{169}{section.8.110}
+\contentsline {section}{\numberline {8.111}File\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}System.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{169}{section.8.111}
+\contentsline {section}{\numberline {8.112}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Level\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Instance.cpp File Reference}{170}{section.8.112}
+\contentsline {section}{\numberline {8.113}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Level\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Instance.hpp File Reference}{170}{section.8.113}
+\contentsline {subsection}{\numberline {8.113.1}Macro Definition Documentation}{170}{subsection.8.113.1}
+\contentsline {subsubsection}{\numberline {8.113.1.1}\_LevelUpInstance\_CLASS\_}{170}{subsubsection.8.113.1.1}
+\contentsline {section}{\numberline {8.114}Level\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Instance.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{171}{section.8.114}
+\contentsline {section}{\numberline {8.115}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Level\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}System.cpp File Reference}{171}{section.8.115}
+\contentsline {section}{\numberline {8.116}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Level\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}System.hpp File Reference}{171}{section.8.116}
+\contentsline {subsection}{\numberline {8.116.1}Macro Definition Documentation}{171}{subsection.8.116.1}
+\contentsline {subsubsection}{\numberline {8.116.1.1}\_LevelUpSystem\_CLASS\_}{171}{subsubsection.8.116.1.1}
+\contentsline {section}{\numberline {8.117}Level\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Up\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}System.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{172}{section.8.117}
+\contentsline {section}{\numberline {8.118}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Main.cpp File Reference}{172}{section.8.118}
+\contentsline {subsection}{\numberline {8.118.1}Function Documentation}{172}{subsection.8.118.1}
+\contentsline {subsubsection}{\numberline {8.118.1.1}main()}{172}{subsubsection.8.118.1.1}
+\contentsline {section}{\numberline {8.119}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Random\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Helper.cpp File Reference}{172}{section.8.119}
+\contentsline {section}{\numberline {8.120}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Random\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Helper.hpp File Reference}{173}{section.8.120}
+\contentsline {subsection}{\numberline {8.120.1}Macro Definition Documentation}{173}{subsection.8.120.1}
+\contentsline {subsubsection}{\numberline {8.120.1.1}\_RANDOMHELPER\_}{173}{subsubsection.8.120.1.1}
+\contentsline {section}{\numberline {8.121}Random\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Helper.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{173}{section.8.121}
+\contentsline {section}{\numberline {8.122}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Screen\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Text.cpp File Reference}{173}{section.8.122}
+\contentsline {section}{\numberline {8.123}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Screen\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Text.hpp File Reference}{174}{section.8.123}
+\contentsline {section}{\numberline {8.124}Screen\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Text.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{174}{section.8.124}
+\contentsline {section}{\numberline {8.125}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Sounds/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Sound\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Effects.cpp File Reference}{174}{section.8.125}
+\contentsline {section}{\numberline {8.126}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Sounds/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Sound\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Effects.hpp File Reference}{174}{section.8.126}
+\contentsline {section}{\numberline {8.127}Sound\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Effects.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{174}{section.8.127}
+\contentsline {section}{\numberline {8.128}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Sprite\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Helper.cpp File Reference}{175}{section.8.128}
+\contentsline {subsection}{\numberline {8.128.1}Macro Definition Documentation}{175}{subsection.8.128.1}
+\contentsline {subsubsection}{\numberline {8.128.1.1}PI}{175}{subsubsection.8.128.1.1}
+\contentsline {section}{\numberline {8.129}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Sprite\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Helper.hpp File Reference}{175}{section.8.129}
+\contentsline {subsection}{\numberline {8.129.1}Macro Definition Documentation}{176}{subsection.8.129.1}
+\contentsline {subsubsection}{\numberline {8.129.1.1}\_SPRITEHELPER\_}{176}{subsubsection.8.129.1.1}
+\contentsline {section}{\numberline {8.130}Sprite\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Helper.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{176}{section.8.130}
+\contentsline {section}{\numberline {8.131}src/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Utility/\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Types.hpp File Reference}{176}{section.8.131}
+\contentsline {subsection}{\numberline {8.131.1}Typedef Documentation}{176}{subsection.8.131.1}
+\contentsline {subsubsection}{\numberline {8.131.1.1}llong}{176}{subsubsection.8.131.1.1}
+\contentsline {subsubsection}{\numberline {8.131.1.2}uchar}{177}{subsubsection.8.131.1.2}
+\contentsline {subsubsection}{\numberline {8.131.1.3}uint}{177}{subsubsection.8.131.1.3}
+\contentsline {subsubsection}{\numberline {8.131.1.4}ullong}{177}{subsubsection.8.131.1.4}
+\contentsline {subsubsection}{\numberline {8.131.1.5}ushort}{177}{subsubsection.8.131.1.5}
+\contentsline {section}{\numberline {8.132}Types.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{177}{section.8.132}
+\contentsline {chapter}{Index}{179}{section*.232}

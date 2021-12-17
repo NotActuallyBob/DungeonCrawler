@@ -1,0 +1,40 @@
+\doxysection{Sprite\+Helper.\+cpp}
+\label{_sprite_helper_8cpp_source}\index{src/Utility/SpriteHelper.cpp@{src/Utility/SpriteHelper.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}Utility/SpriteHelper.hpp"{}}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#define PI 3.14159265}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{keyword}{namespace }spritehelper \{}
+\DoxyCodeLine{00005 \textcolor{keywordtype}{void} CreateSpriteFrom(\textcolor{keyword}{const} std::string\& spriteFile, sf::Vector2f dimensions, sf::Sprite\& sprite, sf::Texture\& texture)}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007     \textcolor{keywordflow}{if} (texture.loadFromFile(spriteFile)) \{}
+\DoxyCodeLine{00008         sprite.setTexture(texture);}
+\DoxyCodeLine{00009         sprite.setScale(dimensions);}
+\DoxyCodeLine{00010     \}}
+\DoxyCodeLine{00011 \}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{keywordtype}{void} SetScale(sf::Vector2f wantedDimension, sf::Sprite\& sprite)}
+\DoxyCodeLine{00014 \{}
+\DoxyCodeLine{00015     \textcolor{keyword}{auto} bounds = sprite.getLocalBounds();}
+\DoxyCodeLine{00016     \textcolor{keyword}{auto} scaleX = wantedDimension.x / bounds.width;}
+\DoxyCodeLine{00017     \textcolor{keyword}{auto} scaleY = wantedDimension.y / bounds.height;}
+\DoxyCodeLine{00018     sprite.setScale(scaleX, scaleY);}
+\DoxyCodeLine{00019     sprite.setOrigin(bounds.width / 2, bounds.height);}
+\DoxyCodeLine{00020 \}}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022 \textcolor{keywordtype}{void} RotateSprite(sf::Vector2f directionOfRotation, sf::Sprite\& sprite)}
+\DoxyCodeLine{00023 \{}
+\DoxyCodeLine{00024     \textcolor{keyword}{auto} angle = atan2(directionOfRotation.y, directionOfRotation.x) * 180 / PI + 90;}
+\DoxyCodeLine{00025     sprite.setRotation(angle);}
+\DoxyCodeLine{00026 \}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 \textcolor{keywordtype}{void} SetOriginBottomCenter(sf::Sprite\& sprite)}
+\DoxyCodeLine{00029 \{}
+\DoxyCodeLine{00030     \textcolor{keyword}{auto} bounds = sprite.getLocalBounds();}
+\DoxyCodeLine{00031     sprite.setOrigin(bounds.width / 2, 3.0f / 4 * bounds.height);}
+\DoxyCodeLine{00032 \}}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034 \} \textcolor{comment}{// namespace}}
+
+\end{DoxyCode}

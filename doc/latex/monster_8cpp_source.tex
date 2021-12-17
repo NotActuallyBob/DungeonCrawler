@@ -1,0 +1,131 @@
+\doxysection{monster.\+cpp}
+\label{monster_8cpp_source}\index{src/Actors/Monsters/monster.cpp@{src/Actors/Monsters/monster.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}monster.hpp"{}}}
+\DoxyCodeLine{00002 }
+\DoxyCodeLine{00003 Monster::Monster(PlayerPS player, sf::Vector2f pos, \textcolor{keyword}{const} std::string\& spriteFile)}
+\DoxyCodeLine{00004     : Character(spriteFile, pos)}
+\DoxyCodeLine{00005     , player\_(player)}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007     initVariables();}
+\DoxyCodeLine{00008     sf::RectangleShape healthbar(sf::Vector2f(100, 5));}
+\DoxyCodeLine{00009     healthbar.setFillColor(sf::Color::Green);}
+\DoxyCodeLine{00010     healthbar.setPosition(pos.x + 15, pos.y -\/ 5);}
+\DoxyCodeLine{00011     healthbar\_ = healthbar;}
+\DoxyCodeLine{00012 \}}
+\DoxyCodeLine{00013 Monster::Monster(PlayerPS player, \textcolor{keywordtype}{float} xPos, \textcolor{keywordtype}{float} yPos, \textcolor{keyword}{const} std::string\& spriteFile)}
+\DoxyCodeLine{00014     : Monster(player, sf::Vector2f(xPos, yPos), spriteFile)}
+\DoxyCodeLine{00015 \{}
+\DoxyCodeLine{00016 \}}
+\DoxyCodeLine{00017 \textcolor{keywordtype}{void} Monster::initVariables()}
+\DoxyCodeLine{00018 \{}
+\DoxyCodeLine{00019     movedLastTick\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{00020     characterProjectileType\_ = Projectile::Type::EnemyProjectile;}
+\DoxyCodeLine{00021 \}}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023 \textcolor{keywordtype}{void} Monster::SetTarget(PlayerPS target)}
+\DoxyCodeLine{00024 \{}
+\DoxyCodeLine{00025     player\_ = target;}
+\DoxyCodeLine{00026 \}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 Monster::\string~Monster()}
+\DoxyCodeLine{00029 \{}
+\DoxyCodeLine{00030 \}}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032 \textcolor{keywordtype}{void} Monster::Render(sf::RenderTarget* target)}
+\DoxyCodeLine{00033 \{}
+\DoxyCodeLine{00034     target-\/>draw(GetSprite());}
+\DoxyCodeLine{00035     target-\/>draw(healthbar\_);}
+\DoxyCodeLine{00036 \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038 Player\& Monster::GetPlayer()\textcolor{keyword}{ const}}
+\DoxyCodeLine{00039 \textcolor{keyword}{}\{}
+\DoxyCodeLine{00040     \textcolor{keywordflow}{return} *player\_;}
+\DoxyCodeLine{00041 \}}
+\DoxyCodeLine{00042 \textcolor{keywordtype}{void} Monster::Update(\textcolor{keywordtype}{float} dt)}
+\DoxyCodeLine{00043 \{}
+\DoxyCodeLine{00044     movedLastTick\_ = \textcolor{keyword}{true};}
+\DoxyCodeLine{00045     \textcolor{keywordflow}{if} (oldPos\_.x == pos\_.x \&\& oldPos\_.y == pos\_.y) \{}
+\DoxyCodeLine{00046         movedLastTick\_ = \textcolor{keyword}{false};}
+\DoxyCodeLine{00047     \}}
+\DoxyCodeLine{00048     generalUpdate(dt);}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050     \textcolor{keywordtype}{int} width = hitpoints\_;}
+\DoxyCodeLine{00051     \textcolor{keywordtype}{int} newWidth = std::min(100, std::max(0, width));}
+\DoxyCodeLine{00052     healthbar\_.setSize(sf::Vector2f(newWidth, 5));}
+\DoxyCodeLine{00053     healthbar\_.setPosition(GetPos() + sf::Vector2f(15, -\/5));}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055     clampPosToRoom();}
+\DoxyCodeLine{00056 \}}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058 \textcolor{keywordtype}{void} Monster::clampPosToRoom()}
+\DoxyCodeLine{00059 \{}
+\DoxyCodeLine{00060     \textcolor{keywordtype}{float} max\_x = 1130.0f;}
+\DoxyCodeLine{00061     \textcolor{keywordtype}{float} min\_x = 70.0f;}
+\DoxyCodeLine{00062     \textcolor{keywordflow}{if} (pos\_.x > max\_x) \{}
+\DoxyCodeLine{00063         SetPos(sf::Vector2f(max\_x, pos\_.y));}
+\DoxyCodeLine{00064     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pos\_.x < min\_x) \{}
+\DoxyCodeLine{00065         SetPos(sf::Vector2f(min\_x, pos\_.y));}
+\DoxyCodeLine{00066     \}}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068     \textcolor{keywordtype}{float} max\_y = 620.0f;}
+\DoxyCodeLine{00069     \textcolor{keywordtype}{float} min\_y = 100.0f;}
+\DoxyCodeLine{00070     \textcolor{keywordflow}{if} (pos\_.y > max\_y) \{}
+\DoxyCodeLine{00071         SetPos(sf::Vector2f(pos\_.x, max\_y));}
+\DoxyCodeLine{00072     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pos\_.y < min\_y) \{}
+\DoxyCodeLine{00073         SetPos(sf::Vector2f(pos\_.x, min\_y));}
+\DoxyCodeLine{00074     \}}
+\DoxyCodeLine{00075 \}}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077 \textcolor{keywordtype}{float} Monster::getDistanceToPlayer()}
+\DoxyCodeLine{00078 \{}
+\DoxyCodeLine{00079     sf::Vector2f playerpos = GetPlayer().GetSpriteCenter();}
+\DoxyCodeLine{00080     sf::Vector2f distanceVec = playerpos -\/ GetSpriteCenter();}
+\DoxyCodeLine{00081     \textcolor{keywordtype}{float} distance = std::sqrt(distanceVec.x * distanceVec.x + distanceVec.y * distanceVec.y);}
+\DoxyCodeLine{00082     \textcolor{keywordflow}{return} distance;}
+\DoxyCodeLine{00083 \}}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085 Potion* Monster::ReturnPotion()}
+\DoxyCodeLine{00086 \{}
+\DoxyCodeLine{00087     sf::Vector2f currentPos = GetPos();}
+\DoxyCodeLine{00088     \textcolor{keywordtype}{int} r = randomhelper::RandomIntBetween(0, 18);}
+\DoxyCodeLine{00089     \textcolor{keywordflow}{if} (r < 4 \&\& r > -\/1)}
+\DoxyCodeLine{00090         \textcolor{keywordflow}{return} \textcolor{keyword}{new} GreenPotion(currentPos);}
+\DoxyCodeLine{00091     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (r < 8 \&\& r > 3)}
+\DoxyCodeLine{00092         \textcolor{keywordflow}{return} \textcolor{keyword}{new} RedPotion(currentPos);}
+\DoxyCodeLine{00093     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (r < 10 \&\& r > 7)}
+\DoxyCodeLine{00094         \textcolor{keywordflow}{return} \textcolor{keyword}{new} YellowPotion(currentPos);}
+\DoxyCodeLine{00095     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (r < 12 \&\& r > 9)}
+\DoxyCodeLine{00096         \textcolor{keywordflow}{return} \textcolor{keyword}{new} VioletPotion(currentPos);}
+\DoxyCodeLine{00097     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00098         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00099 \}}
+\DoxyCodeLine{00100 \textcolor{keywordtype}{bool} Monster::inRangeOfPlayer()}
+\DoxyCodeLine{00101 \{}
+\DoxyCodeLine{00102     \textcolor{keywordflow}{if} (!HasWeapon()) \{}
+\DoxyCodeLine{00103         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00104     \}}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106     \textcolor{keywordflow}{if} (getDistanceToPlayer() < (weapon\_-\/>GetRange()) + 100) \{}
+\DoxyCodeLine{00107         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00108     \}}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{00110     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00111 \}}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113 \textcolor{keywordtype}{bool} Monster::moveTowardsPlayer(\textcolor{keywordtype}{float} dt)}
+\DoxyCodeLine{00114 \{}
+\DoxyCodeLine{00115     sf::Vector2f playerpos = GetPlayer().GetSpriteCenter();}
+\DoxyCodeLine{00116     sf::Vector2f distanceVec = playerpos -\/ GetSpriteCenter();}
+\DoxyCodeLine{00117     \textcolor{keywordtype}{float} distance = std::sqrt(distanceVec.x * distanceVec.x + distanceVec.y * distanceVec.y);}
+\DoxyCodeLine{00118     sf::Vector2f velocityVec = sf::Vector2f(0, 0);}
+\DoxyCodeLine{00119     \textcolor{keywordflow}{if} (distance != 0.0f) \{}
+\DoxyCodeLine{00120         velocityVec = distanceVec / distance;}
+\DoxyCodeLine{00121     \}}
+\DoxyCodeLine{00122     MoveRight(dt * velocityVec.x * 0.3);}
+\DoxyCodeLine{00123     MoveDown(dt * velocityVec.y * 0.3);}
+\DoxyCodeLine{00124     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00125 \}}
+
+\end{DoxyCode}

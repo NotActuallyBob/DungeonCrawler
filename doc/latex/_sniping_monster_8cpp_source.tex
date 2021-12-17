@@ -1,0 +1,45 @@
+\doxysection{Sniping\+Monster.\+cpp}
+\label{_sniping_monster_8cpp_source}\index{src/Actors/Monsters/SnipingMonster.cpp@{src/Actors/Monsters/SnipingMonster.cpp}}
+\textbf{ Go to the documentation of this file.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include "{}SnipingMonster.hpp"{}}}
+\DoxyCodeLine{00002 \textcolor{keyword}{namespace }\{}
+\DoxyCodeLine{00003 \textcolor{keyword}{const} std::string monsterSpriteFileLocation = \textcolor{stringliteral}{"{}content/sprites/monsters/monster3.png"{}};}
+\DoxyCodeLine{00004 \}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 SnipingMonster::SnipingMonster(PlayerPS player, sf::Vector2f pos)}
+\DoxyCodeLine{00007     : SnipingMonster(player, pos.x, pos.y)}
+\DoxyCodeLine{00008 \{}
+\DoxyCodeLine{00009 \}}
+\DoxyCodeLine{00010 SnipingMonster::SnipingMonster(PlayerPS player, \textcolor{keywordtype}{float} xPos, \textcolor{keywordtype}{float} yPos)}
+\DoxyCodeLine{00011     : Monster(player, sf::Vector2f(xPos, yPos), monsterSpriteFileLocation)}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013     initVariables();}
+\DoxyCodeLine{00014 \}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016 SnipingMonster::\string~SnipingMonster() \{ \}}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018 \textcolor{keywordtype}{bool} SnipingMonster::Move(\textcolor{keywordtype}{float})}
+\DoxyCodeLine{00019 \{}
+\DoxyCodeLine{00020     \textcolor{keywordflow}{return} \textcolor{keyword}{false}; \textcolor{comment}{// Should never move}}
+\DoxyCodeLine{00021 \}}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023 std::list<ProjectileUP> SnipingMonster::Attack()}
+\DoxyCodeLine{00024 \{}
+\DoxyCodeLine{00025     \textcolor{keywordflow}{if} (!CanAttack || !HasWeapon() || !inRangeOfPlayer() || !IsAlive()) \{}
+\DoxyCodeLine{00026         \textcolor{keywordflow}{return} emptyList();}
+\DoxyCodeLine{00027     \}}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     ResetAttackCooldown();}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031     \textcolor{keywordflow}{return} shotProjectileList(player\_-\/>GetSpriteCenter());}
+\DoxyCodeLine{00032 \}}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034 \textcolor{keywordtype}{void} SnipingMonster::initVariables()}
+\DoxyCodeLine{00035 \{}
+\DoxyCodeLine{00036     BowWeapon* snipingBow = \textcolor{keyword}{new} BowWeapon(5, 10000, 30, 1000, sf::Vector2f(100, 100), \textcolor{stringliteral}{"{}content/sprites/projectiles/projectilessnipe.png"{}});}
+\DoxyCodeLine{00037     Equip(snipingBow);}
+\DoxyCodeLine{00038     SetNormalSpeed(200.0f);}
+\DoxyCodeLine{00039 \}}
+
+\end{DoxyCode}

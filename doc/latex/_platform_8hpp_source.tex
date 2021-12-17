@@ -1,0 +1,28 @@
+\hypertarget{_platform_8hpp_source}{}\doxysection{Platform.\+hpp}
+\label{_platform_8hpp_source}\index{src/Platform/Platform.hpp@{src/Platform/Platform.hpp}}
+\mbox{\hyperlink{_platform_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef UTIL\_PLATFORM\_HPP}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define UTIL\_PLATFORM\_HPP}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#if defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{    \#include "{}Platform/MacOS/MacOSPlatform.hpp"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#elif defined(\_\_linux\_\_)}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{    \#include "{}\mbox{\hyperlink{_linux_platform_8hpp}{Platform/Unix/LinuxPlatform.hpp}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#elif defined(\_WIN32)}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{    \#include "{}\mbox{\hyperlink{_windows_platform_8hpp}{Platform/Win32/WindowsPlatform.hpp}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceutil}{util}}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#if defined(\_\_APPLE\_\_)}}
+\DoxyCodeLine{15 \textcolor{keyword}{using} Platform = MacOSPlatform;}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#elif defined(\_\_linux\_\_)}}
+\DoxyCodeLine{17 \textcolor{keyword}{using} Platform = LinuxPlatform;}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#elif defined(\_WIN32)}}
+\DoxyCodeLine{19 \textcolor{keyword}{using} Platform = WindowsPlatform;}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{21 \}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// UTIL\_PLATFORM\_HPP}}
+
+\end{DoxyCode}

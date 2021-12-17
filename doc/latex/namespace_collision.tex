@@ -1,0 +1,81 @@
+\hypertarget{namespace_collision}{}\doxysection{Collision Namespace Reference}
+\label{namespace_collision}\index{Collision@{Collision}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_collision_1_1_bitmask_manager}{Bitmask\+Manager}}
+\item 
+class \mbox{\hyperlink{class_collision_1_1_oriented_bounding_box}{Oriented\+Bounding\+Box}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespace_collision_a0d2e2c89d02bbdf787657b636d967cde}{Pixel\+Perfect\+Test}} (const sf\+::\+Sprite \&Object1, const sf\+::\+Sprite \&Object2, sf\+::\+Uint8 Alpha\+Limit)
+\item 
+bool \mbox{\hyperlink{namespace_collision_a22b8e23d7fc5cb243d4365d1c179cf39}{Create\+Texture\+And\+Bitmask}} (sf\+::\+Texture \&Load\+Into, const std\+::string \&Filename)
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{namespace_collision_ab89344d6c5a4b044135d8a1a6d17f517}{Get\+Sprite\+Center}} (const sf\+::\+Sprite \&Object)
+\item 
+sf\+::\+Vector2f \mbox{\hyperlink{namespace_collision_a2ad656979d56aa721a733b7cb479ea86}{Get\+Sprite\+Size}} (const sf\+::\+Sprite \&Object)
+\item 
+bool \mbox{\hyperlink{namespace_collision_af2f8835beee81b76d04311c794c36c0f}{Circle\+Test}} (const sf\+::\+Sprite \&Object1, const sf\+::\+Sprite \&Object2)
+\item 
+bool \mbox{\hyperlink{namespace_collision_a6f5945d467e629017010b139062919c6}{Bounding\+Box\+Test}} (const sf\+::\+Sprite \&Object1, const sf\+::\+Sprite \&Object2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_collision_1_1_bitmask_manager}{Bitmask\+Manager}} \mbox{\hyperlink{namespace_collision_a388520fcf83948fecad6a0311e606e1a}{Bitmasks}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_collision_a6f5945d467e629017010b139062919c6}\label{namespace_collision_a6f5945d467e629017010b139062919c6}} 
+\index{Collision@{Collision}!BoundingBoxTest@{BoundingBoxTest}}
+\index{BoundingBoxTest@{BoundingBoxTest}!Collision@{Collision}}
+\doxysubsubsection{\texorpdfstring{BoundingBoxTest()}{BoundingBoxTest()}}
+{\footnotesize\ttfamily bool Collision\+::\+Bounding\+Box\+Test (\begin{DoxyParamCaption}\item[{const sf\+::\+Sprite \&}]{Object1,  }\item[{const sf\+::\+Sprite \&}]{Object2 }\end{DoxyParamCaption})}
+
+Test for bounding box collision using the Separating Axis Theorem Supports scaling and rotation \mbox{\Hypertarget{namespace_collision_af2f8835beee81b76d04311c794c36c0f}\label{namespace_collision_af2f8835beee81b76d04311c794c36c0f}} 
+\index{Collision@{Collision}!CircleTest@{CircleTest}}
+\index{CircleTest@{CircleTest}!Collision@{Collision}}
+\doxysubsubsection{\texorpdfstring{CircleTest()}{CircleTest()}}
+{\footnotesize\ttfamily bool Collision\+::\+Circle\+Test (\begin{DoxyParamCaption}\item[{const sf\+::\+Sprite \&}]{Object1,  }\item[{const sf\+::\+Sprite \&}]{Object2 }\end{DoxyParamCaption})}
+
+Test for collision using circle collision dection Radius is averaged from the dimensions of the sprite so roughly circular objects will be much more accurate \mbox{\Hypertarget{namespace_collision_a22b8e23d7fc5cb243d4365d1c179cf39}\label{namespace_collision_a22b8e23d7fc5cb243d4365d1c179cf39}} 
+\index{Collision@{Collision}!CreateTextureAndBitmask@{CreateTextureAndBitmask}}
+\index{CreateTextureAndBitmask@{CreateTextureAndBitmask}!Collision@{Collision}}
+\doxysubsubsection{\texorpdfstring{CreateTextureAndBitmask()}{CreateTextureAndBitmask()}}
+{\footnotesize\ttfamily bool Collision\+::\+Create\+Texture\+And\+Bitmask (\begin{DoxyParamCaption}\item[{sf\+::\+Texture \&}]{Load\+Into,  }\item[{const std\+::string \&}]{Filename }\end{DoxyParamCaption})}
+
+Replaces Texture\+::load\+From\+File Load an imagefile into the given texture and create a bitmask for it This is much faster than creating the bitmask for a texture on the first run of \char`\"{}\+Pixel\+Perfect\+Test\char`\"{}
+
+The function returns false if the file could not be opened for some reason \mbox{\Hypertarget{namespace_collision_ab89344d6c5a4b044135d8a1a6d17f517}\label{namespace_collision_ab89344d6c5a4b044135d8a1a6d17f517}} 
+\index{Collision@{Collision}!GetSpriteCenter@{GetSpriteCenter}}
+\index{GetSpriteCenter@{GetSpriteCenter}!Collision@{Collision}}
+\doxysubsubsection{\texorpdfstring{GetSpriteCenter()}{GetSpriteCenter()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Collision\+::\+Get\+Sprite\+Center (\begin{DoxyParamCaption}\item[{const sf\+::\+Sprite \&}]{Object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_collision_a2ad656979d56aa721a733b7cb479ea86}\label{namespace_collision_a2ad656979d56aa721a733b7cb479ea86}} 
+\index{Collision@{Collision}!GetSpriteSize@{GetSpriteSize}}
+\index{GetSpriteSize@{GetSpriteSize}!Collision@{Collision}}
+\doxysubsubsection{\texorpdfstring{GetSpriteSize()}{GetSpriteSize()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Collision\+::\+Get\+Sprite\+Size (\begin{DoxyParamCaption}\item[{const sf\+::\+Sprite \&}]{Object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_collision_a0d2e2c89d02bbdf787657b636d967cde}\label{namespace_collision_a0d2e2c89d02bbdf787657b636d967cde}} 
+\index{Collision@{Collision}!PixelPerfectTest@{PixelPerfectTest}}
+\index{PixelPerfectTest@{PixelPerfectTest}!Collision@{Collision}}
+\doxysubsubsection{\texorpdfstring{PixelPerfectTest()}{PixelPerfectTest()}}
+{\footnotesize\ttfamily bool Collision\+::\+Pixel\+Perfect\+Test (\begin{DoxyParamCaption}\item[{const sf\+::\+Sprite \&}]{Object1,  }\item[{const sf\+::\+Sprite \&}]{Object2,  }\item[{sf\+::\+Uint8}]{Alpha\+Limit = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Test for a collision between two sprites by comparing the alpha values of overlapping pixels Supports scaling and rotation Alpha\+Limit\+: The threshold at which a pixel becomes \char`\"{}solid\char`\"{}. If Alpha\+Limit is 127, a pixel with alpha value 128 will cause a collision and a pixel with alpha value 126 will not.
+
+This functions creates bitmasks of the textures of the two sprites by downloading the textures from the graphics card to memory -\/\texorpdfstring{$>$}{>} SLOW! You can avoid this by using the \char`\"{}\+Create\+Texture\+And\+Bitmask\char`\"{} function 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_collision_a388520fcf83948fecad6a0311e606e1a}\label{namespace_collision_a388520fcf83948fecad6a0311e606e1a}} 
+\index{Collision@{Collision}!Bitmasks@{Bitmasks}}
+\index{Bitmasks@{Bitmasks}!Collision@{Collision}}
+\doxysubsubsection{\texorpdfstring{Bitmasks}{Bitmasks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_collision_1_1_bitmask_manager}{Bitmask\+Manager}} Collision\+::\+Bitmasks}
+
